@@ -847,7 +847,7 @@ async function findRouteForPoints() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestBody),
     });
-    const payload = await response.json();
+    const payload = await readJsonResponse(response);
     if (!response.ok) {
       throw new Error(payload.detail || "Unable to calculate route.");
     }
@@ -860,6 +860,22 @@ async function findRouteForPoints() {
   } catch (error) {
     console.error(error);
     setStatus(error.message || "Route calculation failed.");
+  }
+}
+
+async function readJsonResponse(response) {
+  const text = await response.text();
+  if (!text) {
+    return {
+      detail: `Route API returned ${response.status} ${response.statusText || "with an empty response"}.`,
+    };
+  }
+  try {
+    return JSON.parse(text);
+  } catch (error) {
+    return {
+      detail: `Route API returned ${response.status} ${response.statusText || "non-JSON response"}.`,
+    };
   }
 }
 
