@@ -1297,7 +1297,6 @@ async def get_gis_route_for_points(request: GisPointRouteRequest):
         can_choose_walk_only = (
             not request.via_station_ids
             and walk_only_option["has_road_path"]
-            and not hard_scenario_active
         )
 
         raw_start_candidates = find_candidate_stations_by_walk(

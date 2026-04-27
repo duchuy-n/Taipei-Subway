@@ -128,6 +128,12 @@ class ApiTests(unittest.IsolatedAsyncioTestCase):
             segments=[],
             transfers=[],
             station_to_lines={"station-a": {"blue"}, "station-b": {"blue"}},
+            metadata={
+                "admin_effects": {
+                    "closed_segment_keys": ["blue:station-a:station-b"],
+                    "scenarios": {"rain_zones": []},
+                }
+            },
         )
         gis_payload = {
             "source": "qgis_geojson",
