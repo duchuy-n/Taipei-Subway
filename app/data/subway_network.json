@@ -1,0 +1,31 @@
+{
+  "stations": [
+    {
+      "id": "S1",
+      "name": "Alpha",
+      "x": 100.0,
+      "y": 200.0,
+      "diagram_x": 100.0,
+      "diagram_y": 200.0
+    }
+  ],
+  "lines": [
+    {
+      "id": "red",
+      "name": "Red Line",
+      "color": "#d94f4f"
+    }
+  ],
+  "station_lines": [
+    {
+      "station_id": "S1",
+      "line_id": "red",
+      "seq": 1
+    }
+  ],
+  "segments": [],
+  "transfers": [],
+  "metadata": {
+    "source_kind": "builder"
+  }
+}

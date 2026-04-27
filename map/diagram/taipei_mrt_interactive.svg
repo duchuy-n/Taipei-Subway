@@ -1,0 +1,794 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 160 160" data-generated-by="normalize_metromapmaker_svg.py" data-source-kind="metromapmaker">
+  <style>text { font: 1px Helvetica; font-weight: 600; white-space: pre; dominant-baseline: central; } line { stroke-width: 1; fill: none; stroke-linecap: round; stroke-linejoin: round; } .c0 { stroke: #78bc27 } .c1 { stroke: #c38c31 } .c2 { stroke: #e3002d } .c3 { stroke: #0070bc } .c4 { stroke: #018659 } .c5 { stroke: #f8b51c } .c6 { stroke: #f4a5a8 } .c7 { stroke: #f5b8b0 } .c8 { stroke: #dae11f } .c9 { stroke: #ffe707 } .c10 { stroke: #d6cfba } .c11 { stroke: #cabfde }</style>
+  <defs>
+    <g id="wm-xf">
+      <circle r="1.2" fill="#000" />
+      <circle r="0.9" fill="#fff" />
+      <circle r="0.6" fill="#000" />
+      <circle r="0.3" fill="#fff" />
+    </g>
+    <g id="wm">
+      <circle r="0.6" fill="#000" />
+      <circle r="0.3" fill="#fff" />
+    </g>
+    <g id="csm-f8b51c">
+      <circle r="0.4" fill="#f8b51c" />
+      <circle r="0.2" fill="#fff" />
+    </g>
+    <g id="csm-cabfde">
+      <circle r="0.4" fill="#cabfde" />
+      <circle r="0.2" fill="#fff" />
+    </g>
+    <g id="csm-ffe707">
+      <circle r="0.4" fill="#ffe707" />
+      <circle r="0.2" fill="#fff" />
+    </g>
+    <g id="csm-e3002d">
+      <circle r="0.4" fill="#e3002d" />
+      <circle r="0.2" fill="#fff" />
+    </g>
+    <g id="csm-f5b8b0">
+      <circle r="0.4" fill="#f5b8b0" />
+      <circle r="0.2" fill="#fff" />
+    </g>
+    <g id="csm-0070bc">
+      <circle r="0.4" fill="#0070bc" />
+      <circle r="0.2" fill="#fff" />
+    </g>
+    <g id="csm-018659">
+      <circle r="0.4" fill="#018659" />
+      <circle r="0.2" fill="#fff" />
+    </g>
+    <g id="csm-d6cfba">
+      <circle r="0.4" fill="#d6cfba" />
+      <circle r="0.2" fill="#fff" />
+    </g>
+    <g id="csm-c38c31">
+      <circle r="0.4" fill="#c38c31" />
+      <circle r="0.2" fill="#fff" />
+    </g>
+    <g id="csm-78bc27">
+      <circle r="0.4" fill="#78bc27" />
+      <circle r="0.2" fill="#fff" />
+    </g>
+  </defs>
+  <style>.interactive-track { vector-effect: non-scaling-stroke; } .station-node { cursor: pointer; } .station-label { pointer-events: none; }</style>
+  <g id="tracks" class="track-layer">
+    <line class="c0 interactive-track" x1="118" y1="131" x2="118" y2="140" id="track-c0-001" data-line-class="c0" />
+    <line class="c1 interactive-track" x1="99" y1="80" x2="99" y2="96" id="track-c1-002" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="99" y1="112" x2="99" y2="115" id="track-c1-003" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="112" y1="129" x2="118" y2="129" id="track-c1-004" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="99" y1="98" x2="99" y2="102" id="track-c1-005" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="99" y1="81" x2="100" y2="80" id="track-c1-006" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="111" y1="128" x2="112" y2="129" id="track-c1-007" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="122" y1="80" x2="123" y2="81" id="track-c1-008" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="111" y1="117" x2="111" y2="128" id="track-c1-009" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="100" y1="116" x2="110" y2="116" id="track-c1-010" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="99" y1="115" x2="100" y2="116" id="track-c1-011" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="99" y1="104" x2="99" y2="110" id="track-c1-012" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="99" y1="80" x2="123" y2="80" id="track-c1-013" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="123" y1="80" x2="123" y2="91" id="track-c1-014" data-line-class="c1" />
+    <line class="c1 interactive-track" x1="110" y1="116" x2="111" y2="117" id="track-c1-015" data-line-class="c1" />
+    <line class="c2 interactive-track" x1="83" y1="90" x2="83" y2="96" id="track-c2-016" data-line-class="c2" />
+    <line class="c2 interactive-track" x1="62" y1="62" x2="63" y2="63" id="track-c2-017" data-line-class="c2" />
+    <line class="c2 interactive-track" x1="83" y1="64" x2="83" y2="88" id="track-c2-018" data-line-class="c2" />
+    <line class="c2 interactive-track" x1="63" y1="63" x2="71" y2="63" id="track-c2-019" data-line-class="c2" />
+    <line class="c2 interactive-track" x1="82" y1="63" x2="83" y2="64" id="track-c2-020" data-line-class="c2" />
+    <line class="c2 interactive-track" x1="83" y1="110" x2="84" y2="111" id="track-c2-021" data-line-class="c2" />
+    <line class="c2 interactive-track" x1="92" y1="111" x2="111" y2="111" id="track-c2-022" data-line-class="c2" />
+    <line class="c2 interactive-track" x1="84" y1="111" x2="90" y2="111" id="track-c2-023" data-line-class="c2" />
+    <line class="c2 interactive-track" x1="83" y1="98" x2="83" y2="102" id="track-c2-024" data-line-class="c2" />
+    <line class="c2 interactive-track" x1="62" y1="48" x2="62" y2="62" id="track-c2-025" data-line-class="c2" />
+    <line class="c2 interactive-track" x1="83" y1="104" x2="83" y2="110" id="track-c2-026" data-line-class="c2" />
+    <line class="c2 interactive-track" x1="73" y1="63" x2="82" y2="63" id="track-c2-027" data-line-class="c2" />
+    <line class="c3 interactive-track" x1="69" y1="115" x2="69" y2="140" id="track-c3-028" data-line-class="c3" />
+    <line class="c3 interactive-track" x1="122" y1="103" x2="123" y2="102" id="track-c3-029" data-line-class="c3" />
+    <line class="c3 interactive-track" x1="123" y1="92" x2="123" y2="102" id="track-c3-030" data-line-class="c3" />
+    <line class="c3 interactive-track" x1="69" y1="103" x2="90" y2="103" id="track-c3-031" data-line-class="c3" />
+    <line class="c3 interactive-track" x1="92" y1="103" x2="122" y2="103" id="track-c3-032" data-line-class="c3" />
+    <line class="c3 interactive-track" x1="67" y1="105" x2="67" y2="113" id="track-c3-033" data-line-class="c3" />
+    <line class="c3 interactive-track" x1="67" y1="113" x2="69" y2="115" id="track-c3-034" data-line-class="c3" />
+    <line class="c3 interactive-track" x1="67" y1="105" x2="69" y2="103" id="track-c3-035" data-line-class="c3" />
+    <line class="c4 interactive-track" x1="102" y1="135" x2="102" y2="142" id="track-c4-036" data-line-class="c4" />
+    <line class="c4 interactive-track" x1="79" y1="110" x2="80" y2="111" id="track-c4-037" data-line-class="c4" />
+    <line class="c4 interactive-track" x1="80" y1="97" x2="90" y2="97" id="track-c4-038" data-line-class="c4" />
+    <line class="c4 interactive-track" x1="88" y1="116" x2="101" y2="129" id="track-c4-039" data-line-class="c4" />
+    <line class="c4 interactive-track" x1="79" y1="111" x2="83" y2="111" id="track-c4-040" data-line-class="c4" />
+    <line class="c4 interactive-track" x1="79" y1="104" x2="79" y2="111" id="track-c4-041" data-line-class="c4" />
+    <line class="c4 interactive-track" x1="79" y1="98" x2="79" y2="102" id="track-c4-042" data-line-class="c4" />
+    <line class="c4 interactive-track" x1="83" y1="111" x2="86" y2="114" id="track-c4-043" data-line-class="c4" />
+    <line class="c4 interactive-track" x1="79" y1="98" x2="80" y2="97" id="track-c4-044" data-line-class="c4" />
+    <line class="c4 interactive-track" x1="102" y1="131" x2="102" y2="133" id="track-c4-045" data-line-class="c4" />
+    <line class="c4 interactive-track" x1="92" y1="97" x2="111" y2="97" id="track-c4-046" data-line-class="c4" />
+    <line class="c5 interactive-track" x1="66" y1="71" x2="66" y2="81" id="track-c5-047" data-line-class="c5" />
+    <line class="c5 interactive-track" x1="85" y1="117" x2="85" y2="127" id="track-c5-048" data-line-class="c5" />
+    <line class="c5 interactive-track" x1="85" y1="129" x2="85" y2="132" id="track-c5-049" data-line-class="c5" />
+    <line class="c5 interactive-track" x1="91" y1="90" x2="91" y2="111" id="track-c5-050" data-line-class="c5" />
+    <line class="c5 interactive-track" x1="74" y1="89" x2="90" y2="89" id="track-c5-051" data-line-class="c5" />
+    <line class="c5 interactive-track" x1="54" y1="109" x2="74" y2="89" id="track-c5-052" data-line-class="c5" />
+    <line class="c5 interactive-track" x1="90" y1="89" x2="91" y2="90" id="track-c5-053" data-line-class="c5" />
+    <line class="c5 interactive-track" x1="54" y1="109" x2="54" y2="121" id="track-c5-054" data-line-class="c5" />
+    <line class="c5 interactive-track" x1="66" y1="81" x2="74" y2="89" id="track-c5-055" data-line-class="c5" />
+    <line class="c5 interactive-track" x1="85" y1="117" x2="91" y2="111" id="track-c5-056" data-line-class="c5" />
+    <line class="c6 interactive-track" x1="72" y1="59" x2="72" y2="63" id="track-c6-057" data-line-class="c6" />
+    <line class="c7 interactive-track" x1="71" y1="44" x2="95" y2="44" id="track-c7-058" data-line-class="c7" />
+    <line class="c7 interactive-track" x1="86" y1="52" x2="87" y2="51" id="track-c7-059" data-line-class="c7" />
+    <line class="c7 interactive-track" x1="86" y1="44" x2="87" y2="45" id="track-c7-060" data-line-class="c7" />
+    <line class="c7 interactive-track" x1="87" y1="44" x2="87" y2="51" id="track-c7-061" data-line-class="c7" />
+    <line class="c7 interactive-track" x1="87" y1="45" x2="88" y2="44" id="track-c7-062" data-line-class="c7" />
+    <line class="c7 interactive-track" x1="63" y1="52" x2="86" y2="52" id="track-c7-063" data-line-class="c7" />
+    <line class="c8 interactive-track" x1="98" y1="134" x2="102" y2="134" id="track-c8-064" data-line-class="c8" />
+    <line class="c9 interactive-track" x1="81" y1="128" x2="91" y2="128" id="track-c9-065" data-line-class="c9" />
+    <line class="c9 interactive-track" x1="55" y1="102" x2="57" y2="104" id="track-c9-066" data-line-class="c9" />
+    <line class="c9 interactive-track" x1="95" y1="130" x2="97" y2="130" id="track-c9-067" data-line-class="c9" />
+    <line class="c9 interactive-track" x1="59" y1="106" x2="68" y2="115" id="track-c9-068" data-line-class="c9" />
+    <line class="c9 interactive-track" x1="94" y1="129" x2="95" y2="130" id="track-c9-069" data-line-class="c9" />
+    <line class="c9 interactive-track" x1="70" y1="117" x2="81" y2="128" id="track-c9-070" data-line-class="c9" />
+    <line class="c9 interactive-track" x1="91" y1="128" x2="92" y2="129" id="track-c9-071" data-line-class="c9" />
+    <line class="c9 interactive-track" x1="55" y1="99" x2="55" y2="102" id="track-c9-072" data-line-class="c9" />
+    <line class="c9 interactive-track" x1="92" y1="129" x2="94" y2="129" id="track-c9-073" data-line-class="c9" />
+    <line class="c9 interactive-track" x1="99" y1="130" x2="102" y2="130" id="track-c9-074" data-line-class="c9" />
+    <line class="c10 interactive-track" x1="88" y1="145" x2="93" y2="140" id="track-c10-075" data-line-class="c10" />
+    <line class="c10 interactive-track" x1="76" y1="145" x2="88" y2="145" id="track-c10-076" data-line-class="c10" />
+    <line class="c10 interactive-track" x1="93" y1="131" x2="97" y2="131" id="track-c10-077" data-line-class="c10" />
+    <line class="c10 interactive-track" x1="93" y1="132" x2="94" y2="131" id="track-c10-078" data-line-class="c10" />
+    <line class="c10 interactive-track" x1="93" y1="131" x2="93" y2="140" id="track-c10-079" data-line-class="c10" />
+    <line class="c10 interactive-track" x1="97" y1="131" x2="98" y2="130" id="track-c10-080" data-line-class="c10" />
+    <line class="c11 interactive-track" x1="55" y1="41" x2="55" y2="98" id="track-c11-081" data-line-class="c11" />
+    <line class="c11 interactive-track" x1="55" y1="97" x2="56" y2="98" id="track-c11-082" data-line-class="c11" />
+    <line class="c11 interactive-track" x1="66" y1="98" x2="78" y2="98" id="track-c11-083" data-line-class="c11" />
+    <line class="c11 interactive-track" x1="55" y1="98" x2="64" y2="98" id="track-c11-084" data-line-class="c11" />
+    <line class="c11 interactive-track" x1="80" y1="98" x2="81" y2="99" id="track-c11-085" data-line-class="c11" />
+  </g>
+  <g id="stations" class="station-layer">
+    <g id="station-xinzhuang" class="station-node" data-station-name="Xinzhuang" data-marker-ref="#csm-f8b51c">
+      <use x="54" y="109" href="#csm-f8b51c" class="station-marker" id="station-xinzhuang--marker" />
+      <text x="53.25" y="109" text-anchor="end" class="station-label" id="station-xinzhuang--label">Xinzhuang</text>
+    </g>
+    <g id="station-fu-jen-university" class="station-node" data-station-name="Fu Jen University" data-marker-ref="#csm-f8b51c">
+      <use x="54" y="113" href="#csm-f8b51c" class="station-marker" id="station-fu-jen-university--marker" />
+      <text x="53.25" y="113" text-anchor="end" class="station-label" id="station-fu-jen-university--label">Fu Jen University</text>
+    </g>
+    <g id="station-danfeng" class="station-node" data-station-name="Danfeng" data-marker-ref="#csm-f8b51c">
+      <use x="54" y="117" href="#csm-f8b51c" class="station-marker" id="station-danfeng--marker" />
+      <text x="53.25" y="117" text-anchor="end" class="station-label" id="station-danfeng--label">Danfeng</text>
+    </g>
+    <g id="station-huilong" class="station-node" data-station-name="Huilong" data-marker-ref="#wm">
+      <use x="54" y="121" href="#wm" class="station-marker" id="station-huilong--marker" />
+      <text x="53.25" y="121" text-anchor="end" class="station-label" id="station-huilong--label">Huilong</text>
+    </g>
+    <g id="station-laojie-river" class="station-node" data-station-name="Laojie River" data-marker-ref="#wm">
+      <use x="55" y="41" href="#wm" class="station-marker" id="station-laojie-river--marker" />
+      <text x="54.25" y="41" text-anchor="end" class="station-label" id="station-laojie-river--label">Laojie River</text>
+    </g>
+    <g id="station-huanbei" class="station-node" data-station-name="Huanbei" data-marker-ref="#csm-cabfde">
+      <use x="55" y="44" href="#csm-cabfde" class="station-marker" id="station-huanbei--marker" />
+      <text x="54.25" y="44" text-anchor="end" class="station-label" id="station-huanbei--label">Huanbei</text>
+    </g>
+    <g id="station-xingnan" class="station-node" data-station-name="Xingnan" data-marker-ref="#csm-cabfde">
+      <use x="55" y="47" href="#csm-cabfde" class="station-marker" id="station-xingnan--marker" />
+      <text x="54.25" y="47" text-anchor="end" class="station-label" id="station-xingnan--label">Xingnan</text>
+    </g>
+    <g id="station-taoyuan-sports-park" class="station-node" data-station-name="Taoyuan Sports Park" data-marker-ref="#csm-cabfde">
+      <use x="55" y="50" href="#csm-cabfde" class="station-marker" id="station-taoyuan-sports-park--marker" />
+      <text x="54.25" y="50" text-anchor="end" class="station-label" id="station-taoyuan-sports-park--label">Taoyuan Sports Park</text>
+    </g>
+    <g id="station-taoyuan-hsr-station" class="station-node" data-station-name="Taoyuan HSR Station" data-marker-ref="#csm-cabfde">
+      <use x="55" y="53" href="#csm-cabfde" class="station-marker" id="station-taoyuan-hsr-station--marker" />
+      <text x="54.25" y="53" text-anchor="end" class="station-label" id="station-taoyuan-hsr-station--label">Taoyuan HSR Station</text>
+    </g>
+    <g id="station-linghang" class="station-node" data-station-name="Linghang" data-marker-ref="#csm-cabfde">
+      <use x="55" y="56" href="#csm-cabfde" class="station-marker" id="station-linghang--marker" />
+      <text x="54.25" y="56" text-anchor="end" class="station-label" id="station-linghang--label">Linghang</text>
+    </g>
+    <g id="station-hengshan" class="station-node" data-station-name="Hengshan" data-marker-ref="#csm-cabfde">
+      <use x="55" y="59" href="#csm-cabfde" class="station-marker" id="station-hengshan--marker" />
+      <text x="54.25" y="59" text-anchor="end" class="station-label" id="station-hengshan--label">Hengshan</text>
+    </g>
+    <g id="station-dayuan" class="station-node" data-station-name="Dayuan" data-marker-ref="#csm-cabfde">
+      <use x="55" y="62" href="#csm-cabfde" class="station-marker" id="station-dayuan--marker" />
+      <text x="54.25" y="62" text-anchor="end" class="station-label" id="station-dayuan--label">Dayuan</text>
+    </g>
+    <g id="station-airport-hotel" class="station-node" data-station-name="Airport Hotel" data-marker-ref="#csm-cabfde">
+      <use x="55" y="65" href="#csm-cabfde" class="station-marker" id="station-airport-hotel--marker" />
+      <text x="54.25" y="65" text-anchor="end" class="station-label" id="station-airport-hotel--label">Airport Hotel</text>
+    </g>
+    <g id="station-airport-terminal-2" class="station-node" data-station-name="Airport Terminal 2" data-marker-ref="#csm-cabfde">
+      <use x="55" y="68" href="#csm-cabfde" class="station-marker" id="station-airport-terminal-2--marker" />
+      <text x="54.25" y="68" text-anchor="end" class="station-label" id="station-airport-terminal-2--label">Airport Terminal 2</text>
+    </g>
+    <g id="station-airport-terminal-1" class="station-node" data-station-name="Airport Terminal 1" data-marker-ref="#csm-cabfde">
+      <use x="55" y="71" href="#csm-cabfde" class="station-marker" id="station-airport-terminal-1--marker" />
+      <text x="54.25" y="71" text-anchor="end" class="station-label" id="station-airport-terminal-1--label">Airport Terminal 1</text>
+    </g>
+    <g id="station-kengkou" class="station-node" data-station-name="Kengkou" data-marker-ref="#csm-cabfde">
+      <use x="55" y="74" href="#csm-cabfde" class="station-marker" id="station-kengkou--marker" />
+      <text x="54.25" y="74" text-anchor="end" class="station-label" id="station-kengkou--label">Kengkou</text>
+    </g>
+    <g id="station-shanbi" class="station-node" data-station-name="Shanbi" data-marker-ref="#csm-cabfde">
+      <use x="55" y="77" href="#csm-cabfde" class="station-marker" id="station-shanbi--marker" />
+      <text x="54.25" y="77" text-anchor="end" class="station-label" id="station-shanbi--label">Shanbi</text>
+    </g>
+    <g id="station-linkou" class="station-node" data-station-name="Linkou" data-marker-ref="#csm-cabfde">
+      <use x="55" y="80" href="#csm-cabfde" class="station-marker" id="station-linkou--marker" />
+      <text x="54.25" y="80" text-anchor="end" class="station-label" id="station-linkou--label">Linkou</text>
+    </g>
+    <g id="station-chang-gung-memorial-hospital" class="station-node" data-station-name="Chang Gung Memorial Hospital" data-marker-ref="#csm-cabfde">
+      <use x="55" y="83" href="#csm-cabfde" class="station-marker" id="station-chang-gung-memorial-hospital--marker" />
+      <text x="54.25" y="83" text-anchor="end" class="station-label" id="station-chang-gung-memorial-hospital--label">Chang Gung Memorial Hospital</text>
+    </g>
+    <g id="station-national-taiwan-sport-university" class="station-node" data-station-name="National Taiwan Sport University" data-marker-ref="#csm-cabfde">
+      <use x="55" y="86" href="#csm-cabfde" class="station-marker" id="station-national-taiwan-sport-university--marker" />
+      <text x="54.25" y="86" text-anchor="end" class="station-label" id="station-national-taiwan-sport-university--label">National Taiwan Sport University</text>
+    </g>
+    <g id="station-taishan-guihe" class="station-node" data-station-name="Taishan Guihe" data-marker-ref="#csm-cabfde">
+      <use x="55" y="89" href="#csm-cabfde" class="station-marker" id="station-taishan-guihe--marker" />
+      <text x="54.25" y="89" text-anchor="end" class="station-label" id="station-taishan-guihe--label">Taishan Guihe</text>
+    </g>
+    <g id="station-taishan" class="station-node" data-station-name="Taishan" data-marker-ref="#csm-cabfde">
+      <use x="55" y="92" href="#csm-cabfde" class="station-marker" id="station-taishan--marker" />
+      <text x="54.25" y="92" text-anchor="end" class="station-label" id="station-taishan--label">Taishan</text>
+    </g>
+    <g id="station-xinzhuang-fuduxin" class="station-node" data-station-name="Xinzhuang Fuduxin" data-marker-ref="#csm-cabfde">
+      <use x="55" y="95" href="#csm-cabfde" class="station-marker" id="station-xinzhuang-fuduxin--marker" />
+      <text x="54.25" y="95" text-anchor="end" class="station-label" id="station-xinzhuang-fuduxin--label">Xinzhuang Fuduxin</text>
+    </g>
+    <g id="station-new-taipei-industrial-park" class="station-node" data-station-name="New Taipei Industrial Park" data-marker-ref="#wm-xf">
+      <use x="55" y="98" href="#wm-xf" class="station-marker" id="station-new-taipei-industrial-park--marker" />
+      <text x="53.5" y="98" text-anchor="end" class="station-label" id="station-new-taipei-industrial-park--label">New Taipei Industrial Park</text>
+    </g>
+    <g id="station-xingfu" class="station-node" data-station-name="Xingfu" data-marker-ref="#csm-ffe707">
+      <use x="55" y="102" href="#csm-ffe707" class="station-marker" id="station-xingfu--marker" />
+      <text x="54.25" y="102" text-anchor="end" class="station-label" id="station-xingfu--label">Xingfu</text>
+    </g>
+    <g id="station-touqianzhuang" class="station-node" data-station-name="Touqianzhuang" data-marker-ref="#wm-xf">
+      <use x="58" y="105" href="#wm-xf" class="station-marker" id="station-touqianzhuang--marker" />
+      <text x="56.5" y="105" text-anchor="end" class="station-label" id="station-touqianzhuang--label">Touqianzhuang</text>
+    </g>
+    <g id="station-tamsui" class="station-node" data-station-name="Tamsui" data-marker-ref="#wm">
+      <use x="62" y="48" href="#wm" class="station-marker" id="station-tamsui--marker" />
+      <text x="61.25" y="48" text-anchor="end" class="station-label" id="station-tamsui--label">Tamsui</text>
+    </g>
+    <g id="station-hongshulin" class="station-node" data-station-name="Hongshulin" data-marker-ref="#wm-xf">
+      <use x="62" y="52" href="#wm-xf" class="station-marker" id="station-hongshulin--marker" />
+      <text x="60.5" y="52" text-anchor="end" class="station-label" id="station-hongshulin--label">Hongshulin</text>
+    </g>
+    <g id="station-zhuwei" class="station-node" data-station-name="Zhuwei" data-marker-ref="#csm-e3002d">
+      <use x="62" y="56" href="#csm-e3002d" class="station-marker" id="station-zhuwei--marker" />
+      <text x="61.25" y="56" text-anchor="end" class="station-label" id="station-zhuwei--label">Zhuwei</text>
+    </g>
+    <g id="station-guandu" class="station-node" data-station-name="Guandu" data-marker-ref="#csm-e3002d">
+      <use x="62" y="60" href="#csm-e3002d" class="station-marker" id="station-guandu--marker" />
+      <text x="61.25" y="60" text-anchor="end" class="station-label" id="station-guandu--label">Guandu</text>
+    </g>
+    <g id="station-xianse-temple" class="station-node" data-station-name="Xianse Temple" data-marker-ref="#csm-f8b51c">
+      <use x="62" y="101" href="#csm-f8b51c" class="station-marker" id="station-xianse-temple--marker" />
+      <text x="61.25" y="101" text-anchor="end" class="station-label" id="station-xianse-temple--label">Xianse Temple</text>
+    </g>
+    <g id="station-zhongyi" class="station-node" data-station-name="Zhongyi" data-marker-ref="#csm-e3002d">
+      <use x="64" y="63" href="#csm-e3002d" class="station-marker" id="station-zhongyi--marker" />
+      <text x="63.25" y="63" text-anchor="end" transform="rotate(-90 64, 63)" class="station-label" id="station-zhongyi--label">Zhongyi</text>
+    </g>
+    <g id="station-sanchong" class="station-node" data-station-name="Sanchong" data-marker-ref="#wm-xf">
+      <use x="65" y="98" href="#wm-xf" class="station-marker" id="station-sanchong--marker" />
+      <text x="63.5" y="98" text-anchor="end" transform="rotate(-90 65, 98)" class="station-label" id="station-sanchong--label">Sanchong</text>
+    </g>
+    <g id="station-ganzhenlin" class="station-node" data-station-name="Ganzhenlin" data-marker-ref="#csm-f5b8b0">
+      <use x="66" y="52" href="#csm-f5b8b0" class="station-marker" id="station-ganzhenlin--marker" />
+      <text x="65.25" y="52" text-anchor="end" transform="rotate(-90 66, 52)" class="station-label" id="station-ganzhenlin--label">Ganzhenlin</text>
+    </g>
+    <g id="station-luzhou" class="station-node" data-station-name="Luzhou" data-marker-ref="#wm">
+      <use x="66" y="71" href="#wm" class="station-marker" id="station-luzhou--marker" />
+      <text x="65.25" y="71" text-anchor="end" class="station-label" id="station-luzhou--label">Luzhou</text>
+    </g>
+    <g id="station-sanmin-senior-high-school" class="station-node" data-station-name="Sanmin Senior High School" data-marker-ref="#csm-f8b51c">
+      <use x="66" y="75" href="#csm-f8b51c" class="station-marker" id="station-sanmin-senior-high-school--marker" />
+      <text x="66.75" y="75" transform="rotate(-45 66, 75)" class="station-label" id="station-sanmin-senior-high-school--label">Sanmin Senior High School</text>
+    </g>
+    <g id="station-st-ignatius-high-school" class="station-node" data-station-name="St. Ignatius High School" data-marker-ref="#csm-f8b51c">
+      <use x="66" y="79" href="#csm-f8b51c" class="station-marker" id="station-st-ignatius-high-school--marker" />
+      <text x="66.75" y="79" transform="rotate(-45 66, 79)" class="station-label" id="station-st-ignatius-high-school--label">St. Ignatius High School</text>
+    </g>
+    <g id="station-xinpu-minsheng" class="station-node" data-station-name="Xinpu Minsheng" data-marker-ref="#wm-xf">
+      <use x="66" y="113" href="#wm-xf" class="station-marker" id="station-xinpu-minsheng--marker" />
+      <text x="64.5" y="113" text-anchor="end" transform="rotate(-45 66, 113)" class="station-label" id="station-xinpu-minsheng--label">Xinpu Minsheng</text>
+    </g>
+    <g id="station-jiangzicui" class="station-node" data-station-name="Jiangzicui" data-marker-ref="#csm-0070bc">
+      <use x="67" y="109" href="#csm-0070bc" class="station-marker" id="station-jiangzicui--marker" />
+      <text x="66.25" y="109" text-anchor="end" class="station-label" id="station-jiangzicui--label">Jiangzicui</text>
+    </g>
+    <g id="station-xinpu" class="station-node" data-station-name="Xinpu" data-marker-ref="#wm-xf">
+      <use x="67" y="113" href="#wm-xf" class="station-marker" id="station-xinpu--marker" />
+      <text x="68.5" y="113" class="station-label" id="station-xinpu--label">Xinpu</text>
+    </g>
+    <g id="station-fuxingguang" class="station-node" data-station-name="Fuxingguang" data-marker-ref="#csm-e3002d">
+      <use x="68" y="63" href="#csm-e3002d" class="station-marker" id="station-fuxingguang--marker" />
+      <text x="67.25" y="63" text-anchor="end" transform="rotate(-90 68, 63)" class="station-label" id="station-fuxingguang--label">Fuxingguang</text>
+    </g>
+    <g id="station-sanhe-junior-high-school" class="station-node" data-station-name="Sanhe Junior High School" data-marker-ref="#csm-f8b51c">
+      <use x="68" y="83" href="#csm-f8b51c" class="station-marker" id="station-sanhe-junior-high-school--marker" />
+      <text x="68.75" y="83" transform="rotate(-45 68, 83)" class="station-label" id="station-sanhe-junior-high-school--label">Sanhe Junior High School</text>
+    </g>
+    <g id="station-cailiao" class="station-node" data-station-name="Cailiao" data-marker-ref="#csm-f8b51c">
+      <use x="68" y="95" href="#csm-f8b51c" class="station-marker" id="station-cailiao--marker" />
+      <text x="67.25" y="95" text-anchor="end" class="station-label" id="station-cailiao--label">Cailiao</text>
+    </g>
+    <g id="station-banqiao" class="station-node" data-station-name="Banqiao" data-marker-ref="#wm-xf">
+      <use x="69" y="116" href="#wm-xf" class="station-marker" id="station-banqiao--marker" />
+      <text x="67.5" y="116" text-anchor="end" transform="rotate(-45 69, 116)" class="station-label" id="station-banqiao--label">Banqiao</text>
+    </g>
+    <g id="station-fuzhong" class="station-node" data-station-name="Fuzhong" data-marker-ref="#csm-0070bc">
+      <use x="69" y="120" href="#csm-0070bc" class="station-marker" id="station-fuzhong--marker" />
+      <text x="68.25" y="120" text-anchor="end" transform="rotate(-45 69, 120)" class="station-label" id="station-fuzhong--label">Fuzhong</text>
+    </g>
+    <g id="station-far-eastern-hospital" class="station-node" data-station-name="Far Eastern Hospital" data-marker-ref="#csm-0070bc">
+      <use x="69" y="124" href="#csm-0070bc" class="station-marker" id="station-far-eastern-hospital--marker" />
+      <text x="68.25" y="124" text-anchor="end" transform="rotate(-45 69, 124)" class="station-label" id="station-far-eastern-hospital--label">Far Eastern Hospital</text>
+    </g>
+    <g id="station-haishan" class="station-node" data-station-name="Haishan" data-marker-ref="#csm-0070bc">
+      <use x="69" y="128" href="#csm-0070bc" class="station-marker" id="station-haishan--marker" />
+      <text x="68.25" y="128" text-anchor="end" transform="rotate(-45 69, 128)" class="station-label" id="station-haishan--label">Haishan</text>
+    </g>
+    <g id="station-tucheng" class="station-node" data-station-name="Tucheng" data-marker-ref="#csm-0070bc">
+      <use x="69" y="132" href="#csm-0070bc" class="station-marker" id="station-tucheng--marker" />
+      <text x="68.25" y="132" text-anchor="end" transform="rotate(-45 69, 132)" class="station-label" id="station-tucheng--label">Tucheng</text>
+    </g>
+    <g id="station-yongning" class="station-node" data-station-name="Yongning" data-marker-ref="#csm-0070bc">
+      <use x="69" y="136" href="#csm-0070bc" class="station-marker" id="station-yongning--marker" />
+      <text x="68.25" y="136" text-anchor="end" transform="rotate(-45 69, 136)" class="station-label" id="station-yongning--label">Yongning</text>
+    </g>
+    <g id="station-dingpu" class="station-node" data-station-name="Dingpu" data-marker-ref="#wm">
+      <use x="69" y="140" href="#wm" class="station-marker" id="station-dingpu--marker" />
+      <text x="68.25" y="140" text-anchor="end" transform="rotate(-45 69, 140)" class="station-label" id="station-dingpu--label">Dingpu</text>
+    </g>
+    <g id="station-danjin-denggong" class="station-node" data-station-name="Danjin Denggong" data-marker-ref="#csm-f5b8b0">
+      <use x="70" y="52" href="#csm-f5b8b0" class="station-marker" id="station-danjin-denggong--marker" />
+      <text x="69.25" y="52" text-anchor="end" transform="rotate(-90 70, 52)" class="station-label" id="station-danjin-denggong--label">Danjin Denggong</text>
+    </g>
+    <g id="station-tamsui-fishermans-wharf" class="station-node" data-station-name="Tamsui Fishermans Wharf" data-marker-ref="#wm">
+      <use x="71" y="44" href="#wm" class="station-marker" id="station-tamsui-fishermans-wharf--marker" />
+      <text x="70.25" y="44" text-anchor="end" transform="rotate(45 71, 44)" class="station-label" id="station-tamsui-fishermans-wharf--label">Tamsui Fishermans Wharf</text>
+    </g>
+    <g id="station-sanchong-elementary-school" class="station-node" data-station-name="Sanchong Elementary School" data-marker-ref="#csm-f8b51c">
+      <use x="71" y="86" href="#csm-f8b51c" class="station-marker" id="station-sanchong-elementary-school--marker" />
+      <text x="70.25" y="86" text-anchor="end" class="station-label" id="station-sanchong-elementary-school--label">Sanchong Elementary School</text>
+    </g>
+    <g id="station-taipei-bridge" class="station-node" data-station-name="Taipei Bridge" data-marker-ref="#csm-f8b51c">
+      <use x="71" y="92" href="#csm-f8b51c" class="station-marker" id="station-taipei-bridge--marker" />
+      <text x="70.25" y="92" text-anchor="end" class="station-label" id="station-taipei-bridge--label">Taipei Bridge</text>
+    </g>
+    <g id="station-longshan-temple" class="station-node" data-station-name="Longshan Temple" data-marker-ref="#csm-0070bc">
+      <use x="71" y="103" href="#csm-0070bc" class="station-marker" id="station-longshan-temple--marker" />
+      <text x="70.25" y="103" text-anchor="end" transform="rotate(-90 71, 103)" class="station-label" id="station-longshan-temple--label">Longshan Temple</text>
+    </g>
+    <g id="station-xinbeitou" class="station-node" data-station-name="Xinbeitou" data-marker-ref="#wm">
+      <use x="72" y="59" href="#wm" class="station-marker" id="station-xinbeitou--marker" />
+      <text x="72.75" y="59" class="station-label" id="station-xinbeitou--label">Xinbeitou</text>
+    </g>
+    <g id="station-beitou" class="station-node" data-station-name="Beitou" data-marker-ref="#wm-xf">
+      <use x="72" y="63" href="#wm-xf" class="station-marker" id="station-beitou--marker" />
+      <text x="70.5" y="63" text-anchor="end" transform="rotate(-90 72, 63)" class="station-label" id="station-beitou--label">Beitou</text>
+    </g>
+    <g id="station-banxin" class="station-node" data-station-name="Banxin" data-marker-ref="#csm-ffe707">
+      <use x="72" y="119" href="#csm-ffe707" class="station-marker" id="station-banxin--marker" />
+      <text x="71.25" y="119" text-anchor="end" transform="rotate(-45 72, 119)" class="station-label" id="station-banxin--label">Banxin</text>
+    </g>
+    <g id="station-tamkang-university" class="station-node" data-station-name="Tamkang University" data-marker-ref="#csm-f5b8b0">
+      <use x="74" y="52" href="#csm-f5b8b0" class="station-marker" id="station-tamkang-university--marker" />
+      <text x="74.75" y="52" transform="rotate(45 74, 52)" class="station-label" id="station-tamkang-university--label">Tamkang University</text>
+    </g>
+    <g id="station-shalun" class="station-node" data-station-name="Shalun" data-marker-ref="#csm-f5b8b0">
+      <use x="75" y="44" href="#csm-f5b8b0" class="station-marker" id="station-shalun--marker" />
+      <text x="74.25" y="44" text-anchor="end" transform="rotate(45 75, 44)" class="station-label" id="station-shalun--label">Shalun</text>
+    </g>
+    <g id="station-zhongyuan" class="station-node" data-station-name="Zhongyuan" data-marker-ref="#csm-ffe707">
+      <use x="75" y="122" href="#csm-ffe707" class="station-marker" id="station-zhongyuan--marker" />
+      <text x="74.25" y="122" text-anchor="end" transform="rotate(-45 75, 122)" class="station-label" id="station-zhongyuan--label">Zhongyuan</text>
+    </g>
+    <g id="station-qiyan" class="station-node" data-station-name="Qiyan" data-marker-ref="#csm-e3002d">
+      <use x="76" y="63" href="#csm-e3002d" class="station-marker" id="station-qiyan--marker" />
+      <text x="76.75" y="63" transform="rotate(-45 76, 63)" class="station-label" id="station-qiyan--label">Qiyan</text>
+    </g>
+    <g id="station-shuangcheng" class="station-node" data-station-name="Shuangcheng" data-marker-ref="#wm">
+      <use x="76" y="145" href="#wm" class="station-marker" id="station-shuangcheng--marker" />
+      <text x="76.75" y="145" transform="rotate(45 76, 145)" class="station-label" id="station-shuangcheng--label">Shuangcheng</text>
+    </g>
+    <g id="station-danjin-beixin" class="station-node" data-station-name="Danjin Beixin" data-marker-ref="#csm-f5b8b0">
+      <use x="78" y="52" href="#csm-f5b8b0" class="station-marker" id="station-danjin-beixin--marker" />
+      <text x="78.75" y="52" transform="rotate(45 78, 52)" class="station-label" id="station-danjin-beixin--label">Danjin Beixin</text>
+    </g>
+    <g id="station-daqiaotou" class="station-node" data-station-name="Daqiaotou" data-marker-ref="#wm-xf">
+      <use x="78" y="89" href="#wm-xf" class="station-marker" id="station-daqiaotou--marker" />
+      <text x="76.5" y="89" text-anchor="end" transform="rotate(-45 78, 89)" class="station-label" id="station-daqiaotou--label">Daqiaotou</text>
+    </g>
+    <g id="station-qiaohe" class="station-node" data-station-name="Qiaohe" data-marker-ref="#csm-ffe707">
+      <use x="78" y="125" href="#csm-ffe707" class="station-marker" id="station-qiaohe--marker" />
+      <text x="77.25" y="125" text-anchor="end" transform="rotate(-45 78, 125)" class="station-label" id="station-qiaohe--label">Qiaohe</text>
+    </g>
+    <g id="station-taipei-university-of-marine-technology" class="station-node" data-station-name="Taipei University of Marine Technology" data-marker-ref="#csm-f5b8b0">
+      <use x="79" y="44" href="#csm-f5b8b0" class="station-marker" id="station-taipei-university-of-marine-technology--marker" />
+      <text x="78.25" y="44" text-anchor="end" transform="rotate(45 79, 44)" class="station-label" id="station-taipei-university-of-marine-technology--label">Taipei University of Marine Technology</text>
+    </g>
+    <g id="station-beimen" class="station-node" data-station-name="Beimen" data-marker-ref="#csm-018659">
+      <use x="79" y="99" href="#csm-018659" class="station-marker" id="station-beimen--marker" />
+      <text x="78.25" y="99" text-anchor="end" class="station-label" id="station-beimen--label">Beimen</text>
+    </g>
+    <g id="station-ximen" class="station-node" data-station-name="Ximen" data-marker-ref="#wm-xf">
+      <use x="79" y="103" href="#wm-xf" class="station-marker" id="station-ximen--marker" />
+      <text x="77.5" y="103" text-anchor="end" transform="rotate(-45 79, 103)" class="station-label" id="station-ximen--label">Ximen</text>
+    </g>
+    <g id="station-xiaonanmen" class="station-node" data-station-name="Xiaonanmen" data-marker-ref="#csm-018659">
+      <use x="79" y="111" href="#csm-018659" class="station-marker" id="station-xiaonanmen--marker" />
+      <text x="78.25" y="111" text-anchor="end" transform="rotate(-45 79, 111)" class="station-label" id="station-xiaonanmen--label">Xiaonanmen</text>
+    </g>
+    <g id="station-qilian" class="station-node" data-station-name="Qilian" data-marker-ref="#csm-e3002d">
+      <use x="80" y="63" href="#csm-e3002d" class="station-marker" id="station-qilian--marker" />
+      <text x="80.75" y="63" transform="rotate(-45 80, 63)" class="station-label" id="station-qilian--label">Qilian</text>
+    </g>
+    <g id="station-rose-china-town" class="station-node" data-station-name="Rose China Town" data-marker-ref="#csm-d6cfba">
+      <use x="80" y="145" href="#csm-d6cfba" class="station-marker" id="station-rose-china-town--marker" />
+      <text x="80.75" y="145" transform="rotate(45 80, 145)" class="station-label" id="station-rose-china-town--label">Rose China Town</text>
+    </g>
+    <g id="station-taipei-main-station" class="station-node" data-station-name="Taipei Main Station" data-marker-ref="#wm">
+      <use x="81" y="99" href="#wm" class="station-marker" id="station-taipei-main-station--marker" />
+      <text x="80.25" y="99" text-anchor="end" transform="rotate(-90 81, 99)" class="station-label" id="station-taipei-main-station--label">Taipei Main Station</text>
+    </g>
+    <g id="station-zhonghe" class="station-node" data-station-name="Zhonghe" data-marker-ref="#csm-ffe707">
+      <use x="81" y="128" href="#csm-ffe707" class="station-marker" id="station-zhonghe--marker" />
+      <text x="80.25" y="128" text-anchor="end" transform="rotate(-45 81, 128)" class="station-label" id="station-zhonghe--label">Zhonghe</text>
+    </g>
+    <g id="station-xinshi-1st-rd" class="station-node" data-station-name="Xinshi 1st Rd." data-marker-ref="#csm-f5b8b0">
+      <use x="82" y="52" href="#csm-f5b8b0" class="station-marker" id="station-xinshi-1st-rd--marker" />
+      <text x="82.75" y="52" transform="rotate(45 82, 52)" class="station-label" id="station-xinshi-1st-rd--label">Xinshi 1st Rd.</text>
+    </g>
+    <g id="station-shipai" class="station-node" data-station-name="Shipai" data-marker-ref="#csm-e3002d">
+      <use x="83" y="65" href="#csm-e3002d" class="station-marker" id="station-shipai--marker" />
+      <text x="83.75" y="65" class="station-label" id="station-shipai--label">Shipai</text>
+    </g>
+    <g id="station-mingde" class="station-node" data-station-name="Mingde" data-marker-ref="#csm-e3002d">
+      <use x="83" y="69" href="#csm-e3002d" class="station-marker" id="station-mingde--marker" />
+      <text x="82.25" y="69" text-anchor="end" class="station-label" id="station-mingde--label">Mingde</text>
+    </g>
+    <g id="station-zhishan" class="station-node" data-station-name="Zhishan" data-marker-ref="#csm-e3002d">
+      <use x="83" y="73" href="#csm-e3002d" class="station-marker" id="station-zhishan--marker" />
+      <text x="82.25" y="73" text-anchor="end" class="station-label" id="station-zhishan--label">Zhishan</text>
+    </g>
+    <g id="station-shilin" class="station-node" data-station-name="Shilin" data-marker-ref="#csm-e3002d">
+      <use x="83" y="77" href="#csm-e3002d" class="station-marker" id="station-shilin--marker" />
+      <text x="82.25" y="77" text-anchor="end" class="station-label" id="station-shilin--label">Shilin</text>
+    </g>
+    <g id="station-jiantan" class="station-node" data-station-name="Jiantan" data-marker-ref="#csm-e3002d">
+      <use x="83" y="81" href="#csm-e3002d" class="station-marker" id="station-jiantan--marker" />
+      <text x="82.25" y="81" text-anchor="end" class="station-label" id="station-jiantan--label">Jiantan</text>
+    </g>
+    <g id="station-yuanshan" class="station-node" data-station-name="Yuanshan" data-marker-ref="#csm-e3002d">
+      <use x="83" y="85" href="#csm-e3002d" class="station-marker" id="station-yuanshan--marker" />
+      <text x="82.25" y="85" text-anchor="end" class="station-label" id="station-yuanshan--label">Yuanshan</text>
+    </g>
+    <g id="station-minquan-w-road" class="station-node" data-station-name="Minquan W. Road" data-marker-ref="#wm-xf">
+      <use x="83" y="89" href="#wm-xf" class="station-marker" id="station-minquan-w-road--marker" />
+      <text x="81.5" y="89" text-anchor="end" transform="rotate(-45 83, 89)" class="station-label" id="station-minquan-w-road--label">Minquan W. Road</text>
+    </g>
+    <g id="station-shuanglian" class="station-node" data-station-name="Shuanglian" data-marker-ref="#csm-e3002d">
+      <use x="83" y="93" href="#csm-e3002d" class="station-marker" id="station-shuanglian--marker" />
+      <text x="82.25" y="93" text-anchor="end" transform="rotate(-45 83, 93)" class="station-label" id="station-shuanglian--label">Shuanglian</text>
+    </g>
+    <g id="station-zhongshan" class="station-node" data-station-name="Zhongshan" data-marker-ref="#wm-xf">
+      <use x="83" y="97" href="#wm-xf" class="station-marker" id="station-zhongshan--marker" />
+      <text x="84.5" y="97" transform="rotate(-45 83, 97)" class="station-label" id="station-zhongshan--label">Zhongshan</text>
+    </g>
+    <g id="station-taipei-main-station-2" class="station-node" data-station-name="Taipei Main Station" data-marker-ref="#wm-xf">
+      <use x="83" y="103" href="#wm-xf" class="station-marker" id="station-taipei-main-station-2--marker" />
+      <text x="84.5" y="103" transform="rotate(-45 83, 103)" class="station-label" id="station-taipei-main-station-2--label">Taipei Main Station</text>
+    </g>
+    <g id="station-ntu-hospital" class="station-node" data-station-name="NTU Hospital" data-marker-ref="#csm-e3002d">
+      <use x="83" y="107" href="#csm-e3002d" class="station-marker" id="station-ntu-hospital--marker" />
+      <text x="83.75" y="107" class="station-label" id="station-ntu-hospital--label">NTU Hospital</text>
+    </g>
+    <g id="station-chiang-kai-shek-memorial-hall" class="station-node" data-station-name="Chiang Kai-shek Memorial Hall" data-marker-ref="#wm-xf">
+      <use x="83" y="111" href="#wm-xf" class="station-marker" id="station-chiang-kai-shek-memorial-hall--marker" />
+      <text x="81.5" y="111" text-anchor="end" transform="rotate(-45 83, 111)" class="station-label" id="station-chiang-kai-shek-memorial-hall--label">Chiang Kai-shek Memorial Hall</text>
+    </g>
+    <g id="station-taipei-xiaocheng" class="station-node" data-station-name="Taipei Xiaocheng" data-marker-ref="#csm-d6cfba">
+      <use x="84" y="145" href="#csm-d6cfba" class="station-marker" id="station-taipei-xiaocheng--marker" />
+      <text x="84.75" y="145" transform="rotate(45 84, 145)" class="station-label" id="station-taipei-xiaocheng--label">Taipei Xiaocheng</text>
+    </g>
+    <g id="station-dingxi" class="station-node" data-station-name="DIngxi" data-marker-ref="#csm-f8b51c">
+      <use x="85" y="120" href="#csm-f8b51c" class="station-marker" id="station-dingxi--marker" />
+      <text x="84.25" y="120" text-anchor="end" transform="rotate(-45 85, 120)" class="station-label" id="station-dingxi--label">DIngxi</text>
+    </g>
+    <g id="station-yongan-market" class="station-node" data-station-name="Yongan Market" data-marker-ref="#csm-f8b51c">
+      <use x="85" y="124" href="#csm-f8b51c" class="station-marker" id="station-yongan-market--marker" />
+      <text x="85.75" y="124" transform="rotate(-45 85, 124)" class="station-label" id="station-yongan-market--label">Yongan Market</text>
+    </g>
+    <g id="station-jingan" class="station-node" data-station-name="Jingan" data-marker-ref="#wm-xf">
+      <use x="85" y="128" href="#wm-xf" class="station-marker" id="station-jingan--marker" />
+      <text x="83.5" y="128" text-anchor="end" transform="rotate(-45 85, 128)" class="station-label" id="station-jingan--label">Jingan</text>
+    </g>
+    <g id="station-nanshijiao" class="station-node" data-station-name="Nanshijiao" data-marker-ref="#wm">
+      <use x="85" y="132" href="#wm" class="station-marker" id="station-nanshijiao--marker" />
+      <text x="84.25" y="132" text-anchor="end" transform="rotate(-45 85, 132)" class="station-label" id="station-nanshijiao--label">Nanshijiao</text>
+    </g>
+    <g id="station-tamsui-district-office" class="station-node" data-station-name="Tamsui District Office" data-marker-ref="#csm-f5b8b0">
+      <use x="86" y="52" href="#csm-f5b8b0" class="station-marker" id="station-tamsui-district-office--marker" />
+      <text x="86.75" y="52" transform="rotate(45 86, 52)" class="station-label" id="station-tamsui-district-office--label">Tamsui District Office</text>
+    </g>
+    <g id="station-binhai-shalun" class="station-node" data-station-name="Binhai Shalun">
+      <rect x="86.5" y="43.5" width="1" height="1" fill="#fff" stroke="#000" stroke-width="0.2" rx="0.125" class="station-marker" id="station-binhai-shalun--marker" />
+      <text x="88.5" y="44" transform="rotate(45 87, 44)" class="station-label" id="station-binhai-shalun--label">Binhai Shalun</text>
+    </g>
+    <g id="station-binhai-yishan" class="station-node" data-station-name="Binhai Yishan" data-marker-ref="#csm-f5b8b0">
+      <use x="87" y="48" href="#csm-f5b8b0" class="station-marker" id="station-binhai-yishan--marker" />
+      <text x="86.25" y="48" text-anchor="end" class="station-label" id="station-binhai-yishan--label">Binhai Yishan</text>
+    </g>
+    <g id="station-guting" class="station-node" data-station-name="Guting" data-marker-ref="#wm-xf">
+      <use x="87" y="115" href="#wm-xf" class="station-marker" id="station-guting--marker" />
+      <text x="85.5" y="115" text-anchor="end" transform="rotate(-45 87, 115)" class="station-label" id="station-guting--label">Guting</text>
+    </g>
+    <g id="station-cardinal-tien-hospital-an-kang-branch" class="station-node" data-station-name="Cardinal Tien Hospital An Kang Branch" data-marker-ref="#csm-d6cfba">
+      <use x="88" y="145" href="#csm-d6cfba" class="station-marker" id="station-cardinal-tien-hospital-an-kang-branch--marker" />
+      <text x="88.75" y="145" transform="rotate(45 88, 145)" class="station-label" id="station-cardinal-tien-hospital-an-kang-branch--label">Cardinal Tien Hospital An Kang Branch</text>
+    </g>
+    <g id="station-zhongshan-elementary-school" class="station-node" data-station-name="Zhongshan Elementary School" data-marker-ref="#csm-f8b51c">
+      <use x="89" y="89" href="#csm-f8b51c" class="station-marker" id="station-zhongshan-elementary-school--marker" />
+      <text x="89.75" y="89" transform="rotate(-90 89, 89)" class="station-label" id="station-zhongshan-elementary-school--label">Zhongshan Elementary School</text>
+    </g>
+    <g id="station-jingping" class="station-node" data-station-name="Jingping" data-marker-ref="#csm-ffe707">
+      <use x="89" y="128" href="#csm-ffe707" class="station-marker" id="station-jingping--marker" />
+      <text x="89.75" y="128" transform="rotate(-45 89, 128)" class="station-label" id="station-jingping--label">Jingping</text>
+    </g>
+    <g id="station-taipower-building" class="station-node" data-station-name="Taipower Building" data-marker-ref="#csm-018659">
+      <use x="90" y="118" href="#csm-018659" class="station-marker" id="station-taipower-building--marker" />
+      <text x="89.25" y="118" text-anchor="end" transform="rotate(-45 90, 118)" class="station-label" id="station-taipower-building--label">Taipower Building</text>
+    </g>
+    <g id="station-danhai-new-town" class="station-node" data-station-name="Danhai New Town" data-marker-ref="#csm-f5b8b0">
+      <use x="91" y="44" href="#csm-f5b8b0" class="station-marker" id="station-danhai-new-town--marker" />
+      <text x="91.75" y="44" transform="rotate(45 91, 44)" class="station-label" id="station-danhai-new-town--label">Danhai New Town</text>
+    </g>
+    <g id="station-xingtian-temple" class="station-node" data-station-name="Xingtian Temple" data-marker-ref="#csm-f8b51c">
+      <use x="91" y="92" href="#csm-f8b51c" class="station-marker" id="station-xingtian-temple--marker" />
+      <text x="91.75" y="92" transform="rotate(-45 91, 92)" class="station-label" id="station-xingtian-temple--label">Xingtian Temple</text>
+    </g>
+    <g id="station-songjiang-nanjing" class="station-node" data-station-name="Songjiang Nanjing" data-marker-ref="#wm-xf">
+      <use x="91" y="97" href="#wm-xf" class="station-marker" id="station-songjiang-nanjing--marker" />
+      <text x="92.5" y="97" transform="rotate(-45 91, 97)" class="station-label" id="station-songjiang-nanjing--label">Songjiang Nanjing</text>
+    </g>
+    <g id="station-zhongxiao-xinsheng" class="station-node" data-station-name="Zhongxiao Xinsheng" data-marker-ref="#wm-xf">
+      <use x="91" y="103" href="#wm-xf" class="station-marker" id="station-zhongxiao-xinsheng--marker" />
+      <text x="92.5" y="103" transform="rotate(-45 91, 103)" class="station-label" id="station-zhongxiao-xinsheng--label">Zhongxiao Xinsheng</text>
+    </g>
+    <g id="station-dongmen" class="station-node" data-station-name="Dongmen" data-marker-ref="#wm-xf">
+      <use x="91" y="111" href="#wm-xf" class="station-marker" id="station-dongmen--marker" />
+      <text x="92.5" y="111" transform="rotate(45 91, 111)" class="station-label" id="station-dongmen--label">Dongmen</text>
+    </g>
+    <g id="station-jinwen-university-of-science-and-technology" class="station-node" data-station-name="Jinwen University of Science and Technology" data-marker-ref="#csm-d6cfba">
+      <use x="91" y="142" href="#csm-d6cfba" class="station-marker" id="station-jinwen-university-of-science-and-technology--marker" />
+      <text x="91.75" y="142" transform="rotate(45 91, 142)" class="station-label" id="station-jinwen-university-of-science-and-technology--label">Jinwen University of Science and Technology</text>
+    </g>
+    <g id="station-gongguan" class="station-node" data-station-name="Gongguan" data-marker-ref="#csm-018659">
+      <use x="93" y="121" href="#csm-018659" class="station-marker" id="station-gongguan--marker" />
+      <text x="92.25" y="121" text-anchor="end" transform="rotate(-45 93, 121)" class="station-label" id="station-gongguan--label">Gongguan</text>
+    </g>
+    <g id="station-xiulang-bridge" class="station-node" data-station-name="Xiulang Bridge" data-marker-ref="#csm-ffe707">
+      <use x="93" y="129" href="#csm-ffe707" class="station-marker" id="station-xiulang-bridge--marker" />
+      <text x="92.25" y="129" text-anchor="end" transform="rotate(-45 93, 129)" class="station-label" id="station-xiulang-bridge--label">Xiulang Bridge</text>
+    </g>
+    <g id="station-xinhe-elementary-school" class="station-node" data-station-name="Xinhe Elementary School" data-marker-ref="#csm-d6cfba">
+      <use x="93" y="131" href="#csm-d6cfba" class="station-marker" id="station-xinhe-elementary-school--marker" />
+      <text x="92.25" y="131" text-anchor="end" transform="rotate(-45 93, 131)" class="station-label" id="station-xinhe-elementary-school--label">Xinhe Elementary School</text>
+    </g>
+    <g id="station-sunshine-sports-park" class="station-node" data-station-name="Sunshine Sports Park" data-marker-ref="#csm-d6cfba">
+      <use x="93" y="135" href="#csm-d6cfba" class="station-marker" id="station-sunshine-sports-park--marker" />
+      <text x="92.25" y="135" text-anchor="end" transform="rotate(-45 93, 135)" class="station-label" id="station-sunshine-sports-park--label">Sunshine Sports Park</text>
+    </g>
+    <g id="station-ankang" class="station-node" data-station-name="Ankang" data-marker-ref="#csm-d6cfba">
+      <use x="93" y="139" href="#csm-d6cfba" class="station-marker" id="station-ankang--marker" />
+      <text x="93.75" y="139" class="station-label" id="station-ankang--label">Ankang</text>
+    </g>
+    <g id="station-kanding" class="station-node" data-station-name="Kanding" data-marker-ref="#wm">
+      <use x="95" y="44" href="#wm" class="station-marker" id="station-kanding--marker" />
+      <text x="95.75" y="44" transform="rotate(45 95, 44)" class="station-label" id="station-kanding--label">Kanding</text>
+    </g>
+    <g id="station-daan-park" class="station-node" data-station-name="Daan Park" data-marker-ref="#csm-e3002d">
+      <use x="95" y="111" href="#csm-e3002d" class="station-marker" id="station-daan-park--marker" />
+      <text x="95.75" y="111" transform="rotate(-90 95, 111)" class="station-label" id="station-daan-park--label">Daan Park</text>
+    </g>
+    <g id="station-wanlong" class="station-node" data-station-name="Wanlong" data-marker-ref="#csm-018659">
+      <use x="96" y="124" href="#csm-018659" class="station-marker" id="station-wanlong--marker" />
+      <text x="95.25" y="124" text-anchor="end" transform="rotate(-45 96, 124)" class="station-label" id="station-wanlong--label">Wanlong</text>
+    </g>
+    <g id="station-shisizhang" class="station-node" data-station-name="Shisizhang" data-marker-ref="#wm-xf">
+      <use x="98" y="130" href="#wm-xf" class="station-marker" id="station-shisizhang--marker" />
+      <text x="96.5" y="130" text-anchor="end" transform="rotate(-45 98, 130)" class="station-label" id="station-shisizhang--label">Shisizhang</text>
+    </g>
+    <g id="station-xiaobitan" class="station-node" data-station-name="Xiaobitan" data-marker-ref="#wm">
+      <use x="98" y="134" href="#wm" class="station-marker" id="station-xiaobitan--marker" />
+      <text x="97.25" y="134" text-anchor="end" transform="rotate(-45 98, 134)" class="station-label" id="station-xiaobitan--label">Xiaobitan</text>
+    </g>
+    <g id="station-jiannan-rd" class="station-node" data-station-name="Jiannan Rd." data-marker-ref="#csm-c38c31">
+      <use x="99" y="80" href="#csm-c38c31" class="station-marker" id="station-jiannan-rd--marker" />
+      <text x="99.75" y="80" transform="rotate(-45 99, 80)" class="station-label" id="station-jiannan-rd--label">Jiannan Rd.</text>
+    </g>
+    <g id="station-dazhi" class="station-node" data-station-name="Dazhi" data-marker-ref="#csm-c38c31">
+      <use x="99" y="84" href="#csm-c38c31" class="station-marker" id="station-dazhi--marker" />
+      <text x="98.25" y="84" text-anchor="end" class="station-label" id="station-dazhi--label">Dazhi</text>
+    </g>
+    <g id="station-songshan-airport" class="station-node" data-station-name="Songshan Airport" data-marker-ref="#csm-c38c31">
+      <use x="99" y="88" href="#csm-c38c31" class="station-marker" id="station-songshan-airport--marker" />
+      <text x="99.75" y="88" transform="rotate(-45 99, 88)" class="station-label" id="station-songshan-airport--label">Songshan Airport</text>
+    </g>
+    <g id="station-zhongshan-junior-high-school" class="station-node" data-station-name="Zhongshan Junior High School" data-marker-ref="#csm-c38c31">
+      <use x="99" y="92" href="#csm-c38c31" class="station-marker" id="station-zhongshan-junior-high-school--marker" />
+      <text x="99.75" y="92" transform="rotate(-45 99, 92)" class="station-label" id="station-zhongshan-junior-high-school--label">Zhongshan Junior High School</text>
+    </g>
+    <g id="station-nanjing-fuxing" class="station-node" data-station-name="Nanjing Fuxing" data-marker-ref="#wm-xf">
+      <use x="99" y="97" href="#wm-xf" class="station-marker" id="station-nanjing-fuxing--marker" />
+      <text x="100.5" y="97" transform="rotate(-45 99, 97)" class="station-label" id="station-nanjing-fuxing--label">Nanjing Fuxing</text>
+    </g>
+    <g id="station-zhongxiao-fuxing" class="station-node" data-station-name="Zhongxiao Fuxing" data-marker-ref="#wm-xf">
+      <use x="99" y="103" href="#wm-xf" class="station-marker" id="station-zhongxiao-fuxing--marker" />
+      <text x="100.5" y="103" transform="rotate(-45 99, 103)" class="station-label" id="station-zhongxiao-fuxing--label">Zhongxiao Fuxing</text>
+    </g>
+    <g id="station-daan" class="station-node" data-station-name="Daan" data-marker-ref="#wm-xf">
+      <use x="99" y="111" href="#wm-xf" class="station-marker" id="station-daan--marker" />
+      <text x="100.5" y="111" transform="rotate(-45 99, 111)" class="station-label" id="station-daan--label">Daan</text>
+    </g>
+    <g id="station-technology-building" class="station-node" data-station-name="Technology Building" data-marker-ref="#csm-c38c31">
+      <use x="99" y="115" href="#csm-c38c31" class="station-marker" id="station-technology-building--marker" />
+      <text x="98.25" y="115" text-anchor="end" transform="rotate(-90 99, 115)" class="station-label" id="station-technology-building--label">Technology Building</text>
+    </g>
+    <g id="station-jingmei" class="station-node" data-station-name="Jingmei" data-marker-ref="#csm-018659">
+      <use x="99" y="127" href="#csm-018659" class="station-marker" id="station-jingmei--marker" />
+      <text x="98.25" y="127" text-anchor="end" class="station-label" id="station-jingmei--label">Jingmei</text>
+    </g>
+    <g id="station-dapinglin" class="station-node" data-station-name="Dapinglin" data-marker-ref="#wm-xf">
+      <use x="102" y="130" href="#wm-xf" class="station-marker" id="station-dapinglin--marker" />
+      <text x="103.5" y="130" transform="rotate(-90 102, 130)" class="station-label" id="station-dapinglin--label">Dapinglin</text>
+    </g>
+    <g id="station-qizhang" class="station-node" data-station-name="Qizhang" data-marker-ref="#wm-xf">
+      <use x="102" y="134" href="#wm-xf" class="station-marker" id="station-qizhang--marker" />
+      <text x="103.5" y="134" transform="rotate(45 102, 134)" class="station-label" id="station-qizhang--label">Qizhang</text>
+    </g>
+    <g id="station-xindian-district-office" class="station-node" data-station-name="Xindian District Office" data-marker-ref="#csm-018659">
+      <use x="102" y="138" href="#csm-018659" class="station-marker" id="station-xindian-district-office--marker" />
+      <text x="102.75" y="138" transform="rotate(45 102, 138)" class="station-label" id="station-xindian-district-office--label">Xindian District Office</text>
+    </g>
+    <g id="station-xindian" class="station-node" data-station-name="Xindian" data-marker-ref="#wm">
+      <use x="102" y="142" href="#wm" class="station-marker" id="station-xindian--marker" />
+      <text x="102.75" y="142" transform="rotate(45 102, 142)" class="station-label" id="station-xindian--label">Xindian</text>
+    </g>
+    <g id="station-xihu" class="station-node" data-station-name="Xihu" data-marker-ref="#csm-c38c31">
+      <use x="103" y="80" href="#csm-c38c31" class="station-marker" id="station-xihu--marker" />
+      <text x="103.75" y="80" transform="rotate(-90 103, 80)" class="station-label" id="station-xihu--label">Xihu</text>
+    </g>
+    <g id="station-taipei-arena" class="station-node" data-station-name="Taipei Arena" data-marker-ref="#csm-018659">
+      <use x="103" y="97" href="#csm-018659" class="station-marker" id="station-taipei-arena--marker" />
+      <text x="103.75" y="97" transform="rotate(-45 103, 97)" class="station-label" id="station-taipei-arena--label">Taipei Arena</text>
+    </g>
+    <g id="station-zhongxiao-dunhua" class="station-node" data-station-name="Zhongxiao Dunhua" data-marker-ref="#csm-0070bc">
+      <use x="103" y="103" href="#csm-0070bc" class="station-marker" id="station-zhongxiao-dunhua--marker" />
+      <text x="103.75" y="103" transform="rotate(45 103, 103)" class="station-label" id="station-zhongxiao-dunhua--label">Zhongxiao Dunhua</text>
+    </g>
+    <g id="station-xinyi-anhe" class="station-node" data-station-name="Xinyi Anhe" data-marker-ref="#csm-e3002d">
+      <use x="103" y="111" href="#csm-e3002d" class="station-marker" id="station-xinyi-anhe--marker" />
+      <text x="103.75" y="111" transform="rotate(45 103, 111)" class="station-label" id="station-xinyi-anhe--label">Xinyi Anhe</text>
+    </g>
+    <g id="station-liuzhangli" class="station-node" data-station-name="Liuzhangli" data-marker-ref="#csm-c38c31">
+      <use x="103" y="116" href="#csm-c38c31" class="station-marker" id="station-liuzhangli--marker" />
+      <text x="102.25" y="116" text-anchor="end" transform="rotate(-90 103, 116)" class="station-label" id="station-liuzhangli--label">Liuzhangli</text>
+    </g>
+    <g id="station-gangqian" class="station-node" data-station-name="Gangqian" data-marker-ref="#csm-c38c31">
+      <use x="107" y="80" href="#csm-c38c31" class="station-marker" id="station-gangqian--marker" />
+      <text x="107.75" y="80" transform="rotate(-90 107, 80)" class="station-label" id="station-gangqian--label">Gangqian</text>
+    </g>
+    <g id="station-nanjing-sanmin" class="station-node" data-station-name="Nanjing Sanmin" data-marker-ref="#csm-018659">
+      <use x="107" y="97" href="#csm-018659" class="station-marker" id="station-nanjing-sanmin--marker" />
+      <text x="107.75" y="97" transform="rotate(-45 107, 97)" class="station-label" id="station-nanjing-sanmin--label">Nanjing Sanmin</text>
+    </g>
+    <g id="station-sun-yat-sen-memorial-hall" class="station-node" data-station-name="Sun Yat-Sen Memorial Hall" data-marker-ref="#csm-0070bc">
+      <use x="107" y="103" href="#csm-0070bc" class="station-marker" id="station-sun-yat-sen-memorial-hall--marker" />
+      <text x="107.75" y="103" transform="rotate(45 107, 103)" class="station-label" id="station-sun-yat-sen-memorial-hall--label">Sun Yat-Sen Memorial Hall</text>
+    </g>
+    <g id="station-taipei-101-world-trade-center" class="station-node" data-station-name="Taipei 101 World Trade Center" data-marker-ref="#csm-e3002d">
+      <use x="107" y="111" href="#csm-e3002d" class="station-marker" id="station-taipei-101-world-trade-center--marker" />
+      <text x="107.75" y="111" transform="rotate(45 107, 111)" class="station-label" id="station-taipei-101-world-trade-center--label">Taipei 101 World Trade Center</text>
+    </g>
+    <g id="station-linguang" class="station-node" data-station-name="Linguang" data-marker-ref="#csm-c38c31">
+      <use x="107" y="116" href="#csm-c38c31" class="station-marker" id="station-linguang--marker" />
+      <text x="106.25" y="116" text-anchor="end" transform="rotate(-90 107, 116)" class="station-label" id="station-linguang--label">Linguang</text>
+    </g>
+    <g id="station-wende" class="station-node" data-station-name="Wende" data-marker-ref="#csm-c38c31">
+      <use x="111" y="80" href="#csm-c38c31" class="station-marker" id="station-wende--marker" />
+      <text x="111.75" y="80" transform="rotate(-90 111, 80)" class="station-label" id="station-wende--label">Wende</text>
+    </g>
+    <g id="station-songshan" class="station-node" data-station-name="Songshan" data-marker-ref="#wm">
+      <use x="111" y="97" href="#wm" class="station-marker" id="station-songshan--marker" />
+      <text x="111.75" y="97" class="station-label" id="station-songshan--label">Songshan</text>
+    </g>
+    <g id="station-taipei-city-hall" class="station-node" data-station-name="Taipei City Hall" data-marker-ref="#csm-0070bc">
+      <use x="111" y="103" href="#csm-0070bc" class="station-marker" id="station-taipei-city-hall--marker" />
+      <text x="111.75" y="103" transform="rotate(45 111, 103)" class="station-label" id="station-taipei-city-hall--label">Taipei City Hall</text>
+    </g>
+    <g id="station-xiangshan" class="station-node" data-station-name="Xiangshan" data-marker-ref="#wm">
+      <use x="111" y="111" href="#wm" class="station-marker" id="station-xiangshan--marker" />
+      <text x="111.75" y="111" transform="rotate(45 111, 111)" class="station-label" id="station-xiangshan--label">Xiangshan</text>
+    </g>
+    <g id="station-xinhai" class="station-node" data-station-name="Xinhai" data-marker-ref="#csm-c38c31">
+      <use x="111" y="118" href="#csm-c38c31" class="station-marker" id="station-xinhai--marker" />
+      <text x="110.25" y="118" text-anchor="end" transform="rotate(-45 111, 118)" class="station-label" id="station-xinhai--label">Xinhai</text>
+    </g>
+    <g id="station-wanfang-hospital" class="station-node" data-station-name="Wanfang Hospital" data-marker-ref="#csm-c38c31">
+      <use x="111" y="122" href="#csm-c38c31" class="station-marker" id="station-wanfang-hospital--marker" />
+      <text x="110.25" y="122" text-anchor="end" transform="rotate(-45 111, 122)" class="station-label" id="station-wanfang-hospital--label">Wanfang Hospital</text>
+    </g>
+    <g id="station-wanfang-community" class="station-node" data-station-name="Wanfang Community" data-marker-ref="#csm-c38c31">
+      <use x="111" y="126" href="#csm-c38c31" class="station-marker" id="station-wanfang-community--marker" />
+      <text x="110.25" y="126" text-anchor="end" transform="rotate(-45 111, 126)" class="station-label" id="station-wanfang-community--label">Wanfang Community</text>
+    </g>
+    <g id="station-muzha" class="station-node" data-station-name="Muzha" data-marker-ref="#csm-c38c31">
+      <use x="114" y="129" href="#csm-c38c31" class="station-marker" id="station-muzha--marker" />
+      <text x="114.75" y="129" transform="rotate(-90 114, 129)" class="station-label" id="station-muzha--label">Muzha</text>
+    </g>
+    <g id="station-neihu" class="station-node" data-station-name="Neihu" data-marker-ref="#csm-c38c31">
+      <use x="115" y="80" href="#csm-c38c31" class="station-marker" id="station-neihu--marker" />
+      <text x="115.75" y="80" transform="rotate(-90 115, 80)" class="station-label" id="station-neihu--label">Neihu</text>
+    </g>
+    <g id="station-yongchun" class="station-node" data-station-name="Yongchun" data-marker-ref="#csm-0070bc">
+      <use x="115" y="103" href="#csm-0070bc" class="station-marker" id="station-yongchun--marker" />
+      <text x="115.75" y="103" transform="rotate(45 115, 103)" class="station-label" id="station-yongchun--label">Yongchun</text>
+    </g>
+    <g id="station-taipei-zoo" class="station-node" data-station-name="Taipei Zoo" data-marker-ref="#wm">
+      <use x="118" y="129" href="#wm" class="station-marker" id="station-taipei-zoo--marker" />
+      <text x="118.75" y="129" transform="rotate(-90 118, 129)" class="station-label" id="station-taipei-zoo--label">Taipei Zoo</text>
+    </g>
+    <g id="station-taipei-zoo-station" class="station-node" data-station-name="Taipei Zoo Station" data-marker-ref="#wm">
+      <use x="118" y="131" href="#wm" class="station-marker" id="station-taipei-zoo-station--marker" />
+      <text x="117.25" y="131" text-anchor="end" transform="rotate(-45 118, 131)" class="station-label" id="station-taipei-zoo-station--label">Taipei Zoo Station</text>
+    </g>
+    <g id="station-taipei-zoo-south-station" class="station-node" data-station-name="Taipei Zoo South Station" data-marker-ref="#csm-78bc27">
+      <use x="118" y="134" href="#csm-78bc27" class="station-marker" id="station-taipei-zoo-south-station--marker" />
+      <text x="117.25" y="134" text-anchor="end" transform="rotate(-45 118, 134)" class="station-label" id="station-taipei-zoo-south-station--label">Taipei Zoo South Station</text>
+    </g>
+    <g id="station-zhinan-temple-station" class="station-node" data-station-name="Zhinan Temple Station" data-marker-ref="#csm-78bc27">
+      <use x="118" y="137" href="#csm-78bc27" class="station-marker" id="station-zhinan-temple-station--marker" />
+      <text x="117.25" y="137" text-anchor="end" transform="rotate(-45 118, 137)" class="station-label" id="station-zhinan-temple-station--label">Zhinan Temple Station</text>
+    </g>
+    <g id="station-maokong-zoo-station" class="station-node" data-station-name="Maokong Zoo Station" data-marker-ref="#wm">
+      <use x="118" y="140" href="#wm" class="station-marker" id="station-maokong-zoo-station--marker" />
+      <text x="117.25" y="140" text-anchor="end" transform="rotate(-45 118, 140)" class="station-label" id="station-maokong-zoo-station--label">Maokong Zoo Station</text>
+    </g>
+    <g id="station-dahu-park" class="station-node" data-station-name="Dahu Park" data-marker-ref="#csm-c38c31">
+      <use x="119" y="80" href="#csm-c38c31" class="station-marker" id="station-dahu-park--marker" />
+      <text x="119.75" y="80" transform="rotate(-90 119, 80)" class="station-label" id="station-dahu-park--label">Dahu Park</text>
+    </g>
+    <g id="station-houshanpi" class="station-node" data-station-name="Houshanpi" data-marker-ref="#csm-0070bc">
+      <use x="119" y="103" href="#csm-0070bc" class="station-marker" id="station-houshanpi--marker" />
+      <text x="119.75" y="103" transform="rotate(45 119, 103)" class="station-label" id="station-houshanpi--label">Houshanpi</text>
+    </g>
+    <g id="station-huzhou" class="station-node" data-station-name="Huzhou" data-marker-ref="#csm-c38c31">
+      <use x="123" y="80" href="#csm-c38c31" class="station-marker" id="station-huzhou--marker" />
+      <text x="123.75" y="80" transform="rotate(-45 123, 80)" class="station-label" id="station-huzhou--label">Huzhou</text>
+    </g>
+    <g id="station-donghu" class="station-node" data-station-name="Donghu" data-marker-ref="#csm-c38c31">
+      <use x="123" y="84" href="#csm-c38c31" class="station-marker" id="station-donghu--marker" />
+      <text x="123.75" y="84" class="station-label" id="station-donghu--label">Donghu</text>
+    </g>
+    <g id="station-nangang-software-park" class="station-node" data-station-name="Nangang Software Park" data-marker-ref="#csm-c38c31">
+      <use x="123" y="88" href="#csm-c38c31" class="station-marker" id="station-nangang-software-park--marker" />
+      <text x="123.75" y="88" class="station-label" id="station-nangang-software-park--label">Nangang Software Park</text>
+    </g>
+    <g id="station-taipei-nangang-exhibition-center" class="station-node" data-station-name="Taipei Nangang Exhibition Center" data-marker-ref="#wm-xf">
+      <use x="123" y="92" href="#wm-xf" class="station-marker" id="station-taipei-nangang-exhibition-center--marker" />
+      <text x="124.5" y="92" class="station-label" id="station-taipei-nangang-exhibition-center--label">Taipei Nangang Exhibition Center</text>
+    </g>
+    <g id="station-nangang" class="station-node" data-station-name="Nangang" data-marker-ref="#csm-0070bc">
+      <use x="123" y="96" href="#csm-0070bc" class="station-marker" id="station-nangang--marker" />
+      <text x="123.75" y="96" class="station-label" id="station-nangang--label">Nangang</text>
+    </g>
+    <g id="station-kunyang" class="station-node" data-station-name="Kunyang" data-marker-ref="#csm-0070bc">
+      <use x="123" y="100" href="#csm-0070bc" class="station-marker" id="station-kunyang--marker" />
+      <text x="123.75" y="100" class="station-label" id="station-kunyang--label">Kunyang</text>
+    </g>
+  </g>
+  <g id="misc" class="misc-layer" />
+</svg>

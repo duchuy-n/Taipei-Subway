@@ -1,0 +1,27 @@
+{
+  "source": "qgis_geojson_partial",
+  "generated_at": "2026-04-27T15:36:27.085Z",
+  "ui_mode": "block",
+  "map_bounds": {
+    "min_lon": 121.445614,
+    "min_lat": 24.946521,
+    "max_lon": 121.617598,
+    "max_lat": 25.183875
+  },
+  "rain_zones": [],
+  "block_segments": [
+    {
+      "id": "block-1777304187084-78lmzirna",
+      "kind": "line",
+      "from": {
+        "lon": 121.541145,
+        "lat": 25.057209
+      },
+      "to": {
+        "lon": 121.54917,
+        "lat": 25.058043
+      }
+    }
+  ],
+  "banned_stations": []
+}

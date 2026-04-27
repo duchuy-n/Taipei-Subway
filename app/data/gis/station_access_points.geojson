@@ -1,0 +1,6459 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5171104,
+          24.964964
+        ]
+      },
+      "properties": {
+        "station_id": "ankang",
+        "name": "安康"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5171104,
+          24.964964
+        ]
+      },
+      "properties": {
+        "station_id": "ankang",
+        "name": "安康"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5171104,
+          24.964964
+        ]
+      },
+      "properties": {
+        "station_id": "ankang",
+        "name": "安康"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4623819,
+          25.0131462
+        ]
+      },
+      "properties": {
+        "station_id": "banqiao",
+        "name": "捷運板橋2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4618042,
+          25.0131927
+        ]
+      },
+      "properties": {
+        "station_id": "banqiao",
+        "name": "捷運板橋1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4629403,
+          25.0145837
+        ]
+      },
+      "properties": {
+        "station_id": "banqiao",
+        "name": "捷運板橋站3號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4650284,
+          25.0150001
+        ]
+      },
+      "properties": {
+        "station_id": "banqiao",
+        "name": "捷運板橋站4號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4642851,
+          25.0154903
+        ]
+      },
+      "properties": {
+        "station_id": "banqiao",
+        "name": "捷運板橋站5號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4718484,
+          25.014812
+        ]
+      },
+      "properties": {
+        "station_id": "banxin",
+        "name": "捷運板新站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5103236,
+          25.0494087
+        ]
+      },
+      "properties": {
+        "station_id": "beimen",
+        "name": "北門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5101837,
+          25.0488721
+        ]
+      },
+      "properties": {
+        "station_id": "beimen",
+        "name": "捷運北門站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5102682,
+          25.0491982
+        ]
+      },
+      "properties": {
+        "station_id": "beimen",
+        "name": "捷運北門站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4984641,
+          25.1316835
+        ]
+      },
+      "properties": {
+        "station_id": "beitou",
+        "name": "北投"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4921664,
+          25.0604767
+        ]
+      },
+      "properties": {
+        "station_id": "cailiao",
+        "name": "菜寮"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4921664,
+          25.0604767
+        ]
+      },
+      "properties": {
+        "station_id": "cailiao",
+        "name": "菜寮"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4921664,
+          25.0604767
+        ]
+      },
+      "properties": {
+        "station_id": "cailiao",
+        "name": "菜寮"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5046837,
+          24.9544657
+        ]
+      },
+      "properties": {
+        "station_id": "cardinal-tien-hospital-an-kang-branch",
+        "name": "耕莘安康院區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.504427,
+          24.954473
+        ]
+      },
+      "properties": {
+        "station_id": "cardinal-tien-hospital-an-kang-branch",
+        "name": "耕莘安康院區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5049344,
+          24.9544208
+        ]
+      },
+      "properties": {
+        "station_id": "cardinal-tien-hospital-an-kang-branch",
+        "name": "耕莘安康院區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.517761,
+          25.0335364
+        ]
+      },
+      "properties": {
+        "station_id": "chiang-kai-shek-memorial-hall",
+        "name": "中正紀念堂"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5178901,
+          25.032922
+        ]
+      },
+      "properties": {
+        "station_id": "chiang-kai-shek-memorial-hall",
+        "name": "中正紀念堂"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5174328,
+          25.033796
+        ]
+      },
+      "properties": {
+        "station_id": "chiang-kai-shek-memorial-hall",
+        "name": "捷運中正紀念堂站(勞保局)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5439185,
+          25.0328039
+        ]
+      },
+      "properties": {
+        "station_id": "daan",
+        "name": "捷運大安站5號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5438489,
+          25.0332145
+        ]
+      },
+      "properties": {
+        "station_id": "daan",
+        "name": "捷運大安站4號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5419546,
+          25.0336046
+        ]
+      },
+      "properties": {
+        "station_id": "daan",
+        "name": "捷運大安站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5415736,
+          25.033706
+        ]
+      },
+      "properties": {
+        "station_id": "daan",
+        "name": "捷運大安站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5425681,
+          25.0332354
+        ]
+      },
+      "properties": {
+        "station_id": "daan",
+        "name": "捷運大安站3號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5362865,
+          25.0259237
+        ]
+      },
+      "properties": {
+        "station_id": "daan-park",
+        "name": "大安森林公園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.535179,
+          25.0333454
+        ]
+      },
+      "properties": {
+        "station_id": "daan-park",
+        "name": "大安森林公園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.535179,
+          25.0333454
+        ]
+      },
+      "properties": {
+        "station_id": "daan-park",
+        "name": "大安森林公園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.535179,
+          25.0333454
+        ]
+      },
+      "properties": {
+        "station_id": "daan-park",
+        "name": "大安森林公園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5356907,
+          25.0335612
+        ]
+      },
+      "properties": {
+        "station_id": "daan-park",
+        "name": "捷運大安森林公園站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5360179,
+          25.0335396
+        ]
+      },
+      "properties": {
+        "station_id": "daan-park",
+        "name": "捷運大安森林公園站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5362386,
+          25.02578
+        ]
+      },
+      "properties": {
+        "station_id": "daan-park",
+        "name": "大安森林公園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6023601,
+          25.0836585
+        ]
+      },
+      "properties": {
+        "station_id": "dahu-park",
+        "name": "大湖公園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6023601,
+          25.0836585
+        ]
+      },
+      "properties": {
+        "station_id": "dahu-park",
+        "name": "大湖公園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6023601,
+          25.0836585
+        ]
+      },
+      "properties": {
+        "station_id": "dahu-park",
+        "name": "大湖公園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6023601,
+          25.0836585
+        ]
+      },
+      "properties": {
+        "station_id": "dahu-park",
+        "name": "捷運大湖公園站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6027514,
+          25.0835961
+        ]
+      },
+      "properties": {
+        "station_id": "dahu-park",
+        "name": "捷運大湖公園站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4520889,
+          25.1811625
+        ]
+      },
+      "properties": {
+        "station_id": "danjin-beixin",
+        "name": "淡金北新"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4520889,
+          25.1811625
+        ]
+      },
+      "properties": {
+        "station_id": "danjin-beixin",
+        "name": "淡金北新"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4525942,
+          25.180847
+        ]
+      },
+      "properties": {
+        "station_id": "danjin-beixin",
+        "name": "淡金北新"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4608654,
+          25.1694144
+        ]
+      },
+      "properties": {
+        "station_id": "danjin-denggong",
+        "name": "淡金鄧公"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4607473,
+          25.1691517
+        ]
+      },
+      "properties": {
+        "station_id": "danjin-denggong",
+        "name": "淡金鄧公"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4607235,
+          25.1693052
+        ]
+      },
+      "properties": {
+        "station_id": "danjin-denggong",
+        "name": "淡金鄧公"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5412781,
+          24.9830441
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "大坪林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5417479,
+          24.9809535
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "大坪林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5418394,
+          24.980929
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "大坪林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5413004,
+          24.9829085
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "大坪林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5411807,
+          24.984262
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "捷運大坪林站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5412274,
+          24.9838319
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "捷運大坪林站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5413601,
+          24.9830475
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "大坪林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5411593,
+          24.9844887
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "捷運大坪林站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5412707,
+          24.9835758
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "捷運大坪林站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5411499,
+          24.983673
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "捷運大坪林站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5417937,
+          24.981095
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "大坪林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5415191,
+          24.9828104
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "大坪林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5415156,
+          24.9829071
+        ]
+      },
+      "properties": {
+        "station_id": "dapinglin",
+        "name": "大坪林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5127479,
+          25.0631729
+        ]
+      },
+      "properties": {
+        "station_id": "daqiaotou",
+        "name": "大橋頭"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5127479,
+          25.0631729
+        ]
+      },
+      "properties": {
+        "station_id": "daqiaotou",
+        "name": "大橋頭"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5127479,
+          25.0631729
+        ]
+      },
+      "properties": {
+        "station_id": "daqiaotou",
+        "name": "大橋頭"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5474217,
+          25.0798562
+        ]
+      },
+      "properties": {
+        "station_id": "dazhi",
+        "name": "大直"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5473669,
+          25.0799407
+        ]
+      },
+      "properties": {
+        "station_id": "dazhi",
+        "name": "大直"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5474217,
+          25.0798562
+        ]
+      },
+      "properties": {
+        "station_id": "dazhi",
+        "name": "大直"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5155216,
+          25.0141666
+        ]
+      },
+      "properties": {
+        "station_id": "dingxi",
+        "name": "捷運頂溪站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5152672,
+          25.012918
+        ]
+      },
+      "properties": {
+        "station_id": "dingxi",
+        "name": "捷運頂溪站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6114965,
+          25.0673281
+        ]
+      },
+      "properties": {
+        "station_id": "donghu",
+        "name": "東湖"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6114965,
+          25.0673281
+        ]
+      },
+      "properties": {
+        "station_id": "donghu",
+        "name": "東湖"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6114965,
+          25.0673281
+        ]
+      },
+      "properties": {
+        "station_id": "donghu",
+        "name": "東湖"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5293359,
+          25.0338906
+        ]
+      },
+      "properties": {
+        "station_id": "dongmen",
+        "name": "東門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5270567,
+          25.0342178
+        ]
+      },
+      "properties": {
+        "station_id": "dongmen",
+        "name": "捷運東門站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5274761,
+          25.0340506
+        ]
+      },
+      "properties": {
+        "station_id": "dongmen",
+        "name": "捷運東門站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.452629,
+          24.9979108
+        ]
+      },
+      "properties": {
+        "station_id": "far-eastern-hospital",
+        "name": "亞東醫院站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4528767,
+          24.9989343
+        ]
+      },
+      "properties": {
+        "station_id": "far-eastern-hospital",
+        "name": "亞東醫院站3號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4526962,
+          24.9986972
+        ]
+      },
+      "properties": {
+        "station_id": "far-eastern-hospital",
+        "name": "亞東醫院站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4593608,
+          25.0089001
+        ]
+      },
+      "properties": {
+        "station_id": "fuzhong",
+        "name": "府中站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4590032,
+          25.008389
+        ]
+      },
+      "properties": {
+        "station_id": "fuzhong",
+        "name": "府中站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4589933,
+          25.0092457
+        ]
+      },
+      "properties": {
+        "station_id": "fuzhong",
+        "name": "府中站3號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.575399,
+          25.0799144
+        ]
+      },
+      "properties": {
+        "station_id": "gangqian",
+        "name": "港墘"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.575399,
+          25.0799144
+        ]
+      },
+      "properties": {
+        "station_id": "gangqian",
+        "name": "港墘"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.575399,
+          25.0799144
+        ]
+      },
+      "properties": {
+        "station_id": "gangqian",
+        "name": "港墘"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4562903,
+          25.1621496
+        ]
+      },
+      "properties": {
+        "station_id": "ganzhenlin",
+        "name": "竿蓁林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4562903,
+          25.1621496
+        ]
+      },
+      "properties": {
+        "station_id": "ganzhenlin",
+        "name": "竿蓁林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4562903,
+          25.1621496
+        ]
+      },
+      "properties": {
+        "station_id": "ganzhenlin",
+        "name": "竿蓁林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5351292,
+          25.0139918
+        ]
+      },
+      "properties": {
+        "station_id": "gongguan",
+        "name": "捷運公館站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5340853,
+          25.0150952
+        ]
+      },
+      "properties": {
+        "station_id": "gongguan",
+        "name": "捷運公館站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5338382,
+          25.0153235
+        ]
+      },
+      "properties": {
+        "station_id": "gongguan",
+        "name": "公館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5344779,
+          25.0145154
+        ]
+      },
+      "properties": {
+        "station_id": "gongguan",
+        "name": "公館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5340762,
+          25.0147498
+        ]
+      },
+      "properties": {
+        "station_id": "gongguan",
+        "name": "公館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.534576,
+          25.0144226
+        ]
+      },
+      "properties": {
+        "station_id": "gongguan",
+        "name": "捷運公館站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5346176,
+          25.0143832
+        ]
+      },
+      "properties": {
+        "station_id": "gongguan",
+        "name": "捷運公館站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5376027,
+          25.0116945
+        ]
+      },
+      "properties": {
+        "station_id": "gongguan",
+        "name": "公館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5380693,
+          25.0117817
+        ]
+      },
+      "properties": {
+        "station_id": "gongguan",
+        "name": "公館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5385211,
+          25.0124471
+        ]
+      },
+      "properties": {
+        "station_id": "gongguan",
+        "name": "公館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4670298,
+          25.1257962
+        ]
+      },
+      "properties": {
+        "station_id": "guandu",
+        "name": "關渡"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4672907,
+          25.1257395
+        ]
+      },
+      "properties": {
+        "station_id": "guandu",
+        "name": "關渡"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4671323,
+          25.1258337
+        ]
+      },
+      "properties": {
+        "station_id": "guandu",
+        "name": "關渡"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5230227,
+          25.0264011
+        ]
+      },
+      "properties": {
+        "station_id": "guting",
+        "name": "古亭"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4503257,
+          24.9848075
+        ]
+      },
+      "properties": {
+        "station_id": "haishan",
+        "name": "捷運海山站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4503257,
+          24.9848075
+        ]
+      },
+      "properties": {
+        "station_id": "haishan",
+        "name": "捷運海山站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4590643,
+          25.1544759
+        ]
+      },
+      "properties": {
+        "station_id": "hongshulin",
+        "name": "捷運紅樹林站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4585378,
+          25.1543514
+        ]
+      },
+      "properties": {
+        "station_id": "hongshulin",
+        "name": "捷運紅樹林站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5822659,
+          25.0447904
+        ]
+      },
+      "properties": {
+        "station_id": "houshanpi",
+        "name": "後山埤"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5822659,
+          25.0447904
+        ]
+      },
+      "properties": {
+        "station_id": "houshanpi",
+        "name": "後山埤"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5822659,
+          25.0447904
+        ]
+      },
+      "properties": {
+        "station_id": "houshanpi",
+        "name": "後山埤"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6069225,
+          25.0728741
+        ]
+      },
+      "properties": {
+        "station_id": "huzhou",
+        "name": "葫洲"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6069225,
+          25.0728741
+        ]
+      },
+      "properties": {
+        "station_id": "huzhou",
+        "name": "葫洲"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6069225,
+          25.0728741
+        ]
+      },
+      "properties": {
+        "station_id": "huzhou",
+        "name": "葫洲"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4734365,
+          25.0310752
+        ]
+      },
+      "properties": {
+        "station_id": "jiangzicui",
+        "name": "捷運江子翠站5號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4731228,
+          25.0309572
+        ]
+      },
+      "properties": {
+        "station_id": "jiangzicui",
+        "name": "捷運江子翠站6號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4722065,
+          25.0296062
+        ]
+      },
+      "properties": {
+        "station_id": "jiangzicui",
+        "name": "捷運江子翠站3號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4717376,
+          25.0303035
+        ]
+      },
+      "properties": {
+        "station_id": "jiangzicui",
+        "name": "捷運江子翠站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4718742,
+          25.0297666
+        ]
+      },
+      "properties": {
+        "station_id": "jiangzicui",
+        "name": "捷運江子翠站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4726028,
+          25.0296346
+        ]
+      },
+      "properties": {
+        "station_id": "jiangzicui",
+        "name": "捷運江子翠站4號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5553934,
+          25.0846645
+        ]
+      },
+      "properties": {
+        "station_id": "jiannan-rd",
+        "name": "劍南路"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5558042,
+          25.0850706
+        ]
+      },
+      "properties": {
+        "station_id": "jiannan-rd",
+        "name": "劍南路"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5558042,
+          25.0850706
+        ]
+      },
+      "properties": {
+        "station_id": "jiannan-rd",
+        "name": "劍南路"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5558372,
+          25.0845327
+        ]
+      },
+      "properties": {
+        "station_id": "jiannan-rd",
+        "name": "劍南路"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5248884,
+          25.0842789
+        ]
+      },
+      "properties": {
+        "station_id": "jiantan",
+        "name": "劍潭"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5050813,
+          24.9939504
+        ]
+      },
+      "properties": {
+        "station_id": "jingan",
+        "name": "景安"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5050813,
+          24.9939504
+        ]
+      },
+      "properties": {
+        "station_id": "jingan",
+        "name": "景安"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5058474,
+          24.9932769
+        ]
+      },
+      "properties": {
+        "station_id": "jingan",
+        "name": "景安"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5056925,
+          24.993565
+        ]
+      },
+      "properties": {
+        "station_id": "jingan",
+        "name": "景安"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5050813,
+          24.9939504
+        ]
+      },
+      "properties": {
+        "station_id": "jingan",
+        "name": "景安"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5058522,
+          24.9935046
+        ]
+      },
+      "properties": {
+        "station_id": "jingan",
+        "name": "景安"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5409563,
+          24.9929771
+        ]
+      },
+      "properties": {
+        "station_id": "jingmei",
+        "name": "景美"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5409081,
+          24.9934157
+        ]
+      },
+      "properties": {
+        "station_id": "jingmei",
+        "name": "捷運景美站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5407548,
+          24.9929094
+        ]
+      },
+      "properties": {
+        "station_id": "jingmei",
+        "name": "捷運景美站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5407918,
+          24.9930405
+        ]
+      },
+      "properties": {
+        "station_id": "jingmei",
+        "name": "景美"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5407918,
+          24.9930405
+        ]
+      },
+      "properties": {
+        "station_id": "jingmei",
+        "name": "景美"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5406223,
+          24.9922288
+        ]
+      },
+      "properties": {
+        "station_id": "jingmei",
+        "name": "捷運景美站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5410684,
+          24.993326
+        ]
+      },
+      "properties": {
+        "station_id": "jingmei",
+        "name": "捷運景美站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5160139,
+          24.9920191
+        ]
+      },
+      "properties": {
+        "station_id": "jingping",
+        "name": "捷運景平站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5102966,
+          24.9554059
+        ]
+      },
+      "properties": {
+        "station_id": "jinwen-university-of-science-and-technology",
+        "name": "景文科大"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5102361,
+          24.9554678
+        ]
+      },
+      "properties": {
+        "station_id": "jinwen-university-of-science-and-technology",
+        "name": "景文科大"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5102966,
+          24.9554059
+        ]
+      },
+      "properties": {
+        "station_id": "jinwen-university-of-science-and-technology",
+        "name": "景文科大"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5934509,
+          25.0508345
+        ]
+      },
+      "properties": {
+        "station_id": "kunyang",
+        "name": "昆陽"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5933072,
+          25.0501991
+        ]
+      },
+      "properties": {
+        "station_id": "kunyang",
+        "name": "昆陽"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5933072,
+          25.0501991
+        ]
+      },
+      "properties": {
+        "station_id": "kunyang",
+        "name": "昆陽"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5931179,
+          25.0501493
+        ]
+      },
+      "properties": {
+        "station_id": "kunyang",
+        "name": "捷運昆陽站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5930286,
+          25.0502263
+        ]
+      },
+      "properties": {
+        "station_id": "kunyang",
+        "name": "捷運昆陽站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5935744,
+          25.0502802
+        ]
+      },
+      "properties": {
+        "station_id": "kunyang",
+        "name": "捷運昆陽站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5943346,
+          25.0504602
+        ]
+      },
+      "properties": {
+        "station_id": "kunyang",
+        "name": "捷運昆陽站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5945252,
+          25.0505952
+        ]
+      },
+      "properties": {
+        "station_id": "kunyang",
+        "name": "捷運昆陽站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5585896,
+          25.0187203
+        ]
+      },
+      "properties": {
+        "station_id": "linguang",
+        "name": "捷運麟光站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5589088,
+          25.0181977
+        ]
+      },
+      "properties": {
+        "station_id": "linguang",
+        "name": "捷運麟光站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5533299,
+          25.0237267
+        ]
+      },
+      "properties": {
+        "station_id": "liuzhangli",
+        "name": "六張犁"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5533299,
+          25.0237267
+        ]
+      },
+      "properties": {
+        "station_id": "liuzhangli",
+        "name": "六張犁"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5533299,
+          25.0237267
+        ]
+      },
+      "properties": {
+        "station_id": "liuzhangli",
+        "name": "六張犁"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4995709,
+          25.0352306
+        ]
+      },
+      "properties": {
+        "station_id": "longshan-temple",
+        "name": "龍山寺"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4995682,
+          25.0353347
+        ]
+      },
+      "properties": {
+        "station_id": "longshan-temple",
+        "name": "龍山寺"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4999132,
+          25.0352207
+        ]
+      },
+      "properties": {
+        "station_id": "longshan-temple",
+        "name": "捷運龍山寺站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4995682,
+          25.0353347
+        ]
+      },
+      "properties": {
+        "station_id": "longshan-temple",
+        "name": "龍山寺"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4649722,
+          25.0913479
+        ]
+      },
+      "properties": {
+        "station_id": "luzhou",
+        "name": "蘆洲"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5187152,
+          25.1101402
+        ]
+      },
+      "properties": {
+        "station_id": "mingde",
+        "name": "明德"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5186938,
+          25.109706
+        ]
+      },
+      "properties": {
+        "station_id": "mingde",
+        "name": "明德"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5186462,
+          25.109594
+        ]
+      },
+      "properties": {
+        "station_id": "mingde",
+        "name": "明德"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5198204,
+          25.0620902
+        ]
+      },
+      "properties": {
+        "station_id": "minquan-w-road",
+        "name": "民權西路"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5194991,
+          25.062901
+        ]
+      },
+      "properties": {
+        "station_id": "minquan-w-road",
+        "name": "民權西路"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5195386,
+          25.0629566
+        ]
+      },
+      "properties": {
+        "station_id": "minquan-w-road",
+        "name": "民權西路"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5196408,
+          25.062789
+        ]
+      },
+      "properties": {
+        "station_id": "minquan-w-road",
+        "name": "民權西路"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5198204,
+          25.0620902
+        ]
+      },
+      "properties": {
+        "station_id": "minquan-w-road",
+        "name": "民權西路"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5735514,
+          24.9981496
+        ]
+      },
+      "properties": {
+        "station_id": "muzha",
+        "name": "捷運木柵站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6054585,
+          25.0529138
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.607192,
+          25.0520905
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6054658,
+          25.0524803
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6073062,
+          25.0532772
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6072959,
+          25.0526052
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6054585,
+          25.0529138
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6054585,
+          25.0529138
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6054585,
+          25.0529138
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6054278,
+          25.0526908
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6054585,
+          25.0529138
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6054658,
+          25.0524803
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6054278,
+          25.0526908
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6078568,
+          25.0525596
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "捷運南港站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6063542,
+          25.0519917
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "捷運南港站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6067044,
+          25.052033
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "捷運南港站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6071571,
+          25.0521693
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "捷運南港站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6054585,
+          25.0529138
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6054374,
+          25.0530291
+        ]
+      },
+      "properties": {
+        "station_id": "nangang",
+        "name": "南港"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.615876,
+          25.0599324
+        ]
+      },
+      "properties": {
+        "station_id": "nangang-software-park",
+        "name": "南港軟體園區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.615876,
+          25.0599324
+        ]
+      },
+      "properties": {
+        "station_id": "nangang-software-park",
+        "name": "南港軟體園區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.615876,
+          25.0599324
+        ]
+      },
+      "properties": {
+        "station_id": "nangang-software-park",
+        "name": "南港軟體園區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5434613,
+          25.0519398
+        ]
+      },
+      "properties": {
+        "station_id": "nanjing-fuxing",
+        "name": "南京復興"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5437273,
+          25.0517818
+        ]
+      },
+      "properties": {
+        "station_id": "nanjing-fuxing",
+        "name": "南京復興"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5439733,
+          25.0517728
+        ]
+      },
+      "properties": {
+        "station_id": "nanjing-fuxing",
+        "name": "南京復興"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5642082,
+          25.0514717
+        ]
+      },
+      "properties": {
+        "station_id": "nanjing-sanmin",
+        "name": "南京三民"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5642082,
+          25.0514717
+        ]
+      },
+      "properties": {
+        "station_id": "nanjing-sanmin",
+        "name": "南京三民"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5642082,
+          25.0514717
+        ]
+      },
+      "properties": {
+        "station_id": "nanjing-sanmin",
+        "name": "南京三民"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5095078,
+          24.989555
+        ]
+      },
+      "properties": {
+        "station_id": "nanshijiao",
+        "name": "捷運南勢角站4號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5081079,
+          24.9902403
+        ]
+      },
+      "properties": {
+        "station_id": "nanshijiao",
+        "name": "捷運南勢角站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5077569,
+          24.9904122
+        ]
+      },
+      "properties": {
+        "station_id": "nanshijiao",
+        "name": "捷運南勢角站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5942238,
+          25.083598
+        ]
+      },
+      "properties": {
+        "station_id": "neihu",
+        "name": "內湖"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4597935,
+          25.061575
+        ]
+      },
+      "properties": {
+        "station_id": "new-taipei-industrial-park",
+        "name": "新北產業園區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4587861,
+          25.0618903
+        ]
+      },
+      "properties": {
+        "station_id": "new-taipei-industrial-park",
+        "name": "新北產業園區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4587861,
+          25.0618903
+        ]
+      },
+      "properties": {
+        "station_id": "new-taipei-industrial-park",
+        "name": "新北產業園區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4587861,
+          25.0618903
+        ]
+      },
+      "properties": {
+        "station_id": "new-taipei-industrial-park",
+        "name": "新北產業園區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.458934,
+          25.0619461
+        ]
+      },
+      "properties": {
+        "station_id": "new-taipei-industrial-park",
+        "name": "新北產業園區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4587861,
+          25.0618903
+        ]
+      },
+      "properties": {
+        "station_id": "new-taipei-industrial-park",
+        "name": "新北產業園區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4597935,
+          25.061575
+        ]
+      },
+      "properties": {
+        "station_id": "new-taipei-industrial-park",
+        "name": "新北產業園區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4597935,
+          25.061575
+        ]
+      },
+      "properties": {
+        "station_id": "new-taipei-industrial-park",
+        "name": "新北產業園區"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5159908,
+          25.0417465
+        ]
+      },
+      "properties": {
+        "station_id": "ntu-hospital",
+        "name": "台大醫院"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5159908,
+          25.0417465
+        ]
+      },
+      "properties": {
+        "station_id": "ntu-hospital",
+        "name": "台大醫院"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5163067,
+          25.0414792
+        ]
+      },
+      "properties": {
+        "station_id": "ntu-hospital",
+        "name": "台大醫院"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5159908,
+          25.0417465
+        ]
+      },
+      "properties": {
+        "station_id": "ntu-hospital",
+        "name": "捷運台大醫院站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5160649,
+          25.0419988
+        ]
+      },
+      "properties": {
+        "station_id": "ntu-hospital",
+        "name": "捷運台大醫院站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.518533,
+          25.0415658
+        ]
+      },
+      "properties": {
+        "station_id": "ntu-hospital",
+        "name": "臺大醫院"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5184949,
+          25.042311
+        ]
+      },
+      "properties": {
+        "station_id": "ntu-hospital",
+        "name": "臺大醫院"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4901247,
+          25.0049337
+        ]
+      },
+      "properties": {
+        "station_id": "qiaohe",
+        "name": "捷運橋和站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5063256,
+          25.1206092
+        ]
+      },
+      "properties": {
+        "station_id": "qilian",
+        "name": "唭哩岸"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5011449,
+          25.1259121
+        ]
+      },
+      "properties": {
+        "station_id": "qiyan",
+        "name": "奇岩"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5429882,
+          24.9749847
+        ]
+      },
+      "properties": {
+        "station_id": "qizhang",
+        "name": "七張"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5427187,
+          24.9711064
+        ]
+      },
+      "properties": {
+        "station_id": "qizhang",
+        "name": "七張(北新路)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5428574,
+          24.9750182
+        ]
+      },
+      "properties": {
+        "station_id": "qizhang",
+        "name": "七張"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5428574,
+          24.9750182
+        ]
+      },
+      "properties": {
+        "station_id": "qizhang",
+        "name": "七張"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4938929,
+          24.9507936
+        ]
+      },
+      "properties": {
+        "station_id": "rose-china-town",
+        "name": "玫瑰中國城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4939209,
+          24.9507647
+        ]
+      },
+      "properties": {
+        "station_id": "rose-china-town",
+        "name": "玫瑰中國城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4940025,
+          24.9508786
+        ]
+      },
+      "properties": {
+        "station_id": "rose-china-town",
+        "name": "玫瑰中國城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4853188,
+          25.0560483
+        ]
+      },
+      "properties": {
+        "station_id": "sanchong",
+        "name": "三重"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4853911,
+          25.0559418
+        ]
+      },
+      "properties": {
+        "station_id": "sanchong",
+        "name": "三重"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4829539,
+          25.0547778
+        ]
+      },
+      "properties": {
+        "station_id": "sanchong",
+        "name": "三重"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4829539,
+          25.0547778
+        ]
+      },
+      "properties": {
+        "station_id": "sanchong",
+        "name": "三重"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4853911,
+          25.0559418
+        ]
+      },
+      "properties": {
+        "station_id": "sanchong",
+        "name": "三重"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4829539,
+          25.0547778
+        ]
+      },
+      "properties": {
+        "station_id": "sanchong",
+        "name": "三重"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4973111,
+          25.0700642
+        ]
+      },
+      "properties": {
+        "station_id": "sanchong-elementary-school",
+        "name": "三重國小"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4972531,
+          25.0699399
+        ]
+      },
+      "properties": {
+        "station_id": "sanchong-elementary-school",
+        "name": "三重國小"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4973111,
+          25.0700642
+        ]
+      },
+      "properties": {
+        "station_id": "sanchong-elementary-school",
+        "name": "三重國小"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4862715,
+          25.0770224
+        ]
+      },
+      "properties": {
+        "station_id": "sanhe-junior-high-school",
+        "name": "三和國中"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4861593,
+          25.0769122
+        ]
+      },
+      "properties": {
+        "station_id": "sanhe-junior-high-school",
+        "name": "三和國中"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4861593,
+          25.0769122
+        ]
+      },
+      "properties": {
+        "station_id": "sanhe-junior-high-school",
+        "name": "三和國中"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4733553,
+          25.0855312
+        ]
+      },
+      "properties": {
+        "station_id": "sanmin-senior-high-school",
+        "name": "三民高中"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4732996,
+          25.0854658
+        ]
+      },
+      "properties": {
+        "station_id": "sanmin-senior-high-school",
+        "name": "三民高中"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4732996,
+          25.0854658
+        ]
+      },
+      "properties": {
+        "station_id": "sanmin-senior-high-school",
+        "name": "三民高中"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5259207,
+          25.0936519
+        ]
+      },
+      "properties": {
+        "station_id": "shilin",
+        "name": "士林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5264698,
+          25.0934339
+        ]
+      },
+      "properties": {
+        "station_id": "shilin",
+        "name": "士林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5256047,
+          25.0949256
+        ]
+      },
+      "properties": {
+        "station_id": "shilin",
+        "name": "捷運士林站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5264698,
+          25.0934339
+        ]
+      },
+      "properties": {
+        "station_id": "shilin",
+        "name": "捷運士林站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5248612,
+          25.094131
+        ]
+      },
+      "properties": {
+        "station_id": "shilin",
+        "name": "士林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5264046,
+          25.0936525
+        ]
+      },
+      "properties": {
+        "station_id": "shilin",
+        "name": "士林"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5154263,
+          25.1145183
+        ]
+      },
+      "properties": {
+        "station_id": "shipai",
+        "name": "石牌"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5297277,
+          24.9830633
+        ]
+      },
+      "properties": {
+        "station_id": "shisizhang",
+        "name": "捷運十四張站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4898162,
+          24.946515
+        ]
+      },
+      "properties": {
+        "station_id": "shuangcheng",
+        "name": "雙城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4898162,
+          24.946515
+        ]
+      },
+      "properties": {
+        "station_id": "shuangcheng",
+        "name": "雙城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.489788,
+          24.9465308
+        ]
+      },
+      "properties": {
+        "station_id": "shuangcheng",
+        "name": "雙城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5206638,
+          25.0575502
+        ]
+      },
+      "properties": {
+        "station_id": "shuanglian",
+        "name": "雙連"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5205265,
+          25.0576308
+        ]
+      },
+      "properties": {
+        "station_id": "shuanglian",
+        "name": "雙連"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5206638,
+          25.0575502
+        ]
+      },
+      "properties": {
+        "station_id": "shuanglian",
+        "name": "雙連"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5330764,
+          25.0519477
+        ]
+      },
+      "properties": {
+        "station_id": "songjiang-nanjing",
+        "name": "松江南京"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.578279,
+          25.0492606
+        ]
+      },
+      "properties": {
+        "station_id": "songshan",
+        "name": "松山"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5775948,
+          25.0500933
+        ]
+      },
+      "properties": {
+        "station_id": "songshan",
+        "name": "松山"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5784112,
+          25.049864
+        ]
+      },
+      "properties": {
+        "station_id": "songshan",
+        "name": "松山車站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5782496,
+          25.0498731
+        ]
+      },
+      "properties": {
+        "station_id": "songshan",
+        "name": "松山車站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5784484,
+          25.0498776
+        ]
+      },
+      "properties": {
+        "station_id": "songshan",
+        "name": "松山車站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5517936,
+          25.0631039
+        ]
+      },
+      "properties": {
+        "station_id": "songshan-airport",
+        "name": "松山機場"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5518182,
+          25.0630043
+        ]
+      },
+      "properties": {
+        "station_id": "songshan-airport",
+        "name": "松山機場"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5516645,
+          25.0630492
+        ]
+      },
+      "properties": {
+        "station_id": "songshan-airport",
+        "name": "松山機場"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5519379,
+          25.0633627
+        ]
+      },
+      "properties": {
+        "station_id": "songshan-airport",
+        "name": "松山機場"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5519427,
+          25.0632413
+        ]
+      },
+      "properties": {
+        "station_id": "songshan-airport",
+        "name": "松山機場"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5511666,
+          25.0632173
+        ]
+      },
+      "properties": {
+        "station_id": "songshan-airport",
+        "name": "松山機場"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5512743,
+          25.0633531
+        ]
+      },
+      "properties": {
+        "station_id": "songshan-airport",
+        "name": "松山機場"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4800582,
+          25.0803085
+        ]
+      },
+      "properties": {
+        "station_id": "st-ignatius-high-school",
+        "name": "徐匯中學"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4800582,
+          25.0803085
+        ]
+      },
+      "properties": {
+        "station_id": "st-ignatius-high-school",
+        "name": "徐匯中學"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4800582,
+          25.0803085
+        ]
+      },
+      "properties": {
+        "station_id": "st-ignatius-high-school",
+        "name": "徐匯中學"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5567597,
+          25.0411961
+        ]
+      },
+      "properties": {
+        "station_id": "sun-yat-sen-memorial-hall",
+        "name": "捷運國父紀念館站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5580091,
+          25.0416035
+        ]
+      },
+      "properties": {
+        "station_id": "sun-yat-sen-memorial-hall",
+        "name": "捷運國父紀念館站5號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5579349,
+          25.0411696
+        ]
+      },
+      "properties": {
+        "station_id": "sun-yat-sen-memorial-hall",
+        "name": "捷運國父紀念館站3號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5579889,
+          25.0411671
+        ]
+      },
+      "properties": {
+        "station_id": "sun-yat-sen-memorial-hall",
+        "name": "捷運國父紀念館站4號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.519413,
+          24.9721828
+        ]
+      },
+      "properties": {
+        "station_id": "sunshine-sports-park",
+        "name": "陽光運動公園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.519413,
+          24.9721828
+        ]
+      },
+      "properties": {
+        "station_id": "sunshine-sports-park",
+        "name": "陽光運動公園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.519413,
+          24.9721828
+        ]
+      },
+      "properties": {
+        "station_id": "sunshine-sports-park",
+        "name": "陽光運動公園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5644215,
+          25.0333408
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-101-world-trade-center",
+        "name": "捷運台北101/世貿站4號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5617423,
+          25.033126
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-101-world-trade-center",
+        "name": "捷運台北101/世貿站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5632809,
+          25.0332177
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-101-world-trade-center",
+        "name": "捷運台北101/世貿站5號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5632674,
+          25.032897
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-101-world-trade-center",
+        "name": "捷運台北101/世貿站3號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5614867,
+          25.0328561
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-101-world-trade-center",
+        "name": "捷運台北101/世貿站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5516575,
+          25.0515179
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-arena",
+        "name": "台北小巨蛋"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5516575,
+          25.0515179
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-arena",
+        "name": "台北小巨蛋"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5516575,
+          25.0515179
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-arena",
+        "name": "台北小巨蛋"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5004188,
+          25.0635062
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-bridge",
+        "name": "台北橋"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5004188,
+          25.0635062
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-bridge",
+        "name": "台北橋"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5004188,
+          25.0635062
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-bridge",
+        "name": "台北橋"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5651356,
+          25.0408029
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-city-hall",
+        "name": "捷運市政府站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5673116,
+          25.0412097
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-city-hall",
+        "name": "捷運市政府站4號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.567027,
+          25.0407446
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-city-hall",
+        "name": "捷運市政府站3號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5653595,
+          25.0412678
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-city-hall",
+        "name": "捷運市政府站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5175562,
+          25.046261
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-main-station",
+        "name": "台北車站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5142714,
+          25.0483205
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-main-station",
+        "name": "台北車站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5142714,
+          25.0483205
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-main-station",
+        "name": "台北車站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5142714,
+          25.0483205
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-main-station",
+        "name": "台北車站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5146828,
+          25.0491209
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-main-station",
+        "name": "台北車站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5142714,
+          25.0483205
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-main-station",
+        "name": "台北車站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6173394,
+          25.0546028
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-nangang-exhibition-center",
+        "name": "南港展覽館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6181378,
+          25.0552048
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-nangang-exhibition-center",
+        "name": "南港展覽館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6173394,
+          25.0546028
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-nangang-exhibition-center",
+        "name": "南港展覽館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6173394,
+          25.0546028
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-nangang-exhibition-center",
+        "name": "南港展覽館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6181378,
+          25.0552048
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-nangang-exhibition-center",
+        "name": "南港展覽館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6181691,
+          25.055401
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-nangang-exhibition-center",
+        "name": "南港展覽館"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4995315,
+          24.9537846
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-xiaocheng",
+        "name": "台北小城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4995315,
+          24.9537846
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-xiaocheng",
+        "name": "台北小城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4992009,
+          24.9537365
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-xiaocheng",
+        "name": "台北小城"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5872166,
+          24.9901463
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-zoo-south-station",
+        "name": "動物園南"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5764274,
+          24.9960054
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-zoo-station",
+        "name": "動物園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5794606,
+          24.9981927
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-zoo-station",
+        "name": "動物園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5794606,
+          24.9981927
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-zoo-station",
+        "name": "動物園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5794606,
+          24.9981927
+        ]
+      },
+      "properties": {
+        "station_id": "taipei-zoo-station",
+        "name": "動物園"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5282945,
+          25.020471
+        ]
+      },
+      "properties": {
+        "station_id": "taipower-building",
+        "name": "台電大樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5310136,
+          25.0180704
+        ]
+      },
+      "properties": {
+        "station_id": "taipower-building",
+        "name": "台電大樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5280661,
+          25.0209563
+        ]
+      },
+      "properties": {
+        "station_id": "taipower-building",
+        "name": "台電大樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5304514,
+          25.0184035
+        ]
+      },
+      "properties": {
+        "station_id": "taipower-building",
+        "name": "台電大樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5313637,
+          25.0175432
+        ]
+      },
+      "properties": {
+        "station_id": "taipower-building",
+        "name": "台電大樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5287281,
+          25.0200734
+        ]
+      },
+      "properties": {
+        "station_id": "taipower-building",
+        "name": "台電大樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5284041,
+          25.0206568
+        ]
+      },
+      "properties": {
+        "station_id": "taipower-building",
+        "name": "捷運台電大樓站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4560605,
+          25.1768528
+        ]
+      },
+      "properties": {
+        "station_id": "tamkang-university",
+        "name": "淡江大學"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4558286,
+          25.1774358
+        ]
+      },
+      "properties": {
+        "station_id": "tamkang-university",
+        "name": "淡江大學"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4560605,
+          25.1768528
+        ]
+      },
+      "properties": {
+        "station_id": "tamkang-university",
+        "name": "淡江大學"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4492911,
+          25.1657248
+        ]
+      },
+      "properties": {
+        "station_id": "tamsui",
+        "name": "淡水"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4492911,
+          25.1657248
+        ]
+      },
+      "properties": {
+        "station_id": "tamsui",
+        "name": "淡水"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4492911,
+          25.1657248
+        ]
+      },
+      "properties": {
+        "station_id": "tamsui",
+        "name": "淡水"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5435184,
+          25.0260457
+        ]
+      },
+      "properties": {
+        "station_id": "technology-building",
+        "name": "科技大樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5435184,
+          25.0260457
+        ]
+      },
+      "properties": {
+        "station_id": "technology-building",
+        "name": "科技大樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5432759,
+          25.0266313
+        ]
+      },
+      "properties": {
+        "station_id": "technology-building",
+        "name": "捷運科技大樓站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5435184,
+          25.0260457
+        ]
+      },
+      "properties": {
+        "station_id": "technology-building",
+        "name": "科技大樓"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5434046,
+          25.0267199
+        ]
+      },
+      "properties": {
+        "station_id": "technology-building",
+        "name": "捷運科技大樓站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5435184,
+          25.0260457
+        ]
+      },
+      "properties": {
+        "station_id": "technology-building",
+        "name": "捷運科技大樓站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4614381,
+          25.0394579
+        ]
+      },
+      "properties": {
+        "station_id": "touqianzhuang",
+        "name": "頭前庄"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4602736,
+          25.0398658
+        ]
+      },
+      "properties": {
+        "station_id": "touqianzhuang",
+        "name": "頭前庄"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4614381,
+          25.0394579
+        ]
+      },
+      "properties": {
+        "station_id": "touqianzhuang",
+        "name": "頭前庄"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4602736,
+          25.0398658
+        ]
+      },
+      "properties": {
+        "station_id": "touqianzhuang",
+        "name": "頭前庄"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4614381,
+          25.0394579
+        ]
+      },
+      "properties": {
+        "station_id": "touqianzhuang",
+        "name": "頭前庄"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4602736,
+          25.0398658
+        ]
+      },
+      "properties": {
+        "station_id": "touqianzhuang",
+        "name": "頭前庄"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5681752,
+          24.9987907
+        ]
+      },
+      "properties": {
+        "station_id": "wanfang-community",
+        "name": "捷運萬芳社區站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.557651,
+          24.9991236
+        ]
+      },
+      "properties": {
+        "station_id": "wanfang-hospital",
+        "name": "捷運萬芳醫院站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5582444,
+          24.9992266
+        ]
+      },
+      "properties": {
+        "station_id": "wanfang-hospital",
+        "name": "萬芳醫院"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5582444,
+          24.9992266
+        ]
+      },
+      "properties": {
+        "station_id": "wanfang-hospital",
+        "name": "萬芳醫院"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5582444,
+          24.9992266
+        ]
+      },
+      "properties": {
+        "station_id": "wanfang-hospital",
+        "name": "萬芳醫院"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5578039,
+          24.9991457
+        ]
+      },
+      "properties": {
+        "station_id": "wanfang-hospital",
+        "name": "捷運萬芳醫院站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5568222,
+          24.9997912
+        ]
+      },
+      "properties": {
+        "station_id": "wanfang-hospital",
+        "name": "捷運萬芳醫院站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5570718,
+          24.9995298
+        ]
+      },
+      "properties": {
+        "station_id": "wanfang-hospital",
+        "name": "捷運萬芳醫院站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.538958,
+          25.0018144
+        ]
+      },
+      "properties": {
+        "station_id": "wanlong",
+        "name": "捷運萬隆站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.538958,
+          25.0018144
+        ]
+      },
+      "properties": {
+        "station_id": "wanlong",
+        "name": "萬隆"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.538958,
+          25.0018144
+        ]
+      },
+      "properties": {
+        "station_id": "wanlong",
+        "name": "萬隆"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5400952,
+          24.9993189
+        ]
+      },
+      "properties": {
+        "station_id": "wanlong",
+        "name": "萬隆"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5396737,
+          25.0000575
+        ]
+      },
+      "properties": {
+        "station_id": "wanlong",
+        "name": "萬隆"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5393695,
+          25.0011876
+        ]
+      },
+      "properties": {
+        "station_id": "wanlong",
+        "name": "捷運萬隆站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.538958,
+          25.0018144
+        ]
+      },
+      "properties": {
+        "station_id": "wanlong",
+        "name": "萬隆"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5851622,
+          25.0783149
+        ]
+      },
+      "properties": {
+        "station_id": "wende",
+        "name": "文德"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5851622,
+          25.0783149
+        ]
+      },
+      "properties": {
+        "station_id": "wende",
+        "name": "文德"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.585224,
+          25.0783763
+        ]
+      },
+      "properties": {
+        "station_id": "wende",
+        "name": "文德"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5699504,
+          25.0322713
+        ]
+      },
+      "properties": {
+        "station_id": "xiangshan",
+        "name": "捷運象山站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5706739,
+          25.0329607
+        ]
+      },
+      "properties": {
+        "station_id": "xiangshan",
+        "name": "捷運象山站3號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5693029,
+          25.0329988
+        ]
+      },
+      "properties": {
+        "station_id": "xiangshan",
+        "name": "捷運象山站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.470637,
+          25.0461289
+        ]
+      },
+      "properties": {
+        "station_id": "xianse-temple",
+        "name": "捷運先嗇宮站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.471861,
+          25.0465348
+        ]
+      },
+      "properties": {
+        "station_id": "xianse-temple",
+        "name": "先嗇宮"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4719289,
+          25.0463548
+        ]
+      },
+      "properties": {
+        "station_id": "xianse-temple",
+        "name": "先嗇宮"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.471861,
+          25.0465348
+        ]
+      },
+      "properties": {
+        "station_id": "xianse-temple",
+        "name": "先嗇宮"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4714279,
+          25.0462802
+        ]
+      },
+      "properties": {
+        "station_id": "xianse-temple",
+        "name": "捷運先嗇宮站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.472045,
+          25.0480576
+        ]
+      },
+      "properties": {
+        "station_id": "xianse-temple",
+        "name": "捷運先嗇宮站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4720473,
+          25.0485091
+        ]
+      },
+      "properties": {
+        "station_id": "xianse-temple",
+        "name": "捷運先嗇宮站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5307064,
+          24.9716399
+        ]
+      },
+      "properties": {
+        "station_id": "xiaobitan",
+        "name": "小碧潭"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5307064,
+          24.9716399
+        ]
+      },
+      "properties": {
+        "station_id": "xiaobitan",
+        "name": "小碧潭"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5108427,
+          25.0359342
+        ]
+      },
+      "properties": {
+        "station_id": "xiaonanmen",
+        "name": "小南門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5108496,
+          25.0359693
+        ]
+      },
+      "properties": {
+        "station_id": "xiaonanmen",
+        "name": "小南門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5108427,
+          25.0359342
+        ]
+      },
+      "properties": {
+        "station_id": "xiaonanmen",
+        "name": "小南門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5073375,
+          25.0382165
+        ]
+      },
+      "properties": {
+        "station_id": "xiaonanmen",
+        "name": "小南門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.507279,
+          25.0380133
+        ]
+      },
+      "properties": {
+        "station_id": "xiaonanmen",
+        "name": "小南門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5069028,
+          25.0376906
+        ]
+      },
+      "properties": {
+        "station_id": "xiaonanmen",
+        "name": "小南門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5673402,
+          25.0819418
+        ]
+      },
+      "properties": {
+        "station_id": "xihu",
+        "name": "西湖"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5673402,
+          25.0819418
+        ]
+      },
+      "properties": {
+        "station_id": "xihu",
+        "name": "西湖"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5673402,
+          25.0819418
+        ]
+      },
+      "properties": {
+        "station_id": "xihu",
+        "name": "西湖"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.50874,
+          25.0424579
+        ]
+      },
+      "properties": {
+        "station_id": "ximen",
+        "name": "西門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.50874,
+          25.0424579
+        ]
+      },
+      "properties": {
+        "station_id": "ximen",
+        "name": "西門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.50874,
+          25.0424579
+        ]
+      },
+      "properties": {
+        "station_id": "ximen",
+        "name": "西門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.50874,
+          25.0424579
+        ]
+      },
+      "properties": {
+        "station_id": "ximen",
+        "name": "西門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.50874,
+          25.0424579
+        ]
+      },
+      "properties": {
+        "station_id": "ximen",
+        "name": "西門"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5031722,
+          25.1367783
+        ]
+      },
+      "properties": {
+        "station_id": "xinbeitou",
+        "name": "新北投"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5385927,
+          24.9588565
+        ]
+      },
+      "properties": {
+        "station_id": "xindian",
+        "name": "新店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5391105,
+          24.9594081
+        ]
+      },
+      "properties": {
+        "station_id": "xindian",
+        "name": "新店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5379958,
+          24.9585542
+        ]
+      },
+      "properties": {
+        "station_id": "xindian",
+        "name": "捷運新店站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5372284,
+          24.9576678
+        ]
+      },
+      "properties": {
+        "station_id": "xindian",
+        "name": "捷運新店站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.53768,
+          24.9581339
+        ]
+      },
+      "properties": {
+        "station_id": "xindian",
+        "name": "新店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5380755,
+          24.9588175
+        ]
+      },
+      "properties": {
+        "station_id": "xindian",
+        "name": "捷運新店站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.53768,
+          24.9581339
+        ]
+      },
+      "properties": {
+        "station_id": "xindian",
+        "name": "新店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.53768,
+          24.9581339
+        ]
+      },
+      "properties": {
+        "station_id": "xindian",
+        "name": "新店"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5414666,
+          24.9674371
+        ]
+      },
+      "properties": {
+        "station_id": "xindian-district-office",
+        "name": "新店區公所"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5413594,
+          24.9674929
+        ]
+      },
+      "properties": {
+        "station_id": "xindian-district-office",
+        "name": "新店區公所"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5413594,
+          24.9674929
+        ]
+      },
+      "properties": {
+        "station_id": "xindian-district-office",
+        "name": "新店區公所"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4598876,
+          25.0501043
+        ]
+      },
+      "properties": {
+        "station_id": "xingfu",
+        "name": "幸福"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4597536,
+          25.0507446
+        ]
+      },
+      "properties": {
+        "station_id": "xingfu",
+        "name": "捷運幸福站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.459891,
+          25.0492647
+        ]
+      },
+      "properties": {
+        "station_id": "xingfu",
+        "name": "捷運幸福站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4598876,
+          25.0501043
+        ]
+      },
+      "properties": {
+        "station_id": "xingfu",
+        "name": "幸福"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4598876,
+          25.0501043
+        ]
+      },
+      "properties": {
+        "station_id": "xingfu",
+        "name": "幸福"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5330747,
+          25.0593211
+        ]
+      },
+      "properties": {
+        "station_id": "xingtian-temple",
+        "name": "行天宮"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5330747,
+          25.0593211
+        ]
+      },
+      "properties": {
+        "station_id": "xingtian-temple",
+        "name": "行天宮"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5330747,
+          25.0593211
+        ]
+      },
+      "properties": {
+        "station_id": "xingtian-temple",
+        "name": "行天宮"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5333966,
+          25.0634912
+        ]
+      },
+      "properties": {
+        "station_id": "xingtian-temple",
+        "name": "行天宮"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5571871,
+          25.0054551
+        ]
+      },
+      "properties": {
+        "station_id": "xinhai",
+        "name": "辛亥"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5569779,
+          25.0048513
+        ]
+      },
+      "properties": {
+        "station_id": "xinhai",
+        "name": "捷運辛亥站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5571871,
+          25.0054551
+        ]
+      },
+      "properties": {
+        "station_id": "xinhai",
+        "name": "辛亥"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5571871,
+          25.0054551
+        ]
+      },
+      "properties": {
+        "station_id": "xinhai",
+        "name": "辛亥"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5565947,
+          25.0039958
+        ]
+      },
+      "properties": {
+        "station_id": "xinhai",
+        "name": "捷運辛亥站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5187428,
+          24.9836355
+        ]
+      },
+      "properties": {
+        "station_id": "xinhe-elementary-school",
+        "name": "新和國小"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5185509,
+          24.9833544
+        ]
+      },
+      "properties": {
+        "station_id": "xinhe-elementary-school",
+        "name": "新和國小"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5187428,
+          24.9836355
+        ]
+      },
+      "properties": {
+        "station_id": "xinhe-elementary-school",
+        "name": "新和國小"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4681692,
+          25.0222525
+        ]
+      },
+      "properties": {
+        "station_id": "xinpu",
+        "name": "捷運新埔站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4686471,
+          25.0227136
+        ]
+      },
+      "properties": {
+        "station_id": "xinpu",
+        "name": "捷運新埔站3號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4675125,
+          25.0231097
+        ]
+      },
+      "properties": {
+        "station_id": "xinpu",
+        "name": "捷運新埔站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4680953,
+          25.0242259
+        ]
+      },
+      "properties": {
+        "station_id": "xinpu",
+        "name": "捷運新埔站5號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4686216,
+          25.0237442
+        ]
+      },
+      "properties": {
+        "station_id": "xinpu",
+        "name": "捷運新埔站4號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4669358,
+          25.0261812
+        ]
+      },
+      "properties": {
+        "station_id": "xinpu-minsheng",
+        "name": "捷運新埔站4號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4482679,
+          25.1838925
+        ]
+      },
+      "properties": {
+        "station_id": "xinshi-1st-rd",
+        "name": "新市一路"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4482679,
+          25.1838925
+        ]
+      },
+      "properties": {
+        "station_id": "xinshi-1st-rd",
+        "name": "新市一路"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4484554,
+          25.1838063
+        ]
+      },
+      "properties": {
+        "station_id": "xinshi-1st-rd",
+        "name": "新市一路"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5526321,
+          25.0331207
+        ]
+      },
+      "properties": {
+        "station_id": "xinyi-anhe",
+        "name": "信義安和"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5526347,
+          25.033238
+        ]
+      },
+      "properties": {
+        "station_id": "xinyi-anhe",
+        "name": "信義安和"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5526301,
+          25.0330287
+        ]
+      },
+      "properties": {
+        "station_id": "xinyi-anhe",
+        "name": "信義安和"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4520261,
+          25.036143
+        ]
+      },
+      "properties": {
+        "station_id": "xinzhuang",
+        "name": "新莊"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4518992,
+          25.0359635
+        ]
+      },
+      "properties": {
+        "station_id": "xinzhuang",
+        "name": "新莊"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4535257,
+          25.0362544
+        ]
+      },
+      "properties": {
+        "station_id": "xinzhuang",
+        "name": "新莊"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4475965,
+          25.0581395
+        ]
+      },
+      "properties": {
+        "station_id": "xinzhuang-fuduxin",
+        "name": "新莊副都心"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4475965,
+          25.0581395
+        ]
+      },
+      "properties": {
+        "station_id": "xinzhuang-fuduxin",
+        "name": "新莊副都心"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4475965,
+          25.0581395
+        ]
+      },
+      "properties": {
+        "station_id": "xinzhuang-fuduxin",
+        "name": "新莊副都心"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5250498,
+          24.9904059
+        ]
+      },
+      "properties": {
+        "station_id": "xiulang-bridge",
+        "name": "捷運秀朗橋站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5250498,
+          24.9904059
+        ]
+      },
+      "properties": {
+        "station_id": "xiulang-bridge",
+        "name": "捷運秀朗橋站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5108795,
+          25.0024387
+        ]
+      },
+      "properties": {
+        "station_id": "yongan-market",
+        "name": "捷運永安市場站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.575502,
+          25.0409437
+        ]
+      },
+      "properties": {
+        "station_id": "yongchun",
+        "name": "永春"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5755007,
+          25.0408439
+        ]
+      },
+      "properties": {
+        "station_id": "yongchun",
+        "name": "永春"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5755007,
+          25.0408439
+        ]
+      },
+      "properties": {
+        "station_id": "yongchun",
+        "name": "永春"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5200896,
+          25.071585
+        ]
+      },
+      "properties": {
+        "station_id": "yuanshan",
+        "name": "捷運圓山站出口2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5200697,
+          25.0709126
+        ]
+      },
+      "properties": {
+        "station_id": "yuanshan",
+        "name": "捷運圓山站出口1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5897562,
+          24.9789012
+        ]
+      },
+      "properties": {
+        "station_id": "zhinan-temple-station",
+        "name": "指南宮"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5223804,
+          25.1038348
+        ]
+      },
+      "properties": {
+        "station_id": "zhishan",
+        "name": "芝山站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.522642,
+          25.1023089
+        ]
+      },
+      "properties": {
+        "station_id": "zhishan",
+        "name": "芝山站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4964995,
+          25.0022171
+        ]
+      },
+      "properties": {
+        "station_id": "zhonghe",
+        "name": "捷運中和站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5204547,
+          25.0525756
+        ]
+      },
+      "properties": {
+        "station_id": "zhongshan",
+        "name": "中山"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5273312,
+          25.0624876
+        ]
+      },
+      "properties": {
+        "station_id": "zhongshan-elementary-school",
+        "name": "捷運中山國小站3號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5258317,
+          25.0625217
+        ]
+      },
+      "properties": {
+        "station_id": "zhongshan-elementary-school",
+        "name": "捷運中山國小站2號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5265895,
+          25.062829
+        ]
+      },
+      "properties": {
+        "station_id": "zhongshan-elementary-school",
+        "name": "捷運中山國小站4號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5258533,
+          25.0628594
+        ]
+      },
+      "properties": {
+        "station_id": "zhongshan-elementary-school",
+        "name": "捷運中山國小站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5442824,
+          25.0604697
+        ]
+      },
+      "properties": {
+        "station_id": "zhongshan-junior-high-school",
+        "name": "中山國中"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5442824,
+          25.0604697
+        ]
+      },
+      "properties": {
+        "station_id": "zhongshan-junior-high-school",
+        "name": "中山國中"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5442824,
+          25.0604697
+        ]
+      },
+      "properties": {
+        "station_id": "zhongshan-junior-high-school",
+        "name": "中山國中"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.549556,
+          25.0416235
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-dunhua",
+        "name": "忠孝敦化"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5492846,
+          25.0415869
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-dunhua",
+        "name": "忠孝敦化"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5496454,
+          25.0414311
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-dunhua",
+        "name": "忠孝敦化"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5437139,
+          25.0416931
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-fuxing",
+        "name": "忠孝復興"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5438236,
+          25.0408272
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-fuxing",
+        "name": "忠孝復興"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5438236,
+          25.0408272
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-fuxing",
+        "name": "忠孝復興"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5437139,
+          25.041558
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-fuxing",
+        "name": "忠孝復興"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5437139,
+          25.041558
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-fuxing",
+        "name": "忠孝復興"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.543721,
+          25.0422993
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-fuxing",
+        "name": "捷運忠孝復興站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5438773,
+          25.0428531
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-fuxing",
+        "name": "捷運忠孝復興站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.54262,
+          25.0417116
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-fuxing",
+        "name": "捷運忠孝復興站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5437059,
+          25.0407646
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-fuxing",
+        "name": "捷運忠孝復興站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5328638,
+          25.0423456
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-xinsheng",
+        "name": "忠孝新生"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5327797,
+          25.0402834
+        ]
+      },
+      "properties": {
+        "station_id": "zhongxiao-xinsheng",
+        "name": "捷運忠孝新生站"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4735131,
+          25.130933
+        ]
+      },
+      "properties": {
+        "station_id": "zhongyi",
+        "name": "忠義"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4843696,
+          25.0080757
+        ]
+      },
+      "properties": {
+        "station_id": "zhongyuan",
+        "name": "捷運中原站1號出口"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4593785,
+          25.1369444
+        ]
+      },
+      "properties": {
+        "station_id": "zhuwei",
+        "name": "竹圍"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4593785,
+          25.1369444
+        ]
+      },
+      "properties": {
+        "station_id": "zhuwei",
+        "name": "竹圍"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4593785,
+          25.1369444
+        ]
+      },
+      "properties": {
+        "station_id": "zhuwei",
+        "name": "竹圍"
+      }
+    }
+  ]
+}

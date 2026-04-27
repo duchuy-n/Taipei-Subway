@@ -1,0 +1,315 @@
+html,
+body {
+  height: 100%;
+}
+
+body.gis-page {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+}
+
+body.gis-page::before {
+  display: none;
+}
+
+.gis-shell {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.gis-shell,
+.gis-shell * {
+  box-sizing: border-box;
+}
+
+.gis-map-panel {
+  position: absolute;
+  inset: 0;
+  min-width: 0;
+  height: 100vh;
+}
+
+.gis-map {
+  width: 100%;
+  height: 100vh;
+  border: 0;
+}
+
+.gis-sidebar {
+  position: absolute;
+  z-index: 30;
+  top: 24px;
+  bottom: 24px;
+  left: 24px;
+  width: 344px;
+  padding: 20px 24px;
+  overflow-y: auto;
+  background: var(--panel);
+  backdrop-filter: blur(24px);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease;
+}
+
+.gis-sidebar section + section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--panel-border);
+}
+
+.gis-sidebar-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.gis-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.34rem;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.back-login-link {
+  display: inline-block;
+  color: var(--accent);
+  font: 700 0.84rem var(--font-body);
+  text-decoration: none;
+}
+
+.back-login-link:hover,
+.back-login-link:focus-visible {
+  text-decoration: underline;
+}
+
+.field-label {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #394355;
+}
+
+.input-select {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  background: rgba(255, 255, 255, 0.98);
+  color: #0f172a;
+  padding: 9px 10px;
+  font: 600 0.92rem var(--font-body);
+}
+
+.sidebar-toggle-btn,
+.open-sidebar-btn {
+  width: auto;
+  padding: 9px 12px;
+  border-radius: 999px;
+}
+
+.open-sidebar-btn {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 35;
+  display: none;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.22);
+}
+
+.hint,
+.status,
+.empty {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.hint {
+  margin: 0;
+}
+
+.status-strip,
+.summary-card,
+.via-station-row {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-sm);
+}
+
+.status-strip {
+  margin-top: 12px;
+  padding: 12px 14px;
+}
+
+.status-strip strong {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-display);
+}
+
+.stat-label,
+.stat-meta {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.gis-sidebar h2 {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  letter-spacing: 0;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font: 700 0.9rem var(--font-body);
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.secondary {
+  background: rgba(15, 23, 42, 0.06);
+  color: var(--text);
+}
+
+.mode-grid,
+.actions {
+  display: grid;
+  gap: 10px;
+}
+
+.mode-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.actions {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 12px;
+}
+
+.mode-btn.active {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.summary {
+  display: grid;
+  gap: 10px;
+}
+
+.route-summary {
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.route-summary.empty {
+  grid-template-columns: 1fr;
+}
+
+.summary-card {
+  padding: 12px 14px;
+}
+
+.summary-card strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+.via-station-list {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.via-station-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+}
+
+.via-station-row button {
+  width: auto;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.steps {
+  max-height: 34vh;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.steps li {
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.gis-shell.is-sidebar-hidden .gis-sidebar {
+  transform: translateX(-110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gis-shell.is-sidebar-hidden .open-sidebar-btn {
+  display: inline-flex;
+}
+
+.gis-map .maplibregl-popup-content {
+  font-family: var(--font-body);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
+}
+
+@media (max-width: 980px) {
+  .gis-sidebar {
+    width: min(90vw, 360px);
+    inset: 12px auto 12px 12px;
+  }
+
+  .open-sidebar-btn {
+    top: 12px;
+    left: 12px;
+  }
+}

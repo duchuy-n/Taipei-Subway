@@ -1,0 +1,12 @@
+IT3160-SubwayWeb/
+|-- app/
+|   |-- api/                # Các endpoint FastAPI (GIS, Admin, Route)
+|   |-- services/           # Lõi xử lý (Route Engine, Runtime Loader)
+|   |-- domain/             # Định nghĩa schema và data model
+|   |-- data/
+|   |   |-- gis/            # Topology, ga, tuyến, walk network (GeoJSON/JSON)
+|   |   |-- admin_scenario.json # Lưu trữ các kịch bản chặn tuyến/ga
+|   |-- static/             # Frontend assets (GIS Studio, Admin Console)
+|-- scripts/                # Script chuẩn hoá dữ liệu từ OSM
+|-- tests/                  # Bộ test unit và integration
+|-- start_web.ps1           # Script khởi chạy nhanh trên Windows

@@ -1,0 +1,424 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+
+\chapter{PHÂN TÍCH HỆ THỐNG VÀ PHÂN CÔNG NHÓM}
+\label{chapter:methodology}
+
+\section{Hướng tiếp cận tổng thể}
+Nhóm lựa chọn hướng tiếp cận theo ba khối chuyên trách:
+\begin{itemize}
+    \item \textbf{Frontend:} xây dựng trải nghiệm người dùng, tương tác bản đồ, trực quan hoá lộ trình và các công cụ quản trị.
+    \item \textbf{Backend:} xây dựng API, route engine, cache runtime, xử lý logic định tuyến và hợp nhất dữ liệu trả về.
+    \item \textbf{Data/GIS:} chuẩn hoá dữ liệu tuyến, topology, toạ độ ga, lớp GeoJSON, dữ liệu đi bộ và bản đồ nền.
+\end{itemize}
+
+Việc chia theo ba khối này vừa phù hợp với cấu trúc repository hiện tại, vừa tạo điều kiện để mỗi nhóm có phần việc rõ ràng thay vì cùng sửa chung một lớp mã nguồn.
+
+\section{Kiến trúc hệ thống}
+\begin{figure}[H]
+\centering
+    \begin{tikzpicture}[node distance=2.5cm, scale=0.85, transform shape]
+        \tikzstyle{layer} = [rectangle, rounded corners=8pt, minimum width=10.5cm, minimum height=2.4cm, draw=blue!60!black, fill=blue!2, thick]
+        \tikzstyle{comp} = [rectangle, rounded corners=3pt, minimum width=2.4cm, minimum height=0.8cm, draw=black!40, fill=white, font=\small\normalfont]
+        \tikzstyle{atitle} = [font=\bfseries\color{black!80}, anchor=north, yshift=-2pt]
+        \tikzstyle{arrow} = [-latex, thick]
+        \tikzstyle{startstop} = [rectangle, rounded corners=6pt, minimum width=2.2cm, minimum height=0.8cm, draw=black!60, fill=gray!10, font=\small\bfseries]
+
+        \node (frontend) [layer] {};
+        \node at (frontend.north) [atitle] {LỚP GIAO DIỆN (FRONTEND)};
+
+        \node (backend) [layer, below=1.8cm of frontend, fill=orange!5, draw=orange!60!black] {};
+        \node at (backend.north) [atitle] {LỚP XỬ LÝ TRUNG TÂM (BACKEND)};
+
+        \node (data) [layer, below=1.8cm of backend, fill=green!5, draw=green!60!black] {};
+        \node at (data.north) [atitle] {LỚP DỮ LIỆU \& GIS (DATA PERSISTENCE)};
+
+        \node[comp] (comp_f1) at ([yshift=-0.4cm]frontend.center) [xshift=-3.2cm] {GIS Studio};
+        \node[comp] (comp_f2) at ([yshift=-0.4cm]frontend.center) [xshift=0cm] {Admin Console};
+        \node[comp] (comp_f3) at ([yshift=-0.4cm]frontend.center) [xshift=3.2cm] {Auth Gateway};
+        \node[comp] (comp_b1) at ([yshift=-0.4cm]backend.center) [xshift=-3.2cm] {Route Engine};
+        \node[comp] (comp_b2) at ([yshift=-0.4cm]backend.center) [xshift=0cm] {FastAPI App};
+        \node[comp] (comp_b3) at ([yshift=-0.4cm]backend.center) [xshift=3.2cm] {Runtime Cache};
+
+        \node[comp] (comp_d1) at ([yshift=-0.4cm]data.center) [xshift=-3.2cm] {GeoJSON Layers};
+        \node[comp] (comp_d2) at ([yshift=-0.4cm]data.center) [xshift=0cm] {Topology JSON};
+        \node[comp] (comp_d3) at ([yshift=-0.4cm]data.center) [xshift=3.2cm] {Vector Tiles};
+        
+        \draw[arrow, line width=1pt] ([xshift=-1.5cm]frontend.south) -- node[right, font=\tiny] {REST API} ([xshift=-1.5cm]backend.north);
+        \draw[arrow, line width=1pt] ([xshift=1.5cm]backend.north) -- node[left, font=\tiny] {JSON Result} ([xshift=1.5cm]frontend.south);
+        
+        \draw[arrow, line width=1pt] ([xshift=-1.5cm]backend.south) -- node[right, font=\tiny] {Query} ([xshift=-1.5cm]data.north);
+        \draw[arrow, line width=1pt] ([xshift=1.5cm]data.north) -- node[left, font=\tiny] {Response} ([xshift=1.5cm]backend.south);
+        
+        \node (user) [startstop, above=0.8cm of frontend] {Người dùng};
+        \draw[arrow] (user) -- (frontend);
+    \end{tikzpicture}
+\caption{Kiến trúc ba lớp của dự án IT3160 Subway Web}
+\label{fig:subway_architecture}
+\end{figure}
+
+Kiến trúc tại Hình~\ref{fig:subway_architecture} cho thấy hệ thống được tổ chức theo mô hình ba lớp.
+Frontend tập trung vào tương tác bản đồ và hiển thị kết quả.
+Backend đóng vai trò lớp xử lý trung tâm, nơi tiếp nhận request, tính toán route và quản lý trạng thái runtime.
+Data/GIS là lớp nền cung cấp topology, hình học không gian và bản đồ nền phục vụ cả định tuyến lẫn trực quan hoá.
+
+\section{Luồng xử lý chính}
+Luồng xử lý định tuyến theo điểm trên bản đồ được tổ chức như sau:
+\begin{enumerate}
+    \item Người dùng mở giao diện \texttt{/} hoặc \texttt{/gis} và tải dữ liệu mạng từ endpoint \texttt{/api/gis/network}.
+    \item Frontend hiển thị ga, tuyến, lớp nền và các thành phần điều khiển tương tác.
+    \item Người dùng chọn điểm bắt đầu và điểm kết thúc trên bản đồ.
+    \item Frontend gửi yêu cầu tới backend qua endpoint \texttt{/api/gis/route/points}.
+    \item Backend nạp mạng tuyến, lớp ga GIS, lớp đường đi bộ và các cấu hình runtime cần thiết.
+    \item Backend tìm ga gần nhất theo dữ liệu đi bộ hoặc lối vào ga, sau đó route engine tính hành trình trên đồ thị tuyến.
+    \item Kết quả cuối cùng được trả lại frontend để hiển thị đường đi bộ đầu/cuối, tuyến tàu điện và phần tóm tắt hành trình.
+\end{enumerate}
+
+\subsection{Sequence Diagram cho luồng định tuyến}
+Hình~\ref{fig:seq_route_points} cụ thể hoá luồng người dùng chọn hai điểm trên bản đồ, frontend gửi yêu cầu tới \texttt{/api/gis/route/points}, backend thực hiện snap qua walk network, gọi route engine và cuối cùng trả về payload hình học để frontend trực quan hoá kết quả.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[x=1.9cm,y=0.85cm,font=\small]
+    \def\TopY{0}
+    \def\BottomY{-12.4}
+
+    \node[draw, rounded corners, fill=purple!8, minimum width=1.8cm, minimum height=0.8cm] (u) at (0,\TopY) {User};
+    \node[draw, rounded corners, fill=blue!8, minimum width=2.1cm, minimum height=0.8cm] (f) at (2.2,\TopY) {Frontend};
+    \node[draw, rounded corners, fill=orange!10, minimum width=1.8cm, minimum height=0.8cm] (api) at (4.6,\TopY) {API};
+    \node[draw, rounded corners, fill=green!10, minimum width=2.0cm, minimum height=0.8cm] (snap) at (7.1,\TopY) {Snap Service};
+    \node[draw, rounded corners, fill=cyan!10, minimum width=2.0cm, minimum height=0.8cm] (route) at (9.6,\TopY) {Route Engine};
+    \node[draw, rounded corners, fill=yellow!18, minimum width=2.1cm, minimum height=0.8cm] (geo) at (12.1,\TopY) {GIS Builder};
+
+    \foreach \x in {0,2.2,4.6,7.1,9.6,12.1} {
+        \draw[dashed, gray!70] (\x,-0.5) -- (\x,\BottomY);
+    }
+
+    \draw[->, thick] (0,-1.2) -- node[midway, above, align=center, fill=white, inner sep=1.2pt]{Chọn điểm đầu,\\điểm cuối} (2.2,-1.2);
+    \draw[->, thick] (2.2,-2.2) -- node[midway, above, fill=white, inner sep=1.2pt]{POST /api/gis/route/points} (4.6,-2.2);
+    \draw[->, thick] (4.6,-3.2) -- node[midway, above, align=center, fill=white, inner sep=1.2pt]{Nạp topology, GIS,\\walk network} (7.1,-3.2);
+    \draw[->, thick] (7.1,-4.2) -- node[midway, above, align=center, fill=white, inner sep=1.2pt]{Tìm ga/access point\\tối ưu} (9.6,-4.2);
+    \draw[->, thick] (9.6,-5.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Tính P\_mrt và cost tuple} (12.1,-5.2);
+    \draw[->, thick] (12.1,-6.2) -- node[midway, above, align=center, fill=white, inner sep=1.2pt]{Ghép geometry MRT\\+ access/egress} (9.6,-6.2);
+    \draw[->, thick] (9.6,-7.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Payload định tuyến hoàn chỉnh} (4.6,-7.2);
+    \draw[->, thick] (4.6,-8.2) -- node[midway, above, fill=white, inner sep=1.2pt]{JSON response} (2.2,-8.2);
+    \draw[->, thick] (2.2,-9.2) -- node[midway, above, align=center, fill=white, inner sep=1.2pt]{Vẽ route, ga snap,\\summary} (0,-9.2);
+
+    \node[draw, fill=green!5, rounded corners, align=left, text width=3.25cm] at (6.6,-11.1) {\scriptsize Ưu tiên đường đi bộ hợp lệ; nếu thiếu dữ liệu thì fallback về access point hoặc khoảng cách hình học.};
+    \node[draw, fill=yellow!8, rounded corners, align=left, text width=3.25cm] at (11.6,-11.1) {\scriptsize Chuyển kết quả logic thành GeoJSON/line string để frontend dựng lại hành trình.};
+\end{tikzpicture}%
+}
+\caption{Sequence Diagram cho luồng định tuyến theo điểm trên bản đồ}
+\label{fig:seq_route_points}
+\end{figure}
+
+\subsection{Sequence Diagram cho luồng admin scenario}
+Bên cạnh luồng định tuyến chính, Hình~\ref{fig:seq_admin_scenario} mô tả cách Admin Console gửi scenario mới, backend phân tích phạm vi ảnh hưởng, cập nhật runtime constraint và làm mới cache để các truy vấn định tuyến sau đó phản ánh đúng trạng thái vận hành.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.96\textwidth}{!}{%
+\begin{tikzpicture}[x=2.25cm,y=0.9cm,font=\small]
+    \def\TopY{0}
+    \def\BottomY{-10.2}
+
+    \node[draw, rounded corners, fill=purple!8, minimum width=1.9cm, minimum height=0.8cm] (a) at (0,\TopY) {Admin};
+    \node[draw, rounded corners, fill=blue!8, minimum width=2.2cm, minimum height=0.8cm] (ui) at (2.6,\TopY) {Admin UI};
+    \node[draw, rounded corners, fill=orange!10, minimum width=1.9cm, minimum height=0.8cm] (api2) at (5.2,\TopY) {API};
+    \node[draw, rounded corners, fill=green!10, minimum width=2.4cm, minimum height=0.8cm] (svc) at (7.9,\TopY) {Scenario Service};
+    \node[draw, rounded corners, fill=yellow!18, minimum width=2.4cm, minimum height=0.8cm] (cache) at (10.8,\TopY) {Runtime Cache/Data};
+
+    \foreach \x in {0,2.6,5.2,7.9,10.8} {
+        \draw[dashed, gray!70] (\x,-0.5) -- (\x,\BottomY);
+    }
+
+    \draw[->, thick] (0,-1.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Chọn rain zone / block segment} (2.6,-1.2);
+    \draw[->, thick] (2.6,-2.2) -- node[midway, above, fill=white, inner sep=1.2pt]{PUT /api/admin/scenarios} (5.2,-2.2);
+    \draw[->, thick] (5.2,-3.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Tính segment bị ảnh hưởng} (7.9,-3.2);
+    \draw[->, thick] (7.9,-4.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Đọc topology + GIS hiện hành} (10.8,-4.2);
+    \draw[->, thick] (10.8,-5.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Kết quả phân tích} (7.9,-5.2);
+    \draw[->, thick] (7.9,-6.2) -- node[midway, above, align=center, fill=white, inner sep=1.2pt]{Lưu scenario\\+ invalidate cache} (5.2,-6.2);
+    \draw[->, thick] (5.2,-7.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Trả runtime state mới} (2.6,-7.2);
+    \draw[->, thick] (2.6,-8.0) -- node[midway, above, fill=white, inner sep=1.2pt]{Scenario hiển thị trên bản đồ} (0,-8.0);
+
+    \node[draw, fill=yellow!8, rounded corners, align=left, text width=3.6cm] at (10.8,-9.1) {\scriptsize Cache được làm mới để mọi truy vấn route tiếp theo dùng đúng trạng thái scenario mới nhất.};
+\end{tikzpicture}%
+}
+\caption{Sequence Diagram cho luồng áp dụng admin scenario trong runtime}
+\label{fig:seq_admin_scenario}
+\end{figure}
+
+\section{Thuật toán định tuyến}
+Trong phiên bản hiện tại, hệ thống dùng \textbf{A* Search} làm thuật toán định tuyến chính trên đồ thị MRT mở rộng.
+Lựa chọn này phù hợp với phạm vi học phần Nhập môn AI vì bài toán không chỉ là tìm đường ngắn nhất trên đồ thị trừu tượng, mà còn có thông tin không gian thực tế của các ga.
+Khi đặt heuristic bằng 0, A* trở về Dijkstra; do đó Dijkstra được xem là baseline lý thuyết, còn A* là lựa chọn triển khai phù hợp hơn vì tận dụng được toạ độ địa lý.
+
+\subsection{Đồ thị trạng thái mở rộng}
+Route engine không chạy trực tiếp trên đồ thị ga đơn giản.
+Mỗi đỉnh runtime có dạng:
+\[
+v = (s, l)
+\]
+trong đó \(s\) là ga và \(l\) là tuyến mà hành khách đang đứng.
+Cách biểu diễn này giúp hệ thống phân biệt rõ ba loại hành động:
+\begin{itemize}
+    \item \textbf{ride}: đi tàu giữa hai ga liên tiếp trên cùng tuyến;
+    \item \textbf{transfer}: đổi tuyến tại cùng một ga;
+    \item \textbf{walk-transfer}: đi bộ giữa hai ga gần nhau khi có kết nối hợp lệ.
+\end{itemize}
+
+\subsection{Hàm chi phí tổng quát}
+Mỗi cạnh được gán một vector chi phí:
+\[
+c(e) = (T, W, N_{tr}, N_{stop})
+\]
+trong đó \(T\) là chi phí thời gian dùng để so sánh phương án, \(W\) là thời gian đi bộ, \(N_{tr}\) là số lần chuyển tuyến và \(N_{stop}\) là số chặng đi tàu.
+
+Hệ thống không tối ưu quãng đường hình học đơn thuần.
+Thay vào đó, route được chọn theo chi phí tổng quát:
+\[
+C = T_{ride} + T_{transfer} + \lambda_{walk}T_{walk} + \lambda_{switch}N_{switch}
+\]
+Trong cài đặt hiện tại, tốc độ đi bộ mặc định là \(1.3\,m/s\), tốc độ tàu dùng khi cần nội suy là \(80\,km/h\), và hệ số phạt đi bộ \(\lambda_{walk}\) là 5.
+Cách đặt trọng số này giúp hệ thống vẫn hỗ trợ đi bộ để kết nối điểm người dùng với ga, nhưng không lạm dụng đi bộ thay cho metro.
+
+\subsection{Heuristic của A*}
+Heuristic được xây dựng từ khoảng cách địa lý giữa ga hiện tại và ga đích:
+\[
+h(v) = \frac{d_{geo}(s, s_t)}{v_{max}}
+\]
+với \(d_{geo}\) là khoảng cách Haversine và \(v_{max}\) là tốc độ tàu tối đa giả định.
+Do heuristic này là ước lượng lạc quan về thời gian còn lại, nó không vượt quá chi phí thực tế trong mô hình di chuyển, từ đó giữ được tính đúng đắn của A* trong việc tìm route tối ưu theo chi phí chính.
+
+\subsection{Quy trình truy vấn runtime}
+Luồng truy vấn định tuyến gồm các bước:
+\begin{enumerate}
+    \item Nhận toạ độ điểm đầu và điểm cuối từ giao diện bản đồ.
+    \item Tìm các ga ứng viên bằng walk network và station access points. Walk graph được nạp từ cache; truy vấn điểm dùng multi-source Dijkstra từ một số nút snap gần nhất và dừng sớm khi đã thu đủ ga ứng viên tốt.
+    \item Thử các cặp ga vào/ra hợp lệ và chạy A* trên đồ thị MRT mở rộng.
+    \item Chọn phương án có chi phí tổng quát tốt nhất, trong đó đi bộ bị phạt để ưu tiên hành trình metro hợp lý.
+    \item Ghép geometry cho đoạn đi bộ vào ga, tuyến tàu và đoạn đi bộ ra đích để frontend hiển thị.
+\end{enumerate}
+
+\subsection{A* trên đồ thị MRT mở rộng}
+Thuật toán dưới đây mô tả lõi tìm đường từ một ga xuất phát tới một ga đích sau khi hệ thống đã snap điểm người dùng về ga phù hợp.
+
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\SetAlgoLined
+\KwIn{Đồ thị mở rộng $G'$, ga xuất phát $s$, ga đích $t$, hàm chi phí $g$, heuristic $h$}
+\KwOut{Hành trình $P^*$ có chi phí tổng quát nhỏ nhất}
+\Begin{
+    $open \leftarrow \emptyset$\;
+    $dist[v] \leftarrow \infty, \forall v \in V'$\;
+    $dist[s] \leftarrow 0$\;
+    $open.push((h(s), s))$\;
+
+    \While{$open$ không rỗng}{
+        $(f_u, u) \leftarrow open.pop\_min()$\;
+        \If{$station(u) = t$}{
+            \Return truy vết hành trình bằng mảng $prev$\;
+        }
+
+        \ForEach{cạnh $(u, v)$ kề $u$}{
+            $new\_cost \leftarrow dist[u] + cost(u, v)$\;
+            \If{$new\_cost < dist[v]$}{
+                $dist[v] \leftarrow new\_cost$\;
+                $prev[v] \leftarrow u$\;
+                $open.push((dist[v] + h(v), v))$\;
+            }
+        }
+    }
+    \Return Không tìm thấy hành trình hợp lệ\;
+}
+\caption{A* Search trên đồ thị MRT mở rộng}
+\label{alg:astar_mrt}
+\end{algorithm}
+
+Thuật toán~\ref{alg:astar_mrt} có hai điểm phù hợp với bài toán:
+\begin{itemize}
+    \item \textbf{Tận dụng dữ liệu không gian:} Các ga có toạ độ địa lý nên heuristic giúp ưu tiên mở rộng những trạng thái gần hướng đích hơn.
+    \item \textbf{Vẫn giữ baseline Dijkstra:} Nếu đặt \(h(v)=0\), thuật toán trở thành Dijkstra. Điều này giúp nhóm dễ giải thích quan hệ giữa thuật toán mẫu và lựa chọn triển khai thực tế.
+\end{itemize}
+
+\subsection{Hàm ánh xạ tọa độ vào ga (Spatial Snapping)}
+Việc ánh xạ điểm người dùng chọn trên bản đồ ($p$) vào mạng MRT được thực hiện thông qua quy trình Spatial Snapping hai giai đoạn để đảm bảo tính thực tế của hành trình:
+\begin{enumerate}
+    \item \textbf{Giai đoạn 1 (Point-to-Topology):} Tìm một nhóm nhỏ nút gần nhất trên đồ thị đi bộ từ tọa độ $p$.
+Hệ thống sử dụng chỉ mục không gian (Spatial Indexing) để tối ưu hoá việc tìm kiếm trong tập hợp hàng chục nghìn nút của toàn bộ mạng lưới Đài Bắc. Việc xét nhiều nút snap giúp giảm lỗi khi điểm người dùng nằm gần sông, đường lớn hoặc ranh giới dữ liệu.
+    \item \textbf{Giai đoạn 2 (Topology-to-Station):} Từ nhóm nút snap, hệ thống chạy multi-source Dijkstra tới các điểm tiếp cận ($A_s$) của nhà ga $s$ và dừng sớm khi đã tìm đủ số ga ứng viên cần đánh giá.
+Ga được chọn là ga tối ưu hoá hàm chi phí:
+\end{enumerate}
+
+\[
+\phi(p) = \arg\min_{s \in S_k} \left(D_{snap}(p, V_{walk}) + D_{graph}(V_{walk}, A_s)\right)
+\]
+
+Trong đó \(S_k\) là tập ga ứng viên sau khi cắt tỉa theo khoảng cách đi bộ hợp lý. Cách tiếp cận này giúp hệ thống ưu tiên khả năng tiếp cận thực tế bằng mạng đi bộ thay vì chỉ dựa vào khoảng cách hình học đơn giản, đồng thời tránh phải duyệt toàn bộ walk graph cho mỗi lần người dùng bấm tìm đường.
+
+\subsection{Cấu trúc cạnh và mã minh hoạ logic lõi}
+Để giải quyết bài toán định tuyến đa tiêu chí, đồ thị $G'$ được xây dựng với ba loại cạnh chính, mỗi loại mang các thuộc tính chi phí khác nhau nhằm mô phỏng hành vi di chuyển thực tế.
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{2.3cm}|>{\raggedright\arraybackslash}p{6.0cm}|>{\raggedright\arraybackslash}p{3.7cm}|}
+\hline
+\textbf{Loại cạnh} & \textbf{Ý nghĩa} & \textbf{Chi phí Vector $c$} \\
+\hline
+Ride & Di chuyển giữa hai ga kế tiếp trên cùng tuyến & $(T_{seg}, 0, 0, 1)$ \\
+\hline
+Transfer & Chuyển đổi trạng thái ga giữa các tuyến & $(T_{trans}, 0, 1, 0)$ \\
+\hline
+Walk-trans & Đi bộ trung chuyển giữa các ga gần nhau & $(\lambda_{walk}T_{walk}, T_{walk}, 0, 0)$ \\
+\hline
+\end{tabular}
+\caption{Đặc tả chi phí cho các loại cạnh trong đồ thị mở rộng}
+\label{tab:edge-cost-types}
+\end{table}
+
+Báo cáo bổ sung hai đoạn mã đại diện cho hai thao tác trung tâm của hệ thống: cập nhật trạng thái trong A* và snap điểm người dùng vào ga phù hợp thông qua walk network.
+
+\begin{tcolorbox}[
+  enhanced,
+  title={Đoạn mã 2.0: Logic cập nhật nút theo chi phí từ điển (Cost Relaxation)},
+  fonttitle=\bfseries\small,
+  colframe=codeframe,
+  colback=codeback,
+  coltitle=black,
+  colbacktitle=codeheader,
+  boxrule=0.5mm,
+  arc=2mm,
+  drop shadow,
+  before=\par\vspace{8pt}\needspace{12\baselineskip},
+  after=\par\vspace{10pt}
+]
+\begin{minted}[linenos,breaklines,breakanywhere,fontsize=\small]{python}
+new_cost = curr_cost + edge.cost
+if next_state not in distances or new_cost < distances[next_state]:
+    distances[next_state] = new_cost
+    parents[next_state] = (curr_state, edge)
+    estimated_total = new_cost + heuristic(next_state, goal)
+    priority_queue.push((estimated_total, new_cost, next_state))
+\end{minted}
+\end{tcolorbox}
+
+\begin{tcolorbox}[
+  enhanced,
+  title={Đoạn mã 2.1: Logic ánh xạ toạ độ vào mạng (Walk-based Snapping)},
+  fonttitle=\bfseries\small,
+  colframe=codeframe,
+  colback=codeback,
+  coltitle=black,
+  colbacktitle=codeheader,
+  boxrule=0.5mm,
+  arc=2mm,
+  drop shadow,
+  before=\par\vspace{8pt}\needspace{12\baselineskip},
+  after=\par\vspace{10pt}
+]
+\begin{minted}[linenos,breaklines,breakanywhere,fontsize=\small]{python}
+snap_nodes = nearest_walk_nodes(point, k=5)
+queue = priority_queue_from(snap_nodes)
+best_candidates = {}
+
+while queue and not enough_candidates(best_candidates):
+    dist, node = queue.pop_min()
+    if node in access_point_nodes:
+        update_best_station_candidate(best_candidates, node, dist)
+    for next_node, edge_cost in walk_graph[node]:
+        relax(queue, node, next_node, dist + edge_cost)
+
+return sort_by_walk_cost(best_candidates)[:limit]
+\end{minted}
+\end{tcolorbox}
+
+\section{Tổng quan phân công công việc}
+Để cả ba nhóm đều có đầu việc độc lập và có thể nghiệm thu rõ ràng, nhóm nên chia theo deliverable thay vì chỉ chia theo thời gian.
+Bảng~\ref{tab:work-breakdown} mô tả cách phân chia phù hợp với dự án hiện tại.
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{2.1cm}|>{\raggedright\arraybackslash}p{3.2cm}|>{\raggedright\arraybackslash}p{6.2cm}|}
+\hline
+\textbf{Nhóm} & \textbf{Phạm vi chính} & \textbf{Đầu việc cụ thể} \\
+\hline
+Frontend & Giao diện người dùng và trực quan hoá & Phát triển \texttt{gis-studio}, \texttt{admin}, \texttt{login};
+xử lý click/zoom/pan; hiển thị route summary; chuẩn hoá loading và error state.
+\\
+\hline
+Backend & API và logic nghiệp vụ & Xây dựng endpoint FastAPI; quản lý runtime cache;
+tổ chức route engine và GIS services; xử lý admin scenario; viết test cho API và logic định tuyến.
+\\
+\hline
+Data/GIS & Dữ liệu mạng và lớp bản đồ & Chuẩn hoá \texttt{network\_topology.json}; cập nhật \texttt{stations.geojson}, \texttt{lines.geojson}, \texttt{station\_access\_points.geojson}, \texttt{walk\_network.geojson};
+quản lý OSM enrichment và dữ liệu bản đồ. \\
+\hline
+\end{tabular}
+\caption{Phân rã công việc theo nhóm chuyên trách}
+\label{tab:work-breakdown}
+\end{table}
+
+\section{Phân công nhân sự và trách nhiệm chính}
+Dựa trên cách chia việc của nhóm, nhân sự được phân thành ba khối chức năng tương ứng với frontend, backend và data/GIS.
+Việc gắn trách nhiệm theo nhóm chuyên trách giúp quá trình triển khai rõ đầu việc hơn, đồng thời thuận tiện cho quá trình nghiệm thu vì mỗi nhóm đều có đầu ra kỹ thuật riêng.
+
+\subsection{Nhóm frontend}
+Nhóm frontend gồm Nguyễn Danh Tiến Nam và Trần Thái Minh.
+Nhóm này chịu trách nhiệm xây dựng lớp giao diện tương tác, bao gồm màn hình GIS Studio dành cho người dùng cuối, giao diện Admin Console phục vụ mô phỏng vận hành, cùng trang Login ở mức demo để điều hướng vào khu vực quản trị.
+Cụ thể hơn, nhóm frontend phụ trách các nội dung sau:
+\begin{itemize}
+    \item tổ chức layout giao diện, vùng bản đồ, thanh điều khiển và phần hiển thị tóm tắt hành trình;
+    \item xử lý thao tác chọn điểm đầu, điểm cuối, các điểm đi qua nếu có và gửi yêu cầu định tuyến tới backend;
+    \item dựng lại kết quả định tuyến bằng dữ liệu hình học do backend trả về, bao gồm ga được chọn, đoạn tiếp cận từ điểm người dùng tới ga và tuyến MRT;
+    \item hiển thị thông báo trạng thái, lỗi đầu vào và kết quả xử lý của admin scenario.
+\end{itemize}
+
+\subsection{Nhóm backend}
+Nhóm backend gồm Tạ Đức Hiển và Nguyễn Đức Huy.
+Nhóm này phụ trách toàn bộ phần xử lý nghiệp vụ phía máy chủ trên nền FastAPI, bao gồm tổ chức API, nạp dữ liệu runtime, xây dựng route engine và áp dụng các ràng buộc vận hành do khu vực admin tạo ra.
+Phạm vi chính của nhóm backend gồm:
+\begin{itemize}
+    \item xây dựng và duy trì các endpoint chính như \texttt{/api/gis/network}, \texttt{/api/gis/route/points}, \texttt{/api/admin/scenarios} và các API GIS hỗ trợ;
+    \item triển khai runtime cache để giảm chi phí nạp dữ liệu lặp lại và hỗ trợ làm mới trạng thái khi scenario thay đổi;
+    \item tổ chức route engine trên đồ thị MRT mở rộng, kết hợp logic snap ga gần nhất và ghép đường đi hoàn chỉnh;
+    \item viết kiểm thử cho các luồng xử lý quan trọng như route API, admin scenario và các dịch vụ GIS.
+\end{itemize}
+
+\subsection{Nhóm data/GIS}
+Nhóm data/GIS gồm Nguyễn Vĩ Thái Sơn và Nguyễn Duy Mạnh.
+Nhóm này chịu trách nhiệm chuẩn hoá và duy trì lớp dữ liệu phục vụ cho cả backend lẫn frontend, bao gồm topology mạng tuyến, các lớp GeoJSON, dữ liệu đi bộ, enrichment và tài nguyên bản đồ nền.
+Các đầu việc trọng tâm của nhóm data/GIS gồm:
+\begin{itemize}
+    \item chuẩn hoá \texttt{network\_topology.json} và đồng bộ ID ga, tuyến, segment giữa topology và dữ liệu GIS;
+    \item quản lý các lớp \texttt{stations.geojson}, \texttt{lines.geojson}, \texttt{station\_access\_points.geojson}, \texttt{walk\_network.geojson};
+    \item xây dựng hoặc duy trì các script làm sạch dữ liệu, bổ sung dữ liệu OSM và chuẩn bị lớp bản đồ;
+    \item hỗ trợ kiểm tra mức độ khớp giữa dữ liệu hình học và dữ liệu định tuyến trong quá trình tích hợp.
+\end{itemize}
+
+\subsection{Nguyên tắc phối hợp}
+Dù chia theo ba nhóm chuyên trách, toàn bộ hệ thống chỉ vận hành ổn định khi các nhóm phối hợp chặt chẽ thông qua ba điểm giao tiếp chính:
+\begin{itemize}
+    \item frontend phụ thuộc vào schema API và payload hình học do backend cung cấp;
+    \item backend phụ thuộc vào chất lượng và mức độ đồng bộ của topology, GeoJSON và walk network do nhóm data/GIS chuẩn bị;
+    \item nhóm data/GIS cần phản hồi nhanh khi phát hiện dữ liệu mới làm thay đổi kết quả route hoặc gây lệch hiển thị trên frontend.
+\end{itemize}
+
+Nhờ cơ chế phối hợp này, dự án không bị tách rời thành các phần riêng lẻ mà được duy trì như một hệ thống tích hợp thống nhất.
+
+\section{Cơ chế phối hợp giữa các nhóm}
+Để tránh chồng chéo và giảm lỗi tích hợp, nhóm cần thống nhất ba điểm giao tiếp:
+\begin{itemize}
+    \item \textbf{Hợp đồng API giữa frontend và backend:} thống nhất URL, request body, response schema và cách xử lý lỗi trước khi hoàn thiện giao diện.
+    \item \textbf{Schema dữ liệu giữa backend và data/GIS:} thống nhất tên trường ga, tuyến, segment, toạ độ và quy ước dữ liệu bị xoá mềm.
+    \item \textbf{Vòng tích hợp ngắn:} sau mỗi mốc phát triển, frontend kiểm tra với API thật, backend kiểm tra với dữ liệu thật, và nhóm data xác minh hiển thị trên bản đồ.
+\end{itemize}
+
+\end{document}
+
+
+

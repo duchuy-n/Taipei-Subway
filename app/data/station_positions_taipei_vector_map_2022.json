@@ -1,0 +1,654 @@
+{
+  "taipei-zoo": {
+    "x": 2215.8,
+    "y": 1710.12
+  },
+  "muzha": {
+    "x": 2143.71,
+    "y": 1709.87
+  },
+  "wanfang-community": {
+    "x": 2086.71,
+    "y": 1707.46
+  },
+  "wanfang-hospital": {
+    "x": 1973.65,
+    "y": 1701.98
+  },
+  "xinhai": {
+    "x": 1961.82,
+    "y": 1657.2
+  },
+  "linguang": {
+    "x": 1982.04,
+    "y": 1562.0
+  },
+  "liuzhangli": {
+    "x": 1916.29,
+    "y": 1523.2
+  },
+  "technology-building": {
+    "x": 1808.18,
+    "y": 1506.34
+  },
+  "daan": {
+    "x": 1795.83,
+    "y": 1453.84
+  },
+  "zhongxiao-fuxing": {
+    "x": 1825.87,
+    "y": 1392.24
+  },
+  "zhongshan-junior-high-school": {
+    "x": 1816.7,
+    "y": 1252.8
+  },
+  "songshan-airport": {
+    "x": 1904.87,
+    "y": 1237.78
+  },
+  "dazhi": {
+    "x": 1845.82,
+    "y": 1117.16
+  },
+  "jiannan-rd": {
+    "x": 1945.27,
+    "y": 1077.74
+  },
+  "xihu": {
+    "x": 2076.98,
+    "y": 1097.23
+  },
+  "gangqian": {
+    "x": 2166.7,
+    "y": 1112.49
+  },
+  "wende": {
+    "x": 2277.99,
+    "y": 1124.28
+  },
+  "neihu": {
+    "x": 2383.9,
+    "y": 1086.17
+  },
+  "dahu-park": {
+    "x": 2472.7,
+    "y": 1085.22
+  },
+  "huzhou": {
+    "x": 2528.48,
+    "y": 1166.22
+  },
+  "donghu": {
+    "x": 2578.13,
+    "y": 1204.58
+  },
+  "nangang-software-park": {
+    "x": 2617.32,
+    "y": 1259.59
+  },
+  "taipei-nangang-exhibition-center": {
+    "x": 2638.36,
+    "y": 1296.1
+  },
+  "xiangshan": {
+    "x": 2109.66,
+    "y": 1460.53
+  },
+  "taipei-101-world-trade-center": {
+    "x": 2036.71,
+    "y": 1457.1
+  },
+  "xinyi-anhe": {
+    "x": 1908.44,
+    "y": 1456.0
+  },
+  "daan-park": {
+    "x": 1725.49,
+    "y": 1454.47
+  },
+  "dongmen": {
+    "x": 1641.97,
+    "y": 1449.58
+  },
+  "chiang-kai-shek-memorial-hall": {
+    "x": 1523.28,
+    "y": 1457.81
+  },
+  "ntu-hospital": {
+    "x": 1497.8,
+    "y": 1394.79
+  },
+  "taipei-main-station": {
+    "x": 1513.57,
+    "y": 1358.95
+  },
+  "zhongshan": {
+    "x": 1546.93,
+    "y": 1312.87
+  },
+  "shuanglian": {
+    "x": 1550.56,
+    "y": 1276.71
+  },
+  "minquan-w-road": {
+    "x": 1538.12,
+    "y": 1241.85
+  },
+  "yuanshan": {
+    "x": 1543.65,
+    "y": 1175.72
+  },
+  "jiantan": {
+    "x": 1598.85,
+    "y": 1082.33
+  },
+  "shilin": {
+    "x": 1613.28,
+    "y": 1014.5
+  },
+  "zhishan": {
+    "x": 1571.61,
+    "y": 947.15
+  },
+  "mingde": {
+    "x": 1529.07,
+    "y": 895.34
+  },
+  "shipai": {
+    "x": 1492.74,
+    "y": 861.47
+  },
+  "qilian": {
+    "x": 1387.12,
+    "y": 814.77
+  },
+  "qiyan": {
+    "x": 1329.49,
+    "y": 781.05
+  },
+  "beitou": {
+    "x": 1301.3,
+    "y": 734.71
+  },
+  "xinbeitou": {
+    "x": 1345.96,
+    "y": 697.38
+  },
+  "fuxingguang": {
+    "x": 1152.1,
+    "y": 693.26
+  },
+  "zhongyi": {
+    "x": 1014.58,
+    "y": 741.25
+  },
+  "guandu": {
+    "x": 943.35,
+    "y": 780.76
+  },
+  "zhuwei": {
+    "x": 859.09,
+    "y": 697.61
+  },
+  "hongshulin": {
+    "x": 850.6,
+    "y": 572.85
+  },
+  "tamsui": {
+    "x": 1492.0,
+    "y": 229.0
+  },
+  "xindian": {
+    "x": 1740.3,
+    "y": 2006.48
+  },
+  "xindian-district-office": {
+    "x": 1783.73,
+    "y": 1934.71
+  },
+  "qizhang": {
+    "x": 1802.78,
+    "y": 1876.24
+  },
+  "xiaobitan": {
+    "x": 1662.48,
+    "y": 1902.3
+  },
+  "dapinglin": {
+    "x": 1784.19,
+    "y": 1823.16
+  },
+  "jingmei": {
+    "x": 1776.92,
+    "y": 1749.41
+  },
+  "wanlong": {
+    "x": 1757.81,
+    "y": 1682.58
+  },
+  "gongguan": {
+    "x": 1705.21,
+    "y": 1589.11
+  },
+  "taipower-building": {
+    "x": 1634.92,
+    "y": 1545.66
+  },
+  "guting": {
+    "x": 1575.26,
+    "y": 1504.49
+  },
+  "xiaonanmen": {
+    "x": 1439.66,
+    "y": 1437.24
+  },
+  "beimen": {
+    "x": 1431.79,
+    "y": 1335.26
+  },
+  "songjiang-nanjing": {
+    "x": 1688.15,
+    "y": 1312.35
+  },
+  "nanjing-fuxing": {
+    "x": 1817.7,
+    "y": 1317.08
+  },
+  "taipei-arena": {
+    "x": 1910.96,
+    "y": 1320.91
+  },
+  "nanjing-sanmin": {
+    "x": 2048.51,
+    "y": 1320.41
+  },
+  "songshan": {
+    "x": 2195.5,
+    "y": 1331.14
+  },
+  "nanshijiao": {
+    "x": 1421.08,
+    "y": 1769.55
+  },
+  "jingan": {
+    "x": 1374.44,
+    "y": 1741.4
+  },
+  "yongan-market": {
+    "x": 1443.57,
+    "y": 1675.88
+  },
+  "dingxi": {
+    "x": 1491.49,
+    "y": 1595.85
+  },
+  "xingtian-temple": {
+    "x": 1691.55,
+    "y": 1264.55
+  },
+  "zhongshan-elementary-school": {
+    "x": 1617.56,
+    "y": 1239.55
+  },
+  "daqiaotou": {
+    "x": 1463.68,
+    "y": 1235.5
+  },
+  "taipei-bridge": {
+    "x": 1323.1,
+    "y": 1236.55
+  },
+  "cailiao": {
+    "x": 1219.57,
+    "y": 1263.01
+  },
+  "sanchong": {
+    "x": 1138.12,
+    "y": 1290.32
+  },
+  "xianse-temple": {
+    "x": 995.95,
+    "y": 1358.87
+  },
+  "touqianzhuang": {
+    "x": 882.9,
+    "y": 1406.94
+  },
+  "xinzhuang": {
+    "x": 775.73,
+    "y": 1433.63
+  },
+  "fu-jen-university": {
+    "x": 589.73,
+    "y": 1457.64
+  },
+  "danfeng": {
+    "x": 439.15,
+    "y": 1484.78
+  },
+  "huilong": {
+    "x": 318.52,
+    "y": 1535.63
+  },
+  "sanchong-elementary-school": {
+    "x": 1282.78,
+    "y": 1183.99
+  },
+  "sanhe-junior-high-school": {
+    "x": 1167.25,
+    "y": 1138.84
+  },
+  "st-ignatius-high-school": {
+    "x": 1089.77,
+    "y": 1109.46
+  },
+  "sanmin-senior-high-school": {
+    "x": 1015.34,
+    "y": 1073.39
+  },
+  "luzhou": {
+    "x": 917.45,
+    "y": 1028.9
+  },
+  "dingpu": {
+    "x": 417.41,
+    "y": 1988.15
+  },
+  "yongning": {
+    "x": 594.19,
+    "y": 1939.24
+  },
+  "tucheng": {
+    "x": 686.83,
+    "y": 1893.18
+  },
+  "haishan": {
+    "x": 736.71,
+    "y": 1804.3
+  },
+  "far-eastern-hospital": {
+    "x": 778.95,
+    "y": 1709.58
+  },
+  "fuzhong": {
+    "x": 855.99,
+    "y": 1635.22
+  },
+  "banqiao": {
+    "x": 890.25,
+    "y": 1596.09
+  },
+  "xinpu": {
+    "x": 955.29,
+    "y": 1527.14
+  },
+  "jiangzicui": {
+    "x": 1006.35,
+    "y": 1476.07
+  },
+  "longshan-temple": {
+    "x": 1320.28,
+    "y": 1439.46
+  },
+  "ximen": {
+    "x": 1409.06,
+    "y": 1390.23
+  },
+  "zhongxiao-xinsheng": {
+    "x": 1692.22,
+    "y": 1386.77
+  },
+  "zhongxiao-dunhua": {
+    "x": 1887.22,
+    "y": 1394.02
+  },
+  "sun-yat-sen-memorial-hall": {
+    "x": 1970.52,
+    "y": 1395.01
+  },
+  "taipei-city-hall": {
+    "x": 2059.53,
+    "y": 1396.72
+  },
+  "yongchun": {
+    "x": 2178.47,
+    "y": 1398.77
+  },
+  "houshanpi": {
+    "x": 2247.12,
+    "y": 1370.59
+  },
+  "kunyang": {
+    "x": 2371.07,
+    "y": 1328.66
+  },
+  "nangang": {
+    "x": 2526.49,
+    "y": 1317.15
+  },
+  "_meta": {
+    "x": 0,
+    "y": 0
+  },
+  "airport-hotel": {
+    "x": 1287.0,
+    "y": 1942.0
+  },
+  "airport-terminal-1": {
+    "x": 1237.5,
+    "y": 2236.06
+  },
+  "airport-terminal-2": {
+    "x": 2068.0,
+    "y": 262.0
+  },
+  "ankang": {
+    "x": 2092.5,
+    "y": 4377.63
+  },
+  "banxin": {
+    "x": 1620.0,
+    "y": 3747.76
+  },
+  "binhai-shalun": {
+    "x": 1946.25,
+    "y": 1369.98
+  },
+  "binhai-yishan": {
+    "x": 1957.5,
+    "y": 1511.7
+  },
+  "cardinal-tien-hospital-an-kang-branch": {
+    "x": 1980.0,
+    "y": 4566.59
+  },
+  "chang-gung-memorial-hospital": {
+    "x": 1237.5,
+    "y": 2613.98
+  },
+  "danhai-new-town": {
+    "x": 2047.5,
+    "y": 1385.73
+  },
+  "danjin-beixin": {
+    "x": 1755.0,
+    "y": 1637.67
+  },
+  "danjin-denggong": {
+    "x": 1575.0,
+    "y": 1637.67
+  },
+  "dayuan": {
+    "x": 1237.5,
+    "y": 1952.61
+  },
+  "ganzhenlin": {
+    "x": 1485.0,
+    "y": 1637.67
+  },
+  "hengshan": {
+    "x": 1237.5,
+    "y": 1858.13
+  },
+  "huanbei": {
+    "x": 1237.5,
+    "y": 1385.73
+  },
+  "jingping": {
+    "x": 2002.5,
+    "y": 4031.2
+  },
+  "jinwen-university-of-science-and-technology": {
+    "x": 2047.5,
+    "y": 4472.11
+  },
+  "kanding": {
+    "x": 2137.5,
+    "y": 1385.73
+  },
+  "kengkou": {
+    "x": 1237.5,
+    "y": 2330.54
+  },
+  "laojie-river": {
+    "x": 1237.5,
+    "y": 1291.24
+  },
+  "linghang": {
+    "x": 1237.5,
+    "y": 1763.65
+  },
+  "linkou": {
+    "x": 1237.5,
+    "y": 2519.5
+  },
+  "maokong-zoo-station": {
+    "x": 2655.0,
+    "y": 4409.12
+  },
+  "national-taiwan-sport-university": {
+    "x": 1237.5,
+    "y": 2708.46
+  },
+  "new-taipei-industrial-park": {
+    "x": 1237.5,
+    "y": 3086.39
+  },
+  "qiaohe": {
+    "x": 1755.0,
+    "y": 3936.72
+  },
+  "rose-china-town": {
+    "x": 1800.0,
+    "y": 4566.59
+  },
+  "shalun": {
+    "x": 1687.5,
+    "y": 1385.73
+  },
+  "shanbi": {
+    "x": 1237.5,
+    "y": 2425.02
+  },
+  "shisizhang": {
+    "x": 2205.0,
+    "y": 4094.19
+  },
+  "shuangcheng": {
+    "x": 1710.0,
+    "y": 4566.59
+  },
+  "sunshine-sports-park": {
+    "x": 2092.5,
+    "y": 4251.66
+  },
+  "taipei-university-of-marine-technology": {
+    "x": 1777.5,
+    "y": 1385.73
+  },
+  "taipei-xiaocheng": {
+    "x": 1890.0,
+    "y": 4566.59
+  },
+  "taipei-zoo-south-station": {
+    "x": 2655.0,
+    "y": 4220.16
+  },
+  "taipei-zoo-station": {
+    "x": 2655.0,
+    "y": 4125.68
+  },
+  "taishan": {
+    "x": 1237.5,
+    "y": 2897.42
+  },
+  "taishan-guihe": {
+    "x": 1237.5,
+    "y": 2802.94
+  },
+  "tamkang-university": {
+    "x": 1665.0,
+    "y": 1637.67
+  },
+  "tamsui-district-office": {
+    "x": 1935.0,
+    "y": 1637.67
+  },
+  "tamsui-fishermans-wharf": {
+    "x": 1597.5,
+    "y": 1385.73
+  },
+  "taoyuan-hsr-station": {
+    "x": 1237.5,
+    "y": 1669.17
+  },
+  "taoyuan-sports-park": {
+    "x": 1237.5,
+    "y": 1574.69
+  },
+  "xingfu": {
+    "x": 1237.5,
+    "y": 3212.36
+  },
+  "xingnan": {
+    "x": 1237.5,
+    "y": 1480.21
+  },
+  "xinhe-elementary-school": {
+    "x": 2092.5,
+    "y": 4125.68
+  },
+  "xinpu-minsheng": {
+    "x": 1485.0,
+    "y": 3558.79
+  },
+  "xinshi-1st-rd": {
+    "x": 1845.0,
+    "y": 1637.67
+  },
+  "xinzhuang-fuduxin": {
+    "x": 1237.5,
+    "y": 2991.91
+  },
+  "xiulang-bridge": {
+    "x": 2092.5,
+    "y": 4062.69
+  },
+  "zhinan-temple-station": {
+    "x": 2655.0,
+    "y": 4314.64
+  },
+  "zhonghe": {
+    "x": 1822.5,
+    "y": 4031.2
+  },
+  "zhongyuan": {
+    "x": 1687.5,
+    "y": 3842.24
+  },
+  "X1": {
+    "x": 1200.0,
+    "y": 2800.0
+  }
+}

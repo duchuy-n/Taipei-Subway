@@ -1,0 +1,75 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {chapter}{LỜI CẢM ƠN}{i}{chapter*.1}%
+\contentsline {chapter}{TÓM TẮT BÁO CÁO}{ii}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}GIỚI THIỆU}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Bối cảnh bài toán}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Mục tiêu dự án}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Phạm vi thực hiện}{1}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Biểu diễn bài toán}{1}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Phát biểu bài toán}{1}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Mô hình toán học của bài toán}{2}{subsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.2.1}Đầu vào}{2}{subsubsection.1.4.2.1}%
+\contentsline {subsubsection}{\numberline {1.4.2.2}Đầu ra}{2}{subsubsection.1.4.2.2}%
+\contentsline {subsubsection}{\numberline {1.4.2.3}Hàm ánh xạ điểm người dùng vào mạng MRT}{3}{subsubsection.1.4.2.3}%
+\contentsline {subsubsection}{\numberline {1.4.2.4}Mô hình đồ thị}{3}{subsubsection.1.4.2.4}%
+\contentsline {subsubsection}{\numberline {1.4.2.5}Hàm mục tiêu tối ưu}{3}{subsubsection.1.4.2.5}%
+\contentsline {subsection}{\numberline {1.4.3}Cài đặt thuật toán định tuyến}{4}{subsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.3.1}Mã minh hoạ logic lõi}{5}{subsubsection.1.4.3.1}%
+\contentsline {subsection}{\numberline {1.4.4}Biểu diễn trực quan của bài toán}{6}{subsection.1.4.4}%
+\contentsline {subsubsection}{\numberline {1.4.4.1}Luồng xử lý tổng quát}{6}{subsubsection.1.4.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.4.2}Biểu diễn ánh xạ từ không gian bản đồ sang mạng MRT}{6}{subsubsection.1.4.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.4.3}Biểu diễn mạng MRT dưới dạng đồ thị có trọng số}{6}{subsubsection.1.4.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.4.4}Biểu diễn hàm chi phí hành trình}{7}{subsubsection.1.4.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Nhận xét}{7}{subsection.1.4.5}%
+\contentsline {chapter}{\numberline {2}PHÂN TÍCH HỆ THỐNG VÀ PHÂN CÔNG NHÓM}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Hướng tiếp cận tổng thể}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Kiến trúc hệ thống}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Luồng xử lý chính}{8}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Sequence Diagram cho luồng định tuyến}{9}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Sequence Diagram cho luồng admin scenario}{9}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Thuật toán định tuyến và Kiến trúc hai pha}{10}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Pha 1: Tiền tính toán ngoại tuyến (Offline / Precomputation)}{10}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Pha 2: Truy vấn thời gian thực (Online / Runtime Query)}{10}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Thuật toán Dijkstra đa mục tiêu tại Pha tiền tính toán}{10}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Hàm ánh xạ tọa độ vào ga (Spatial Snapping)}{11}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Cấu trúc cạnh và mã minh hoạ logic lõi}{12}{subsection.2.4.5}%
+\contentsline {section}{\numberline {2.5}Tổng quan phân công công việc}{13}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Phân công nhân sự và trách nhiệm chính}{13}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Nhóm frontend}{13}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Nhóm backend}{14}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Nhóm data/GIS}{14}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Nguyên tắc phối hợp}{14}{subsection.2.6.4}%
+\contentsline {section}{\numberline {2.7}Cơ chế phối hợp giữa các nhóm}{14}{section.2.7}%
+\contentsline {chapter}{\numberline {3}CÔNG CỤ, DỮ LIỆU VÀ KIẾN TRÚC HỆ THỐNG}{16}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Công nghệ và Công cụ sử dụng}{16}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Cấu trúc thư mục và Dữ liệu}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Kiến trúc dịch vụ định tuyến (Route Engine)}{16}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Mô hình Đồ thị Trạng thái (State Graph)}{16}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Hàm chi phí đa mục tiêu (Lexicographical Vector)}{17}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Quy trình cài đặt và Khởi tạo}{17}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Cài đặt môi trường}{17}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Khởi chạy runtime}{17}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4}KẾT QUẢ THỰC NGHIỆM VÀ TRIỂN KHAI THEO TỪNG NHÓM}{18}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Tổng quan kết quả}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Đánh giá tóm tắt theo nhóm công việc}{18}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Kết quả của nhóm frontend}{18}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Thành viên phụ trách}{18}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Chức năng đã triển khai}{18}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Cách triển khai và công nghệ sử dụng}{18}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Kết quả đạt được}{19}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Kết quả của nhóm backend}{21}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Thành viên phụ trách}{21}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Chức năng đã triển khai}{21}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Cách triển khai và công nghệ sử dụng}{22}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Kết quả đạt được}{22}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Kết quả của nhóm data/GIS}{23}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Thành viên phụ trách}{23}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Chức năng và dữ liệu đã triển khai}{23}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Cách triển khai và công nghệ sử dụng}{23}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Kết quả đạt được}{23}{subsection.4.5.4}%
+\contentsline {section}{\numberline {4.6}Kiểm thử và nhận xét chung}{24}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Hạn chế hiện tại và hướng khắc phục}{25}{section.4.7}%
+\contentsline {chapter}{\numberline {5}KẾT LUẬN}{26}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Tổng kết đóng góp kỹ thuật}{26}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Hướng phát triển}{26}{section.5.2}%
+\contentsfinish 

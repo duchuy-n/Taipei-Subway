@@ -1,0 +1,1759 @@
+              ĐẠI HỌC BÁCH KHOA HÀ NỘI
+    Trường CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG
+
+
+
+
+           BÁO CÁO BÀI TẬP LỚN
+              IT3160 SUBWAY WEB
+HỆ THỐNG TÌM ĐƯỜNG TÀU ĐIỆN NGẦM TÍCH
+                          HỢP GIS
+
+
+
+
+          Sinh viên thực hiện:    Tạ Đức Hiển
+                                  Nguyễn Đức Huy
+                                  Nguyễn Danh Tiến Nam
+                                  Trần Thái Minh
+                                  Nguyễn Vi Thái Sơn
+                                  Nguyễn Duy Mạnh
+          Học phần:               IT3160
+          Giảng viên hướng dẫn:   TS. Trần Đình Khang
+
+
+
+
+                           Hà Nội, 2026
+                                              LỜI CẢM ƠN
+
+
+
+   Nhóm xin gửi lời cảm ơn chân thành tới thầy TS. Trần Đình Khang đã định hướng phạm vi, yêu cầu kỹ
+thuật và cách tổ chức báo cáo trong suốt quá trình thực hiện bài tập lớn. Những góp ý về kiến trúc hệ thống,
+cách chia việc và phương pháp kiểm thử đã giúp nhóm hoàn thiện sản phẩm theo hướng rõ ràng hơn giữa
+frontend, backend và data/GIS.
+
+
+
+
+                                                                                                           i
+                                         TÓM TẮT BÁO CÁO
+
+
+
+   Trong xu thế phát triển của giao thông công cộng đô thị, nhu cầu tra cứu và tìm đường trên hệ thống
+tàu điện ngầm (Subway/MRT) ngày càng trở nên thiết yếu. Bài báo cáo này trình bày quá trình nghiên cứu,
+thiết kế và phát triển dự án IT3160 Subway Web – một ứng dụng web chuyên biệt hỗ trợ tìm đường tàu điện
+ngầm tích hợp công nghệ GIS.
+
+   Khác với các ứng dụng truyền thống yêu cầu người dùng phải chọn chính xác tên từng nhà ga, hệ thống
+cho phép thao tác chọn điểm trực tiếp trên bản đồ số, sau đó tự động ánh xạ vị trí tới nhà ga gần nhất thông
+qua mạng lưới đi bộ (Walk Network). Về mặt kiến trúc, dự án được phân rã thành ba khối chuyên trách
+độc lập: Frontend (chịu trách nhiệm về trải nghiệm người dùng và trực quan hoá đường đi bằng MapLibre),
+Backend (phụ trách API và lõi thuật toán định tuyến bằng FastAPI), và Data/GIS (tập trung chuẩn hoá dữ
+liệu topology, GeoJSON và các định dạng không gian).
+
+   Các kiểm thử nội bộ cho thấy hệ thống hoạt động ổn định trên phân hệ dữ liệu của mạng lưới MRT Đài
+Bắc. Điểm nổi bật của hệ thống nằm ở khả năng tích hợp các kịch bản vận hành do người quản trị cấu hình
+(như thiết lập vùng thời tiết xấu hoặc đóng chặn đoạn tuyến), cho phép route engine cập nhật lại lộ trình
+trong runtime và trực quan hoá kết quả ngay trên bản đồ.
+
+
+
+
+                                                                                                          ii
+                                                 Mục lục
+
+
+
+
+LỜI CẢM ƠN                                                                                                  i
+
+
+TÓM TẮT BÁO CÁO                                                                                            ii
+
+
+1 GIỚI THIỆU                                                                                                1
+
+  1.1   Bối cảnh bài toán . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     1
+
+  1.2   Mục tiêu dự án . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      1
+
+  1.3   Phạm vi thực hiện . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     1
+
+  1.4   Đóng góp chính của hệ thống . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       1
+
+  1.5   Biểu diễn bài toán . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    2
+
+        1.5.1   Phát biểu bài toán . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    2
+
+        1.5.2   Mô hình toán học của bài toán . . . . . . . . . . . . . . . . . . . . . . . . . . . .       2
+
+                1.5.2.1    Đầu vào . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      2
+
+                1.5.2.2    Đầu ra . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     2
+
+                1.5.2.3    Hàm ánh xạ điểm người dùng vào mạng MRT . . . . . . . . . . . . . .              3
+
+                1.5.2.4    Mô hình đồ thị . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     3
+
+  1.6   Biểu diễn trực quan của bài toán . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      3
+
+                1.6.0.1    Luồng xử lý tổng quát . . . . . . . . . . . . . . . . . . . . . . . . . . .      3
+
+                1.6.0.2    Biểu diễn ánh xạ từ không gian bản đồ sang mạng MRT . . . . . . . . .            4
+
+                1.6.0.3    Biểu diễn mạng MRT dưới dạng đồ thị có trọng số . . . . . . . . . . . .          4
+
+                1.6.0.4    Biểu diễn hàm chi phí hành trình . . . . . . . . . . . . . . . . . . . . .       5
+
+  1.7   Kết luận chương . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     5
+
+
+2 PHÂN TÍCH HỆ THỐNG VÀ PHÂN CÔNG NHÓM                                                                      6
+
+  2.1   Hướng tiếp cận tổng thể . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     6
+
+  2.2   Kiến trúc hệ thống . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      6
+
+  2.3   Luồng xử lý chính . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     6
+
+        2.3.1   Sequence Diagram cho luồng định tuyến . . . . . . . . . . . . . . . . . . . . . .           7
+
+        2.3.2   Sequence Diagram cho luồng admin scenario . . . . . . . . . . . . . . . . . . . .           7
+
+  2.4   Thuật toán định tuyến cải tiến . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      7
+
+        2.4.1   Hàm ánh xạ tọa độ vào ga (Spatial Snapping) . . . . . . . . . . . . . . . . . . . .         8
+
+        2.4.2   Cấu trúc cạnh và mã minh họa logic lõi . . . . . . . . . . . . . . . . . . . . . . .        9
+
+  2.5   Tổng quan phân công công việc . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        10
+
+  2.6   Phân công nhân sự và trách nhiệm chính . . . . . . . . . . . . . . . . . . . . . . . . . . .       10
+
+
+                                                                                                           iii
+          2.6.1   Nhóm frontend . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     10
+
+          2.6.2   Nhóm backend . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      10
+
+          2.6.3   Nhóm data/GIS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     11
+
+          2.6.4   Nguyên tắc phối hợp . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     11
+
+    2.7   Cơ chế phối hợp giữa các nhóm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       11
+
+
+3   CÔNG CỤ, DỮ LIỆU VÀ KIẾN TRÚC HỆ THỐNG                                                                  12
+
+    3.1   Công nghệ và Công cụ sử dụng . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      12
+
+    3.2   Cấu trúc thư mục và Dữ liệu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     12
+
+    3.3   Kiến trúc dịch vụ định tuyến (Route Engine) . . . . . . . . . . . . . . . . . . . . . . . . .     13
+
+          3.3.1   Mô hình Đồ thị Trạng thái (State Graph) . . . . . . . . . . . . . . . . . . . . . . .     13
+
+          3.3.2   Hàm chi phí đa mục tiêu (Lexicographical Vector) . . . . . . . . . . . . . . . . .        13
+
+          3.3.3   Hiệu năng và Cơ chế Bộ nhớ đệm (Caching) . . . . . . . . . . . . . . . . . . . .          13
+
+          3.3.4   Cơ chế quản lý Persistence và Chữ ký dữ liệu (SHA-256) . . . . . . . . . . . . . .        13
+
+          3.3.5   Chiến lược Precomputation: All-Pairs Shortest Paths . . . . . . . . . . . . . . . .       14
+
+          3.3.6   Tích hợp Kịch bản động (Dynamic Scenario) . . . . . . . . . . . . . . . . . . . .         14
+
+    3.4   Quy trình cài đặt và Khởi tạo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   14
+
+          3.4.1   Cài đặt môi trường . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    14
+
+          3.4.2   Khởi chạy runtime . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     15
+
+          3.4.3   Quy trình Kiểm thử và Duy trì . . . . . . . . . . . . . . . . . . . . . . . . . . . .     15
+
+    3.5   Kết luận chương . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   15
+
+
+4   KẾT QUẢ THỰC NGHIỆM VÀ TRIỂN KHAI THEO TỪNG NHÓM                                                        16
+
+    4.1   Tổng quan kết quả . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     16
+
+    4.2   Đánh giá tóm tắt theo nhóm công việc . . . . . . . . . . . . . . . . . . . . . . . . . . . .      16
+
+    4.3   Kết quả của nhóm frontend . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     16
+
+          4.3.1   Thành viên phụ trách . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    16
+
+          4.3.2   Chức năng đã triển khai . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     16
+
+          4.3.3   Cách triển khai và công nghệ sử dụng . . . . . . . . . . . . . . . . . . . . . . . .      16
+
+          4.3.4   Kết quả đạt được . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    17
+
+    4.4   Kết quả của nhóm backend . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      18
+
+          4.4.1   Thành viên phụ trách . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    18
+
+          4.4.2   Chức năng đã triển khai . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     18
+
+          4.4.3   Cách triển khai và công nghệ sử dụng . . . . . . . . . . . . . . . . . . . . . . . .      19
+
+          4.4.4   Kết quả đạt được . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    20
+
+    4.5   Kết quả của nhóm data/GIS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     20
+
+
+                                                      iv
+        4.5.1   Thành viên phụ trách . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   20
+
+        4.5.2   Chức năng và dữ liệu đã triển khai . . . . . . . . . . . . . . . . . . . . . . . . . .   20
+
+        4.5.3   Cách triển khai và công nghệ sử dụng . . . . . . . . . . . . . . . . . . . . . . . .     21
+
+        4.5.4   Kết quả đạt được . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   21
+
+  4.6   Kiểm thử và nhận xét chung . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     21
+
+  4.7   Hạn chế hiện tại và hướng khắc phục . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    22
+
+
+5 KẾT LUẬN                                                                                               24
+
+  5.1   Tổng kết đóng góp kỹ thuật . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   24
+
+  5.2   Hướng phát triển . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   24
+
+
+
+
+                                                    v
+                                        Danh sách hình vẽ
+
+
+
+
+1.1   Quy trình tổng quát của bài toán định tuyến trong hệ thống . . . . . . . . . . . . . . . . .     4
+
+1.2   Ánh xạ từ điểm người dùng trên bản đồ sang các đỉnh trong mạng định tuyến MRT . . . .            4
+
+1.3   Mô hình đồ thị có trọng số của mạng MRT . . . . . . . . . . . . . . . . . . . . . . . . . .      4
+
+1.4   Phân rã tổng chi phí của một hành trình . . . . . . . . . . . . . . . . . . . . . . . . . . .    5
+
+
+2.1   Kiến trúc ba lớp của dự án IT3160 Subway Web . . . . . . . . . . . . . . . . . . . . . . .       6
+
+2.2   Sequence Diagram cho luồng định tuyến theo điểm trên bản đồ . . . . . . . . . . . . . . .        7
+
+2.3   Sequence Diagram cho luồng áp dụng admin scenario trong runtime . . . . . . . . . . . .          7
+
+
+4.1   Giao diện chính phân hệ GIS Studio . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    17
+
+4.2   Kết quả định tuyến mẫu thể hiện ga đầu, ga cuối, đoạn tiếp cận và tuyến chính . . . . . . .     17
+
+4.3   Minh hoạ giao diện Admin Console khi áp dụng rain zone và block segment trong runtime           18
+
+4.4   Minh hoạ tác động của admin scenario lên kết quả định tuyến trên bản đồ . . . . . . . . .       18
+
+4.5   Lớp dữ liệu GIS tổng quan: bản đồ mạng lưới tuyến và ga Đài Bắc (Taipei) . . . . . . . .        21
+
+
+
+
+                                                                                                      vi
+                                          Danh sách bảng
+
+
+
+
+2.1   Đặc tả chi phí cho các loại cạnh trong đồ thị mở rộng . . . . . . . . . . . . . . . . . . . .    9
+
+2.2   Phân rã công việc theo nhóm chuyên trách . . . . . . . . . . . . . . . . . . . . . . . . . .    10
+
+
+4.1   Tổng hợp kết quả theo nhóm công việc . . . . . . . . . . . . . . . . . . . . . . . . . . . .    16
+
+4.2   Đặc tả rút gọn các API chính của hệ thống . . . . . . . . . . . . . . . . . . . . . . . . . .   19
+
+4.3   Bảng Benchmark hiệu năng hệ thống (đo trên CPU Intel i7-12700H) . . . . . . . . . . . .         22
+
+
+
+
+                                                                                                      vii
+                                            CHƯƠNG 1. GIỚI THIỆU
+
+
+
+1.1    Bối cảnh bài toán
+
+      Trong các hệ thống hỗ trợ giao thông đô thị, người dùng không chỉ cần biết đường đi giữa hai ga mà còn
+cần một cách tương tác trực quan để chọn điểm xuất phát, điểm đích và quan sát lộ trình trên bản đồ. Với
+mạng tàu điện ngầm có nhiều tuyến, nhiều điểm trung chuyển và nhiều lớp dữ liệu không gian khác nhau,
+một giao diện chỉ trả về danh sách ga theo dạng văn bản là chưa đủ cho nhu cầu sử dụng và trình diễn.
+
+      Dự án IT3160 Subway Web được xây dựng để giải quyết bài toán đó bằng một ứng dụng web gồm ba
+lớp chính: giao diện tương tác, dịch vụ định tuyến và lớp dữ liệu GIS. Hệ thống cho phép người dùng chọn
+điểm trên bản đồ, ánh xạ các điểm này tới ga phù hợp, tính đường đi bằng thuật toán trên đồ thị mở rộng và
+hiển thị lại kết quả theo ngữ cảnh trực quan.
+
+1.2    Mục tiêu dự án
+
+      Các mục tiêu chính của dự án gồm:
+
+      • Xây dựng một ứng dụng web tối giản nhưng đủ hoàn chỉnh để mô phỏng bài toán tìm đường tàu điện
+        ngầm.
+
+      • Hỗ trợ người dùng chọn hai điểm bất kỳ trên bản đồ để hệ thống tự ánh xạ đến ga gần nhất bằng dữ
+        liệu đi bộ và dữ liệu lối vào ga.
+
+      • Tổ chức dự án theo hướng tách bạch frontend, backend và data/GIS để nhóm có thể phát triển song
+        song.
+
+      • Thiết lập quy trình cập nhật dữ liệu gồm topology mạng tuyến, lớp GeoJSON, mạng đi bộ, OSM
+        enrichment và basemap MBTiles.
+
+      • Tạo ra một sản phẩm có thể chạy cục bộ nhanh, dễ demo, dễ kiểm thử và phù hợp với phạm vi bài tập
+        lớn học phần.
+
+1.3    Phạm vi thực hiện
+
+      Phiên bản hiện tại của hệ thống tập trung vào các thành phần sau:
+
+      • Giao diện chính gis-studio cho bài toán tìm đường trên bản đồ.
+
+      • Giao diện admin để mô phỏng tình huống vận hành và áp dụng scenario vào runtime định tuyến.
+
+      • Giao diện login ở mức demo để điều hướng vào khu vực quản trị.
+
+      • API định tuyến và API GIS trên nền FastAPI.
+
+      • Dữ liệu topology, GeoJSON, walk network và basemap MBTiles cho mạng MRT Đài Bắc.
+
+1.4    Đóng góp chính của hệ thống
+
+      Dự án không chỉ dừng lại ở việc tìm đường trên đồ thị ga đơn thuần mà tập trung vào các đóng góp kỹ
+thuật nhằm tối ưu hoá trải nghiệm thực tế:
+
+      • Cơ chế tương tác trực tiếp trên bản đồ: Thay vì chọn ga từ danh sách, người dùng có thể chọn vị
+        trí bất kỳ, hệ thống sẽ tự động xử lý các rào cản về không gian để tìm điểm truy cập phù hợp nhất.
+
+
+
+                                                                                                             1
+                                                                                       CHƯƠNG 1. GIỚI THIỆU
+
+
+      • Định tuyến dựa trên mạng đi bộ (Walk Network): Việc ánh xạ điểm người dùng tới ga (snapping)
+        được thực hiện dựa trên khả năng đi bộ thực tế (street network) thay vì chỉ tính khoảng cách đường
+        chim bay (Euclidean distance), đảm bảo tính thực tế của hành trình.
+
+      • Tối ưu hoá đa mục tiêu (Vector Cost): Hành trình được lựa chọn dựa trên bộ chi phí vector nhằm
+        cân bằng giữa tổng thời gian, số lần chuyển tuyến và nỗ lực đi bộ, thay vì chỉ tối ưu một chi phí đơn
+        lẻ.
+
+1.5    Biểu diễn bài toán
+
+         1.5.1   Phát biểu bài toán
+
+      Bài toán của hệ thống là hỗ trợ người dùng tìm hành trình trong mạng tàu điện ngầm MRT trên nền bản
+đồ số. Khác với cách tiếp cận truyền thống là yêu cầu người dùng chọn trực tiếp ga xuất phát và ga đích, hệ
+thống cho phép người dùng chọn hai điểm bất kỳ trên bản đồ. Từ hai điểm này, hệ thống phải tự động ánh xạ
+chúng vào mạng MRT, xác định ga phù hợp, tính toán lộ trình tối ưu và trả về kết quả dưới dạng trực quan.
+
+      Xét:
+                                         ps = (xs , ys ),        pt = (xt , yt )
+
+lần lượt là điểm xuất phát và điểm đích do người dùng chọn trên bản đồ. Gọi:
+
+                                               S = {s1 , s2 , . . . , sn }
+
+là tập ga của mạng MRT, và
+                                               L = {ℓ1 , ℓ2 , . . . , ℓm }
+
+là tập các tuyến. Nhiệm vụ của hệ thống là xây dựng một hành trình hợp lệ nối từ ps đến pt thông qua mạng
+MRT sao cho chi phí tổng quát là nhỏ nhất.
+
+         1.5.2   Mô hình toán học của bài toán
+
+             1.5.2.1 Đầu vào
+
+      Đầu vào của hệ thống được mô hình hoá bởi:
+
+                                          I = (ps , pt , S, L, A, W, Ggis )
+
+trong đó:
+
+      • ps , pt là hai điểm do người dùng chọn trên bản đồ;
+
+      • S là tập ga của hệ thống MRT;
+
+      • L là tập tuyến MRT;
+
+      • A là tập điểm tiếp cận nhà ga;
+
+      • W là mạng đi bộ dùng để kết nối điểm người dùng với ga;
+
+      • Ggis là tập dữ liệu không gian gồm vị trí ga, hình học tuyến và các lớp bản đồ liên quan.
+
+             1.5.2.2 Đầu ra
+
+      Đầu ra của hệ thống là một hành trình:
+
+                                      J = (sstart , send , Pmrt , Pgeo , C, Ttotal )
+
+
+                                                                                                           2
+CHƯƠNG 1. GIỚI THIỆU
+
+
+trong đó:
+
+      • sstart là ga được chọn cho điểm đầu;
+
+      • send là ga được chọn cho điểm cuối;
+
+      • Pmrt là đường đi tối ưu trên mạng MRT;
+
+      • Pgeo là dữ liệu hình học dùng để hiển thị hành trình trên bản đồ;
+
+      • C là bộ chi phí tối ưu dùng cho so sánh đường đi;
+
+      • Ttotal là tổng thời gian hành trình dùng cho phần tóm tắt hiển thị tới người dùng.
+
+              1.5.2.3 Hàm ánh xạ điểm người dùng vào mạng MRT
+
+      Do người dùng thao tác trên bản đồ liên tục thay vì chọn trực tiếp ga, hệ thống cần một phép ánh xạ:
+
+                                                         ϕ : R2 → S
+
+sao cho:
+                                          ϕ(ps ) = sstart ,            ϕ(pt ) = send
+
+      Trong dự án, hàm ϕ không chỉ dựa trên khoảng cách hình học đơn giản, mà còn xét đến dữ liệu tiếp cận
+ga và mạng đi bộ lân cận để lựa chọn ga phù hợp hơn với điều kiện thực tế.
+
+              1.5.2.4 Mô hình đồ thị
+
+      Sau khi xác định được ga đầu và ga cuối, bài toán định tuyến được biểu diễn dưới dạng đồ thị trạng thái
+có chi phí:
+                                                     G′ = (V ′ , E ′ , c)
+
+trong đó:
+
+      • V ′ là tập đỉnh, biểu diễn trạng thái ga–tuyến hoặc các trạng thái di chuyển hợp lệ trong runtime;
+
+      • E ′ là tập cạnh, biểu diễn khả năng di chuyển giữa các trạng thái đó;
+
+      • c : E ′ → R4≥0 là hàm chi phí vector gán cho mỗi cạnh.
+
+      Một đường đi hợp lệ trên mạng MRT được ký hiệu:
+
+                                  Pmrt = (v1′ , v2′ , . . . , vk′ ),              ′
+                                                                          (vi′ , vi+1 ) ∈ E′
+
+trong đó mỗi thành phần của c(e) lần lượt phản ánh thời gian tăng thêm, thời gian đi bộ tăng thêm, số lần
+chuyển tuyến tăng thêm và số chặng đi tàu tăng thêm trên cạnh e.
+
+      Để đảm bảo hiệu năng và tính linh hoạt, các chi tiết cài đặt về cấu trúc các loại cạnh, logic so sánh vector
+chi phí và các đoạn mã minh hoạ sẽ được trình bày chi tiết tại Chương 2.
+
+1.6    Biểu diễn trực quan của bài toán
+
+              1.6.0.1 Luồng xử lý tổng quát
+
+      Hình 1.1 cho thấy luồng xử lý tuần tự của hệ thống, từ các thao tác đầu vào không gian của người dùng
+cho đến việc chuyển đổi chúng thành các truy vấn đồ thị và cuối cùng là tái cấu trúc hình học cho mục đích
+hiển thị.
+
+
+3
+                                                                                                             CHƯƠNG 1. GIỚI THIỆU
+
+
+
+                                                    Hai điểm người dùng chọn trên bản đồ
+
+
+
+
+                                               Ánh xạ điểm đầu và điểm cuối tới ga phù hợp
+
+
+
+
+                                                    Xác định chặng tiếp cận và chặng rời ga
+
+
+
+
+                                                         Tìm đường tối ưu trên đồ thị MRT
+
+
+
+
+                                                         Ghép dữ liệu hình học để hiển thị
+
+
+
+
+                                                     Trả kết quả cho giao diện người dùng
+
+                          Hình 1.1: Quy trình tổng quát của bài toán định tuyến trong hệ thống
+
+             1.6.0.2 Biểu diễn ánh xạ từ không gian bản đồ sang mạng MRT
+
+                    KHÔNG GIAN BẢN ĐỒ                                               MẠNG ĐỊNH TUYẾN (MRT GRAPH)
+                                                                      ϕ(ps )
+                           Walk Snap                                                                    Segment
+    Bắt đầu (ps )                                                                         v1                                      v2
+                                               sa
+                                                                                                                       Transfer
+
+
+
+                                                    sb                                                   v3
+         Kết thúc (pt )           Walk Snap                            ϕ(pt )
+
+
+
+             Hình 1.2: Ánh xạ từ điểm người dùng trên bản đồ sang các đỉnh trong mạng định tuyến MRT
+
+   Sơ đồ tại Hình 1.2 làm rõ vai trò của hàm ánh xạ ϕ(p), đóng vai trò cầu nối giữa không gian bản đồ tự
+do và mạng lưới MRT có cấu trúc, đảm bảo người dùng có thể bắt đầu hành trình từ bất kỳ vị trí nào.
+
+             1.6.0.3 Biểu diễn mạng MRT dưới dạng đồ thị có trọng số
+
+                                   Cấu trúc tập cạnh E = Eride ∪ Etransf er ∪ Ewalk_trans
+                                          Tuyến ℓ1
+
+
+                                       Eride                 Eride
+                          v1                        v2                  v3         Chuyển tuyến
+
+
+
+                                                                             Etransf er
+
+
+
+
+                                                                        v4                     v5                 v6
+                                                                                Eride                Eride
+
+
+
+
+                                                                                          Tuyến ℓ2
+                                       Hình 1.3: Mô hình đồ thị có trọng số của mạng MRT
+
+   Hình 1.3 minh hoạ cách các thực thể thực tế được trừu tượng hoá thành các node và edge, trong đó các
+loại cạnh khác nhau mang các đặc tính chi phí riêng biệt để phục vụ thuật toán tìm đường.
+
+
+                                                                                                                                       4
+CHƯƠNG 1. GIỚI THIỆU
+
+
+             1.6.0.4 Biểu diễn hàm chi phí hành trình
+
+
+                                         Tổng chi phí hành trình C
+
+
+
+
+              Caccess                   Croute                    Ctransfer               Cegress
+        Chi phí tiếp cận ga    Chi phí di chuyển MRT       Chi phí chuyển tuyến        Chi phí rời ga
+
+
+
+
+                                   C = Caccess + Croute + Ctransfer + Cegress
+                                Hình 1.4: Phân rã tổng chi phí của một hành trình
+
+      Hình 1.4 cho thấy vì sao chi phí phải là đa tiêu chí, giúp hệ thống không chỉ tìm đường nhanh nhất mà
+còn phải là đường thuận tiện nhất cho người hành khách.
+
+1.7    Kết luận chương
+
+      Tóm lại, Chương 1 đã xác định rõ bối cảnh, mục tiêu và phạm vi của dự án, đồng thời xây dựng mô hình
+toán học tích hợp giữa không gian bản đồ và mạng lưới MRT. Việc làm rõ các đóng góp chính về cơ chế
+chọn điểm trực tiếp và tối ưu hoá đa tiêu chí giúp định hình giá trị kỹ thuật cốt lõi của hệ thống, làm nền
+tảng vững chắc cho phần phân tích kiến trúc và triển khai thuật toán chi tiết tại các chương tiếp theo.
+
+
+
+
+5
+                    CHƯƠNG 2. PHÂN TÍCH HỆ THỐNG VÀ PHÂN CÔNG NHÓM
+
+
+
+2.1    Hướng tiếp cận tổng thể
+
+      Nhóm lựa chọn hướng tiếp cận theo ba khối chuyên trách:
+
+      • Frontend: xây dựng trải nghiệm người dùng, tương tác bản đồ, trực quan hoá lộ trình và các công cụ
+        quản trị.
+
+      • Backend: xây dựng API, route engine, cache runtime, xử lý logic định tuyến và hợp nhất dữ liệu trả
+        về.
+
+      • Data/GIS: chuẩn hoá dữ liệu tuyến, topology, toạ độ ga, lớp GeoJSON, dữ liệu đi bộ và bản đồ nền.
+
+      Việc chia theo ba khối này vừa phù hợp với cấu trúc repository hiện tại, vừa tạo điều kiện để mỗi nhóm
+có phần việc rõ ràng thay vì cùng sửa chung một lớp mã nguồn.
+
+2.2    Kiến trúc hệ thống
+
+
+                                                      Người dùng
+
+
+
+
+                                        LỚP GIAO DIỆN (FRONTEND)
+
+
+                               GIS Studio         Admin Console             Auth Gateway
+
+
+
+
+                                              REST API        JSON Result
+
+
+
+
+                                    LỚP XỬ LÝ TRUNG TÂM (BACKEND)
+
+
+                              Route Engine            FastAPI App           Runtime Cache
+
+
+
+
+                                              Query             Response
+
+
+
+
+                                 LỚP DỮ LIỆU & GIS (DATA PERSISTENCE)
+
+
+                             GeoJSON Layers      Topology JSON               Vector Tiles
+
+
+                            Hình 2.1: Kiến trúc ba lớp của dự án IT3160 Subway Web
+
+
+2.3    Luồng xử lý chính
+
+      Luồng xử lý định tuyến theo điểm trên bản đồ được tổ chức như sau:
+
+  1. Người dùng mở giao diện / hoặc /gis và tải dữ liệu mạng từ endpoint /api/gis/network.
+
+  2. Frontend hiển thị ga, tuyến, lớp nền và các thành phần điều khiển tương tác.
+
+  3. Người dùng chọn điểm bắt đầu và điểm kết thúc trên bản đồ.
+
+  4. Frontend gửi yêu cầu tới backend qua endpoint /api/gis/route/points.
+
+
+                                                                                                          6
+CHƯƠNG 2. PHÂN TÍCH HỆ THỐNG VÀ PHÂN CÔNG NHÓM
+
+
+    5. Backend nạp mạng tuyến, lớp ga GIS, lớp đường đi bộ và các cấu hình runtime cần thiết.
+
+    6. Backend tìm ga gần nhất theo dữ liệu đi bộ hoặc lối vào ga, sau đó route engine tính hành trình trên
+           đồ thị tuyến.
+
+    7. Kết quả cuối cùng được trả lại frontend để hiển thị đường đi bộ đầu/cuối, tuyến tàu điện và phần tóm
+           tắt hành trình.
+
+            2.3.1 Sequence Diagram cho luồng định tuyến
+
+      Hình 2.2 cụ thể hoá luồng người dùng chọn hai điểm trên bản đồ, frontend gửi yêu cầu tới /api/gis/route/points,
+backend thực hiện snap qua walk network, gọi route engine và cuối cùng trả về payload hình học để frontend
+trực quan hoá kết quả.
+    User                          Frontend                                  API                              Snap Service                           Route Engine                             GIS Builder
+              Chọn điểm đầu,
+                điểm cuối
+
+                                            POST /api/gis/route/points
+
+                                                                               Nạp topology, GIS, walk network
+
+                                                                                                                           Tìm ga/access point tối ưu
+
+
+                                                                                                         Ưu tiên đường đi bộ hợp
+                                                                                                                                                                  Tính P_mrt và cost tuple
+                                                                                                         lệ; nếu thiếu dữ liệu thì
+                                                                                                         fallback về access point                           Ghép geometry MRT + access/egress
+                                                                                                         hoặc khoảng cách hình
+                                                                                                         học.định tuyến hoàn chỉnh
+                                                                                                    Payload
+                                                                                                                                                                                       Chuyển kết quả logic
+                                                                                                                                                                                       thành GeoJSON/line
+                                                  JSON response
+                                                                                                                                                                                       string để frontend dựng
+                                                                                                                                                                                       lại hành trình.
+       Vẽ route, ga snap, summary
+
+
+
+
+                                     Hình 2.2: Sequence Diagram cho luồng định tuyến theo điểm trên bản đồ
+
+
+            2.3.2 Sequence Diagram cho luồng admin scenario
+
+      Bên cạnh luồng định tuyến chính, Hình 2.3 mô tả cách Admin Console gửi scenario mới, backend phân
+tích phạm vi ảnh hưởng, cập nhật runtime constraint và làm mới cache để các truy vấn định tuyến sau đó
+phản ánh đúng trạng thái vận hành.
+      Admin                                     Admin UI                                      API                                    Scenario Service                              Runtime Cache/Data
+
+               Chọn rain zone / block segment
+
+                                                           POST /api/admin/scenario/analyze
+
+                                                                                                         Tính segment bị ảnh hưởng
+
+                                                                                                                                                        Đọc topology + GIS hiện hành
+
+                                                                                                                                                             Kết quả phân tích
+
+                                                                                                PUT /api/admin/scenario + invalidate cache
+                                                                                                                                                                                  Cache được làm mới để
+                                                                                                                                                                                  mọi truy vấn route tiếp
+                                                                 Trả runtime state mới
+                                                                                                                                                                                  theo dùng đúng trạng thái
+                Scenario hiển thị trên bản đồ                                                                                                                                     scenario mới nhất.
+
+
+
+
+                                Hình 2.3: Sequence Diagram cho luồng áp dụng admin scenario trong runtime
+
+
+2.4        Thuật toán định tuyến cải tiến
+
+      Để đáp ứng yêu cầu phản hồi nhanh trong môi trường web, hệ thống triển khai phiên bản cải tiến của
+thuật toán Dijkstra với cơ chế so sánh vector chi phí (Lexicographical Comparison) và điều kiện dừng sớm
+(Early-stop).
+
+      Thuật toán 1 sở hữu hai tính chất then chốt giúp tối ưu hóa hệ thống:
+
+      • So sánh từ điển (Lexicographical Comparison): Hệ thống coi mỗi chi phí là một vector C =
+           (T, W, Ntr , Nstop ). Phép so sánh A <lex B đảm bảo rằng hệ thống sẽ ưu tiên các hành trình có
+
+
+7
+                                      CHƯƠNG 2. PHÂN TÍCH HỆ THỐNG VÀ PHÂN CÔNG NHÓM
+
+
+
+ Algorithm 1: Dijkstra tối ưu đa mục tiêu với cơ chế dừng sớm (Early-stop)
+   Input: Đồ thị mở rộng G′ , ga xuất phát s, ga đích t, trọng số cạnh c(u, v) ∈ R4≥0
+   Output: Hành trình P ∗ có chi phí nhỏ nhất theo thứ tự từ điển
+ 1 begin
+ 2    PQ ← ∅
+ 3    dist[v] ← (∞, ∞, ∞, ∞), ∀v ∈ V ′
+ 4    dist[s] ← (0, 0, 0, 0)
+ 5    P Q.push((dist[s], s))
+ 6    best_target_cost ← (∞, ∞, ∞, ∞)
+ 7    while P Q không rỗng do
+ 8        (Ccurr , u) ← P Q.pop_min()
+          // Cơ chế Early-stop: Dừng nếu candidate đã tệ hơn kết quả
+               tốt nhất hiện có
+ 9        if Ccurr >lex best_target_cost then
+10            continue
+11        end
+12        if u = t then
+13            best_target_cost ← Ccurr
+14        end
+15        foreach ga v kề u do
+16            Cnew ← Ccurr + c(u, v)
+17            if Cnew <lex dist[v] then
+18                dist[v] ← Cnew
+19                prev[v] ← u
+20                P Q.push((Cnew , v))
+21            end
+22        end
+23    end
+24    return Truy vết hành trình từ t ngược về s thông qua prev
+25 end
+
+
+
+      tổng thời gian (T ) thấp nhất; nếu bằng nhau mới xét đến các tiêu chí phụ như thời gian đi bộ (W ) hay
+      số lần chuyển tuyến (Ntr ). Điều này phản ánh đúng hành vi thực tế của hành khách khi ưu tiên sự
+      nhanh chóng nhưng vẫn muốn giảm thiểu sự mệt mỏi (đi bộ).
+
+    • Cơ chế dừng sớm (Early-stop): Do Dijkstra luôn lấy ra từ hàng đợi ưu tiên nút có chi phí nhỏ nhất,
+      nếu tại một thời điểm nào đó, chi phí của nút vừa lấy ra đã lớn hơn chi phí tốt nhất tìm được tới đích
+      (best_target_cost), chúng ta có thể khẳng định chắc chắn rằng mọi nhánh phát triển tiếp theo từ nút
+      đó đều sẽ không cho kết quả tốt hơn. Việc continue (bỏ qua) giúp giảm đáng kể không gian tìm
+      kiếm, đặc biệt hữu ích khi đồ thị MRT có nhiều chặng chuyển tuyến phức tạp.
+
+       2.4.1   Hàm ánh xạ tọa độ vào ga (Spatial Snapping)
+
+   Việc ánh xạ điểm người dùng chọn trên bản đồ (p) vào mạng MRT được thực hiện thông qua quy trình
+Spatial Snapping hai giai đoạn để đảm bảo tính thực tế của hành trình:
+
+   1. Giai đoạn 1 (Point-to-Topology): Tìm nút gần nhất (vwalk ) trên đồ thị đi bộ từ tọa độ p. Sử dụng chỉ
+      mục không gian (Spatial Indexing) để tối ưu hóa việc tìm kiếm trong tập hợp hàng chục nghìn nút của
+      toàn bộ mạng lưới Đài Bắc.
+
+   2. Giai đoạn 2 (Topology-to-Station): Từ vwalk , hệ thống tính toán đường đi ngắn nhất tới các điểm
+      tiếp cận (As ) của nhà ga s. Ga được chọn là ga tối ưu hóa hàm chi phí:
+
+                            ϕ(p) = arg min (Dwalk (p, vwalk ) + Dgraph (vwalk , As ))
+                                        s∈S
+
+
+
+
+                                                                                                          8
+CHƯƠNG 2. PHÂN TÍCH HỆ THỐNG VÀ PHÂN CÔNG NHÓM
+
+
+            2.4.2 Cấu trúc cạnh và mã minh họa logic lõi
+
+        Để giải quyết bài toán định tuyến đa tiêu chí, đồ thị G′ được xây dựng với ba loại cạnh chính, mỗi loại
+mang các thuộc tính chi phí khác nhau nhằm mô phỏng hành vi di chuyển thực tế (Bảng 2.1).
+                                Bảng 2.1: Đặc tả chi phí cho các loại cạnh trong đồ thị mở rộng
+                Loại cạnh           Ý nghĩa                                              Chi phí Vector (c)
+                Ride                Di chuyển giữa hai ga kế tiếp trên cùng tuyến           (Tseg , 0, 0, 1)
+                Transfer            Chuyển đổi trạng thái ga giữa các tuyến                (Ttrans , 0, 1, 0)
+                Walk-trans          Đi bộ trung chuyển (vượt qua rào cản vật lý)         (Twalk , Twalk , 1, 0)
+
+        Báo cáo bổ sung hai đoạn mã đại diện cho hai thao tác trung tâm của hệ thống: so sánh bộ chi phí theo
+thứ tự từ điển trong Dijkstra (Đoạn mã 2.4.2) và snap điểm người dùng vào ga phù hợp thông qua walk
+network (Đoạn mã 2.4.2).
+
+        Đoạn mã 2.0: Logic cập nhật nút theo chi phí từ điển (Cost Relaxation)
+
+    1   {
+    2       "scenarios": [
+    3           {
+    4                "id": "rain_heavy_central",
+    5                "type": "rain_zone",
+    6                "data": {
+    7                    "center_pixel": [450, 600],
+    8                    "radius": 150,
+    9                    "cost_multiplier": 2.5
+10                   }
+11              },
+12              {
+13                   "id": "block_blue_line_01",
+14                   "type": "block_segment",
+15                   "data": { "u": "BL15", "v": "BL16" }
+16              }
+17          ]
+18      }
+
+
+
+
+        Đoạn mã 2.1: Logic ánh xạ tọa độ vào mạng (Walk-based Snapping)
+
+    1   {
+    2       "scenarios": [
+    3           {
+    4                "id": "rain_heavy_central",
+    5                "type": "rain_zone",
+    6                "data": {
+    7                    "center_pixel": [450, 600],
+    8                    "radius": 150,
+    9                    "cost_multiplier": 2.5
+10                   }
+11              },
+12              {
+13                   "id": "block_blue_line_01",
+14                   "type": "block_segment",
+15                   "data": { "u": "BL15", "v": "BL16" }
+
+
+
+9
+                                        CHƯƠNG 2. PHÂN TÍCH HỆ THỐNG VÀ PHÂN CÔNG NHÓM
+
+
+
+16            }
+17        ]
+18    }
+
+
+
+
+2.5       Tổng quan phân công công việc
+
+      Để cả ba nhóm đều có đầu việc độc lập và có thể nghiệm thu rõ ràng, nhóm nên chia theo deliverable
+thay vì chỉ chia theo thời gian. Bảng 2.2 mô tả cách phân chia phù hợp với dự án hiện tại.
+                                Bảng 2.2: Phân rã công việc theo nhóm chuyên trách
+      Nhóm                  Phạm vi chính                    Đầu việc cụ thể
+      Frontend              Giao diện người dùng và          Phát triển gis-studio, admin, login;
+                            trực quan hoá                    xử lý click/zoom/pan; hiển thị route sum-
+                                                             mary; chuẩn hoá loading và error state.
+      Backend               API và logic nghiệp vụ           Xây dựng endpoint FastAPI; quản lý runtime
+                                                             cache; tổ chức route engine và GIS services;
+                                                             xử lý admin scenario; viết test cho API và
+                                                             logic định tuyến.
+      Data/GIS              Dữ liệu mạng và lớp bản đồ       Chuẩn hoá network_topology.json;
+                                                             cập       nhật      stations.geojson,
+                                                             lines.geojson,
+                                                             station_access_points.geojson,
+                                                             walk_network.geojson; quản lý OSM
+                                                             enrichment và MBTiles.
+
+
+2.6       Phân công nhân sự và trách nhiệm chính
+
+      Dựa trên cách chia việc của nhóm, nhân sự được phân thành ba khối chức năng tương ứng với frontend,
+backend và data/GIS. Việc gắn trách nhiệm theo nhóm chuyên trách giúp quá trình triển khai rõ đầu việc
+hơn, đồng thời thuận tiện cho quá trình nghiệm thu vì mỗi nhóm đều có đầu ra kỹ thuật riêng.
+
+           2.6.1   Nhóm frontend
+
+      Nhóm frontend gồm Nguyễn Danh Tiến Nam và Trần Thái Minh. Nhóm này chịu trách nhiệm xây
+dựng lớp giao diện tương tác, bao gồm màn hình GIS Studio dành cho người dùng cuối, giao diện Admin
+Console phục vụ mô phỏng vận hành, cùng trang Login ở mức demo để điều hướng vào khu vực quản trị.
+
+      Cụ thể hơn, nhóm frontend phụ trách các nội dung sau:
+
+      • tổ chức layout giao diện, vùng bản đồ, thanh điều khiển và phần hiển thị tóm tắt hành trình;
+
+      • xử lý thao tác chọn điểm đầu, điểm cuối, các điểm đi qua nếu có và gửi yêu cầu định tuyến tới backend;
+
+      • dựng lại kết quả định tuyến bằng dữ liệu hình học do backend trả về, bao gồm ga được chọn, đoạn
+          tiếp cận từ điểm người dùng tới ga và tuyến MRT;
+
+      • hiển thị thông báo trạng thái, lỗi đầu vào và kết quả xử lý của admin scenario.
+
+           2.6.2   Nhóm backend
+
+      Nhóm backend gồm Tạ Đức Hiển và Nguyễn Đức Huy. Nhóm này phụ trách toàn bộ phần xử lý nghiệp
+vụ phía máy chủ trên nền FastAPI, bao gồm tổ chức API, nạp dữ liệu runtime, xây dựng route engine và áp
+dụng các ràng buộc vận hành do khu vực admin tạo ra.
+
+      Phạm vi chính của nhóm backend gồm:
+
+
+                                                                                                            10
+CHƯƠNG 2. PHÂN TÍCH HỆ THỐNG VÀ PHÂN CÔNG NHÓM
+
+
+      • xây dựng và duy trì các endpoint chính như /api/gis/network, /api/gis/route/points,
+        /api/admin/scenario và các API GIS hỗ trợ;
+
+      • triển khai runtime cache để giảm chi phí nạp dữ liệu lặp lại và hỗ trợ làm mới trạng thái khi scenario
+        thay đổi;
+
+      • tổ chức route engine trên đồ thị MRT mở rộng, kết hợp logic snap ga gần nhất và ghép đường đi hoàn
+        chỉnh;
+
+      • viết kiểm thử cho các luồng xử lý quan trọng như route API, admin scenario, MBTiles và các dịch vụ
+        GIS.
+
+         2.6.3 Nhóm data/GIS
+
+      Nhóm data/GIS gồm Nguyễn Vi Thái Sơn và Nguyễn Duy Mạnh. Nhóm này chịu trách nhiệm chuẩn
+hoá và duy trì lớp dữ liệu phục vụ cho cả backend lẫn frontend, bao gồm topology mạng tuyến, các lớp
+GeoJSON, dữ liệu đi bộ, enrichment và tài nguyên bản đồ nền.
+
+      Các đầu việc trọng tâm của nhóm data/GIS gồm:
+
+      • chuẩn hoá network_topology.json và đồng bộ ID ga, tuyến, segment giữa topology và dữ liệu
+        GIS;
+
+      • quản lý các lớp stations.geojson, lines.geojson, station_access_points.geojson,
+        walk_network.geojson;
+
+      • xây dựng hoặc duy trì các script làm sạch dữ liệu, bổ sung dữ liệu OSM và chuẩn bị MBTiles;
+
+      • hỗ trợ kiểm tra mức độ khớp giữa dữ liệu hình học và dữ liệu định tuyến trong quá trình tích hợp.
+
+         2.6.4 Nguyên tắc phối hợp
+
+   Dù chia theo ba nhóm chuyên trách, toàn bộ hệ thống chỉ vận hành ổn định khi các nhóm phối hợp chặt
+chẽ thông qua ba điểm giao tiếp chính:
+
+      • frontend phụ thuộc vào schema API và payload hình học do backend cung cấp;
+
+      • backend phụ thuộc vào chất lượng và mức độ đồng bộ của topology, GeoJSON và walk network do
+        nhóm data/GIS chuẩn bị;
+
+      • nhóm data/GIS cần phản hồi nhanh khi phát hiện dữ liệu mới làm thay đổi kết quả route hoặc gây lệch
+        hiển thị trên frontend.
+
+      Nhờ cơ chế phối hợp này, dự án không bị tách rời thành các phần riêng lẻ mà được duy trì như một hệ
+thống tích hợp thống nhất.
+
+2.7    Cơ chế phối hợp giữa các nhóm
+
+      Để tránh chồng chéo và giảm lỗi tích hợp, nhóm cần thống nhất ba điểm giao tiếp:
+
+      • Hợp đồng API giữa frontend và backend: thống nhất URL, request body, response schema và cách
+        xử lý lỗi trước khi hoàn thiện giao diện.
+
+      • Schema dữ liệu giữa backend và data/GIS: thống nhất tên trường ga, tuyến, segment, toạ độ và quy
+        ước dữ liệu bị xoá mềm.
+
+      • Vòng tích hợp ngắn: sau mỗi mốc phát triển, frontend kiểm tra với API thật, backend kiểm tra với
+        dữ liệu thật, và nhóm data xác minh hiển thị trên bản đồ.
+
+
+11
+                         CHƯƠNG 3. CÔNG CỤ, DỮ LIỆU VÀ KIẾN TRÚC HỆ THỐNG
+
+
+
+      Chương này trình bày chi tiết về các công cụ phát triển, cấu trúc dữ liệu và kiến trúc kỹ thuật lõi của hệ
+thống. Đây là nền tảng để đảm bảo tính ổn định và khả năng mở rộng của dịch vụ định tuyến.
+
+3.1       Công nghệ và Công cụ sử dụng
+
+      Hệ thống được xây dựng trên bộ công nghệ hiện đại, ưu tiên tính gọn nhẹ và hiệu năng xử lý:
+
+      • Ngôn ngữ Backend: Python 3.12+, tận dụng lợi thế về thư viện xử lý đồ thị và GIS.
+
+      • Framework Web: FastAPI [1], cung cấp hiệu năng ASGI cao và hỗ trợ tự động tài liệu hóa API.
+
+      • Frontend: HTML, CSS, JavaScript thuần và MapLibre GL JS [2] cho hiển thị bản đồ vector.
+
+      • Xử lý không gian: geopandas, shapely và pyproj cho các phép tính snap to network và chuẩn
+          hoá GIS.
+
+      • Dữ liệu: JSON topology cho mạng lưới MRT và GeoJSON [3] cho các lớp hình học không gian.
+
+      Việc lựa chọn FastAPI không chỉ giúp tăng tốc độ phát triển nhờ cơ chế tự động kiểm tra dữ liệu đầu
+vào (validation) thông qua Pydantic, mà còn cho phép hệ thống xử lý đồng thời nhiều yêu cầu định tuyến
+nhờ mô hình ASGI (Asynchronous Server Gateway Interface). Phía Frontend, MapLibre GL JS được ưu
+tiên nhằm sử dụng công nghệ Vector Tiles, giúp bản đồ hiển thị mượt mà với hiệu suất cao ngay cả trên các
+thiết bị di động.
+
+3.2       Cấu trúc thư mục và Dữ liệu
+
+      Hệ thống được tổ chức theo mô hình Modular Monolith để dễ quản lý và triển khai:
+
+      Đoạn mã 3.0: Cấu trúc chính của repository
+
+ 1    {
+ 2        "scenarios": [
+ 3          {
+ 4                 "id": "rain_heavy_central",
+ 5                 "type": "rain_zone",
+ 6                 "data": {
+ 7                   "center_pixel": [450, 600],
+ 8                     "radius": 150,
+ 9                     "cost_multiplier": 2.5
+10                 }
+11            },
+12            {
+13                 "id": "block_blue_line_01",
+14                 "type": "block_segment",
+15                 "data": { "u": "BL15", "v": "BL16" }
+16            }
+17        ]
+18    }
+
+
+
+
+      Cấu trúc này giúp phân tách rõ ràng giữa tầng giao diện (static), tầng logic dịch vụ (services) và tầng dữ
+liệu (data). Cơ chế lưu trữ dạng tệp (File-based Storage) được ưu tiên nhằm đơn giản hóa việc triển khai và
+
+
+                                                                                                             12
+CHƯƠNG 3. CÔNG CỤ, DỮ LIỆU VÀ KIẾN TRÚC HỆ THỐNG
+
+
+cho phép kiểm soát phiên bản dữ liệu đồng nhất với mã nguồn thông qua hệ thống quản lý phiên bản Git.
+
+3.3    Kiến trúc dịch vụ định tuyến (Route Engine)
+
+      Trái tim của hệ thống là lớp RouteEngine, được triển khai dựa trên thuật toán Dijkstra cải tiến với
+các đặc điểm kỹ thuật sau:
+
+         3.3.1 Mô hình Đồ thị Trạng thái (State Graph)
+
+      Để xử lý chi phí chuyển tuyến (transfer cost), hệ thống không sử dụng đồ thị ga đơn giản. Thay vào đó,
+mỗi ga được tách thành các đỉnh trạng thái (s, l) đại diện cho ga s trên tuyến l.
+
+      • Cạnh di chuyển (Trip): liên kết (si , l) → (si+1 , l) với trọng số là thời gian chạy tàu.
+
+      • Cạnh chuyển tuyến (Transfer): liên kết (s, l1 ) → (s, l2 ) với trọng số là thời gian đi bộ trong ga và
+        thời gian chờ tàu dự kiến.
+
+         3.3.2 Hàm chi phí đa mục tiêu (Lexicographical Vector)
+
+      Hệ thống sử dụng vector trọng số W = (T, W, Ntr , Nstop ) để tìm đường tối ưu, trong đó:
+
+      • T : Tổng thời gian di chuyển (seconds).
+
+      • W : Tổng quãng đường đi bộ (meters).
+
+      • Ntr : Số lần chuyển tuyến.
+
+      • Nstop : Số lượng ga đi qua.
+
+         3.3.3 Hiệu năng và Cơ chế Bộ nhớ đệm (Caching)
+
+      Hệ thống áp dụng mô hình Singleton cho lớp GraphStore để tránh việc nạp lại dữ liệu GIS cho mỗi
+yêu cầu. Sự khác biệt về hiệu năng giữa các trạng thái là rất lớn:
+
+      • Cold start: Mất khoảng 440ms để nạp dữ liệu từ đĩa và xây dựng cấu trúc đồ thị trong bộ nhớ.
+
+      • Hot path: Sau khi cache đã được ”hâm nóng”(warming up), các yêu cầu định tuyến trung bình chỉ
+        mất 0.02ms để xử lý, đáp ứng thời gian thực cho thao tác của người dùng.
+
+         3.3.4 Cơ chế quản lý Persistence và Chữ ký dữ liệu (SHA-256)
+
+      Để tối ưu hóa thời gian khởi động (startup time), hệ thống triển khai một tầng nạp dữ liệu bền vững
+(Persistence Layer) trong gis_loader.py. Thay vì luôn xây dựng lại WalkGraph từ GeoJSON nguyên
+bản (vốn chiếm nhiều tài nguyên CPU), hệ thống sử dụng cơ chế chữ ký file:
+
+      • Chữ ký (Signature): Hệ thống tính toán một chuỗi định danh dựa trên kích thước (size) và thời
+        gian sửa đổi cuối cùng (mtime) của các tệp GeoJSON đầu vào.
+
+      • Serialization: Nếu chữ ký khớp với bản lưu trong thư mục .runtime-cache/, hệ thống sử dụng
+        thư viện pickle để nạp trực tiếp đối tượng Python đã được xử lý xong.
+
+      • Invalidation: Bất kỳ sự thay đổi nào về dữ liệu nguồn sẽ làm thay đổi chữ ký, buộc hệ thống phải
+        dựng lại đồ thị từ đầu và cập nhật bản cache mới.
+
+
+
+
+13
+                                            CHƯƠNG 3. CÔNG CỤ, DỮ LIỆU VÀ KIẾN TRÚC HỆ THỐNG
+
+
+           3.3.5       Chiến lược Precomputation: All-Pairs Shortest Paths
+
+      Một trong những quyết định kiến trúc quan trọng nhất của dự án là việc đánh đổi không gian lưu trữ lấy
+tốc độ truy cập. Khi dịch vụ khởi chạy, RouteEngine thực hiện tính toán trước toàn bộ các cặp đường đi
+ngắn nhất:
+
+     1. Hệ thống khởi tạo một ma trận kết quả (lookup matrix) trong bộ nhớ.
+
+     2. Với mỗi đỉnh ga trung chuyển, thuật toán Dijkstra được chạy một lần để tìm đường đến tất cả các đỉnh
+          còn lại trong mạng lưới.
+
+     3. Kết quả được lưu trữ dưới dạng một từ điển lồng nhau (nested dictionary), cho phép việc tìm kiếm lộ
+          trình sau này trở thành một thao tác truy cập chỉ số (O(1) lookup).
+
+Phương pháp này đảm bảo rằng ngay cả khi mạng lưới MRT phức tạp mở rộng với hàng nghìn ga, thời gian
+phản hồi yêu cầu của người dùng trên Web vẫn không thay đổi đáng kể.
+
+           3.3.6       Tích hợp Kịch bản động (Dynamic Scenario)
+
+      Kiến trúc Route Engine cho phép can thiệp vào mạng lưới mà không cần khởi động lại dịch vụ. Thông
+qua admin_scenario.json, hệ thống có thể áp dụng các tham số hiệu chỉnh hoặc chặn trực tiếp các
+cạnh trên đồ thị khi nhận được yêu cầu từ bộ phận quản trị (ví dụ: thông báo bảo trì tuyến hoặc đóng cửa
+ga tạm thời). Khi có kịch bản mới, hệ thống tự động đánh dấu invalidate cache nội bộ để các yêu cầu định
+tuyến tiếp theo cập nhật theo thực tế vận hành mới.
+
+3.4       Quy trình cài đặt và Khởi tạo
+
+           3.4.1       Cài đặt môi trường
+
+      Người dùng cần cài đặt các thư viện phụ thuộc thông qua pip:
+
+      Đoạn mã 3.1: Lệnh cài đặt phụ thuộc
+
+ 1    {
+ 2        "scenarios": [
+ 3          {
+ 4                 "id": "rain_heavy_central",
+ 5                 "type": "rain_zone",
+ 6                 "data": {
+ 7                   "center_pixel": [450, 600],
+ 8                     "radius": 150,
+ 9                     "cost_multiplier": 2.5
+10                 }
+11            },
+12            {
+13                 "id": "block_blue_line_01",
+14                 "type": "block_segment",
+15                 "data": { "u": "BL15", "v": "BL16" }
+16            }
+17        ]
+18    }
+
+
+
+
+                                                                                                         14
+CHƯƠNG 3. CÔNG CỤ, DỮ LIỆU VÀ KIẾN TRÚC HỆ THỐNG
+
+
+           3.4.2 Khởi chạy runtime
+
+      Sau khi dữ liệu GIS được chuẩn bị trong thư mục app/data/gis/, hệ thống khởi chạy bằng lệnh:
+
+      Đoạn mã 3.2: Khởi chạy ứng dụng
+
+ 1    {
+ 2        "scenarios": [
+ 3            {
+ 4                 "id": "rain_heavy_central",
+ 5                 "type": "rain_zone",
+ 6                 "data": {
+ 7                   "center_pixel": [450, 600],
+ 8                     "radius": 150,
+ 9                     "cost_multiplier": 2.5
+10                 }
+11            },
+12            {
+13                 "id": "block_blue_line_01",
+14                 "type": "block_segment",
+15                 "data": { "u": "BL15", "v": "BL16" }
+16            }
+17        ]
+18    }
+
+
+
+
+      Hệ thống sẽ tự động warming cache cho đồ thị MRT và walk network trong lần truy cập đầu tiên để đảm
+bảo độ trễ thấp cho các truy vấn sau.
+
+           3.4.3 Quy trình Kiểm thử và Duy trì
+
+      Tính ổn định của hệ thống được đảm bảo thông qua bộ công cụ pytest. Các kịch bản kiểm thử tập
+trung vào tính toàn vẹn của đồ thị, độ chính xác của phép tính snap và khả năng xử lý các trường hợp biên
+khi người dùng chọn điểm bắt đầu/kết thúc quá xa mạng lưới metro.
+
+3.5       Kết luận chương
+
+      Chương 3 đã phác thảo bức tranh kỹ thuật toàn diện của hệ thống từ các công cụ phát triển đến cấu trúc
+kiến trúc bên trong. Sự kết hợp giữa tốc độ của FastAPI, tính linh hoạt của xử lý đồ thị networkx và hiệu
+năng hiển thị của MapLibre đã tạo nên một nền tảng vững chắc cho các tính năng định tuyến phức tạp được
+trình bày ở các chương tiếp theo.
+
+
+
+
+15
+          CHƯƠNG 4. KẾT QUẢ THỰC NGHIỆM VÀ TRIỂN KHAI THEO TỪNG NHÓM
+
+
+
+4.1    Tổng quan kết quả
+
+      Frontend hiện đã có các giao diện chính tương ứng với chức năng của hệ thống. Backend đã hình thành
+được lớp dịch vụ đủ dùng cho bài toán định tuyến và GIS. Khối Data/GIS đã chuẩn hoá dữ liệu topology,
+lớp bản đồ và hỗ trợ trực tiếp cho việc hiển thị cũng như tính toán. Để báo cáo dễ viết và công bằng giữa
+các nhóm, phần kết quả được chia lại theo cùng một khung nội dung cho từng nhóm.
+
+4.2    Đánh giá tóm tắt theo nhóm công việc
+
+                                 Bảng 4.1: Tổng hợp kết quả theo nhóm công việc
+      Nhóm                   Kết quả chính                  Giá trị mang lại
+      Frontend               Bộ giao diện hoàn chỉnh cho    Tạo trải nghiệm trực quan, dễ demo, dễ quan
+                             người dùng và quản trị         sát route và dễ đánh giá chức năng hệ thống
+      Backend                API định tuyến, nạp dữ liệu    Chuyển dữ liệu thô thành dịch vụ ổn định để
+                             và xử lý logic nghiệp vụ       frontend có thể tích hợp trực tiếp
+      Data/GIS               Bộ dữ liệu mạng, lớp bản đồ    Là nền tảng để kết quả định tuyến có ý nghĩa
+                             và pipeline chuẩn hoá          và hiển thị đúng ngữ cảnh địa lý
+
+4.3    Kết quả của nhóm frontend
+
+         4.3.1   Thành viên phụ trách
+
+      Nhóm frontend gồm hai thành viên Nguyễn Danh Tiến Nam và Trần Thái Minh. Hai thành viên này
+phụ trách các màn hình tương tác trực tiếp với người dùng, đồng thời đảm nhận việc tổ chức trải nghiệm
+hiển thị sao cho dữ liệu định tuyến và dữ liệu bản đồ được trình bày rõ ràng, dễ thao tác và phù hợp với mục
+tiêu demo của bài tập lớn.
+
+         4.3.2   Chức năng đã triển khai
+
+      Trong phạm vi runtime chính của hệ thống, nhóm frontend đã triển khai ba giao diện quan trọng:
+
+      • GIS Studio: giao diện trung tâm của hệ thống, cho phép tải dữ liệu mạng, hiển thị bản đồ bằng
+        MapLibre, chọn điểm đầu – điểm cuối và nhận kết quả định tuyến;
+
+      • Admin Console: giao diện phục vụ mô phỏng vận hành, cho phép tạo rain zone, chặn segment, chặn
+        điểm và đánh dấu ga bị cấm để kiểm tra ảnh hưởng đến route;
+
+      • Login Demo: giao diện đơn giản dùng để điều hướng vào khu vực quản trị, mang tính chất mô phỏng
+        luồng truy cập hơn là một hệ xác thực hoàn chỉnh.
+
+      Ngoài ra, frontend còn xử lý các thành phần phụ trợ như thông báo trạng thái, khu vực tóm tắt hành
+trình, hiển thị danh sách bước đi và phản hồi lỗi khi request không hợp lệ.
+
+         4.3.3   Cách triển khai và công nghệ sử dụng
+
+      Frontend của hệ thống được triển khai chủ yếu bằng HTML, CSS và JavaScript thuần, không phụ
+thuộc vào một framework SPA lớn trong runtime chính. Cách tổ chức này giúp hệ thống nhẹ, dễ chạy cục
+bộ và phù hợp với phạm vi của bài tập lớn.
+
+      Phần bản đồ tương tác được xây dựng trên MapLibre GL JS. Sau khi người dùng truy cập giao diện
+/gis, frontend gọi endpoint /api/gis/network để tải các lớp dữ liệu như ga, tuyến, catalog tuyến,
+catalog ga và thông tin basemap. Khi người dùng chọn điểm bắt đầu và kết thúc, frontend gửi request tới
+/api/gis/route/points, sau đó dựng lại các thành phần gồm:
+
+
+                                                                                                           16
+CHƯƠNG 4. KẾT QUẢ THỰC NGHIỆM VÀ TRIỂN KHAI THEO TỪNG NHÓM
+
+
+     • ga được snap từ điểm người dùng chọn,
+     • đoạn tiếp cận từ điểm đầu tới ga đầu tiên,
+     • tuyến MRT chính,
+     • đoạn rời ga tới điểm đích,
+     • phần tóm tắt về tổng thời gian và chuỗi bước di chuyển.
+
+        4.3.4 Kết quả đạt được
+
+     Kết quả quan trọng nhất của nhóm frontend là đã tạo ra được một luồng sử dụng hoàn chỉnh từ tải dữ
+liệu mạng đến hiển thị route cuối cùng trên bản đồ. So với cách biểu diễn tuyến tàu điện ngầm thuần văn
+bản, cách tiếp cận này giúp người dùng quan sát hành trình rõ ràng hơn và thể hiện được giá trị của lớp dữ
+liệu GIS.
+
+     Giao diện admin cũng tạo ra giá trị đáng kể trong phần trình diễn, vì nó cho phép thay đổi scenario vận
+hành và quan sát ảnh hưởng của những thay đổi đó đối với hệ thống định tuyến mà không cần can thiệp trực
+tiếp vào mã nguồn hay chỉnh tay dữ liệu runtime.
+
+
+
+
+                                    Hình 4.1: Giao diện chính phân hệ GIS Studio
+
+
+
+
+              Hình 4.2: Kết quả định tuyến mẫu thể hiện ga đầu, ga cuối, đoạn tiếp cận và tuyến chính
+
+
+
+
+17
+                           CHƯƠNG 4. KẾT QUẢ THỰC NGHIỆM VÀ TRIỂN KHAI THEO TỪNG NHÓM
+
+
+
+              Admin Console                 Bản đồ runtime của Admin
+                 Scenario Controls
+                  Rain zone nhẹ
+
+                  Rain zone vừa
+
+                  Block segment
+
+                  Disable station
+
+
+                 Clear / Save Scenario
+             Form admin gửi request                                   Runtime constraint gồm:
+                                                                      - rain zone tạo tăng chi phí
+             analyze trước khi PUT
+                                                                      - segment block loại bỏ cạnh
+             scenario vào runtime.
+                                                                      hoặc đặt phạt rất lớn
+
+
+
+          Hình 4.3: Minh hoạ giao diện Admin Console khi áp dụng rain zone và block segment trong runtime
+
+                  Trước khi áp dụng scenario                                 Sau khi áp dụng scenario
+
+                  Start
+
+
+
+
+                                                                                 Route phải né vùng mưa và
+                                                                                 đoạn bị khoá, nên hình học
+                                         End
+                                                                                 tuyến và tổng chi phí đều
+                                                                                 thay đổi.
+
+                    Hình 4.4: Minh hoạ tác động của admin scenario lên kết quả định tuyến trên bản đồ
+
+4.4    Kết quả của nhóm backend
+
+         4.4.1     Thành viên phụ trách
+
+      Nhóm backend gồm hai thành viên Tạ Đức Hiển và Nguyễn Đức Huy. Đây là nhóm chịu trách nhiệm
+về lớp xử lý trung tâm của hệ thống, nơi tiếp nhận yêu cầu từ frontend, nạp dữ liệu runtime, tính toán hành
+trình và trả kết quả theo schema ổn định.
+
+         4.4.2     Chức năng đã triển khai
+
+      Nhóm backend đã triển khai một tập API đủ để vận hành luồng chính của hệ thống:
+
+      • GET /api/gis/network: cung cấp dữ liệu mạng, catalog ga/tuyến, bounds và basemap;
+
+      • POST /api/gis/route/points: tiếp nhận hai điểm trên bản đồ và trả về hành trình định tuyến
+        hoàn chỉnh;
+
+      • GET /api/admin/scenario: tải scenario hiện hành;
+
+      • POST /api/admin/scenario/analyze: phân tích ảnh hưởng của scenario trước khi áp dụng;
+
+      • PUT /api/admin/scenario: lưu và áp dụng scenario mới vào runtime;
+
+      • các API phụ trợ như đọc tile basemap MBTiles, cập nhật vị trí ga hoặc đánh dấu xoá mềm ga GIS.
+
+      Dưới đây là một ví dụ về cấu trúc dữ liệu của các kịch bản vận hành thực tế được lưu trữ trong hệ thống,
+cho phép Admin can thiệp vào đồ thị mà không cần thay đổi file topology lõi:
+
+
+                                                                                                              18
+CHƯƠNG 4. KẾT QUẢ THỰC NGHIỆM VÀ TRIỂN KHAI THEO TỪNG NHÓM
+
+
+
+     Đoạn mã 4.0: Cấu trúc kịch bản Admin Scenario (JSON)
+
+ 1   {
+ 2       "scenarios": [
+ 3           {
+ 4                "id": "rain_heavy_central",
+ 5                "type": "rain_zone",
+ 6                "data": {
+ 7                  "center_pixel": [450, 600],
+ 8                    "radius": 150,
+ 9                    "cost_multiplier": 2.5
+10                }
+11           },
+12           {
+13                "id": "block_blue_line_01",
+14                "type": "block_segment",
+15                "data": { "u": "BL15", "v": "BL16" }
+16           }
+17       ]
+18   }
+
+
+
+
+     Bên dưới lớp API, backend còn tổ chức các dịch vụ chuyên biệt như route engine, walk network search,
+GIS payload loader, MBTiles reader và admin routing constraints.
+                                  Bảng 4.2: Đặc tả rút gọn các API chính của hệ thống
+ Method               Endpoint                    Input (payload/query)           Output (response schema)
+ GET                  /api/gis/network            Không bắt buộc payload; có      Catalog ga/tuyến, lớp GeoJSON,
+                                                  thể nhận tham số tải lớp dữ     bounds hiển thị, thông tin basemap
+                                                  liệu hoặc bounds                để frontend khởi tạo bản đồ
+ POST                 /api/gis/route/points Toạ độ điểm đầu, điểm cuối,           Ga snap ở hai đầu, route summary,
+                                            tham số cấu hình route hoặc           cost tuple, geometry/GeoJSON để
+                                            tốc độ đi bộ                          frontend dựng tuyến
+ GET                  /api/admin/scenario         Không bắt buộc payload          Trạng thái scenario hiện hành,
+                                                                                  metadata của các ràng buộc đang
+                                                                                  áp dụng trong runtime
+ POST                                       Mô tả scenario mới: loại ràng
+                      /api/admin/scenario/analyze                                 Kết quả phân tích tác động: số
+                                            buộc, vùng ảnh hưởng, seg-            cạnh/ga bị ảnh hưởng, trạng thái
+                                            ment hoặc ga mục tiêu                 hợp lệ trước khi ghi vào runtime
+ PUT                  /api/admin/scenario         Scenario payload đã xác nhận,   Runtime state mới nhất sau khi ghi,
+                                                  kèm dữ liệu cập nhật runtime    thông tin invalidate cache và dữ
+                                                                                  liệu để Admin Console vẽ lại lớp
+                                                                                  scenario
+
+     Đặc tả API ở Bảng 4.2 đóng vai trò là hợp đồng kỹ thuật giữa frontend và backend. Nhờ đó, frontend
+có thể dựng hình học và route summary từ đúng schema mà backend cung cấp, còn backend giữ được khả
+năng tiến hoá service mà không phá vỡ luồng tích hợp chính.
+
+         4.4.3 Cách triển khai và công nghệ sử dụng
+
+     Backend được xây dựng trên FastAPI với ngôn ngữ Python. Kiến trúc thực tế mang đặc trưng của một
+modular monolith nhỏ: các dịch vụ được tách rõ theo vai trò nhưng vẫn cùng chạy trong một tiến trình web
+duy nhất. Cách tổ chức này đủ linh hoạt cho phạm vi học phần mà không làm phát sinh độ phức tạp như
+microservice.
+
+     Một điểm kỹ thuật đáng chú ý là backend không chỉ giải bài toán trên đồ thị ga đơn giản. Thay vào đó,
+
+
+19
+                       CHƯƠNG 4. KẾT QUẢ THỰC NGHIỆM VÀ TRIỂN KHAI THEO TỪNG NHÓM
+
+
+hệ thống kết hợp nhiều lớp xử lý:
+
+      • snap điểm người dùng chọn về ga phù hợp thông qua walk network và station access point;
+
+      • chạy route engine trên đồ thị MRT mở rộng theo ngữ cảnh tuyến;
+
+      • dựng lại hình học của tuyến đi dựa trên dữ liệu GIS;
+
+      • áp dụng thêm các ràng buộc do scenario admin sinh ra trong runtime.
+
+      Nhóm backend cũng tận dụng lru_cache và chữ ký file dữ liệu để giảm chi phí nạp lại mạng tuyến,
+đồng thời hỗ trợ làm mới cache khi scenario thay đổi.
+
+         4.4.4   Kết quả đạt được
+
+      Về mặt chức năng, nhóm backend đã xây dựng được một luồng xử lý end-to-end có thể phục vụ frontend
+ổn định:
+
+   1. tải topology và dữ liệu GIS;
+
+   2. ánh xạ điểm người dùng tới ga phù hợp;
+
+   3. tìm hành trình trên mạng MRT;
+
+   4. ghép đường đi hoàn chỉnh và trả về geometry cho frontend.
+
+      Điểm nổi bật của backend là khả năng tích hợp dữ liệu định tuyến với dữ liệu không gian, thay vì chỉ trả
+về danh sách ga. Ngoài ra, cơ chế admin scenario cũng tạo ra giá trị thực tế cho demo, vì nó giúp kiểm tra
+ảnh hưởng của các tình huống vận hành lên kết quả route mà không cần thay đổi trực tiếp code xử lý.
+
+4.5    Kết quả của nhóm data/GIS
+
+         4.5.1   Thành viên phụ trách
+
+      Nhóm data/GIS gồm hai thành viên Nguyễn Vi Thái Sơn và Nguyễn Duy Mạnh. Nhóm này cung cấp
+nền tảng dữ liệu để cả backend và frontend cùng hoạt động, đồng thời là nơi quyết định mức độ chính xác
+của route khi hiển thị trên bản đồ.
+
+         4.5.2   Chức năng và dữ liệu đã triển khai
+
+      Nhóm data/GIS đã chuẩn bị và duy trì các lớp dữ liệu chính của hệ thống, bao gồm:
+
+      • network_topology.json cho lớp topology MRT;
+
+      • stations.geojson và lines.geojson cho lớp hình học của ga và tuyến;
+
+      • station_access_points.geojson cho các điểm tiếp cận ga;
+
+      • walk_network.geojson cho đồ thị đi bộ;
+
+      • subway_osm_enrichment.json để bổ sung thông tin từ nguồn OSM;
+
+      • OUTPUT_FILE.mbtiles làm lớp nền cục bộ khi có sẵn.
+
+      Bên cạnh dữ liệu runtime, nhóm còn duy trì các script xử lý dữ liệu trong thư mục scripts/map/
+để chuẩn hoá GeoJSON, tải dữ liệu mạng lưới OSM [6] (thông qua công cụ như OSMnx [7]) và xây dựng
+enrichment.
+
+
+                                                                                                           20
+CHƯƠNG 4. KẾT QUẢ THỰC NGHIỆM VÀ TRIỂN KHAI THEO TỪNG NHÓM
+
+
+         4.5.3 Cách triển khai và công nghệ sử dụng
+
+      Nhóm data/GIS làm việc trên nhiều kiểu dữ liệu khác nhau như JSON, GeoJSON, MBTiles và các tài
+nguyên bản đồ. Quy trình chính của nhóm không chỉ là thu thập dữ liệu, mà còn phải làm sạch, kiểm tra ID,
+đồng bộ toạ độ và bảo đảm dữ liệu đủ tốt để backend có thể sử dụng trực tiếp trong route runtime.
+
+      Một khó khăn bản chất của lớp dữ liệu là topology và dữ liệu GIS không phải lúc nào cũng đồng bộ tuyệt
+đối. Vì vậy nhóm data/GIS phải phối hợp chặt với backend để phát hiện trường hợp ga có trong topology
+nhưng chưa có feature GIS tương ứng, hoặc tuyến có trong route logic nhưng thiếu hình học hiển thị.
+
+      Để giải quyết vấn đề này, hệ thống triển khai cơ chế **Fallback GeoJSON Generation**:
+
+      • Khi gis_loader.py phát hiện thiếu tệp hình học của một ga hoặc tuyến, thay vì bỏ qua, hệ thống
+        sử dụng tọa độ pixel có sẵn trong topology để dựng lại các đối tượng hình học giả lập.
+
+      • Việc này đảm bảo tính toàn vẹn của giao diện người dùng (không bị ”mất hình”khi định tuyến) và cho
+        phép hệ thống vận hành ngay cả trong điều kiện thiếu tốn dữ liệu GIS thô từ QGIS.
+
+Đây là lý do hệ thống cần các bước lọc hoặc bổ sung dữ liệu trước khi đưa vào runtime.
+
+         4.5.4 Kết quả đạt được
+
+      Kết quả rõ nhất của nhóm data/GIS là đã xây dựng được một bộ dữ liệu đủ để vận hành luồng định tuyến
+trên bản đồ trong điều kiện cục bộ. Thay vì chỉ dừng ở dữ liệu logic, bộ dữ liệu hiện tại hỗ trợ được cả ba
+yêu cầu quan trọng:
+
+     1. tính route trên topology,
+
+     2. xác định ga gần nhất theo lớp đi bộ,
+
+     3. dựng lại kết quả định tuyến thành hình học trực quan.
+
+      Việc duy trì thêm các công cụ chuẩn hoá dữ liệu cũng giúp nhóm có khả năng mở rộng hoặc tái tạo
+pipeline khi cần cập nhật nguồn dữ liệu mới.
+
+
+
+
+                Hình 4.5: Lớp dữ liệu GIS tổng quan: bản đồ mạng lưới tuyến và ga Đài Bắc (Taipei)
+
+
+4.6    Kiểm thử và nhận xét chung
+
+      Bộ kiểm thử hiện có của dự án tập trung mạnh vào lớp backend và các dịch vụ xử lý chính. Các test
+trong thư mục tests/ bao phủ nhiều nhóm chức năng như API, runtime cache, route engine, GIS loader,
+
+
+21
+                      CHƯƠNG 4. KẾT QUẢ THỰC NGHIỆM VÀ TRIỂN KHAI THEO TỪNG NHÓM
+
+
+ride geometry, admin scenario và MBTiles. Điều này cho thấy nhóm không chỉ dừng ở việc xây dựng giao
+diện demo mà còn quan tâm đến tính ổn định của logic xử lý phía sau.
+
+      Ngoài kiểm thử tự động, dự án còn phù hợp với một số kịch bản kiểm thử tích hợp thủ công:
+
+      • mở giao diện /gis, tải dữ liệu mạng và kiểm tra khả năng hiển thị các lớp bản đồ;
+
+      • chọn hai điểm trên bản đồ để xác minh quá trình snap ga gần nhất và hiển thị route;
+
+      • thay đổi scenario trong /admin, sau đó chạy lại định tuyến để quan sát ảnh hưởng lên kết quả;
+
+      • kiểm tra việc phục vụ tile từ MBTiles hoặc khả năng fallback khi không có basemap cục bộ.
+
+      Bộ kiểm thử tự động hiện tại đạt 76/76 test case pass. Hiệu năng thực tế của hệ thống được đo đạc và
+tổng hợp trong Bảng 4.3, minh chứng cho hiệu quả của các cơ chế tối ưu hóa đã trình bày ở Chương 3.
+                   Bảng 4.3: Bảng Benchmark hiệu năng hệ thống (đo trên CPU Intel i7-12700H)
+         Giai đoạn xử lý                Cold Start     Hot Path     Ghi chú
+         Nạp I/O và Parsing JSON         120 ms         < 1 ms      Hot path nạp từ RAM Singleton
+         Xây dựng đồ thị logic            30 ms          0 ms       Chỉ thực hiện 1 lần duy nhất
+         Precomputation (AP-SP)          290 ms          0 ms       Tính toán 11,500+ cặp đường đi
+         Tìm lộ trình (Routing)             –          < 0.1 ms     Lookup O(1) trong ma trận
+         Spatial Snapping (Walking)       15 ms         2-5 ms      Sử dụng R-Tree / Spatial Index
+         Tổng cộng                       440 ms         2-6 ms      Thời gian phản hồi người dùng
+
+      Con số này được dùng như một chỉ báo định hướng cho khả năng phục vụ demo học phần; nó không
+thay thế cho benchmark production end-to-end trên hạ tầng triển khai thực tế.
+
+4.7    Hạn chế hiện tại và hướng khắc phục
+
+      Phần này tổng hợp các hạn chế kỹ thuật và thách thức vận hành trên toàn hệ thống, được phân tích theo
+từng lớp chức năng thay vì lặp lại ở từng nhóm riêng lẻ.
+
+
+      • Lớp Frontend – Phụ thuộc vào chất lượng payload: Frontend phải dựng dữ liệu định tuyến dưới
+        dạng hình học thật trên bản đồ, khiến nhóm phụ thuộc chặt vào payload do backend trả về và mức độ
+        đồng bộ giữa topology với dữ liệu GIS. Hướng xử lý hiện tại là tập trung vào luồng runtime cốt lõi
+        (gis-studio, admin, login) thay vì dàn trải sang các tính năng chưa thiết yếu.
+
+      • Lớp Backend – Nhất quán dữ liệu đa nguồn: Backend phải bảo đảm tính nhất quán giữa topology,
+        GeoJSON, walk network và scenario admin. Nếu một lớp thay đổi hoặc thiếu đồng bộ, route có thể
+        sai hoặc frontend không dựng được đường đi. Nhóm ưu tiên ổn định luồng chính, giữ cấu trúc service
+        rõ ràng và bao phủ test cho các hành vi quan trọng.
+
+      • Lớp Data/GIS – Chênh lệch dữ liệu OSM và thực tế: Dữ liệu OpenStreetMap [6] cung cấp chi tiết
+        địa lý tốt, nhưng một số khu vực thiếu kết nối đi bộ hoặc access point phù hợp. Backend áp dụng cơ
+        chế fallback nhiều tầng (walk network → access point → khoảng cách hình học) để giữ ổn định luồng
+        truy vấn; nhóm data tiếp tục tinh chỉnh dữ liệu ở các vòng cập nhật tiếp theo.
+
+      • Bảo mật Admin: Khu vực quản trị hiện mới phục vụ mục tiêu demo và kiểm thử nội bộ; hệ thống
+        chưa triển khai đầy đủ cơ chế xác thực và phân quyền ở mức production như JWT, OAuth2/OIDC
+        hay RBAC.
+
+      • Persistence file-based: Toàn bộ trạng thái runtime (scenario, topology cache) hiện vẫn lưu trên file
+        JSON. Ở quy mô nhiều người dùng đồng thời, cách tiếp cận này có thể phát sinh race condition khi
+        ghi. Hướng khắc phục là chuyển sang SQLite (WAL mode) hoặc Redis tuỳ mức độ mở rộng.
+
+
+                                                                                                         22
+CHƯƠNG 4. KẾT QUẢ THỰC NGHIỆM VÀ TRIỂN KHAI THEO TỪNG NHÓM
+
+
+     • Observability: Hiện chưa có structured logging hay metrics export. Có thể bổ sung structlog và
+      endpoint /metrics theo chuẩn Prometheus để theo dõi các phân vị độ trễ như P95 hoặc P99 trong
+      môi trường triển khai.
+
+
+
+
+23
+                                         CHƯƠNG 5. KẾT LUẬN
+
+
+
+5.1    Tổng kết đóng góp kỹ thuật
+
+      Dự án IT3160 Subway Web đã triển khai thành công một hệ thống định tuyến tàu điện ngầm đa lớp tích
+hợp GIS, với bộ đóng góp kỹ thuật cốt lõi gồm ba phần chính:
+
+
+   1. Mô hình đồ thị trạng thái mở rộng G′ = (V ′ , E ′ ): Mỗi đỉnh v ′ = (s, l) biểu diễn trạng thái ga
+        s trên tuyến l, cho phép phân biệt rõ ba loại chuyển động (on-line, transfer, walk-transfer) và tránh
+        được vòng lặp chuyển tuyến không cần thiết.
+
+   2. Cơ chế ánh xạ điểm – ga ϕ(p) qua walk network: Thay vì snap điểm đơn giản theo Euclidean, hệ
+        thống định tuyến điểm người dùng qua đồ thị đi bộ thực tế, đảm bảo ga được chọn có thể đến được
+        theo đường thực địa.
+
+   3. Runtime Scenario System: Admin có thể áp dụng ràng buộc vận hành (rain zone, đóng cửa ga, khoá
+        đoạn segment) trong runtime mà không cần tắt dịch vụ, nhờ cơ chế invalidate cache theo chữ ký dữ
+        liệu.
+
+
+      Trên bộ kiểm thử hiện tại, hệ thống đạt 76/76 test case pass. Hiệu năng khởi tạo (Cold Start) đạt mức
+441,4 ms và độ trễ truy vấn trung bình (Hot Path) đạt mức ấn tượng 0,025 ms. Runtime demo hiện hành vận
+hành ổn định trên mạng dữ liệu đã đồng bộ với khoảng 124 ga khả dụng của MRT Đài Bắc.
+
+5.2    Hướng phát triển
+
+      Trên nền tảng kỹ thuật đã xây dựng, hệ thống có thể mở rộng theo các hướng:
+
+      • Thuật toán: Chuyển sang RAPTOR [8] hoặc CSA [9] để hỗ trợ time-table-based routing với thông
+        tin chuyến thực tế.
+
+      • Dữ liệu: Bổ sung GTFS feed thực của MRT Đài Bắc để thay thế topology tĩnh bằng lịch trình động.
+
+      • Bảo mật: Tích hợp OAuth2 + JWT cho khu vực admin, thay thế cơ chế kiểm soát truy cập ở mức
+        demo hiện tại.
+
+      • Quan sát hệ thống: Bổ sung structured logging (structlog) và metrics endpoint (Prometheus) để
+        theo dõi P95 latency ở môi trường production.
+
+      • Đa đô thị: Mở rộng pipeline dữ liệu sang GTFS của Hà Nội Metro hoặc TP.HCM Metro khi có feed
+        công khai.
+
+
+
+
+                                                                                                          24
+                                      TÀI LIỆU THAM KHẢO
+
+
+
+ [1] T. Ramírez, FastAPI: Modern, Fast Web Framework for Building APIs with Python, https://fastapi.
+     tiangolo.com/, 2019. [Truy cập: 08-04-2026].
+
+ [2] MapLibre Contributors, MapLibre GL JS – Open-source map rendering library, https://maplibre.org/,
+     2021. [Truy cập: 08-04-2026].
+
+ [3] H. Butler et al., RFC 7946: The GeoJSON Format, Internet Engineering Task Force (IETF), 2016.
+
+ [4] E. W. Dijkstra, A Note on Two Problems in Connexion with Graphs, Numerische Mathematik, vol. 1,
+     pp. 269–271, 1959.
+
+ [5] Mapbox, MBTiles Specification v1.3, https://github.com/mapbox/mbtiles-spec, 2019. [Truy cập: 08-
+     04-2026].
+
+ [6] OpenStreetMap Foundation, OpenStreetMap: The Free Wiki World Map, https://www.openstreetmap.
+     org/. [Truy cập: 08-04-2026].
+
+ [7] G. Boeing, OSMnx: New Methods for Acquiring, Constructing, Analyzing, and Visualizing Complex
+     Street Networks, Computers, Environment and Urban Systems, vol. 65, pp. 126–139, 2017.
+
+ [8] D. Delling, T. Pajor, R. Werneck, Round-Based Public Transit Routing, Transportation Science, vol.
+     49, pp. 591–604, 2015.
+
+ [9] J. Dibbelt, T. Pajor, B. Strasser, D. Wagner, Connection Scan Algorithm, ACM Journal of Experimental
+     Algorithmics, vol. 23, 2018.
+
+[10] H. Bast et al., Route Planning in Transportation Networks, Algorithm Engineering, LNCS vol. 9220,
+     2016.
+
+[11] P. A. Longley et al., Geographic Information Science and Systems, 4th ed., Wiley, 2015.
+
+[12] R. W. Bohannon, Comfortable and maximum walking speed of adults aged 20–79 years: reference
+     values and determinants, Age and Ageing, vol. 26, no. 1, pp. 15–19, 1997.
+
+[13] Transportation Research Board, Highway Capacity Manual 2010, Chapter 18: Pedestrians, Washing-
+     ton, DC, 2010.
+
+
+
+
+                                                                                                      25
+

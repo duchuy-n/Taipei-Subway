@@ -1,0 +1,233 @@
+﻿\documentclass[a4paper,13pt,twoside]{extreport}
+
+\usepackage{fontspec}
+\usepackage[vietnamese]{babel}
+\setmainfont{Times New Roman}
+\setmonofont{Courier New}
+\usepackage[top=2cm, bottom=2cm, left=3.5cm, right=2.5cm]{geometry}
+
+\usepackage{xcolor}
+\usepackage{minted}
+\usemintedstyle{friendly}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, shadows}
+\usepackage{indentfirst}
+\usepackage{amsmath, amssymb, amsthm, latexsym}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{subfiles}
+\usepackage{currfile}
+
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{tcolorbox}
+\usepackage{needspace}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\tcbuselibrary{minted, skins, breakable}
+
+\tikzset{
+    % Premium style definitions
+    base/.style={font=\small, align=center, line width=0.8pt},
+    startstop/.style={base, rectangle, rounded corners=6pt, minimum width=3.2cm, minimum height=1.1cm, draw=blue!60!black, fill=blue!5, drop shadow},
+    io/.style={base, trapezium, trapezium left angle=75, trapezium right angle=105, minimum width=3.2cm, minimum height=1.1cm, draw=teal!60!black, fill=teal!5, drop shadow},
+    process/.style={base, rectangle, minimum width=3.5cm, minimum height=1.1cm, draw=slate!60!black, fill=gray!8, drop shadow},
+    decision/.style={base, diamond, aspect=1.5, minimum width=3cm, minimum height=1.1cm, draw=orange!60!black, fill=orange!5, drop shadow},
+    arrow/.style={thick, -{Stealth[length=3mm]}, draw=black!70},
+    % Specialized nodes
+    station/.style={base, circle, minimum size=0.9cm, draw=blue!70, fill=white, thick},
+    route_point/.style={base, circle, minimum size=0.25cm, fill=red!70, draw=black!80}
+}
+
+\definecolor{slate}{RGB}{70, 90, 110}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{codeframe}{RGB}{40, 60, 100}
+\definecolor{codeback}{RGB}{250, 250, 250}
+\definecolor{codeheader}{RGB}{230, 235, 245}
+\definecolor{fillgray}{RGB}{245,245,245}
+
+% Minted global settings
+\setminted{
+    fontsize=\small,
+    breaklines=true,
+    breakanywhere=true,
+    linenos=true,
+    numbersep=8pt,
+    tabsize=4,
+    fontfamily=tt
+}
+
+\newcounter{codelist}[chapter]
+\renewcommand{\thecodelist}{\thechapter.\arabic{codelist}}
+
+\makeatletter
+\def\input@path{{./}{Chuong/}{../}}
+\makeatother
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newtcolorbox{writeguide}[1][]{
+  enhanced,
+  breakable,
+  colback=fillgray,
+  colframe=black!40,
+  boxrule=0.3mm,
+  arc=1.5mm,
+  title={#1},
+  fonttitle=\bfseries,
+  left=2mm,
+  right=2mm,
+  top=1mm,
+  bottom=1mm
+}
+
+\newcommand{\writespace}[1]{\vspace*{#1}}
+\newcommand{\imageplaceholder}[3][0.82\textwidth]{%
+\begin{figure}[!htbp]
+\centering
+\fbox{%
+\parbox[c][5.2cm][c]{#1}{\centering \textbf{#2}\\[6pt]#3}
+}
+\caption{#2}
+\end{figure}
+}
+
+\def\TITLE{BÁO CÁO BÀI TẬP LỚN\\IT3160 SUBWAY WEB\\HỆ THỐNG TÌM ĐƯỜNG TÀU ĐIỆN NGẦM TÍCH HỢP GIS}
+\def\AUTHOR{%
+\begin{tabular}[t]{@{}l@{}}
+Tạ Đức Hiển\\
+Nguyễn Đức Huy\\
+Nguyễn Danh Tiến Nam\\
+Trần Thái Minh\\
+Nguyễn Vi Thái Sơn\\
+Nguyễn Duy Mạnh
+\end{tabular}%
+}
+\def\ID{IT3160}
+\def\INSTRUCTOR{TS. Trần Đình Khang}
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \rfoot{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+\fancyhf{}
+\rfoot{\thepage}
+
+\titleformat{\chapter}[hang]{\centering\bfseries}{CHƯƠNG \thechapter.\ }{0pt}{}[]
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
+\titleformat{\section}[hang]{\bfseries}{\thechapter.\arabic{section}\ \ \ \ }{0pt}{}[]
+\titlespacing{\section}{0pt}{\parskip}{0.5\parskip}
+\titleformat{\subsection}[hang]{\bfseries}{\thechapter.\arabic{section}.\arabic{subsection}\ \ \ \ }{0pt}{}[]
+\titlespacing{\subsection}{30pt}{\parskip}{0.5\parskip}
+\titleformat{\subsubsection}[hang]{\bfseries\itshape}{\thechapter.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}\ \ }{0pt}{}[]
+\titlespacing{\subsubsection}{45pt}{0.4\parskip}{0.3\parskip}
+
+\hypersetup{
+    unicode=true,
+    pdfborder={0 0 0},
+    pdftitle={\TITLE},
+    pdfauthor={Tạ Đức Hiển; Nguyễn Đức Huy; Nguyễn Danh Tiến Nam; Trần Thái Minh; Nguyễn Vi Thái Sơn; Nguyễn Duy Mạnh}
+}
+\urlstyle{same}
+
+\setlength{\headheight}{15pt}
+\onehalfspacing
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{15pt}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Optimization for layout and float placement
+\raggedbottom
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{0pt}
+
+% Greedy float placement settings
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.15}
+\renewcommand{\floatpagefraction}{.66}
+\renewcommand{\dbltopfraction}{.66}
+\renewcommand{\dblfloatpagefraction}{.66}
+\setcounter{topnumber}{9}
+\setcounter{bottomnumber}{9}
+\setcounter{totalnumber}{20}
+\setcounter{dbltopnumber}{9}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \textbf{\large ĐẠI HỌC BÁCH KHOA HÀ NỘI}\\
+        \textbf{\large Trường CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG}
+
+        \vspace*{4.5cm}
+
+        {\LARGE \bfseries \TITLE \par}
+
+        \vspace{2.5cm}
+        \begin{tabular}{ll}
+            \textbf{Sinh viên thực hiện:} & \AUTHOR \\
+            \textbf{Học phần:} & \ID \\
+            \textbf{Giảng viên hướng dẫn:} & \INSTRUCTOR \\
+        \end{tabular}
+
+        \vfill
+        \textbf{Hà Nội, \the\year}
+    \end{center}
+\end{titlepage}
+
+\pagenumbering{roman}
+
+\subfile{Chuong/Loi_cam_on}
+\subfile{Chuong/Tom_tat_bao_cao}
+
+
+\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\leftmark}
+\fancyfoot[RE,LO]{\thepage}
+
+% ========================================================================
+% CHÆ¯Æ NG 1
+% ========================================================================
+
+\subfile{Chuong/Chuong_1_Gioi_thieu}
+\subfile{Chuong/Chuong_2_Phan_tich_he_thong_va_phan_cong_nhom}
+\subfile{Chuong/Chuong_3_Cong_cu_du_lieu_va_kien_truc_he_thong}
+\subfile{Chuong/Chuong_4_Ket_qua_thuc_nghiem_va_trien_khai}
+\subfile{Chuong/Chuong_5_Ket_luan}
+\end{document}

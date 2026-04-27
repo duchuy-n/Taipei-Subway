@@ -1,0 +1,1821 @@
+{
+  "view_box": "0 0 160 160",
+  "tracks": [
+    {
+      "svg_id": "track-c0-001",
+      "line_class": "c0",
+      "x1": 118.0,
+      "y1": 131.0,
+      "x2": 118.0,
+      "y2": 140.0
+    },
+    {
+      "svg_id": "track-c1-002",
+      "line_class": "c1",
+      "x1": 99.0,
+      "y1": 80.0,
+      "x2": 99.0,
+      "y2": 96.0
+    },
+    {
+      "svg_id": "track-c1-003",
+      "line_class": "c1",
+      "x1": 99.0,
+      "y1": 112.0,
+      "x2": 99.0,
+      "y2": 115.0
+    },
+    {
+      "svg_id": "track-c1-004",
+      "line_class": "c1",
+      "x1": 112.0,
+      "y1": 129.0,
+      "x2": 118.0,
+      "y2": 129.0
+    },
+    {
+      "svg_id": "track-c1-005",
+      "line_class": "c1",
+      "x1": 99.0,
+      "y1": 98.0,
+      "x2": 99.0,
+      "y2": 102.0
+    },
+    {
+      "svg_id": "track-c1-006",
+      "line_class": "c1",
+      "x1": 99.0,
+      "y1": 81.0,
+      "x2": 100.0,
+      "y2": 80.0
+    },
+    {
+      "svg_id": "track-c1-007",
+      "line_class": "c1",
+      "x1": 111.0,
+      "y1": 128.0,
+      "x2": 112.0,
+      "y2": 129.0
+    },
+    {
+      "svg_id": "track-c1-008",
+      "line_class": "c1",
+      "x1": 122.0,
+      "y1": 80.0,
+      "x2": 123.0,
+      "y2": 81.0
+    },
+    {
+      "svg_id": "track-c1-009",
+      "line_class": "c1",
+      "x1": 111.0,
+      "y1": 117.0,
+      "x2": 111.0,
+      "y2": 128.0
+    },
+    {
+      "svg_id": "track-c1-010",
+      "line_class": "c1",
+      "x1": 100.0,
+      "y1": 116.0,
+      "x2": 110.0,
+      "y2": 116.0
+    },
+    {
+      "svg_id": "track-c1-011",
+      "line_class": "c1",
+      "x1": 99.0,
+      "y1": 115.0,
+      "x2": 100.0,
+      "y2": 116.0
+    },
+    {
+      "svg_id": "track-c1-012",
+      "line_class": "c1",
+      "x1": 99.0,
+      "y1": 104.0,
+      "x2": 99.0,
+      "y2": 110.0
+    },
+    {
+      "svg_id": "track-c1-013",
+      "line_class": "c1",
+      "x1": 99.0,
+      "y1": 80.0,
+      "x2": 123.0,
+      "y2": 80.0
+    },
+    {
+      "svg_id": "track-c1-014",
+      "line_class": "c1",
+      "x1": 123.0,
+      "y1": 80.0,
+      "x2": 123.0,
+      "y2": 91.0
+    },
+    {
+      "svg_id": "track-c1-015",
+      "line_class": "c1",
+      "x1": 110.0,
+      "y1": 116.0,
+      "x2": 111.0,
+      "y2": 117.0
+    },
+    {
+      "svg_id": "track-c2-016",
+      "line_class": "c2",
+      "x1": 83.0,
+      "y1": 90.0,
+      "x2": 83.0,
+      "y2": 96.0
+    },
+    {
+      "svg_id": "track-c2-017",
+      "line_class": "c2",
+      "x1": 62.0,
+      "y1": 62.0,
+      "x2": 63.0,
+      "y2": 63.0
+    },
+    {
+      "svg_id": "track-c2-018",
+      "line_class": "c2",
+      "x1": 83.0,
+      "y1": 64.0,
+      "x2": 83.0,
+      "y2": 88.0
+    },
+    {
+      "svg_id": "track-c2-019",
+      "line_class": "c2",
+      "x1": 63.0,
+      "y1": 63.0,
+      "x2": 71.0,
+      "y2": 63.0
+    },
+    {
+      "svg_id": "track-c2-020",
+      "line_class": "c2",
+      "x1": 82.0,
+      "y1": 63.0,
+      "x2": 83.0,
+      "y2": 64.0
+    },
+    {
+      "svg_id": "track-c2-021",
+      "line_class": "c2",
+      "x1": 83.0,
+      "y1": 110.0,
+      "x2": 84.0,
+      "y2": 111.0
+    },
+    {
+      "svg_id": "track-c2-022",
+      "line_class": "c2",
+      "x1": 92.0,
+      "y1": 111.0,
+      "x2": 111.0,
+      "y2": 111.0
+    },
+    {
+      "svg_id": "track-c2-023",
+      "line_class": "c2",
+      "x1": 84.0,
+      "y1": 111.0,
+      "x2": 90.0,
+      "y2": 111.0
+    },
+    {
+      "svg_id": "track-c2-024",
+      "line_class": "c2",
+      "x1": 83.0,
+      "y1": 98.0,
+      "x2": 83.0,
+      "y2": 102.0
+    },
+    {
+      "svg_id": "track-c2-025",
+      "line_class": "c2",
+      "x1": 62.0,
+      "y1": 48.0,
+      "x2": 62.0,
+      "y2": 62.0
+    },
+    {
+      "svg_id": "track-c2-026",
+      "line_class": "c2",
+      "x1": 83.0,
+      "y1": 104.0,
+      "x2": 83.0,
+      "y2": 110.0
+    },
+    {
+      "svg_id": "track-c2-027",
+      "line_class": "c2",
+      "x1": 73.0,
+      "y1": 63.0,
+      "x2": 82.0,
+      "y2": 63.0
+    },
+    {
+      "svg_id": "track-c3-028",
+      "line_class": "c3",
+      "x1": 69.0,
+      "y1": 115.0,
+      "x2": 69.0,
+      "y2": 140.0
+    },
+    {
+      "svg_id": "track-c3-029",
+      "line_class": "c3",
+      "x1": 122.0,
+      "y1": 103.0,
+      "x2": 123.0,
+      "y2": 102.0
+    },
+    {
+      "svg_id": "track-c3-030",
+      "line_class": "c3",
+      "x1": 123.0,
+      "y1": 92.0,
+      "x2": 123.0,
+      "y2": 102.0
+    },
+    {
+      "svg_id": "track-c3-031",
+      "line_class": "c3",
+      "x1": 69.0,
+      "y1": 103.0,
+      "x2": 90.0,
+      "y2": 103.0
+    },
+    {
+      "svg_id": "track-c3-032",
+      "line_class": "c3",
+      "x1": 92.0,
+      "y1": 103.0,
+      "x2": 122.0,
+      "y2": 103.0
+    },
+    {
+      "svg_id": "track-c3-033",
+      "line_class": "c3",
+      "x1": 67.0,
+      "y1": 105.0,
+      "x2": 67.0,
+      "y2": 113.0
+    },
+    {
+      "svg_id": "track-c3-034",
+      "line_class": "c3",
+      "x1": 67.0,
+      "y1": 113.0,
+      "x2": 69.0,
+      "y2": 115.0
+    },
+    {
+      "svg_id": "track-c3-035",
+      "line_class": "c3",
+      "x1": 67.0,
+      "y1": 105.0,
+      "x2": 69.0,
+      "y2": 103.0
+    },
+    {
+      "svg_id": "track-c4-036",
+      "line_class": "c4",
+      "x1": 102.0,
+      "y1": 135.0,
+      "x2": 102.0,
+      "y2": 142.0
+    },
+    {
+      "svg_id": "track-c4-037",
+      "line_class": "c4",
+      "x1": 79.0,
+      "y1": 110.0,
+      "x2": 80.0,
+      "y2": 111.0
+    },
+    {
+      "svg_id": "track-c4-038",
+      "line_class": "c4",
+      "x1": 80.0,
+      "y1": 97.0,
+      "x2": 90.0,
+      "y2": 97.0
+    },
+    {
+      "svg_id": "track-c4-039",
+      "line_class": "c4",
+      "x1": 88.0,
+      "y1": 116.0,
+      "x2": 101.0,
+      "y2": 129.0
+    },
+    {
+      "svg_id": "track-c4-040",
+      "line_class": "c4",
+      "x1": 79.0,
+      "y1": 111.0,
+      "x2": 83.0,
+      "y2": 111.0
+    },
+    {
+      "svg_id": "track-c4-041",
+      "line_class": "c4",
+      "x1": 79.0,
+      "y1": 104.0,
+      "x2": 79.0,
+      "y2": 111.0
+    },
+    {
+      "svg_id": "track-c4-042",
+      "line_class": "c4",
+      "x1": 79.0,
+      "y1": 98.0,
+      "x2": 79.0,
+      "y2": 102.0
+    },
+    {
+      "svg_id": "track-c4-043",
+      "line_class": "c4",
+      "x1": 83.0,
+      "y1": 111.0,
+      "x2": 86.0,
+      "y2": 114.0
+    },
+    {
+      "svg_id": "track-c4-044",
+      "line_class": "c4",
+      "x1": 79.0,
+      "y1": 98.0,
+      "x2": 80.0,
+      "y2": 97.0
+    },
+    {
+      "svg_id": "track-c4-045",
+      "line_class": "c4",
+      "x1": 102.0,
+      "y1": 131.0,
+      "x2": 102.0,
+      "y2": 133.0
+    },
+    {
+      "svg_id": "track-c4-046",
+      "line_class": "c4",
+      "x1": 92.0,
+      "y1": 97.0,
+      "x2": 111.0,
+      "y2": 97.0
+    },
+    {
+      "svg_id": "track-c5-047",
+      "line_class": "c5",
+      "x1": 66.0,
+      "y1": 71.0,
+      "x2": 66.0,
+      "y2": 81.0
+    },
+    {
+      "svg_id": "track-c5-048",
+      "line_class": "c5",
+      "x1": 85.0,
+      "y1": 117.0,
+      "x2": 85.0,
+      "y2": 127.0
+    },
+    {
+      "svg_id": "track-c5-049",
+      "line_class": "c5",
+      "x1": 85.0,
+      "y1": 129.0,
+      "x2": 85.0,
+      "y2": 132.0
+    },
+    {
+      "svg_id": "track-c5-050",
+      "line_class": "c5",
+      "x1": 91.0,
+      "y1": 90.0,
+      "x2": 91.0,
+      "y2": 111.0
+    },
+    {
+      "svg_id": "track-c5-051",
+      "line_class": "c5",
+      "x1": 74.0,
+      "y1": 89.0,
+      "x2": 90.0,
+      "y2": 89.0
+    },
+    {
+      "svg_id": "track-c5-052",
+      "line_class": "c5",
+      "x1": 54.0,
+      "y1": 109.0,
+      "x2": 74.0,
+      "y2": 89.0
+    },
+    {
+      "svg_id": "track-c5-053",
+      "line_class": "c5",
+      "x1": 90.0,
+      "y1": 89.0,
+      "x2": 91.0,
+      "y2": 90.0
+    },
+    {
+      "svg_id": "track-c5-054",
+      "line_class": "c5",
+      "x1": 54.0,
+      "y1": 109.0,
+      "x2": 54.0,
+      "y2": 121.0
+    },
+    {
+      "svg_id": "track-c5-055",
+      "line_class": "c5",
+      "x1": 66.0,
+      "y1": 81.0,
+      "x2": 74.0,
+      "y2": 89.0
+    },
+    {
+      "svg_id": "track-c5-056",
+      "line_class": "c5",
+      "x1": 85.0,
+      "y1": 117.0,
+      "x2": 91.0,
+      "y2": 111.0
+    },
+    {
+      "svg_id": "track-c6-057",
+      "line_class": "c6",
+      "x1": 72.0,
+      "y1": 59.0,
+      "x2": 72.0,
+      "y2": 63.0
+    },
+    {
+      "svg_id": "track-c7-058",
+      "line_class": "c7",
+      "x1": 71.0,
+      "y1": 44.0,
+      "x2": 95.0,
+      "y2": 44.0
+    },
+    {
+      "svg_id": "track-c7-059",
+      "line_class": "c7",
+      "x1": 86.0,
+      "y1": 52.0,
+      "x2": 87.0,
+      "y2": 51.0
+    },
+    {
+      "svg_id": "track-c7-060",
+      "line_class": "c7",
+      "x1": 86.0,
+      "y1": 44.0,
+      "x2": 87.0,
+      "y2": 45.0
+    },
+    {
+      "svg_id": "track-c7-061",
+      "line_class": "c7",
+      "x1": 87.0,
+      "y1": 44.0,
+      "x2": 87.0,
+      "y2": 51.0
+    },
+    {
+      "svg_id": "track-c7-062",
+      "line_class": "c7",
+      "x1": 87.0,
+      "y1": 45.0,
+      "x2": 88.0,
+      "y2": 44.0
+    },
+    {
+      "svg_id": "track-c7-063",
+      "line_class": "c7",
+      "x1": 63.0,
+      "y1": 52.0,
+      "x2": 86.0,
+      "y2": 52.0
+    },
+    {
+      "svg_id": "track-c8-064",
+      "line_class": "c8",
+      "x1": 98.0,
+      "y1": 134.0,
+      "x2": 102.0,
+      "y2": 134.0
+    },
+    {
+      "svg_id": "track-c9-065",
+      "line_class": "c9",
+      "x1": 81.0,
+      "y1": 128.0,
+      "x2": 91.0,
+      "y2": 128.0
+    },
+    {
+      "svg_id": "track-c9-066",
+      "line_class": "c9",
+      "x1": 55.0,
+      "y1": 102.0,
+      "x2": 57.0,
+      "y2": 104.0
+    },
+    {
+      "svg_id": "track-c9-067",
+      "line_class": "c9",
+      "x1": 95.0,
+      "y1": 130.0,
+      "x2": 97.0,
+      "y2": 130.0
+    },
+    {
+      "svg_id": "track-c9-068",
+      "line_class": "c9",
+      "x1": 59.0,
+      "y1": 106.0,
+      "x2": 68.0,
+      "y2": 115.0
+    },
+    {
+      "svg_id": "track-c9-069",
+      "line_class": "c9",
+      "x1": 94.0,
+      "y1": 129.0,
+      "x2": 95.0,
+      "y2": 130.0
+    },
+    {
+      "svg_id": "track-c9-070",
+      "line_class": "c9",
+      "x1": 70.0,
+      "y1": 117.0,
+      "x2": 81.0,
+      "y2": 128.0
+    },
+    {
+      "svg_id": "track-c9-071",
+      "line_class": "c9",
+      "x1": 91.0,
+      "y1": 128.0,
+      "x2": 92.0,
+      "y2": 129.0
+    },
+    {
+      "svg_id": "track-c9-072",
+      "line_class": "c9",
+      "x1": 55.0,
+      "y1": 99.0,
+      "x2": 55.0,
+      "y2": 102.0
+    },
+    {
+      "svg_id": "track-c9-073",
+      "line_class": "c9",
+      "x1": 92.0,
+      "y1": 129.0,
+      "x2": 94.0,
+      "y2": 129.0
+    },
+    {
+      "svg_id": "track-c9-074",
+      "line_class": "c9",
+      "x1": 99.0,
+      "y1": 130.0,
+      "x2": 102.0,
+      "y2": 130.0
+    },
+    {
+      "svg_id": "track-c10-075",
+      "line_class": "c10",
+      "x1": 88.0,
+      "y1": 145.0,
+      "x2": 93.0,
+      "y2": 140.0
+    },
+    {
+      "svg_id": "track-c10-076",
+      "line_class": "c10",
+      "x1": 76.0,
+      "y1": 145.0,
+      "x2": 88.0,
+      "y2": 145.0
+    },
+    {
+      "svg_id": "track-c10-077",
+      "line_class": "c10",
+      "x1": 93.0,
+      "y1": 131.0,
+      "x2": 97.0,
+      "y2": 131.0
+    },
+    {
+      "svg_id": "track-c10-078",
+      "line_class": "c10",
+      "x1": 93.0,
+      "y1": 132.0,
+      "x2": 94.0,
+      "y2": 131.0
+    },
+    {
+      "svg_id": "track-c10-079",
+      "line_class": "c10",
+      "x1": 93.0,
+      "y1": 131.0,
+      "x2": 93.0,
+      "y2": 140.0
+    },
+    {
+      "svg_id": "track-c10-080",
+      "line_class": "c10",
+      "x1": 97.0,
+      "y1": 131.0,
+      "x2": 98.0,
+      "y2": 130.0
+    },
+    {
+      "svg_id": "track-c11-081",
+      "line_class": "c11",
+      "x1": 55.0,
+      "y1": 41.0,
+      "x2": 55.0,
+      "y2": 98.0
+    },
+    {
+      "svg_id": "track-c11-082",
+      "line_class": "c11",
+      "x1": 55.0,
+      "y1": 97.0,
+      "x2": 56.0,
+      "y2": 98.0
+    },
+    {
+      "svg_id": "track-c11-083",
+      "line_class": "c11",
+      "x1": 66.0,
+      "y1": 98.0,
+      "x2": 78.0,
+      "y2": 98.0
+    },
+    {
+      "svg_id": "track-c11-084",
+      "line_class": "c11",
+      "x1": 55.0,
+      "y1": 98.0,
+      "x2": 64.0,
+      "y2": 98.0
+    },
+    {
+      "svg_id": "track-c11-085",
+      "line_class": "c11",
+      "x1": 80.0,
+      "y1": 98.0,
+      "x2": 81.0,
+      "y2": 99.0
+    }
+  ],
+  "stations": [
+    {
+      "svg_id": "station-xinzhuang",
+      "name": "Xinzhuang",
+      "marker_ref": "#csm-f8b51c",
+      "x": 54.0,
+      "y": 109.0
+    },
+    {
+      "svg_id": "station-fu-jen-university",
+      "name": "Fu Jen University",
+      "marker_ref": "#csm-f8b51c",
+      "x": 54.0,
+      "y": 113.0
+    },
+    {
+      "svg_id": "station-danfeng",
+      "name": "Danfeng",
+      "marker_ref": "#csm-f8b51c",
+      "x": 54.0,
+      "y": 117.0
+    },
+    {
+      "svg_id": "station-huilong",
+      "name": "Huilong",
+      "marker_ref": "#wm",
+      "x": 54.0,
+      "y": 121.0
+    },
+    {
+      "svg_id": "station-laojie-river",
+      "name": "Laojie River",
+      "marker_ref": "#wm",
+      "x": 55.0,
+      "y": 41.0
+    },
+    {
+      "svg_id": "station-huanbei",
+      "name": "Huanbei",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 44.0
+    },
+    {
+      "svg_id": "station-xingnan",
+      "name": "Xingnan",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 47.0
+    },
+    {
+      "svg_id": "station-taoyuan-sports-park",
+      "name": "Taoyuan Sports Park",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 50.0
+    },
+    {
+      "svg_id": "station-taoyuan-hsr-station",
+      "name": "Taoyuan HSR Station",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 53.0
+    },
+    {
+      "svg_id": "station-linghang",
+      "name": "Linghang",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 56.0
+    },
+    {
+      "svg_id": "station-hengshan",
+      "name": "Hengshan",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 59.0
+    },
+    {
+      "svg_id": "station-dayuan",
+      "name": "Dayuan",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 62.0
+    },
+    {
+      "svg_id": "station-airport-hotel",
+      "name": "Airport Hotel",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 65.0
+    },
+    {
+      "svg_id": "station-airport-terminal-2",
+      "name": "Airport Terminal 2",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 68.0
+    },
+    {
+      "svg_id": "station-airport-terminal-1",
+      "name": "Airport Terminal 1",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 71.0
+    },
+    {
+      "svg_id": "station-kengkou",
+      "name": "Kengkou",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 74.0
+    },
+    {
+      "svg_id": "station-shanbi",
+      "name": "Shanbi",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 77.0
+    },
+    {
+      "svg_id": "station-linkou",
+      "name": "Linkou",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 80.0
+    },
+    {
+      "svg_id": "station-chang-gung-memorial-hospital",
+      "name": "Chang Gung Memorial Hospital",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 83.0
+    },
+    {
+      "svg_id": "station-national-taiwan-sport-university",
+      "name": "National Taiwan Sport University",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 86.0
+    },
+    {
+      "svg_id": "station-taishan-guihe",
+      "name": "Taishan Guihe",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 89.0
+    },
+    {
+      "svg_id": "station-taishan",
+      "name": "Taishan",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 92.0
+    },
+    {
+      "svg_id": "station-xinzhuang-fuduxin",
+      "name": "Xinzhuang Fuduxin",
+      "marker_ref": "#csm-cabfde",
+      "x": 55.0,
+      "y": 95.0
+    },
+    {
+      "svg_id": "station-new-taipei-industrial-park",
+      "name": "New Taipei Industrial Park",
+      "marker_ref": "#wm-xf",
+      "x": 55.0,
+      "y": 98.0
+    },
+    {
+      "svg_id": "station-xingfu",
+      "name": "Xingfu",
+      "marker_ref": "#csm-ffe707",
+      "x": 55.0,
+      "y": 102.0
+    },
+    {
+      "svg_id": "station-touqianzhuang",
+      "name": "Touqianzhuang",
+      "marker_ref": "#wm-xf",
+      "x": 58.0,
+      "y": 105.0
+    },
+    {
+      "svg_id": "station-tamsui",
+      "name": "Tamsui",
+      "marker_ref": "#wm",
+      "x": 62.0,
+      "y": 48.0
+    },
+    {
+      "svg_id": "station-hongshulin",
+      "name": "Hongshulin",
+      "marker_ref": "#wm-xf",
+      "x": 62.0,
+      "y": 52.0
+    },
+    {
+      "svg_id": "station-zhuwei",
+      "name": "Zhuwei",
+      "marker_ref": "#csm-e3002d",
+      "x": 62.0,
+      "y": 56.0
+    },
+    {
+      "svg_id": "station-guandu",
+      "name": "Guandu",
+      "marker_ref": "#csm-e3002d",
+      "x": 62.0,
+      "y": 60.0
+    },
+    {
+      "svg_id": "station-xianse-temple",
+      "name": "Xianse Temple",
+      "marker_ref": "#csm-f8b51c",
+      "x": 62.0,
+      "y": 101.0
+    },
+    {
+      "svg_id": "station-zhongyi",
+      "name": "Zhongyi",
+      "marker_ref": "#csm-e3002d",
+      "x": 64.0,
+      "y": 63.0
+    },
+    {
+      "svg_id": "station-sanchong",
+      "name": "Sanchong",
+      "marker_ref": "#wm-xf",
+      "x": 65.0,
+      "y": 98.0
+    },
+    {
+      "svg_id": "station-ganzhenlin",
+      "name": "Ganzhenlin",
+      "marker_ref": "#csm-f5b8b0",
+      "x": 66.0,
+      "y": 52.0
+    },
+    {
+      "svg_id": "station-luzhou",
+      "name": "Luzhou",
+      "marker_ref": "#wm",
+      "x": 66.0,
+      "y": 71.0
+    },
+    {
+      "svg_id": "station-sanmin-senior-high-school",
+      "name": "Sanmin Senior High School",
+      "marker_ref": "#csm-f8b51c",
+      "x": 66.0,
+      "y": 75.0
+    },
+    {
+      "svg_id": "station-st-ignatius-high-school",
+      "name": "St. Ignatius High School",
+      "marker_ref": "#csm-f8b51c",
+      "x": 66.0,
+      "y": 79.0
+    },
+    {
+      "svg_id": "station-xinpu-minsheng",
+      "name": "Xinpu Minsheng",
+      "marker_ref": "#wm-xf",
+      "x": 66.0,
+      "y": 113.0
+    },
+    {
+      "svg_id": "station-jiangzicui",
+      "name": "Jiangzicui",
+      "marker_ref": "#csm-0070bc",
+      "x": 67.0,
+      "y": 109.0
+    },
+    {
+      "svg_id": "station-xinpu",
+      "name": "Xinpu",
+      "marker_ref": "#wm-xf",
+      "x": 67.0,
+      "y": 113.0
+    },
+    {
+      "svg_id": "station-fuxingguang",
+      "name": "Fuxingguang",
+      "marker_ref": "#csm-e3002d",
+      "x": 68.0,
+      "y": 63.0
+    },
+    {
+      "svg_id": "station-sanhe-junior-high-school",
+      "name": "Sanhe Junior High School",
+      "marker_ref": "#csm-f8b51c",
+      "x": 68.0,
+      "y": 83.0
+    },
+    {
+      "svg_id": "station-cailiao",
+      "name": "Cailiao",
+      "marker_ref": "#csm-f8b51c",
+      "x": 68.0,
+      "y": 95.0
+    },
+    {
+      "svg_id": "station-banqiao",
+      "name": "Banqiao",
+      "marker_ref": "#wm-xf",
+      "x": 69.0,
+      "y": 116.0
+    },
+    {
+      "svg_id": "station-fuzhong",
+      "name": "Fuzhong",
+      "marker_ref": "#csm-0070bc",
+      "x": 69.0,
+      "y": 120.0
+    },
+    {
+      "svg_id": "station-far-eastern-hospital",
+      "name": "Far Eastern Hospital",
+      "marker_ref": "#csm-0070bc",
+      "x": 69.0,
+      "y": 124.0
+    },
+    {
+      "svg_id": "station-haishan",
+      "name": "Haishan",
+      "marker_ref": "#csm-0070bc",
+      "x": 69.0,
+      "y": 128.0
+    },
+    {
+      "svg_id": "station-tucheng",
+      "name": "Tucheng",
+      "marker_ref": "#csm-0070bc",
+      "x": 69.0,
+      "y": 132.0
+    },
+    {
+      "svg_id": "station-yongning",
+      "name": "Yongning",
+      "marker_ref": "#csm-0070bc",
+      "x": 69.0,
+      "y": 136.0
+    },
+    {
+      "svg_id": "station-dingpu",
+      "name": "Dingpu",
+      "marker_ref": "#wm",
+      "x": 69.0,
+      "y": 140.0
+    },
+    {
+      "svg_id": "station-danjin-denggong",
+      "name": "Danjin Denggong",
+      "marker_ref": "#csm-f5b8b0",
+      "x": 70.0,
+      "y": 52.0
+    },
+    {
+      "svg_id": "station-tamsui-fishermans-wharf",
+      "name": "Tamsui Fishermans Wharf",
+      "marker_ref": "#wm",
+      "x": 71.0,
+      "y": 44.0
+    },
+    {
+      "svg_id": "station-sanchong-elementary-school",
+      "name": "Sanchong Elementary School",
+      "marker_ref": "#csm-f8b51c",
+      "x": 71.0,
+      "y": 86.0
+    },
+    {
+      "svg_id": "station-taipei-bridge",
+      "name": "Taipei Bridge",
+      "marker_ref": "#csm-f8b51c",
+      "x": 71.0,
+      "y": 92.0
+    },
+    {
+      "svg_id": "station-longshan-temple",
+      "name": "Longshan Temple",
+      "marker_ref": "#csm-0070bc",
+      "x": 71.0,
+      "y": 103.0
+    },
+    {
+      "svg_id": "station-xinbeitou",
+      "name": "Xinbeitou",
+      "marker_ref": "#wm",
+      "x": 72.0,
+      "y": 59.0
+    },
+    {
+      "svg_id": "station-beitou",
+      "name": "Beitou",
+      "marker_ref": "#wm-xf",
+      "x": 72.0,
+      "y": 63.0
+    },
+    {
+      "svg_id": "station-banxin",
+      "name": "Banxin",
+      "marker_ref": "#csm-ffe707",
+      "x": 72.0,
+      "y": 119.0
+    },
+    {
+      "svg_id": "station-tamkang-university",
+      "name": "Tamkang University",
+      "marker_ref": "#csm-f5b8b0",
+      "x": 74.0,
+      "y": 52.0
+    },
+    {
+      "svg_id": "station-shalun",
+      "name": "Shalun",
+      "marker_ref": "#csm-f5b8b0",
+      "x": 75.0,
+      "y": 44.0
+    },
+    {
+      "svg_id": "station-zhongyuan",
+      "name": "Zhongyuan",
+      "marker_ref": "#csm-ffe707",
+      "x": 75.0,
+      "y": 122.0
+    },
+    {
+      "svg_id": "station-qiyan",
+      "name": "Qiyan",
+      "marker_ref": "#csm-e3002d",
+      "x": 76.0,
+      "y": 63.0
+    },
+    {
+      "svg_id": "station-shuangcheng",
+      "name": "Shuangcheng",
+      "marker_ref": "#wm",
+      "x": 76.0,
+      "y": 145.0
+    },
+    {
+      "svg_id": "station-danjin-beixin",
+      "name": "Danjin Beixin",
+      "marker_ref": "#csm-f5b8b0",
+      "x": 78.0,
+      "y": 52.0
+    },
+    {
+      "svg_id": "station-daqiaotou",
+      "name": "Daqiaotou",
+      "marker_ref": "#wm-xf",
+      "x": 78.0,
+      "y": 89.0
+    },
+    {
+      "svg_id": "station-qiaohe",
+      "name": "Qiaohe",
+      "marker_ref": "#csm-ffe707",
+      "x": 78.0,
+      "y": 125.0
+    },
+    {
+      "svg_id": "station-taipei-university-of-marine-technology",
+      "name": "Taipei University of Marine Technology",
+      "marker_ref": "#csm-f5b8b0",
+      "x": 79.0,
+      "y": 44.0
+    },
+    {
+      "svg_id": "station-beimen",
+      "name": "Beimen",
+      "marker_ref": "#csm-018659",
+      "x": 79.0,
+      "y": 99.0
+    },
+    {
+      "svg_id": "station-ximen",
+      "name": "Ximen",
+      "marker_ref": "#wm-xf",
+      "x": 79.0,
+      "y": 103.0
+    },
+    {
+      "svg_id": "station-xiaonanmen",
+      "name": "Xiaonanmen",
+      "marker_ref": "#csm-018659",
+      "x": 79.0,
+      "y": 111.0
+    },
+    {
+      "svg_id": "station-qilian",
+      "name": "Qilian",
+      "marker_ref": "#csm-e3002d",
+      "x": 80.0,
+      "y": 63.0
+    },
+    {
+      "svg_id": "station-rose-china-town",
+      "name": "Rose China Town",
+      "marker_ref": "#csm-d6cfba",
+      "x": 80.0,
+      "y": 145.0
+    },
+    {
+      "svg_id": "station-taipei-main-station",
+      "name": "Taipei Main Station",
+      "marker_ref": "#wm",
+      "x": 81.0,
+      "y": 99.0
+    },
+    {
+      "svg_id": "station-zhonghe",
+      "name": "Zhonghe",
+      "marker_ref": "#csm-ffe707",
+      "x": 81.0,
+      "y": 128.0
+    },
+    {
+      "svg_id": "station-xinshi-1st-rd",
+      "name": "Xinshi 1st Rd.",
+      "marker_ref": "#csm-f5b8b0",
+      "x": 82.0,
+      "y": 52.0
+    },
+    {
+      "svg_id": "station-shipai",
+      "name": "Shipai",
+      "marker_ref": "#csm-e3002d",
+      "x": 83.0,
+      "y": 65.0
+    },
+    {
+      "svg_id": "station-mingde",
+      "name": "Mingde",
+      "marker_ref": "#csm-e3002d",
+      "x": 83.0,
+      "y": 69.0
+    },
+    {
+      "svg_id": "station-zhishan",
+      "name": "Zhishan",
+      "marker_ref": "#csm-e3002d",
+      "x": 83.0,
+      "y": 73.0
+    },
+    {
+      "svg_id": "station-shilin",
+      "name": "Shilin",
+      "marker_ref": "#csm-e3002d",
+      "x": 83.0,
+      "y": 77.0
+    },
+    {
+      "svg_id": "station-jiantan",
+      "name": "Jiantan",
+      "marker_ref": "#csm-e3002d",
+      "x": 83.0,
+      "y": 81.0
+    },
+    {
+      "svg_id": "station-yuanshan",
+      "name": "Yuanshan",
+      "marker_ref": "#csm-e3002d",
+      "x": 83.0,
+      "y": 85.0
+    },
+    {
+      "svg_id": "station-minquan-w-road",
+      "name": "Minquan W. Road",
+      "marker_ref": "#wm-xf",
+      "x": 83.0,
+      "y": 89.0
+    },
+    {
+      "svg_id": "station-shuanglian",
+      "name": "Shuanglian",
+      "marker_ref": "#csm-e3002d",
+      "x": 83.0,
+      "y": 93.0
+    },
+    {
+      "svg_id": "station-zhongshan",
+      "name": "Zhongshan",
+      "marker_ref": "#wm-xf",
+      "x": 83.0,
+      "y": 97.0
+    },
+    {
+      "svg_id": "station-taipei-main-station-2",
+      "name": "Taipei Main Station",
+      "marker_ref": "#wm-xf",
+      "x": 83.0,
+      "y": 103.0
+    },
+    {
+      "svg_id": "station-ntu-hospital",
+      "name": "NTU Hospital",
+      "marker_ref": "#csm-e3002d",
+      "x": 83.0,
+      "y": 107.0
+    },
+    {
+      "svg_id": "station-chiang-kai-shek-memorial-hall",
+      "name": "Chiang Kai-shek Memorial Hall",
+      "marker_ref": "#wm-xf",
+      "x": 83.0,
+      "y": 111.0
+    },
+    {
+      "svg_id": "station-taipei-xiaocheng",
+      "name": "Taipei Xiaocheng",
+      "marker_ref": "#csm-d6cfba",
+      "x": 84.0,
+      "y": 145.0
+    },
+    {
+      "svg_id": "station-dingxi",
+      "name": "DIngxi",
+      "marker_ref": "#csm-f8b51c",
+      "x": 85.0,
+      "y": 120.0
+    },
+    {
+      "svg_id": "station-yongan-market",
+      "name": "Yongan Market",
+      "marker_ref": "#csm-f8b51c",
+      "x": 85.0,
+      "y": 124.0
+    },
+    {
+      "svg_id": "station-jingan",
+      "name": "Jingan",
+      "marker_ref": "#wm-xf",
+      "x": 85.0,
+      "y": 128.0
+    },
+    {
+      "svg_id": "station-nanshijiao",
+      "name": "Nanshijiao",
+      "marker_ref": "#wm",
+      "x": 85.0,
+      "y": 132.0
+    },
+    {
+      "svg_id": "station-tamsui-district-office",
+      "name": "Tamsui District Office",
+      "marker_ref": "#csm-f5b8b0",
+      "x": 86.0,
+      "y": 52.0
+    },
+    {
+      "svg_id": "station-binhai-shalun",
+      "name": "Binhai Shalun",
+      "marker_ref": "",
+      "x": 86.5,
+      "y": 43.5
+    },
+    {
+      "svg_id": "station-binhai-yishan",
+      "name": "Binhai Yishan",
+      "marker_ref": "#csm-f5b8b0",
+      "x": 87.0,
+      "y": 48.0
+    },
+    {
+      "svg_id": "station-guting",
+      "name": "Guting",
+      "marker_ref": "#wm-xf",
+      "x": 87.0,
+      "y": 115.0
+    },
+    {
+      "svg_id": "station-cardinal-tien-hospital-an-kang-branch",
+      "name": "Cardinal Tien Hospital An Kang Branch",
+      "marker_ref": "#csm-d6cfba",
+      "x": 88.0,
+      "y": 145.0
+    },
+    {
+      "svg_id": "station-zhongshan-elementary-school",
+      "name": "Zhongshan Elementary School",
+      "marker_ref": "#csm-f8b51c",
+      "x": 89.0,
+      "y": 89.0
+    },
+    {
+      "svg_id": "station-jingping",
+      "name": "Jingping",
+      "marker_ref": "#csm-ffe707",
+      "x": 89.0,
+      "y": 128.0
+    },
+    {
+      "svg_id": "station-taipower-building",
+      "name": "Taipower Building",
+      "marker_ref": "#csm-018659",
+      "x": 90.0,
+      "y": 118.0
+    },
+    {
+      "svg_id": "station-danhai-new-town",
+      "name": "Danhai New Town",
+      "marker_ref": "#csm-f5b8b0",
+      "x": 91.0,
+      "y": 44.0
+    },
+    {
+      "svg_id": "station-xingtian-temple",
+      "name": "Xingtian Temple",
+      "marker_ref": "#csm-f8b51c",
+      "x": 91.0,
+      "y": 92.0
+    },
+    {
+      "svg_id": "station-songjiang-nanjing",
+      "name": "Songjiang Nanjing",
+      "marker_ref": "#wm-xf",
+      "x": 91.0,
+      "y": 97.0
+    },
+    {
+      "svg_id": "station-zhongxiao-xinsheng",
+      "name": "Zhongxiao Xinsheng",
+      "marker_ref": "#wm-xf",
+      "x": 91.0,
+      "y": 103.0
+    },
+    {
+      "svg_id": "station-dongmen",
+      "name": "Dongmen",
+      "marker_ref": "#wm-xf",
+      "x": 91.0,
+      "y": 111.0
+    },
+    {
+      "svg_id": "station-jinwen-university-of-science-and-technology",
+      "name": "Jinwen University of Science and Technology",
+      "marker_ref": "#csm-d6cfba",
+      "x": 91.0,
+      "y": 142.0
+    },
+    {
+      "svg_id": "station-gongguan",
+      "name": "Gongguan",
+      "marker_ref": "#csm-018659",
+      "x": 93.0,
+      "y": 121.0
+    },
+    {
+      "svg_id": "station-xiulang-bridge",
+      "name": "Xiulang Bridge",
+      "marker_ref": "#csm-ffe707",
+      "x": 93.0,
+      "y": 129.0
+    },
+    {
+      "svg_id": "station-xinhe-elementary-school",
+      "name": "Xinhe Elementary School",
+      "marker_ref": "#csm-d6cfba",
+      "x": 93.0,
+      "y": 131.0
+    },
+    {
+      "svg_id": "station-sunshine-sports-park",
+      "name": "Sunshine Sports Park",
+      "marker_ref": "#csm-d6cfba",
+      "x": 93.0,
+      "y": 135.0
+    },
+    {
+      "svg_id": "station-ankang",
+      "name": "Ankang",
+      "marker_ref": "#csm-d6cfba",
+      "x": 93.0,
+      "y": 139.0
+    },
+    {
+      "svg_id": "station-kanding",
+      "name": "Kanding",
+      "marker_ref": "#wm",
+      "x": 95.0,
+      "y": 44.0
+    },
+    {
+      "svg_id": "station-daan-park",
+      "name": "Daan Park",
+      "marker_ref": "#csm-e3002d",
+      "x": 95.0,
+      "y": 111.0
+    },
+    {
+      "svg_id": "station-wanlong",
+      "name": "Wanlong",
+      "marker_ref": "#csm-018659",
+      "x": 96.0,
+      "y": 124.0
+    },
+    {
+      "svg_id": "station-shisizhang",
+      "name": "Shisizhang",
+      "marker_ref": "#wm-xf",
+      "x": 98.0,
+      "y": 130.0
+    },
+    {
+      "svg_id": "station-xiaobitan",
+      "name": "Xiaobitan",
+      "marker_ref": "#wm",
+      "x": 98.0,
+      "y": 134.0
+    },
+    {
+      "svg_id": "station-jiannan-rd",
+      "name": "Jiannan Rd.",
+      "marker_ref": "#csm-c38c31",
+      "x": 99.0,
+      "y": 80.0
+    },
+    {
+      "svg_id": "station-dazhi",
+      "name": "Dazhi",
+      "marker_ref": "#csm-c38c31",
+      "x": 99.0,
+      "y": 84.0
+    },
+    {
+      "svg_id": "station-songshan-airport",
+      "name": "Songshan Airport",
+      "marker_ref": "#csm-c38c31",
+      "x": 99.0,
+      "y": 88.0
+    },
+    {
+      "svg_id": "station-zhongshan-junior-high-school",
+      "name": "Zhongshan Junior High School",
+      "marker_ref": "#csm-c38c31",
+      "x": 99.0,
+      "y": 92.0
+    },
+    {
+      "svg_id": "station-nanjing-fuxing",
+      "name": "Nanjing Fuxing",
+      "marker_ref": "#wm-xf",
+      "x": 99.0,
+      "y": 97.0
+    },
+    {
+      "svg_id": "station-zhongxiao-fuxing",
+      "name": "Zhongxiao Fuxing",
+      "marker_ref": "#wm-xf",
+      "x": 99.0,
+      "y": 103.0
+    },
+    {
+      "svg_id": "station-daan",
+      "name": "Daan",
+      "marker_ref": "#wm-xf",
+      "x": 99.0,
+      "y": 111.0
+    },
+    {
+      "svg_id": "station-technology-building",
+      "name": "Technology Building",
+      "marker_ref": "#csm-c38c31",
+      "x": 99.0,
+      "y": 115.0
+    },
+    {
+      "svg_id": "station-jingmei",
+      "name": "Jingmei",
+      "marker_ref": "#csm-018659",
+      "x": 99.0,
+      "y": 127.0
+    },
+    {
+      "svg_id": "station-dapinglin",
+      "name": "Dapinglin",
+      "marker_ref": "#wm-xf",
+      "x": 102.0,
+      "y": 130.0
+    },
+    {
+      "svg_id": "station-qizhang",
+      "name": "Qizhang",
+      "marker_ref": "#wm-xf",
+      "x": 102.0,
+      "y": 134.0
+    },
+    {
+      "svg_id": "station-xindian-district-office",
+      "name": "Xindian District Office",
+      "marker_ref": "#csm-018659",
+      "x": 102.0,
+      "y": 138.0
+    },
+    {
+      "svg_id": "station-xindian",
+      "name": "Xindian",
+      "marker_ref": "#wm",
+      "x": 102.0,
+      "y": 142.0
+    },
+    {
+      "svg_id": "station-xihu",
+      "name": "Xihu",
+      "marker_ref": "#csm-c38c31",
+      "x": 103.0,
+      "y": 80.0
+    },
+    {
+      "svg_id": "station-taipei-arena",
+      "name": "Taipei Arena",
+      "marker_ref": "#csm-018659",
+      "x": 103.0,
+      "y": 97.0
+    },
+    {
+      "svg_id": "station-zhongxiao-dunhua",
+      "name": "Zhongxiao Dunhua",
+      "marker_ref": "#csm-0070bc",
+      "x": 103.0,
+      "y": 103.0
+    },
+    {
+      "svg_id": "station-xinyi-anhe",
+      "name": "Xinyi Anhe",
+      "marker_ref": "#csm-e3002d",
+      "x": 103.0,
+      "y": 111.0
+    },
+    {
+      "svg_id": "station-liuzhangli",
+      "name": "Liuzhangli",
+      "marker_ref": "#csm-c38c31",
+      "x": 103.0,
+      "y": 116.0
+    },
+    {
+      "svg_id": "station-gangqian",
+      "name": "Gangqian",
+      "marker_ref": "#csm-c38c31",
+      "x": 107.0,
+      "y": 80.0
+    },
+    {
+      "svg_id": "station-nanjing-sanmin",
+      "name": "Nanjing Sanmin",
+      "marker_ref": "#csm-018659",
+      "x": 107.0,
+      "y": 97.0
+    },
+    {
+      "svg_id": "station-sun-yat-sen-memorial-hall",
+      "name": "Sun Yat-Sen Memorial Hall",
+      "marker_ref": "#csm-0070bc",
+      "x": 107.0,
+      "y": 103.0
+    },
+    {
+      "svg_id": "station-taipei-101-world-trade-center",
+      "name": "Taipei 101 World Trade Center",
+      "marker_ref": "#csm-e3002d",
+      "x": 107.0,
+      "y": 111.0
+    },
+    {
+      "svg_id": "station-linguang",
+      "name": "Linguang",
+      "marker_ref": "#csm-c38c31",
+      "x": 107.0,
+      "y": 116.0
+    },
+    {
+      "svg_id": "station-wende",
+      "name": "Wende",
+      "marker_ref": "#csm-c38c31",
+      "x": 111.0,
+      "y": 80.0
+    },
+    {
+      "svg_id": "station-songshan",
+      "name": "Songshan",
+      "marker_ref": "#wm",
+      "x": 111.0,
+      "y": 97.0
+    },
+    {
+      "svg_id": "station-taipei-city-hall",
+      "name": "Taipei City Hall",
+      "marker_ref": "#csm-0070bc",
+      "x": 111.0,
+      "y": 103.0
+    },
+    {
+      "svg_id": "station-xiangshan",
+      "name": "Xiangshan",
+      "marker_ref": "#wm",
+      "x": 111.0,
+      "y": 111.0
+    },
+    {
+      "svg_id": "station-xinhai",
+      "name": "Xinhai",
+      "marker_ref": "#csm-c38c31",
+      "x": 111.0,
+      "y": 118.0
+    },
+    {
+      "svg_id": "station-wanfang-hospital",
+      "name": "Wanfang Hospital",
+      "marker_ref": "#csm-c38c31",
+      "x": 111.0,
+      "y": 122.0
+    },
+    {
+      "svg_id": "station-wanfang-community",
+      "name": "Wanfang Community",
+      "marker_ref": "#csm-c38c31",
+      "x": 111.0,
+      "y": 126.0
+    },
+    {
+      "svg_id": "station-muzha",
+      "name": "Muzha",
+      "marker_ref": "#csm-c38c31",
+      "x": 114.0,
+      "y": 129.0
+    },
+    {
+      "svg_id": "station-neihu",
+      "name": "Neihu",
+      "marker_ref": "#csm-c38c31",
+      "x": 115.0,
+      "y": 80.0
+    },
+    {
+      "svg_id": "station-yongchun",
+      "name": "Yongchun",
+      "marker_ref": "#csm-0070bc",
+      "x": 115.0,
+      "y": 103.0
+    },
+    {
+      "svg_id": "station-taipei-zoo",
+      "name": "Taipei Zoo",
+      "marker_ref": "#wm",
+      "x": 118.0,
+      "y": 129.0
+    },
+    {
+      "svg_id": "station-taipei-zoo-station",
+      "name": "Taipei Zoo Station",
+      "marker_ref": "#wm",
+      "x": 118.0,
+      "y": 131.0
+    },
+    {
+      "svg_id": "station-taipei-zoo-south-station",
+      "name": "Taipei Zoo South Station",
+      "marker_ref": "#csm-78bc27",
+      "x": 118.0,
+      "y": 134.0
+    },
+    {
+      "svg_id": "station-zhinan-temple-station",
+      "name": "Zhinan Temple Station",
+      "marker_ref": "#csm-78bc27",
+      "x": 118.0,
+      "y": 137.0
+    },
+    {
+      "svg_id": "station-maokong-zoo-station",
+      "name": "Maokong Zoo Station",
+      "marker_ref": "#wm",
+      "x": 118.0,
+      "y": 140.0
+    },
+    {
+      "svg_id": "station-dahu-park",
+      "name": "Dahu Park",
+      "marker_ref": "#csm-c38c31",
+      "x": 119.0,
+      "y": 80.0
+    },
+    {
+      "svg_id": "station-houshanpi",
+      "name": "Houshanpi",
+      "marker_ref": "#csm-0070bc",
+      "x": 119.0,
+      "y": 103.0
+    },
+    {
+      "svg_id": "station-huzhou",
+      "name": "Huzhou",
+      "marker_ref": "#csm-c38c31",
+      "x": 123.0,
+      "y": 80.0
+    },
+    {
+      "svg_id": "station-donghu",
+      "name": "Donghu",
+      "marker_ref": "#csm-c38c31",
+      "x": 123.0,
+      "y": 84.0
+    },
+    {
+      "svg_id": "station-nangang-software-park",
+      "name": "Nangang Software Park",
+      "marker_ref": "#csm-c38c31",
+      "x": 123.0,
+      "y": 88.0
+    },
+    {
+      "svg_id": "station-taipei-nangang-exhibition-center",
+      "name": "Taipei Nangang Exhibition Center",
+      "marker_ref": "#wm-xf",
+      "x": 123.0,
+      "y": 92.0
+    },
+    {
+      "svg_id": "station-nangang",
+      "name": "Nangang",
+      "marker_ref": "#csm-0070bc",
+      "x": 123.0,
+      "y": 96.0
+    },
+    {
+      "svg_id": "station-kunyang",
+      "name": "Kunyang",
+      "marker_ref": "#csm-0070bc",
+      "x": 123.0,
+      "y": 100.0
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+﻿\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+
+\chapter{CÔNG CỤ, DỮ LIỆU VÀ KIẾN TRÚC HỆ THỐNG}
+\label{chapter:technology}
+
+Chương này trình bày chi tiết về các công cụ phát triển, cấu trúc dữ liệu và kiến trúc kỹ thuật lõi của hệ thống. Đây là nền tảng để đảm bảo tính ổn định và khả năng mở rộng của dịch vụ định tuyến.
+
+\section{Công nghệ và Công cụ sử dụng}
+Hệ thống được xây dựng trên bộ công nghệ hiện đại, ưu tiên tính gọn nhẹ và hiệu năng xử lý:
+\begin{itemize}
+    \item \textbf{Ngôn ngữ Backend:} Python 3.12+, dùng cấu trúc dữ liệu chuẩn của Python để triển khai đồ thị, hàng đợi ưu tiên và cache runtime.
+    \item \textbf{Framework Web:} FastAPI \cite{fastapi}, cung cấp hiệu năng ASGI cao và hỗ trợ tự động tài liệu hóa API.
+    \item \textbf{Frontend:} HTML, CSS, JavaScript thuần và MapLibre GL JS \cite{maplibre} cho hiển thị bản đồ vector.
+    \item \textbf{Xử lý không gian:} GeoJSON, công thức Haversine và chỉ mục không gian dạng lưới cho các phép snap to network trong runtime.
+    \item \textbf{Dữ liệu:} JSON topology cho mạng lưới MRT và GeoJSON \cite{geojson} cho các lớp hình học không gian.
+\end{itemize}
+
+\section{Cấu trúc thư mục và Dữ liệu}
+Hệ thống được tổ chức theo mô hình Modular Monolith để dễ quản lý và triển khai:
+
+\begin{tcolorbox}[
+  enhanced,
+  title={Đoạn mã: Cấu trúc chính của repository},
+  fonttitle=\bfseries\small,
+  colframe=codeframe,
+  colback=codeback,
+  coltitle=black,
+  colbacktitle=codeheader,
+  boxrule=0.5mm,
+  arc=2mm,
+  drop shadow,
+  before=\par\vspace{8pt}\needspace{12\baselineskip},
+  after=\par\vspace{10pt}
+]
+\begin{minted}[linenos,breaklines,breakanywhere,fontsize=\small]{text}
+IT3160-SubwayWeb/
+|-- app/
+|   |-- api/                # Các endpoint FastAPI (GIS, Admin, Route)
+|   |-- services/           # Lõi xử lý (Route Engine, Runtime Loader)
+|   |-- domain/             # Định nghĩa schema và data model
+|   |-- data/
+|   |   |-- gis/            # Topology, ga, tuyến, walk network (GeoJSON/JSON)
+|   |   |-- admin_scenario.json # Lưu trữ các kịch bản chặn tuyến/ga
+|   |-- static/             # Frontend assets (GIS Studio, Admin Console)
+|-- scripts/                # Script chuẩn hoá dữ liệu từ OSM
+|-- tests/                  # Bộ test unit và integration
+|-- start_web.ps1           # Script khởi chạy nhanh trên Windows
+\end{minted}
+\end{tcolorbox}
+
+\section{Kiến trúc dịch vụ định tuyến (Route Engine)}
+Trái tim của hệ thống là lớp \texttt{RouteEngine}, được triển khai dựa trên thuật toán A* Search với các đặc điểm kỹ thuật sau:
+
+\subsection{Mô hình Đồ thị Trạng thái (State Graph)}
+Để xử lý chi phí chuyển tuyến (transfer cost), hệ thống không sử dụng đồ thị ga đơn giản. Thay vào đó, mỗi ga được tách thành các đỉnh trạng thái $(s, l)$ đại diện cho ga $s$ trên tuyến $l$. 
+\begin{itemize}
+    \item \textbf{Cạnh di chuyển (Trip):} liên kết $(s_i, l) \to (s_{i+1}, l)$ với trọng số là thời gian chạy tàu.
+    \item \textbf{Cạnh chuyển tuyến (Transfer):} liên kết $(s, l_1) \to (s, l_2)$ với trọng số là thời gian đi bộ trong ga và thời gian chờ tàu dự kiến.
+    \item \textbf{Cạnh đi bộ liên ga (Walk-transfer):} liên kết hai ga gần nhau hoặc hai đầu đoạn tuyến bị khoá trong scenario admin. Loại cạnh này chỉ đóng vai trò kết nối phụ trợ, không thay thế bài toán tìm đường metro chính.
+\end{itemize}
+
+\subsection{Hàm chi phí đa mục tiêu (Lexicographical Vector)}
+Hệ thống sử dụng vector trọng số $W = (T, W, N_{tr}, N_{stop})$ để tìm đường tối ưu, trong đó:
+\begin{itemize}
+    \item $T$: Tổng thời gian di chuyển (seconds).
+    \item $W$: Tổng thời gian đi bộ (seconds).
+    \item $N_{tr}$: Số lần chuyển tuyến.
+    \item $N_{stop}$: Số lượng ga đi qua.
+\end{itemize}
+Ở tầng API, hệ thống tách riêng hai phần chi phí: A* xử lý route giữa các ga trên đồ thị MRT mở rộng, còn walk network xử lý access/egress từ điểm người dùng tới ga. Walk graph được nạp qua cache bền vững và tái sử dụng giữa các request; truy vấn warm vì vậy chỉ cần tìm một số ga ứng viên thay vì xây dựng lại toàn bộ mạng đi bộ.
+
+\section{Quy trình cài đặt và Khởi tạo}
+\subsection{Cài đặt môi trường}
+Người dùng cần cài đặt các thư viện phụ thuộc thông qua \texttt{pip}:
+\begin{tcolorbox}[
+  enhanced,
+  title={Đoạn mã: Lệnh cài đặt phụ thuộc},
+  fonttitle=\bfseries\small,
+  colframe=codeframe,
+  colback=codeback,
+  coltitle=black,
+  colbacktitle=codeheader,
+  boxrule=0.5mm,
+  arc=2mm,
+  drop shadow,
+  before=\par\vspace{8pt}\needspace{12\baselineskip},
+  after=\par\vspace{10pt}
+]
+\begin{minted}[linenos,breaklines,breakanywhere,fontsize=\small]{bash}
+python -m pip install fastapi uvicorn pydantic
+\end{minted}
+\end{tcolorbox}
+
+\subsection{Khởi chạy runtime}
+Sau khi dữ liệu GIS được chuẩn bị trong thư mục \texttt{app/data/gis/}, hệ thống khởi chạy bằng lệnh:
+\begin{tcolorbox}[
+  enhanced,
+  title={Đoạn mã: Khởi chạy ứng dụng},
+  fonttitle=\bfseries\small,
+  colframe=codeframe,
+  colback=codeback,
+  coltitle=black,
+  colbacktitle=codeheader,
+  boxrule=0.5mm,
+  arc=2mm,
+  drop shadow,
+  before=\par\vspace{8pt}\needspace{12\baselineskip},
+  after=\par\vspace{10pt}
+]
+\begin{minted}[linenos,breaklines,breakanywhere,fontsize=\small]{powershell}
+.\start_web.ps1
+\end{minted}
+\end{tcolorbox}
+Script sẽ tự chọn cổng khả dụng và in URL truy cập ra terminal. Hệ thống warming cache cho đồ thị MRT và walk network trong lần truy cập đầu tiên; các truy vấn sau tái sử dụng cache nên độ trễ thấp hơn rõ rệt.
+
+% ========================================================================
+% CHƯƠNG 4
+% ========================================================================
+
+\end{document}
+

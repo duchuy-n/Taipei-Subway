@@ -1,0 +1,17 @@
+IT3160-SubwayWeb/
+|-- app/
+|   |-- api/                # Endpoint FastAPI
+|   |-- services/           # Runtime, route engine, GIS logic, admin scenario
+|   |-- domain/             # Domain model
+|   |-- data/
+|   |   |-- gis/            # network_topology.json, stations.geojson, lines.geojson,
+|   |   |                   # station_access_points.geojson, walk_network.geojson
+|   |   |-- admin_scenario.json
+|   |   |-- subway_osm_enrichment.json
+|   |-- static/             # gis-studio, admin, login
+|-- map/                    # Diagram and geography assets
+|-- scripts/                # GIS/OSM data processing scripts
+|-- tests/                  # API, runtime, route, GIS tests
+|-- OUTPUT_FILE.mbtiles
+|-- start_web.ps1
+|-- start_web.bat

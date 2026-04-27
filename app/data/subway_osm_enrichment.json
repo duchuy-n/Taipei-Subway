@@ -1,0 +1,2345 @@
+{
+  "stops": [
+    {
+      "id": "airport-hotel",
+      "station_id": "airport-hotel",
+      "name": "Airport Hotel",
+      "latitude": 25.0691793,
+      "longitude": 121.2206257
+    },
+    {
+      "id": "airport-terminal-1",
+      "station_id": "airport-terminal-1",
+      "name": "Airport Terminal 1",
+      "latitude": 25.080498,
+      "longitude": 121.2383976
+    },
+    {
+      "id": "airport-terminal-2",
+      "station_id": "airport-terminal-2",
+      "name": "Airport Terminal 2",
+      "latitude": 25.0772273,
+      "longitude": 121.2322564
+    },
+    {
+      "id": "ankang",
+      "station_id": "ankang",
+      "name": "Ankang",
+      "latitude": 24.965141,
+      "longitude": 121.5172474
+    },
+    {
+      "id": "banqiao",
+      "station_id": "banqiao",
+      "name": "Banqiao",
+      "latitude": 25.0096703,
+      "longitude": 121.4590989
+    },
+    {
+      "id": "banxin",
+      "station_id": "banxin",
+      "name": "Banxin",
+      "latitude": 25.0145313,
+      "longitude": 121.472418
+    },
+    {
+      "id": "beimen",
+      "station_id": "beimen",
+      "name": "Beimen",
+      "latitude": 25.0493991,
+      "longitude": 121.5103289
+    },
+    {
+      "id": "beitou",
+      "station_id": "beitou",
+      "name": "Beitou",
+      "latitude": 25.1319307,
+      "longitude": 121.4985934
+    },
+    {
+      "id": "binhai-shalun",
+      "station_id": "binhai-shalun",
+      "name": "Binhai Shalun",
+      "latitude": 25.1904655,
+      "longitude": 121.4316345
+    },
+    {
+      "id": "binhai-yishan",
+      "station_id": "binhai-yishan",
+      "name": "Binhai Yishan",
+      "latitude": 25.1897184,
+      "longitude": 121.4373723
+    },
+    {
+      "id": "cailiao",
+      "station_id": "cailiao",
+      "name": "Cailiao",
+      "latitude": 25.060314,
+      "longitude": 121.4920589
+    },
+    {
+      "id": "cardinal-tien-hospital-an-kang-branch",
+      "station_id": "cardinal-tien-hospital-an-kang-branch",
+      "name": "Cardinal Tien Hospital An Kang Branch",
+      "latitude": 24.95445,
+      "longitude": 121.50468
+    },
+    {
+      "id": "chang-gung-memorial-hospital",
+      "station_id": "chang-gung-memorial-hospital",
+      "name": "Chang Gung Memorial Hospital",
+      "latitude": 25.0604744,
+      "longitude": 121.3707965
+    },
+    {
+      "id": "chiang-kai-shek-memorial-hall",
+      "station_id": "chiang-kai-shek-memorial-hall",
+      "name": "Chiang Kai-shek Memorial Hall",
+      "latitude": 25.0333942,
+      "longitude": 121.5177618
+    },
+    {
+      "id": "dingxi",
+      "station_id": "dingxi",
+      "name": "DIngxi",
+      "latitude": 25.0136014,
+      "longitude": 121.515472
+    },
+    {
+      "id": "daan",
+      "station_id": "daan",
+      "name": "Daan",
+      "latitude": 25.0333294,
+      "longitude": 121.5435546
+    },
+    {
+      "id": "daan-park",
+      "station_id": "daan-park",
+      "name": "Daan Park",
+      "latitude": 25.0335619,
+      "longitude": 121.5352793
+    },
+    {
+      "id": "dahu-park",
+      "station_id": "dahu-park",
+      "name": "Dahu Park",
+      "latitude": 25.0837613,
+      "longitude": 121.602341
+    },
+    {
+      "id": "danfeng",
+      "station_id": "danfeng",
+      "name": "Danfeng",
+      "latitude": 25.0289264,
+      "longitude": 121.4226568
+    },
+    {
+      "id": "danhai-new-town",
+      "station_id": "danhai-new-town",
+      "name": "Danhai New Town",
+      "latitude": 25.1956548,
+      "longitude": 121.4324753
+    },
+    {
+      "id": "danjin-beixin",
+      "station_id": "danjin-beixin",
+      "name": "Danjin Beixin",
+      "latitude": 25.1809762,
+      "longitude": 121.4524679
+    },
+    {
+      "id": "danjin-denggong",
+      "station_id": "danjin-denggong",
+      "name": "Danjin Denggong",
+      "latitude": 25.1693035,
+      "longitude": 121.4608263
+    },
+    {
+      "id": "dapinglin",
+      "station_id": "dapinglin",
+      "name": "Dapinglin",
+      "latitude": 24.9829914,
+      "longitude": 121.5413733
+    },
+    {
+      "id": "daqiaotou",
+      "station_id": "daqiaotou",
+      "name": "Daqiaotou",
+      "latitude": 25.063198,
+      "longitude": 121.5126944
+    },
+    {
+      "id": "dayuan",
+      "station_id": "dayuan",
+      "name": "Dayuan",
+      "latitude": 25.0649692,
+      "longitude": 121.4937417
+    },
+    {
+      "id": "dazhi",
+      "station_id": "dazhi",
+      "name": "Dazhi",
+      "latitude": 25.07923,
+      "longitude": 121.5473
+    },
+    {
+      "id": "dingpu",
+      "station_id": "dingpu",
+      "name": "Dingpu",
+      "latitude": 24.9597337,
+      "longitude": 121.4194769
+    },
+    {
+      "id": "donghu",
+      "station_id": "donghu",
+      "name": "Donghu",
+      "latitude": 25.0674198,
+      "longitude": 121.6116099
+    },
+    {
+      "id": "dongmen",
+      "station_id": "dongmen",
+      "name": "Dongmen",
+      "latitude": 25.0338425,
+      "longitude": 121.5292584
+    },
+    {
+      "id": "far-eastern-hospital",
+      "station_id": "far-eastern-hospital",
+      "name": "Far Eastern Hospital",
+      "latitude": 24.9975221,
+      "longitude": 121.4523632
+    },
+    {
+      "id": "fu-jen-university",
+      "station_id": "fu-jen-university",
+      "name": "Fu Jen University",
+      "latitude": 25.032722,
+      "longitude": 121.4352746
+    },
+    {
+      "id": "fuxingguang",
+      "station_id": "fuxingguang",
+      "name": "Fuxingguang",
+      "latitude": 25.1374895,
+      "longitude": 121.4854979
+    },
+    {
+      "id": "fuzhong",
+      "station_id": "fuzhong",
+      "name": "Fuzhong",
+      "latitude": 25.0087697,
+      "longitude": 121.4592803
+    },
+    {
+      "id": "gangqian",
+      "station_id": "gangqian",
+      "name": "Gangqian",
+      "latitude": 25.0800727,
+      "longitude": 121.5752034
+    },
+    {
+      "id": "ganzhenlin",
+      "station_id": "ganzhenlin",
+      "name": "Ganzhenlin",
+      "latitude": 25.1621824,
+      "longitude": 121.456225
+    },
+    {
+      "id": "gongguan",
+      "station_id": "gongguan",
+      "name": "Gongguan",
+      "latitude": 25.0149166,
+      "longitude": 121.534264
+    },
+    {
+      "id": "guandu",
+      "station_id": "guandu",
+      "name": "Guandu",
+      "latitude": 25.1257044,
+      "longitude": 121.4671227
+    },
+    {
+      "id": "guting",
+      "station_id": "guting",
+      "name": "Guting",
+      "latitude": 25.0264102,
+      "longitude": 121.5229533
+    },
+    {
+      "id": "haishan",
+      "station_id": "haishan",
+      "name": "Haishan",
+      "latitude": 24.9853177,
+      "longitude": 121.4487858
+    },
+    {
+      "id": "hengshan",
+      "station_id": "hengshan",
+      "name": "Hengshan",
+      "latitude": 25.0364919,
+      "longitude": 121.2157962
+    },
+    {
+      "id": "hongshulin",
+      "station_id": "hongshulin",
+      "name": "Hongshulin",
+      "latitude": 25.1544067,
+      "longitude": 121.4588106
+    },
+    {
+      "id": "houshanpi",
+      "station_id": "houshanpi",
+      "name": "Houshanpi",
+      "latitude": 25.0447413,
+      "longitude": 121.5823224
+    },
+    {
+      "id": "huanbei",
+      "station_id": "huanbei",
+      "name": "Huanbei",
+      "latitude": 25.0775577,
+      "longitude": 121.5033887
+    },
+    {
+      "id": "huilong",
+      "station_id": "huilong",
+      "name": "Huilong",
+      "latitude": 25.0220786,
+      "longitude": 121.4119025
+    },
+    {
+      "id": "huzhou",
+      "station_id": "huzhou",
+      "name": "Huzhou",
+      "latitude": 25.0726385,
+      "longitude": 121.6073633
+    },
+    {
+      "id": "jiangzicui",
+      "station_id": "jiangzicui",
+      "name": "Jiangzicui",
+      "latitude": 25.0304238,
+      "longitude": 121.4727783
+    },
+    {
+      "id": "jiannan-rd",
+      "station_id": "jiannan-rd",
+      "name": "Jiannan Rd.",
+      "latitude": 25.0848493,
+      "longitude": 121.5556531
+    },
+    {
+      "id": "jiantan",
+      "station_id": "jiantan",
+      "name": "Jiantan",
+      "latitude": 25.0842913,
+      "longitude": 121.5249806
+    },
+    {
+      "id": "jingan",
+      "station_id": "jingan",
+      "name": "Jingan",
+      "latitude": 24.9937859,
+      "longitude": 121.5050464
+    },
+    {
+      "id": "jingmei",
+      "station_id": "jingmei",
+      "name": "Jingmei",
+      "latitude": 24.992978,
+      "longitude": 121.5408198
+    },
+    {
+      "id": "jingping",
+      "station_id": "jingping",
+      "name": "Jingping",
+      "latitude": 24.9921502,
+      "longitude": 121.5161735
+    },
+    {
+      "id": "jinwen-university-of-science-and-technology",
+      "station_id": "jinwen-university-of-science-and-technology",
+      "name": "Jinwen University of Science and Technology",
+      "latitude": 24.9555152,
+      "longitude": 121.5104047
+    },
+    {
+      "id": "kanding",
+      "station_id": "kanding",
+      "name": "Kanding",
+      "latitude": 25.2009501,
+      "longitude": 121.434621
+    },
+    {
+      "id": "kengkou",
+      "station_id": "kengkou",
+      "name": "Kengkou",
+      "latitude": 25.0864909,
+      "longitude": 121.2663561
+    },
+    {
+      "id": "kunyang",
+      "station_id": "kunyang",
+      "name": "Kunyang",
+      "latitude": 25.0504897,
+      "longitude": 121.5933161
+    },
+    {
+      "id": "laojie-river",
+      "station_id": "laojie-river",
+      "name": "Laojie River",
+      "latitude": 25.0123737,
+      "longitude": 121.2079482
+    },
+    {
+      "id": "linghang",
+      "station_id": "linghang",
+      "name": "Linghang",
+      "latitude": 25.0383783,
+      "longitude": 121.4421348
+    },
+    {
+      "id": "linguang",
+      "station_id": "linguang",
+      "name": "Linguang",
+      "latitude": 25.0184431,
+      "longitude": 121.5589123
+    },
+    {
+      "id": "linkou",
+      "station_id": "linkou",
+      "name": "Linkou",
+      "latitude": 25.0784718,
+      "longitude": 121.3931923
+    },
+    {
+      "id": "liuzhangli",
+      "station_id": "liuzhangli",
+      "name": "Liuzhangli",
+      "latitude": 25.0238241,
+      "longitude": 121.5531388
+    },
+    {
+      "id": "longshan-temple",
+      "station_id": "longshan-temple",
+      "name": "Longshan Temple",
+      "latitude": 25.0352844,
+      "longitude": 121.4995813
+    },
+    {
+      "id": "luzhou",
+      "station_id": "luzhou",
+      "name": "Luzhou",
+      "latitude": 25.091278,
+      "longitude": 121.465104
+    },
+    {
+      "id": "maokong-zoo-station",
+      "station_id": "maokong-zoo-station",
+      "name": "Maokong Zoo Station",
+      "latitude": 24.99645,
+      "longitude": 121.57603
+    },
+    {
+      "id": "mingde",
+      "station_id": "mingde",
+      "name": "Mingde",
+      "latitude": 25.1098593,
+      "longitude": 121.5187693
+    },
+    {
+      "id": "minquan-w-road",
+      "station_id": "minquan-w-road",
+      "name": "Minquan W. Road",
+      "latitude": 25.0632888,
+      "longitude": 121.5099499
+    },
+    {
+      "id": "muzha",
+      "station_id": "muzha",
+      "name": "Muzha",
+      "latitude": 24.9982458,
+      "longitude": 121.5731834
+    },
+    {
+      "id": "ntu-hospital",
+      "station_id": "ntu-hospital",
+      "name": "NTU Hospital",
+      "latitude": 25.0416464,
+      "longitude": 121.5161808
+    },
+    {
+      "id": "nangang",
+      "station_id": "nangang",
+      "name": "Nangang",
+      "latitude": 25.0545779,
+      "longitude": 121.6065999
+    },
+    {
+      "id": "nangang-software-park",
+      "station_id": "nangang-software-park",
+      "name": "Nangang Software Park",
+      "latitude": 25.0599458,
+      "longitude": 121.6158969
+    },
+    {
+      "id": "nanjing-fuxing",
+      "station_id": "nanjing-fuxing",
+      "name": "Nanjing Fuxing",
+      "latitude": 25.051836,
+      "longitude": 121.5439651
+    },
+    {
+      "id": "nanjing-sanmin",
+      "station_id": "nanjing-sanmin",
+      "name": "Nanjing Sanmin",
+      "latitude": 25.0514279,
+      "longitude": 121.5643061
+    },
+    {
+      "id": "nanshijiao",
+      "station_id": "nanshijiao",
+      "name": "Nanshijiao",
+      "latitude": 24.9899645,
+      "longitude": 121.5089822
+    },
+    {
+      "id": "national-taiwan-sport-university",
+      "station_id": "national-taiwan-sport-university",
+      "name": "National Taiwan Sport University",
+      "latitude": 25.0413317,
+      "longitude": 121.3854083
+    },
+    {
+      "id": "neihu",
+      "station_id": "neihu",
+      "name": "Neihu",
+      "latitude": 25.0834972,
+      "longitude": 121.5941892
+    },
+    {
+      "id": "new-taipei-industrial-park",
+      "station_id": "new-taipei-industrial-park",
+      "name": "New Taipei Industrial Park",
+      "latitude": 25.061706,
+      "longitude": 121.4589414
+    },
+    {
+      "id": "qiaohe",
+      "station_id": "qiaohe",
+      "name": "Qiaohe",
+      "latitude": 25.0046042,
+      "longitude": 121.4902458
+    },
+    {
+      "id": "qilian",
+      "station_id": "qilian",
+      "name": "Qilian",
+      "latitude": 25.1209048,
+      "longitude": 121.5061304
+    },
+    {
+      "id": "qiyan",
+      "station_id": "qiyan",
+      "name": "Qiyan",
+      "latitude": 25.1256031,
+      "longitude": 121.5011369
+    },
+    {
+      "id": "qizhang",
+      "station_id": "qizhang",
+      "name": "Qizhang",
+      "latitude": 24.9750221,
+      "longitude": 121.5429203
+    },
+    {
+      "id": "rose-china-town",
+      "station_id": "rose-china-town",
+      "name": "Rose China Town",
+      "latitude": 24.95092,
+      "longitude": 121.49406
+    },
+    {
+      "id": "sanchong",
+      "station_id": "sanchong",
+      "name": "Sanchong",
+      "latitude": 25.0546641,
+      "longitude": 121.482813
+    },
+    {
+      "id": "sanchong-elementary-school",
+      "station_id": "sanchong-elementary-school",
+      "name": "Sanchong Elementary School",
+      "latitude": 25.0699693,
+      "longitude": 121.4972618
+    },
+    {
+      "id": "sanhe-junior-high-school",
+      "station_id": "sanhe-junior-high-school",
+      "name": "Sanhe Junior High School",
+      "latitude": 25.0767532,
+      "longitude": 121.4863476
+    },
+    {
+      "id": "sanmin-senior-high-school",
+      "station_id": "sanmin-senior-high-school",
+      "name": "Sanmin Senior High School",
+      "latitude": 25.0855048,
+      "longitude": 121.4732993
+    },
+    {
+      "id": "shalun",
+      "station_id": "shalun",
+      "name": "Shalun",
+      "latitude": 25.18745,
+      "longitude": 121.41719
+    },
+    {
+      "id": "shanbi",
+      "station_id": "shanbi",
+      "name": "Shanbi",
+      "latitude": 25.0808055,
+      "longitude": 121.2847775
+    },
+    {
+      "id": "shilin",
+      "station_id": "shilin",
+      "name": "Shilin",
+      "latitude": 25.0918396,
+      "longitude": 121.5242068
+    },
+    {
+      "id": "shipai",
+      "station_id": "shipai",
+      "name": "Shipai",
+      "latitude": 25.1146071,
+      "longitude": 121.5155232
+    },
+    {
+      "id": "shisizhang",
+      "station_id": "shisizhang",
+      "name": "Shisizhang",
+      "latitude": 24.9844703,
+      "longitude": 121.5275892
+    },
+    {
+      "id": "shuangcheng",
+      "station_id": "shuangcheng",
+      "name": "Shuangcheng",
+      "latitude": 24.94657,
+      "longitude": 121.48985
+    },
+    {
+      "id": "shuanglian",
+      "station_id": "shuanglian",
+      "name": "Shuanglian",
+      "latitude": 25.057632,
+      "longitude": 121.5206986
+    },
+    {
+      "id": "songjiang-nanjing",
+      "station_id": "songjiang-nanjing",
+      "name": "Songjiang Nanjing",
+      "latitude": 25.0520141,
+      "longitude": 121.5330358
+    },
+    {
+      "id": "songshan",
+      "station_id": "songshan",
+      "name": "Songshan",
+      "latitude": 25.0498852,
+      "longitude": 121.5772719
+    },
+    {
+      "id": "songshan-airport",
+      "station_id": "songshan-airport",
+      "name": "Songshan Airport",
+      "latitude": 25.063086,
+      "longitude": 121.5516137
+    },
+    {
+      "id": "st-ignatius-high-school",
+      "station_id": "st-ignatius-high-school",
+      "name": "St. Ignatius High School",
+      "latitude": 25.0803359,
+      "longitude": 121.4802265
+    },
+    {
+      "id": "sun-yat-sen-memorial-hall",
+      "station_id": "sun-yat-sen-memorial-hall",
+      "name": "Sun Yat-Sen Memorial Hall",
+      "latitude": 25.0399869,
+      "longitude": 121.5602911
+    },
+    {
+      "id": "sunshine-sports-park",
+      "station_id": "sunshine-sports-park",
+      "name": "Sunshine Sports Park",
+      "latitude": 24.9723043,
+      "longitude": 121.5195038
+    },
+    {
+      "id": "taipei-101-world-trade-center",
+      "station_id": "taipei-101-world-trade-center",
+      "name": "Taipei 101 World Trade Center",
+      "latitude": 25.0329794,
+      "longitude": 121.5624453
+    },
+    {
+      "id": "taipei-arena",
+      "station_id": "taipei-arena",
+      "name": "Taipei Arena",
+      "latitude": 25.0516857,
+      "longitude": 121.5514989
+    },
+    {
+      "id": "taipei-bridge",
+      "station_id": "taipei-bridge",
+      "name": "Taipei Bridge",
+      "latitude": 25.0631779,
+      "longitude": 121.5005513
+    },
+    {
+      "id": "taipei-city-hall",
+      "station_id": "taipei-city-hall",
+      "name": "Taipei City Hall",
+      "latitude": 25.0411219,
+      "longitude": 121.5662136
+    },
+    {
+      "id": "taipei-main-station",
+      "station_id": "taipei-main-station",
+      "name": "Taipei Main Station",
+      "latitude": 25.0462432,
+      "longitude": 121.5174745
+    },
+    {
+      "id": "taipei-nangang-exhibition-center",
+      "station_id": "taipei-nangang-exhibition-center",
+      "name": "Taipei Nangang Exhibition Center",
+      "latitude": 25.0553158,
+      "longitude": 121.617896
+    },
+    {
+      "id": "taipei-university-of-marine-technology",
+      "station_id": "taipei-university-of-marine-technology",
+      "name": "Taipei University of Marine Technology",
+      "latitude": 25.1911611,
+      "longitude": 121.426285
+    },
+    {
+      "id": "taipei-xiaocheng",
+      "station_id": "taipei-xiaocheng",
+      "name": "Taipei Xiaocheng",
+      "latitude": 24.9537556,
+      "longitude": 121.4995311
+    },
+    {
+      "id": "taipei-zoo",
+      "station_id": "taipei-zoo",
+      "name": "Taipei Zoo",
+      "latitude": 24.9953546,
+      "longitude": 121.5861491
+    },
+    {
+      "id": "taipei-zoo-south-station",
+      "station_id": "taipei-zoo-south-station",
+      "name": "Taipei Zoo South Station",
+      "latitude": 24.9900048,
+      "longitude": 121.5872453
+    },
+    {
+      "id": "taipei-zoo-station",
+      "station_id": "taipei-zoo-station",
+      "name": "Taipei Zoo Station",
+      "latitude": 24.9983168,
+      "longitude": 121.5794478
+    },
+    {
+      "id": "taipower-building",
+      "station_id": "taipower-building",
+      "name": "Taipower Building",
+      "latitude": 25.0205325,
+      "longitude": 121.5283902
+    },
+    {
+      "id": "taishan",
+      "station_id": "taishan",
+      "name": "Taishan",
+      "latitude": 25.058864,
+      "longitude": 121.4308111
+    },
+    {
+      "id": "taishan-guihe",
+      "station_id": "taishan-guihe",
+      "name": "Taishan Guihe",
+      "latitude": 25.0333454,
+      "longitude": 121.4229634
+    },
+    {
+      "id": "tamkang-university",
+      "station_id": "tamkang-university",
+      "name": "Tamkang University",
+      "latitude": 25.1749822,
+      "longitude": 121.4503498
+    },
+    {
+      "id": "tamsui",
+      "station_id": "tamsui",
+      "name": "Tamsui",
+      "latitude": 25.1677828,
+      "longitude": 121.4455744
+    },
+    {
+      "id": "tamsui-district-office",
+      "station_id": "tamsui-district-office",
+      "name": "Tamsui District Office",
+      "latitude": 25.1889533,
+      "longitude": 121.4445041
+    },
+    {
+      "id": "tamsui-fishermans-wharf",
+      "station_id": "tamsui-fishermans-wharf",
+      "name": "Tamsui Fishermans Wharf",
+      "latitude": 25.182026,
+      "longitude": 121.4187208
+    },
+    {
+      "id": "taoyuan-hsr-station",
+      "station_id": "taoyuan-hsr-station",
+      "name": "Taoyuan HSR Station",
+      "latitude": 25.0137163,
+      "longitude": 121.2141381
+    },
+    {
+      "id": "taoyuan-sports-park",
+      "station_id": "taoyuan-sports-park",
+      "name": "Taoyuan Sports Park",
+      "latitude": 25.0017441,
+      "longitude": 121.2032715
+    },
+    {
+      "id": "technology-building",
+      "station_id": "technology-building",
+      "name": "Technology Building",
+      "latitude": 25.0261012,
+      "longitude": 121.5434596
+    },
+    {
+      "id": "touqianzhuang",
+      "station_id": "touqianzhuang",
+      "name": "Touqianzhuang",
+      "latitude": 25.0399026,
+      "longitude": 121.4603193
+    },
+    {
+      "id": "tucheng",
+      "station_id": "tucheng",
+      "name": "Tucheng",
+      "latitude": 24.9794013,
+      "longitude": 121.4531024
+    },
+    {
+      "id": "wanfang-community",
+      "station_id": "wanfang-community",
+      "name": "Wanfang Community",
+      "latitude": 24.9986089,
+      "longitude": 121.5681226
+    },
+    {
+      "id": "wanfang-hospital",
+      "station_id": "wanfang-hospital",
+      "name": "Wanfang Hospital",
+      "latitude": 24.9994306,
+      "longitude": 121.558138
+    },
+    {
+      "id": "wanlong",
+      "station_id": "wanlong",
+      "name": "Wanlong",
+      "latitude": 25.0019199,
+      "longitude": 121.5390753
+    },
+    {
+      "id": "wende",
+      "station_id": "wende",
+      "name": "Wende",
+      "latitude": 25.0785562,
+      "longitude": 121.5849416
+    },
+    {
+      "id": "xiangshan",
+      "station_id": "xiangshan",
+      "name": "Xiangshan",
+      "latitude": 25.0329205,
+      "longitude": 121.5697687
+    },
+    {
+      "id": "xianse-temple",
+      "station_id": "xianse-temple",
+      "name": "Xianse Temple",
+      "latitude": 25.0464284,
+      "longitude": 121.4716805
+    },
+    {
+      "id": "xiaobitan",
+      "station_id": "xiaobitan",
+      "name": "Xiaobitan",
+      "latitude": 24.9717696,
+      "longitude": 121.5305995
+    },
+    {
+      "id": "xiaonanmen",
+      "station_id": "xiaonanmen",
+      "name": "Xiaonanmen",
+      "latitude": 25.035901,
+      "longitude": 121.5108064
+    },
+    {
+      "id": "xihu",
+      "station_id": "xihu",
+      "name": "Xihu",
+      "latitude": 25.0821916,
+      "longitude": 121.5673156
+    },
+    {
+      "id": "ximen",
+      "station_id": "ximen",
+      "name": "Ximen",
+      "latitude": 25.0427128,
+      "longitude": 121.5086081
+    },
+    {
+      "id": "xinbeitou",
+      "station_id": "xinbeitou",
+      "name": "Xinbeitou",
+      "latitude": 25.1369644,
+      "longitude": 121.5031693
+    },
+    {
+      "id": "xindian",
+      "station_id": "xindian",
+      "name": "Xindian",
+      "latitude": 24.9673935,
+      "longitude": 121.5419418
+    },
+    {
+      "id": "xindian-district-office",
+      "station_id": "xindian-district-office",
+      "name": "Xindian District Office",
+      "latitude": 24.9673862,
+      "longitude": 121.5413511
+    },
+    {
+      "id": "xingfu",
+      "station_id": "xingfu",
+      "name": "Xingfu",
+      "latitude": 25.0499888,
+      "longitude": 121.459967
+    },
+    {
+      "id": "xingnan",
+      "station_id": "xingnan",
+      "name": "Xingnan",
+      "latitude": 24.9888529,
+      "longitude": 121.5118933
+    },
+    {
+      "id": "xingtian-temple",
+      "station_id": "xingtian-temple",
+      "name": "Xingtian Temple",
+      "latitude": 25.0594133,
+      "longitude": 121.5331615
+    },
+    {
+      "id": "xinhai",
+      "station_id": "xinhai",
+      "name": "Xinhai",
+      "latitude": 25.0054814,
+      "longitude": 121.5570598
+    },
+    {
+      "id": "xinhe-elementary-school",
+      "station_id": "xinhe-elementary-school",
+      "name": "Xinhe Elementary School",
+      "latitude": 24.9834836,
+      "longitude": 121.5186782
+    },
+    {
+      "id": "xinpu",
+      "station_id": "xinpu",
+      "name": "Xinpu",
+      "latitude": 25.0234603,
+      "longitude": 121.4683057
+    },
+    {
+      "id": "xinpu-minsheng",
+      "station_id": "xinpu-minsheng",
+      "name": "Xinpu Minsheng",
+      "latitude": 25.0261266,
+      "longitude": 121.4666661
+    },
+    {
+      "id": "xinshi-1st-rd",
+      "station_id": "xinshi-1st-rd",
+      "name": "Xinshi 1st Rd.",
+      "latitude": 25.1821791,
+      "longitude": 121.4503238
+    },
+    {
+      "id": "xinyi-anhe",
+      "station_id": "xinyi-anhe",
+      "name": "Xinyi Anhe",
+      "latitude": 25.0331302,
+      "longitude": 121.5527328
+    },
+    {
+      "id": "xinzhuang",
+      "station_id": "xinzhuang",
+      "name": "Xinzhuang",
+      "latitude": 25.0357722,
+      "longitude": 121.4502478
+    },
+    {
+      "id": "xinzhuang-fuduxin",
+      "station_id": "xinzhuang-fuduxin",
+      "name": "Xinzhuang Fuduxin",
+      "latitude": 25.05921,
+      "longitude": 121.4457893
+    },
+    {
+      "id": "xiulang-bridge",
+      "station_id": "xiulang-bridge",
+      "name": "Xiulang Bridge",
+      "latitude": 24.9903315,
+      "longitude": 121.5249012
+    },
+    {
+      "id": "yongan-market",
+      "station_id": "yongan-market",
+      "name": "Yongan Market",
+      "latitude": 25.0024105,
+      "longitude": 121.5109003
+    },
+    {
+      "id": "yongchun",
+      "station_id": "yongchun",
+      "name": "Yongchun",
+      "latitude": 25.0408687,
+      "longitude": 121.5757207
+    },
+    {
+      "id": "yongning",
+      "station_id": "yongning",
+      "name": "Yongning",
+      "latitude": 24.9668719,
+      "longitude": 121.4362698
+    },
+    {
+      "id": "yuanshan",
+      "station_id": "yuanshan",
+      "name": "Yuanshan",
+      "latitude": 25.0714175,
+      "longitude": 121.5201361
+    },
+    {
+      "id": "zhinan-temple-station",
+      "station_id": "zhinan-temple-station",
+      "name": "Zhinan Temple Station",
+      "latitude": 24.9796041,
+      "longitude": 121.5880572
+    },
+    {
+      "id": "zhishan",
+      "station_id": "zhishan",
+      "name": "Zhishan",
+      "latitude": 25.1030034,
+      "longitude": 121.5225195
+    },
+    {
+      "id": "zhonghe",
+      "station_id": "zhonghe",
+      "name": "Zhonghe",
+      "latitude": 24.9898745,
+      "longitude": 121.4910915
+    },
+    {
+      "id": "zhongshan",
+      "station_id": "zhongshan",
+      "name": "Zhongshan",
+      "latitude": 25.0526256,
+      "longitude": 121.5203914
+    },
+    {
+      "id": "zhongshan-elementary-school",
+      "station_id": "zhongshan-elementary-school",
+      "name": "Zhongshan Elementary School",
+      "latitude": 25.0637689,
+      "longitude": 121.5264301
+    },
+    {
+      "id": "zhongshan-junior-high-school",
+      "station_id": "zhongshan-junior-high-school",
+      "name": "Zhongshan Junior High School",
+      "latitude": 25.0606883,
+      "longitude": 121.5441859
+    },
+    {
+      "id": "zhongxiao-dunhua",
+      "station_id": "zhongxiao-dunhua",
+      "name": "Zhongxiao Dunhua",
+      "latitude": 25.0415086,
+      "longitude": 121.549479
+    },
+    {
+      "id": "zhongxiao-fuxing",
+      "station_id": "zhongxiao-fuxing",
+      "name": "Zhongxiao Fuxing",
+      "latitude": 25.0415409,
+      "longitude": 121.5437706
+    },
+    {
+      "id": "zhongxiao-xinsheng",
+      "station_id": "zhongxiao-xinsheng",
+      "name": "Zhongxiao Xinsheng",
+      "latitude": 25.04229,
+      "longitude": 121.5328383
+    },
+    {
+      "id": "zhongyi",
+      "station_id": "zhongyi",
+      "name": "Zhongyi",
+      "latitude": 25.1309506,
+      "longitude": 121.473374
+    },
+    {
+      "id": "zhongyuan",
+      "station_id": "zhongyuan",
+      "name": "Zhongyuan",
+      "latitude": 25.0081782,
+      "longitude": 121.4842739
+    },
+    {
+      "id": "zhuwei",
+      "station_id": "zhuwei",
+      "name": "Zhuwei",
+      "latitude": 25.1369727,
+      "longitude": 121.4595099
+    }
+  ],
+  "walk_transfers": [
+    {
+      "from_station_id": "muzha",
+      "to_station_id": "taipei-zoo-station",
+      "duration_sec": 338
+    },
+    {
+      "from_station_id": "taipei-zoo-station",
+      "to_station_id": "muzha",
+      "duration_sec": 338
+    }
+  ],
+  "metadata": {
+    "osm_enrichment": {
+      "generated_at": "2026-03-20T13:18:31.135001+00:00",
+      "street_graph_file": "E:\\C Project\\lsh\\IT3160-SubwayWeb\\map\\geography\\taipei_streets.graphml",
+      "resolved_station_count": 161,
+      "snapped_station_count": 74,
+      "walk_transfer_count": 2,
+      "unresolved_station_ids": [],
+      "unsnapped_station_ids": [
+        "airport-hotel",
+        "airport-terminal-1",
+        "airport-terminal-2",
+        "ankang",
+        "banqiao",
+        "banxin",
+        "binhai-shalun",
+        "binhai-yishan",
+        "cailiao",
+        "cardinal-tien-hospital-an-kang-branch",
+        "chang-gung-memorial-hospital",
+        "danfeng",
+        "danhai-new-town",
+        "danjin-beixin",
+        "danjin-denggong",
+        "dapinglin",
+        "dayuan",
+        "dingpu",
+        "dingxi",
+        "far-eastern-hospital",
+        "fu-jen-university",
+        "fuzhong",
+        "ganzhenlin",
+        "haishan",
+        "hengshan",
+        "hongshulin",
+        "huilong",
+        "jiangzicui",
+        "jingan",
+        "jingping",
+        "jinwen-university-of-science-and-technology",
+        "kanding",
+        "kengkou",
+        "laojie-river",
+        "linghang",
+        "linkou",
+        "luzhou",
+        "nanshijiao",
+        "national-taiwan-sport-university",
+        "new-taipei-industrial-park",
+        "qiaohe",
+        "qizhang",
+        "rose-china-town",
+        "sanchong",
+        "sanchong-elementary-school",
+        "sanhe-junior-high-school",
+        "sanmin-senior-high-school",
+        "shalun",
+        "shanbi",
+        "shisizhang",
+        "shuangcheng",
+        "st-ignatius-high-school",
+        "sunshine-sports-park",
+        "taipei-bridge",
+        "taipei-university-of-marine-technology",
+        "taipei-xiaocheng",
+        "taipei-zoo",
+        "taipei-zoo-south-station",
+        "taishan",
+        "taishan-guihe",
+        "tamkang-university",
+        "tamsui",
+        "tamsui-district-office",
+        "tamsui-fishermans-wharf",
+        "taoyuan-hsr-station",
+        "taoyuan-sports-park",
+        "touqianzhuang",
+        "tucheng",
+        "xianse-temple",
+        "xiaobitan",
+        "xindian",
+        "xindian-district-office",
+        "xingfu",
+        "xingnan",
+        "xinhe-elementary-school",
+        "xinpu",
+        "xinpu-minsheng",
+        "xinshi-1st-rd",
+        "xinzhuang",
+        "xinzhuang-fuduxin",
+        "xiulang-bridge",
+        "yongan-market",
+        "yongning",
+        "zhonghe",
+        "zhongyi",
+        "zhongyuan",
+        "zhuwei"
+      ]
+    },
+    "station_osm_mapping": {
+      "airport-hotel": {
+        "latitude": 25.0691793,
+        "longitude": 121.2206257,
+        "query": "Airport Hotel Station, Taiwan"
+      },
+      "airport-terminal-1": {
+        "latitude": 25.080498,
+        "longitude": 121.2383976,
+        "query": "Airport Terminal 1 Station, Taiwan"
+      },
+      "airport-terminal-2": {
+        "latitude": 25.0772273,
+        "longitude": 121.2322564,
+        "query": "Airport Terminal 2 Station, Taiwan"
+      },
+      "ankang": {
+        "latitude": 24.965141,
+        "longitude": 121.5172474,
+        "query": "Ankang, Taiwan"
+      },
+      "banqiao": {
+        "latitude": 25.0096703,
+        "longitude": 121.4590989,
+        "query": "Banqiao, Taiwan"
+      },
+      "banxin": {
+        "latitude": 25.0145313,
+        "longitude": 121.472418,
+        "query": "Banxin Station, Taiwan"
+      },
+      "beimen": {
+        "latitude": 25.0493991,
+        "longitude": 121.5103289,
+        "query": "Beimen Station, Taipei, Taiwan",
+        "osm_node_id": 662368087,
+        "node_latitude": 25.0500666,
+        "node_longitude": 121.5104996,
+        "snap_distance_m": 76.2
+      },
+      "beitou": {
+        "latitude": 25.1319307,
+        "longitude": 121.4985934,
+        "query": "Beitou Station, Taiwan",
+        "osm_node_id": 2466380742,
+        "node_latitude": 25.1322874,
+        "node_longitude": 121.4988101,
+        "snap_distance_m": 45.3
+      },
+      "binhai-shalun": {
+        "latitude": 25.1904655,
+        "longitude": 121.4316345,
+        "query": "Binhai Shalun Station, Taiwan"
+      },
+      "binhai-yishan": {
+        "latitude": 25.1897184,
+        "longitude": 121.4373723,
+        "query": "Binhai Yishan Station, Taiwan"
+      },
+      "cailiao": {
+        "latitude": 25.060314,
+        "longitude": 121.4920589,
+        "query": "Cailiao, Taiwan"
+      },
+      "cardinal-tien-hospital-an-kang-branch": {
+        "latitude": 24.95445,
+        "longitude": 121.50468,
+        "query": "Cardinal Tien Hospital An Kang Branch Station, Taiwan"
+      },
+      "chang-gung-memorial-hospital": {
+        "latitude": 25.0604744,
+        "longitude": 121.3707965,
+        "query": "Chang Gung Memorial Hospital Station, Taiwan"
+      },
+      "chiang-kai-shek-memorial-hall": {
+        "latitude": 25.0333942,
+        "longitude": 121.5177618,
+        "query": "Chiang Kai-shek Memorial Hall Station, Taiwan",
+        "osm_node_id": 346114655,
+        "node_latitude": 25.0329093,
+        "node_longitude": 121.5180789,
+        "snap_distance_m": 62.7
+      },
+      "dingxi": {
+        "latitude": 25.0136014,
+        "longitude": 121.515472,
+        "query": "Dingxi Station, Taiwan"
+      },
+      "daan": {
+        "latitude": 25.0333294,
+        "longitude": 121.5435546,
+        "query": "Daan Station, Taiwan",
+        "osm_node_id": 618866038,
+        "node_latitude": 25.0332978,
+        "node_longitude": 121.5435348,
+        "snap_distance_m": 4.0
+      },
+      "daan-park": {
+        "latitude": 25.0335619,
+        "longitude": 121.5352793,
+        "query": "Daan Park Station, Taiwan",
+        "osm_node_id": 2653879924,
+        "node_latitude": 25.0334557,
+        "node_longitude": 121.5358301,
+        "snap_distance_m": 56.7
+      },
+      "dahu-park": {
+        "latitude": 25.0837613,
+        "longitude": 121.602341,
+        "query": "Dahu Park Station, Taiwan",
+        "osm_node_id": 293848320,
+        "node_latitude": 25.0838149,
+        "node_longitude": 121.602092,
+        "snap_distance_m": 25.8
+      },
+      "danfeng": {
+        "latitude": 25.0289264,
+        "longitude": 121.4226568,
+        "query": "Danfeng Station, Taiwan"
+      },
+      "danhai-new-town": {
+        "latitude": 25.1956548,
+        "longitude": 121.4324753,
+        "query": "Danhai New Town Station, Taiwan"
+      },
+      "danjin-beixin": {
+        "latitude": 25.1809762,
+        "longitude": 121.4524679,
+        "query": "Danjin Beixin, Taiwan"
+      },
+      "danjin-denggong": {
+        "latitude": 25.1693035,
+        "longitude": 121.4608263,
+        "query": "Danjin Denggong Station, Taiwan"
+      },
+      "dapinglin": {
+        "latitude": 24.9829914,
+        "longitude": 121.5413733,
+        "query": "Dapinglin, Taiwan"
+      },
+      "daqiaotou": {
+        "latitude": 25.063198,
+        "longitude": 121.5126944,
+        "query": "Daqiaotou Station, Taiwan",
+        "osm_node_id": 683196729,
+        "node_latitude": 25.0628583,
+        "node_longitude": 121.5125634,
+        "snap_distance_m": 40.0
+      },
+      "dayuan": {
+        "latitude": 25.0649692,
+        "longitude": 121.4937417,
+        "query": "Dayuan, Taipei, Taiwan"
+      },
+      "dazhi": {
+        "latitude": 25.07923,
+        "longitude": 121.5473,
+        "query": "Dazhi Station, Taiwan",
+        "osm_node_id": 1142115529,
+        "node_latitude": 25.0790434,
+        "node_longitude": 121.5476988,
+        "snap_distance_m": 45.2
+      },
+      "dingpu": {
+        "latitude": 24.9597337,
+        "longitude": 121.4194769,
+        "query": "Dingpu Station, Taiwan"
+      },
+      "donghu": {
+        "latitude": 25.0674198,
+        "longitude": 121.6116099,
+        "query": "Donghu Station, Taiwan",
+        "osm_node_id": 922120043,
+        "node_latitude": 25.0677138,
+        "node_longitude": 121.6118389,
+        "snap_distance_m": 40.0
+      },
+      "dongmen": {
+        "latitude": 25.0338425,
+        "longitude": 121.5292584,
+        "query": "Dongmen Station, Taiwan",
+        "osm_node_id": 3394713028,
+        "node_latitude": 25.0338906,
+        "node_longitude": 121.5293359,
+        "snap_distance_m": 9.5
+      },
+      "far-eastern-hospital": {
+        "latitude": 24.9975221,
+        "longitude": 121.4523632,
+        "query": "Far Eastern Hospital Station, Taiwan"
+      },
+      "fu-jen-university": {
+        "latitude": 25.032722,
+        "longitude": 121.4352746,
+        "query": "Fu Jen University Station, Taiwan"
+      },
+      "fuxingguang": {
+        "latitude": 25.1374895,
+        "longitude": 121.4854979,
+        "query": "Fuxinggang Station, Taiwan",
+        "osm_node_id": 2466842280,
+        "node_latitude": 25.1382116,
+        "node_longitude": 121.4856155,
+        "snap_distance_m": 81.2
+      },
+      "fuzhong": {
+        "latitude": 25.0087697,
+        "longitude": 121.4592803,
+        "query": "Fuzhong Station, Taiwan"
+      },
+      "gangqian": {
+        "latitude": 25.0800727,
+        "longitude": 121.5752034,
+        "query": "Gangqian Station, Taiwan",
+        "osm_node_id": 1838342136,
+        "node_latitude": 25.0799321,
+        "node_longitude": 121.5758159,
+        "snap_distance_m": 63.6
+      },
+      "ganzhenlin": {
+        "latitude": 25.1621824,
+        "longitude": 121.456225,
+        "query": "Ganzhenlin Station, Taiwan"
+      },
+      "gongguan": {
+        "latitude": 25.0149166,
+        "longitude": 121.534264,
+        "query": "Gongguan Station, Taiwan",
+        "osm_node_id": 10092661993,
+        "node_latitude": 25.0150884,
+        "node_longitude": 121.5340159,
+        "snap_distance_m": 31.5
+      },
+      "guandu": {
+        "latitude": 25.1257044,
+        "longitude": 121.4671227,
+        "query": "Guandu, Taiwan",
+        "osm_node_id": 333678125,
+        "node_latitude": 25.1266231,
+        "node_longitude": 121.465977,
+        "snap_distance_m": 154.1
+      },
+      "guting": {
+        "latitude": 25.0264102,
+        "longitude": 121.5229533,
+        "query": "Guting Station, Taiwan",
+        "osm_node_id": 280502900,
+        "node_latitude": 25.025808,
+        "node_longitude": 121.5232846,
+        "snap_distance_m": 74.8
+      },
+      "haishan": {
+        "latitude": 24.9853177,
+        "longitude": 121.4487858,
+        "query": "Haishan Station, Taiwan"
+      },
+      "hengshan": {
+        "latitude": 25.0364919,
+        "longitude": 121.2157962,
+        "query": "Hengshan Station, Taiwan"
+      },
+      "hongshulin": {
+        "latitude": 25.1544067,
+        "longitude": 121.4588106,
+        "query": "Hongshulin, Taiwan"
+      },
+      "houshanpi": {
+        "latitude": 25.0447413,
+        "longitude": 121.5823224,
+        "query": "Houshanpi Station, Taiwan",
+        "osm_node_id": 660878360,
+        "node_latitude": 25.0452639,
+        "node_longitude": 121.5826018,
+        "snap_distance_m": 64.6
+      },
+      "huanbei": {
+        "latitude": 25.0775577,
+        "longitude": 121.5033887,
+        "query": "Huanbei, Taipei, Taiwan",
+        "osm_node_id": 648979280,
+        "node_latitude": 25.078213,
+        "node_longitude": 121.5050328,
+        "snap_distance_m": 180.9
+      },
+      "huilong": {
+        "latitude": 25.0220786,
+        "longitude": 121.4119025,
+        "query": "Huilong Station, Taiwan"
+      },
+      "huzhou": {
+        "latitude": 25.0726385,
+        "longitude": 121.6073633,
+        "query": "Huzhou Station, Taiwan",
+        "osm_node_id": 2077766681,
+        "node_latitude": 25.0728741,
+        "node_longitude": 121.6069225,
+        "snap_distance_m": 51.5
+      },
+      "jiangzicui": {
+        "latitude": 25.0304238,
+        "longitude": 121.4727783,
+        "query": "Jiangzicui Station, Taiwan"
+      },
+      "jiannan-rd": {
+        "latitude": 25.0848493,
+        "longitude": 121.5556531,
+        "query": "Jiannan Road Station, Taiwan",
+        "osm_node_id": 2188790650,
+        "node_latitude": 25.0850414,
+        "node_longitude": 121.5552464,
+        "snap_distance_m": 46.2
+      },
+      "jiantan": {
+        "latitude": 25.0842913,
+        "longitude": 121.5249806,
+        "query": "Jiantan Station, Taiwan",
+        "osm_node_id": 662129869,
+        "node_latitude": 25.0842853,
+        "node_longitude": 121.5247866,
+        "snap_distance_m": 19.5
+      },
+      "jingan": {
+        "latitude": 24.9937859,
+        "longitude": 121.5050464,
+        "query": "Jingan Station, Taiwan"
+      },
+      "jingmei": {
+        "latitude": 24.992978,
+        "longitude": 121.5408198,
+        "query": "Jingmei Station, Taiwan",
+        "osm_node_id": 2317000855,
+        "node_latitude": 24.993033,
+        "node_longitude": 121.5409817,
+        "snap_distance_m": 17.4
+      },
+      "jingping": {
+        "latitude": 24.9921502,
+        "longitude": 121.5161735,
+        "query": "Jingping Station, Taiwan"
+      },
+      "jinwen-university-of-science-and-technology": {
+        "latitude": 24.9555152,
+        "longitude": 121.5104047,
+        "query": "Jinwen University of Science and Technology Station, Taiwan"
+      },
+      "kanding": {
+        "latitude": 25.2009501,
+        "longitude": 121.434621,
+        "query": "Kanding Station, Taiwan"
+      },
+      "kengkou": {
+        "latitude": 25.0864909,
+        "longitude": 121.2663561,
+        "query": "Kengkou Station, Taiwan"
+      },
+      "kunyang": {
+        "latitude": 25.0504897,
+        "longitude": 121.5933161,
+        "query": "Kunyang, Taiwan",
+        "osm_node_id": 862471665,
+        "node_latitude": 25.0504624,
+        "node_longitude": 121.594001,
+        "snap_distance_m": 69.1
+      },
+      "laojie-river": {
+        "latitude": 25.0123737,
+        "longitude": 121.2079482,
+        "query": "Laojie River, Taiwan"
+      },
+      "linghang": {
+        "latitude": 25.0383783,
+        "longitude": 121.4421348,
+        "query": "Linghang, Taipei, Taiwan"
+      },
+      "linguang": {
+        "latitude": 25.0184431,
+        "longitude": 121.5589123,
+        "query": "Linguang, Taiwan",
+        "osm_node_id": 638298721,
+        "node_latitude": 25.0184704,
+        "node_longitude": 121.5589589,
+        "snap_distance_m": 5.6
+      },
+      "linkou": {
+        "latitude": 25.0784718,
+        "longitude": 121.3931923,
+        "query": "Linkou Station, Taiwan"
+      },
+      "liuzhangli": {
+        "latitude": 25.0238241,
+        "longitude": 121.5531388,
+        "query": "Liuzhangli, Taiwan",
+        "osm_node_id": 631995794,
+        "node_latitude": 25.0241842,
+        "node_longitude": 121.5528549,
+        "snap_distance_m": 49.2
+      },
+      "longshan-temple": {
+        "latitude": 25.0352844,
+        "longitude": 121.4995813,
+        "query": "Longshan Temple Station, Taiwan",
+        "osm_node_id": 9403338881,
+        "node_latitude": 25.0353399,
+        "node_longitude": 121.4993703,
+        "snap_distance_m": 22.1
+      },
+      "luzhou": {
+        "latitude": 25.091278,
+        "longitude": 121.465104,
+        "query": "Luzhou Station, Taiwan"
+      },
+      "maokong-zoo-station": {
+        "latitude": 24.99645,
+        "longitude": 121.57603,
+        "query": "Maokong Zoo Station Station, Taiwan",
+        "osm_node_id": 3423502324,
+        "node_latitude": 24.9953789,
+        "node_longitude": 121.5743891,
+        "snap_distance_m": 203.8
+      },
+      "mingde": {
+        "latitude": 25.1098593,
+        "longitude": 121.5187693,
+        "query": "Mingde Station, Taiwan",
+        "osm_node_id": 3744245261,
+        "node_latitude": 25.1101609,
+        "node_longitude": 121.5182606,
+        "snap_distance_m": 61.2
+      },
+      "minquan-w-road": {
+        "latitude": 25.0632888,
+        "longitude": 121.5099499,
+        "query": "Minquan W Road, Taiwan",
+        "osm_node_id": 1218554169,
+        "node_latitude": 25.0629956,
+        "node_longitude": 121.5098853,
+        "snap_distance_m": 33.2
+      },
+      "muzha": {
+        "latitude": 24.9982458,
+        "longitude": 121.5731834,
+        "query": "Muzha Station, Taiwan",
+        "osm_node_id": 3536422154,
+        "node_latitude": 24.9978092,
+        "node_longitude": 121.5741035,
+        "snap_distance_m": 104.7
+      },
+      "ntu-hospital": {
+        "latitude": 25.0416464,
+        "longitude": 121.5161808,
+        "query": "NTU Hospital Station, Taiwan",
+        "osm_node_id": 2051219340,
+        "node_latitude": 25.0412951,
+        "node_longitude": 121.5160828,
+        "snap_distance_m": 40.3
+      },
+      "nangang": {
+        "latitude": 25.0545779,
+        "longitude": 121.6065999,
+        "query": "Nangang, Taiwan",
+        "osm_node_id": 3134622940,
+        "node_latitude": 25.0544063,
+        "node_longitude": 121.6070226,
+        "snap_distance_m": 46.7
+      },
+      "nangang-software-park": {
+        "latitude": 25.0599458,
+        "longitude": 121.6158969,
+        "query": "Nangang Software Park Station, Taiwan",
+        "osm_node_id": 3132418403,
+        "node_latitude": 25.0598622,
+        "node_longitude": 121.6158807,
+        "snap_distance_m": 9.4
+      },
+      "nanjing-fuxing": {
+        "latitude": 25.051836,
+        "longitude": 121.5439651,
+        "query": "Nanjing Fuxing Station, Taiwan",
+        "osm_node_id": 622618238,
+        "node_latitude": 25.0517728,
+        "node_longitude": 121.5439733,
+        "snap_distance_m": 7.1
+      },
+      "nanjing-sanmin": {
+        "latitude": 25.0514279,
+        "longitude": 121.5643061,
+        "query": "Nanjing Sanmin Station, Taiwan",
+        "osm_node_id": 12749563207,
+        "node_latitude": 25.0514777,
+        "node_longitude": 121.5640141,
+        "snap_distance_m": 29.9
+      },
+      "nanshijiao": {
+        "latitude": 24.9899645,
+        "longitude": 121.5089822,
+        "query": "Nanshijiao, Taiwan"
+      },
+      "national-taiwan-sport-university": {
+        "latitude": 25.0413317,
+        "longitude": 121.3854083,
+        "query": "National Taiwan Sport University Station, Taiwan"
+      },
+      "neihu": {
+        "latitude": 25.0834972,
+        "longitude": 121.5941892,
+        "query": "Neihu Station, Taiwan",
+        "osm_node_id": 2170439940,
+        "node_latitude": 25.083598,
+        "node_longitude": 121.5942238,
+        "snap_distance_m": 11.7
+      },
+      "new-taipei-industrial-park": {
+        "latitude": 25.061706,
+        "longitude": 121.4589414,
+        "query": "New Taipei Industrial Park Station, Taiwan"
+      },
+      "qiaohe": {
+        "latitude": 25.0046042,
+        "longitude": 121.4902458,
+        "query": "Qiaohe Station, Taiwan"
+      },
+      "qilian": {
+        "latitude": 25.1209048,
+        "longitude": 121.5061304,
+        "query": "Qilian Station, Taiwan",
+        "osm_node_id": 3849103465,
+        "node_latitude": 25.121311,
+        "node_longitude": 121.5049099,
+        "snap_distance_m": 130.9
+      },
+      "qiyan": {
+        "latitude": 25.1256031,
+        "longitude": 121.5011369,
+        "query": "Qiyan Station, Taiwan",
+        "osm_node_id": 336194530,
+        "node_latitude": 25.1262006,
+        "node_longitude": 121.5007438,
+        "snap_distance_m": 77.3
+      },
+      "qizhang": {
+        "latitude": 24.9750221,
+        "longitude": 121.5429203,
+        "query": "Qizhang Station, Taiwan"
+      },
+      "rose-china-town": {
+        "latitude": 24.95092,
+        "longitude": 121.49406,
+        "query": "Rose China Town Station, Taiwan"
+      },
+      "sanchong": {
+        "latitude": 25.0546641,
+        "longitude": 121.482813,
+        "query": "Sanchong Station, Taiwan"
+      },
+      "sanchong-elementary-school": {
+        "latitude": 25.0699693,
+        "longitude": 121.4972618,
+        "query": "Sanchong Elementary School, Taiwan"
+      },
+      "sanhe-junior-high-school": {
+        "latitude": 25.0767532,
+        "longitude": 121.4863476,
+        "query": "Sanhe Junior High School, Taiwan"
+      },
+      "sanmin-senior-high-school": {
+        "latitude": 25.0855048,
+        "longitude": 121.4732993,
+        "query": "Sanmin Senior High School Station, Taiwan"
+      },
+      "shalun": {
+        "latitude": 25.18745,
+        "longitude": 121.41719,
+        "query": "Shalun Station, Taiwan"
+      },
+      "shanbi": {
+        "latitude": 25.0808055,
+        "longitude": 121.2847775,
+        "query": "Shanbi Station, Taiwan"
+      },
+      "shilin": {
+        "latitude": 25.0918396,
+        "longitude": 121.5242068,
+        "query": "Shilin, Taiwan",
+        "osm_node_id": 3372138976,
+        "node_latitude": 25.0919543,
+        "node_longitude": 121.5245674,
+        "snap_distance_m": 38.5
+      },
+      "shipai": {
+        "latitude": 25.1146071,
+        "longitude": 121.5155232,
+        "query": "Shipai Station, Taiwan",
+        "osm_node_id": 3786978786,
+        "node_latitude": 25.1143402,
+        "node_longitude": 121.5150632,
+        "snap_distance_m": 55.0
+      },
+      "shisizhang": {
+        "latitude": 24.9844703,
+        "longitude": 121.5275892,
+        "query": "Shisizhang Station, Taiwan"
+      },
+      "shuangcheng": {
+        "latitude": 24.94657,
+        "longitude": 121.48985,
+        "query": "Shuangcheng Station, Taiwan"
+      },
+      "shuanglian": {
+        "latitude": 25.057632,
+        "longitude": 121.5206986,
+        "query": "Shuanglian Station, Taiwan",
+        "osm_node_id": 662161236,
+        "node_latitude": 25.0576671,
+        "node_longitude": 121.520818,
+        "snap_distance_m": 12.6
+      },
+      "songjiang-nanjing": {
+        "latitude": 25.0520141,
+        "longitude": 121.5330358,
+        "query": "Songjiang Nanjing Station, Taiwan",
+        "osm_node_id": 632569633,
+        "node_latitude": 25.0519477,
+        "node_longitude": 121.5330764,
+        "snap_distance_m": 8.4
+      },
+      "songshan": {
+        "latitude": 25.0498852,
+        "longitude": 121.5772719,
+        "query": "Songshan, Taiwan",
+        "osm_node_id": 661022200,
+        "node_latitude": 25.0500048,
+        "node_longitude": 121.5777142,
+        "snap_distance_m": 46.5
+      },
+      "songshan-airport": {
+        "latitude": 25.063086,
+        "longitude": 121.5516137,
+        "query": "Songshan Airport Station, Taiwan",
+        "osm_node_id": 4898630548,
+        "node_latitude": 25.0634729,
+        "node_longitude": 121.5520405,
+        "snap_distance_m": 60.8
+      },
+      "st-ignatius-high-school": {
+        "latitude": 25.0803359,
+        "longitude": 121.4802265,
+        "query": "St. Ignatius High School Station, Taiwan"
+      },
+      "sun-yat-sen-memorial-hall": {
+        "latitude": 25.0399869,
+        "longitude": 121.5602911,
+        "query": "Sun Yat-Sen Memorial Hall, Taiwan",
+        "osm_node_id": 623479520,
+        "node_latitude": 25.0391995,
+        "node_longitude": 121.5615402,
+        "snap_distance_m": 153.3
+      },
+      "sunshine-sports-park": {
+        "latitude": 24.9723043,
+        "longitude": 121.5195038,
+        "query": "Sunshine Sports Park Station, Taiwan"
+      },
+      "taipei-101-world-trade-center": {
+        "latitude": 25.0329794,
+        "longitude": 121.5624453,
+        "query": "Taipei 101 World Trade Center Station, Taiwan",
+        "osm_node_id": 623479025,
+        "node_latitude": 25.0330053,
+        "node_longitude": 121.5634121,
+        "snap_distance_m": 97.4
+      },
+      "taipei-arena": {
+        "latitude": 25.0516857,
+        "longitude": 121.5514989,
+        "query": "Taipei Arena Station, Taiwan",
+        "osm_node_id": 654154747,
+        "node_latitude": 25.0517288,
+        "node_longitude": 121.5526396,
+        "snap_distance_m": 115.0
+      },
+      "taipei-bridge": {
+        "latitude": 25.0631779,
+        "longitude": 121.5005513,
+        "query": "Taipei Bridge Station, Taiwan"
+      },
+      "taipei-city-hall": {
+        "latitude": 25.0411219,
+        "longitude": 121.5662136,
+        "query": "Taipei City Hall Station, Taiwan",
+        "osm_node_id": 631989721,
+        "node_latitude": 25.0410496,
+        "node_longitude": 121.566141,
+        "snap_distance_m": 10.9
+      },
+      "taipei-main-station": {
+        "latitude": 25.0462432,
+        "longitude": 121.5174745,
+        "query": "Taipei Main Station Station, Taiwan",
+        "osm_node_id": 1140220198,
+        "node_latitude": 25.046261,
+        "node_longitude": 121.5175562,
+        "snap_distance_m": 8.5
+      },
+      "taipei-nangang-exhibition-center": {
+        "latitude": 25.0553158,
+        "longitude": 121.617896,
+        "query": "Taipei Nangang Exhibition Center Station, Taiwan",
+        "osm_node_id": 871977480,
+        "node_latitude": 25.0549079,
+        "node_longitude": 121.6186702,
+        "snap_distance_m": 90.2
+      },
+      "taipei-university-of-marine-technology": {
+        "latitude": 25.1911611,
+        "longitude": 121.426285,
+        "query": "Taipei University of Marine Technology Station, Taiwan"
+      },
+      "taipei-xiaocheng": {
+        "latitude": 24.9537556,
+        "longitude": 121.4995311,
+        "query": "Taipei Xiaocheng Station, Taiwan"
+      },
+      "taipei-zoo": {
+        "latitude": 24.9953546,
+        "longitude": 121.5861491,
+        "query": "Taipei Zoo, Taiwan"
+      },
+      "taipei-zoo-south-station": {
+        "latitude": 24.9900048,
+        "longitude": 121.5872453,
+        "query": "Taipei Zoo South Station, Taiwan"
+      },
+      "taipei-zoo-station": {
+        "latitude": 24.9983168,
+        "longitude": 121.5794478,
+        "query": "Taipei Zoo Station, Taiwan",
+        "osm_node_id": 632423334,
+        "node_latitude": 25.0003444,
+        "node_longitude": 121.5773708,
+        "snap_distance_m": 307.6
+      },
+      "taipower-building": {
+        "latitude": 25.0205325,
+        "longitude": 121.5283902,
+        "query": "Taipower Building Station, Taiwan",
+        "osm_node_id": 3144544429,
+        "node_latitude": 25.0203232,
+        "node_longitude": 121.5284562,
+        "snap_distance_m": 24.2
+      },
+      "taishan": {
+        "latitude": 25.058864,
+        "longitude": 121.4308111,
+        "query": "Taishan, Taiwan"
+      },
+      "taishan-guihe": {
+        "latitude": 25.0333454,
+        "longitude": 121.4229634,
+        "query": "Taishan Guihe Station, Taiwan"
+      },
+      "tamkang-university": {
+        "latitude": 25.1749822,
+        "longitude": 121.4503498,
+        "query": "Tamkang University, Taiwan"
+      },
+      "tamsui": {
+        "latitude": 25.1677828,
+        "longitude": 121.4455744,
+        "query": "Tamsui Station, Taiwan"
+      },
+      "tamsui-district-office": {
+        "latitude": 25.1889533,
+        "longitude": 121.4445041,
+        "query": "Tamsui District Office Station, Taiwan"
+      },
+      "tamsui-fishermans-wharf": {
+        "latitude": 25.182026,
+        "longitude": 121.4187208,
+        "query": "Tamsui Fisherman's Wharf, Taiwan"
+      },
+      "taoyuan-hsr-station": {
+        "latitude": 25.0137163,
+        "longitude": 121.2141381,
+        "query": "Taoyuan HSR Station Station, Taiwan"
+      },
+      "taoyuan-sports-park": {
+        "latitude": 25.0017441,
+        "longitude": 121.2032715,
+        "query": "Taoyuan Sports Park Station, Taiwan"
+      },
+      "technology-building": {
+        "latitude": 25.0261012,
+        "longitude": 121.5434596,
+        "query": "Technology Building Station, Taiwan",
+        "osm_node_id": 631736133,
+        "node_latitude": 25.0265125,
+        "node_longitude": 121.5433991,
+        "snap_distance_m": 46.1
+      },
+      "touqianzhuang": {
+        "latitude": 25.0399026,
+        "longitude": 121.4603193,
+        "query": "Touqianzhuang, Taiwan"
+      },
+      "tucheng": {
+        "latitude": 24.9794013,
+        "longitude": 121.4531024,
+        "query": "Tucheng Station, Taiwan"
+      },
+      "wanfang-community": {
+        "latitude": 24.9986089,
+        "longitude": 121.5681226,
+        "query": "Wanfang Community Station, Taiwan",
+        "osm_node_id": 2671128355,
+        "node_latitude": 24.9987866,
+        "node_longitude": 121.5690716,
+        "snap_distance_m": 97.7
+      },
+      "wanfang-hospital": {
+        "latitude": 24.9994306,
+        "longitude": 121.558138,
+        "query": "Wanfang Hospital Station, Taiwan",
+        "osm_node_id": 2316654251,
+        "node_latitude": 24.9993333,
+        "node_longitude": 121.5575044,
+        "snap_distance_m": 64.8
+      },
+      "wanlong": {
+        "latitude": 25.0019199,
+        "longitude": 121.5390753,
+        "query": "Wanlong, Taiwan",
+        "osm_node_id": 698446630,
+        "node_latitude": 25.0022338,
+        "node_longitude": 121.5389399,
+        "snap_distance_m": 37.5
+      },
+      "wende": {
+        "latitude": 25.0785562,
+        "longitude": 121.5849416,
+        "query": "Wende Station, Taiwan",
+        "osm_node_id": 2444098101,
+        "node_latitude": 25.0786525,
+        "node_longitude": 121.5856193,
+        "snap_distance_m": 69.1
+      },
+      "xiangshan": {
+        "latitude": 25.0329205,
+        "longitude": 121.5697687,
+        "query": "Xiangshan, Taipei, Taiwan",
+        "osm_node_id": 631990092,
+        "node_latitude": 25.0328843,
+        "node_longitude": 121.5696966,
+        "snap_distance_m": 8.3
+      },
+      "xianse-temple": {
+        "latitude": 25.0464284,
+        "longitude": 121.4716805,
+        "query": "Xianse Temple, Taiwan"
+      },
+      "xiaobitan": {
+        "latitude": 24.9717696,
+        "longitude": 121.5305995,
+        "query": "Xiaobitan Station, Taiwan"
+      },
+      "xiaonanmen": {
+        "latitude": 25.035901,
+        "longitude": 121.5108064,
+        "query": "Xiaonanmen Station, Taiwan",
+        "osm_node_id": 260240818,
+        "node_latitude": 25.0359342,
+        "node_longitude": 121.5108427,
+        "snap_distance_m": 5.2
+      },
+      "xihu": {
+        "latitude": 25.0821916,
+        "longitude": 121.5673156,
+        "query": "Xihu Station, Taiwan",
+        "osm_node_id": 773904421,
+        "node_latitude": 25.0822549,
+        "node_longitude": 121.5669212,
+        "snap_distance_m": 40.3
+      },
+      "ximen": {
+        "latitude": 25.0427128,
+        "longitude": 121.5086081,
+        "query": "Ximen Station, Taiwan",
+        "osm_node_id": 12464949746,
+        "node_latitude": 25.0430073,
+        "node_longitude": 121.5087246,
+        "snap_distance_m": 34.8
+      },
+      "xinbeitou": {
+        "latitude": 25.1369644,
+        "longitude": 121.5031693,
+        "query": "Xinbeitou Station, Taiwan",
+        "osm_node_id": 409741939,
+        "node_latitude": 25.1372178,
+        "node_longitude": 121.5037415,
+        "snap_distance_m": 64.1
+      },
+      "xindian": {
+        "latitude": 24.9673935,
+        "longitude": 121.5419418,
+        "query": "Xindian, Taiwan"
+      },
+      "xindian-district-office": {
+        "latitude": 24.9673862,
+        "longitude": 121.5413511,
+        "query": "Xindian District Office Station, Taiwan"
+      },
+      "xingfu": {
+        "latitude": 25.0499888,
+        "longitude": 121.459967,
+        "query": "Xingfu Station, Taiwan"
+      },
+      "xingnan": {
+        "latitude": 24.9888529,
+        "longitude": 121.5118933,
+        "query": "Xingnan, Taipei, Taiwan"
+      },
+      "xingtian-temple": {
+        "latitude": 25.0594133,
+        "longitude": 121.5331615,
+        "query": "Xingtian Temple Station, Taiwan",
+        "osm_node_id": 648172587,
+        "node_latitude": 25.059594,
+        "node_longitude": 121.5332374,
+        "snap_distance_m": 21.5
+      },
+      "xinhai": {
+        "latitude": 25.0054814,
+        "longitude": 121.5570598,
+        "query": "Xinhai Station, Taiwan",
+        "osm_node_id": 689354550,
+        "node_latitude": 25.0061174,
+        "node_longitude": 121.5581016,
+        "snap_distance_m": 126.6
+      },
+      "xinhe-elementary-school": {
+        "latitude": 24.9834836,
+        "longitude": 121.5186782,
+        "query": "Xinhe Elementary School Station, Taiwan"
+      },
+      "xinpu": {
+        "latitude": 25.0234603,
+        "longitude": 121.4683057,
+        "query": "Xinpu Station, Taipei, Taiwan"
+      },
+      "xinpu-minsheng": {
+        "latitude": 25.0261266,
+        "longitude": 121.4666661,
+        "query": "Xinpu Minsheng Station, Taiwan"
+      },
+      "xinshi-1st-rd": {
+        "latitude": 25.1821791,
+        "longitude": 121.4503238,
+        "query": "Xinshi 1st Road Station, Taiwan"
+      },
+      "xinyi-anhe": {
+        "latitude": 25.0331302,
+        "longitude": 121.5527328,
+        "query": "Xinyi Anhe Station, Taiwan",
+        "osm_node_id": 618865776,
+        "node_latitude": 25.0331269,
+        "node_longitude": 121.552514,
+        "snap_distance_m": 22.0
+      },
+      "xinzhuang": {
+        "latitude": 25.0357722,
+        "longitude": 121.4502478,
+        "query": "Xinzhuang, Taiwan"
+      },
+      "xinzhuang-fuduxin": {
+        "latitude": 25.05921,
+        "longitude": 121.4457893,
+        "query": "Xinzhuang Fuduxin Station, Taiwan"
+      },
+      "xiulang-bridge": {
+        "latitude": 24.9903315,
+        "longitude": 121.5249012,
+        "query": "Xiulang Bridge Station, Taiwan"
+      },
+      "yongan-market": {
+        "latitude": 25.0024105,
+        "longitude": 121.5109003,
+        "query": "Yongan Market Station, Taiwan"
+      },
+      "yongchun": {
+        "latitude": 25.0408687,
+        "longitude": 121.5757207,
+        "query": "Yongchun Station, Taiwan",
+        "osm_node_id": 637641083,
+        "node_latitude": 25.0408455,
+        "node_longitude": 121.5754221,
+        "snap_distance_m": 30.2
+      },
+      "yongning": {
+        "latitude": 24.9668719,
+        "longitude": 121.4362698,
+        "query": "Yongning Station, Taiwan"
+      },
+      "yuanshan": {
+        "latitude": 25.0714175,
+        "longitude": 121.5201361,
+        "query": "Yuanshan Station, Taiwan",
+        "osm_node_id": 2528873069,
+        "node_latitude": 25.071875,
+        "node_longitude": 121.5200368,
+        "snap_distance_m": 51.8
+      },
+      "zhinan-temple-station": {
+        "latitude": 24.9796041,
+        "longitude": 121.5880572,
+        "query": "Zhinan Temple, Taiwan",
+        "osm_node_id": 5516590755,
+        "node_latitude": 24.9787584,
+        "node_longitude": 121.5900566,
+        "snap_distance_m": 222.4
+      },
+      "zhishan": {
+        "latitude": 25.1030034,
+        "longitude": 121.5225195,
+        "query": "Zhishan Station, Taiwan",
+        "osm_node_id": 416523333,
+        "node_latitude": 25.1029178,
+        "node_longitude": 121.5222847,
+        "snap_distance_m": 25.5
+      },
+      "zhonghe": {
+        "latitude": 24.9898745,
+        "longitude": 121.4910915,
+        "query": "Zhonghe Station, Taiwan"
+      },
+      "zhongshan": {
+        "latitude": 25.0526256,
+        "longitude": 121.5203914,
+        "query": "Zhongshan Station, Taiwan",
+        "osm_node_id": 2137955730,
+        "node_latitude": 25.0525756,
+        "node_longitude": 121.5204547,
+        "snap_distance_m": 8.5
+      },
+      "zhongshan-elementary-school": {
+        "latitude": 25.0637689,
+        "longitude": 121.5264301,
+        "query": "Zhongshan Elementary School, Taiwan",
+        "osm_node_id": 665103650,
+        "node_latitude": 25.0627321,
+        "node_longitude": 121.5271118,
+        "snap_distance_m": 134.2
+      },
+      "zhongshan-junior-high-school": {
+        "latitude": 25.0606883,
+        "longitude": 121.5441859,
+        "query": "Zhongshan Junior High School, Taiwan",
+        "osm_node_id": 649219949,
+        "node_latitude": 25.0604697,
+        "node_longitude": 121.5442824,
+        "snap_distance_m": 26.2
+      },
+      "zhongxiao-dunhua": {
+        "latitude": 25.0415086,
+        "longitude": 121.549479,
+        "query": "Zhongxiao Dunhua Station, Taiwan",
+        "osm_node_id": 253559038,
+        "node_latitude": 25.0414462,
+        "node_longitude": 121.5491111,
+        "snap_distance_m": 37.7
+      },
+      "zhongxiao-fuxing": {
+        "latitude": 25.0415409,
+        "longitude": 121.5437706,
+        "query": "Zhongxiao Fuxing Station, Taiwan",
+        "osm_node_id": 618865982,
+        "node_latitude": 25.041558,
+        "node_longitude": 121.5437139,
+        "snap_distance_m": 6.0
+      },
+      "zhongxiao-xinsheng": {
+        "latitude": 25.04229,
+        "longitude": 121.5328383,
+        "query": "Zhongxiao Xinsheng Station, Taiwan",
+        "osm_node_id": 631668981,
+        "node_latitude": 25.0422648,
+        "node_longitude": 121.5327726,
+        "snap_distance_m": 7.2
+      },
+      "zhongyi": {
+        "latitude": 25.1309506,
+        "longitude": 121.473374,
+        "query": "Zhongyi Station, Taiwan"
+      },
+      "zhongyuan": {
+        "latitude": 25.0081782,
+        "longitude": 121.4842739,
+        "query": "Zhongyuan Station, Taiwan"
+      },
+      "zhuwei": {
+        "latitude": 25.1369727,
+        "longitude": 121.4595099,
+        "query": "Zhuwei Station, Taiwan"
+      }
+    }
+  }
+}

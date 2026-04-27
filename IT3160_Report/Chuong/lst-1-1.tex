@@ -1,0 +1,9 @@
+def snap_to_mrt(point: Tuple[float, float], access_points: List[dict]) -> str:
+    # Lựa chọn ga dựa trên chi phí đi bộ thực tế (shortest path distance)
+    # thay vì chỉ dựa trên khoảng cách chim bay (Euclidean distance).
+    best_match = min(
+        access_points,
+        key=lambda ap: compute_walk_dist(point, ap["coord"]),
+        default=None
+    )
+    return best_match["station_id"] if best_match else None

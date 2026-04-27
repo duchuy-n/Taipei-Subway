@@ -1,0 +1,386 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+
+\chapter{GIỚI THIỆU}
+\label{chapter:introduction}
+
+\section{Bối cảnh bài toán}
+Trong các hệ thống hỗ trợ giao thông đô thị, người dùng không chỉ cần biết đường đi giữa hai ga mà còn cần một cách tương tác trực quan để chọn điểm xuất phát, điểm đích và quan sát lộ trình trên bản đồ. Với mạng tàu điện ngầm có nhiều tuyến, nhiều điểm trung chuyển và nhiều lớp dữ liệu không gian khác nhau, một giao diện chỉ trả về danh sách ga theo dạng văn bản là chưa đủ cho nhu cầu sử dụng và trình diễn.
+
+Dự án \textbf{IT3160 Subway Web} được xây dựng để giải quyết bài toán đó bằng một ứng dụng web gồm ba lớp chính: giao diện tương tác, dịch vụ định tuyến và lớp dữ liệu GIS. Hệ thống cho phép người dùng chọn điểm trên bản đồ, ánh xạ các điểm này tới ga phù hợp, tính đường đi bằng thuật toán trên đồ thị mở rộng và hiển thị lại kết quả theo ngữ cảnh trực quan.
+
+\section{Mục tiêu dự án}
+Các mục tiêu chính của dự án gồm:
+\begin{itemize}
+    \item Xây dựng một ứng dụng web tối giản nhưng đủ hoàn chỉnh để mô phỏng bài toán tìm đường tàu điện ngầm.
+    \item Hỗ trợ người dùng chọn hai điểm bất kỳ trên bản đồ để hệ thống tự ánh xạ đến ga gần nhất bằng dữ liệu đi bộ và dữ liệu lối vào ga.
+    \item Tổ chức dự án theo hướng tách bạch frontend, backend và data/GIS để nhóm có thể phát triển song song.
+    \item Thiết lập quy trình cập nhật dữ liệu gồm topology mạng tuyến, lớp GeoJSON, mạng đi bộ và OSM enrichment.
+    \item Tạo ra một sản phẩm có thể chạy cục bộ nhanh, dễ demo, dễ kiểm thử và phù hợp với phạm vi bài tập lớn học phần.
+\end{itemize}
+
+\section{Phạm vi thực hiện}
+Phiên bản hiện tại của hệ thống tập trung vào các thành phần sau:
+\begin{itemize}
+    \item Giao diện chính \texttt{gis-studio} cho bài toán tìm đường trên bản đồ.
+    \item Giao diện \texttt{admin} để mô phỏng tình huống vận hành và áp dụng scenario vào runtime định tuyến.
+    \item Giao diện \texttt{login} ở mức demo để điều hướng vào khu vực quản trị.
+    \item API định tuyến và API GIS trên nền FastAPI.
+    \item Dữ liệu topology, GeoJSON và walk network cho mạng MRT Đài Bắc.
+\end{itemize}
+
+
+\section{Biểu diễn bài toán}
+
+\subsection{Phát biểu bài toán}
+Bài toán của hệ thống là hỗ trợ người dùng tìm hành trình trong mạng tàu điện ngầm MRT trên nền bản đồ số. Khác với cách tiếp cận truyền thống là yêu cầu người dùng chọn trực tiếp ga xuất phát và ga đích, hệ thống cho phép người dùng chọn hai điểm bất kỳ trên bản đồ. Từ hai điểm này, hệ thống phải tự động ánh xạ chúng vào mạng MRT, xác định ga phù hợp, tính toán lộ trình tối ưu và trả về kết quả dưới dạng trực quan.
+
+Xét:
+\[
+p_s = (x_s, y_s), \qquad p_t = (x_t, y_t)
+\]
+lần lượt là điểm xuất phát và điểm đích do người dùng chọn trên bản đồ. Gọi:
+\[
+S = \{s_1, s_2, \dots, s_n\}
+\]
+là tập ga của mạng MRT, và
+\[
+L = \{\ell_1, \ell_2, \dots, \ell_m\}
+\]
+là tập các tuyến. Nhiệm vụ của hệ thống là xây dựng một hành trình hợp lệ nối từ $p_s$ đến $p_t$ thông qua mạng MRT sao cho chi phí tổng quát là nhỏ nhất.
+
+\subsection{Mô hình toán học của bài toán}
+
+\subsubsection{Đầu vào}
+Đầu vào của hệ thống được mô hình hoá bởi:
+\[
+\mathcal{I} = \left(p_s, p_t, S, L, A, W, G_{\text{gis}}\right)
+\]
+trong đó:
+\begin{itemize}
+    \item $p_s, p_t$ là hai điểm do người dùng chọn trên bản đồ;
+    \item $S$ là tập ga của hệ thống MRT;
+    \item $L$ là tập tuyến MRT;
+    \item $A$ là tập điểm tiếp cận nhà ga;
+    \item $W$ là mạng đi bộ dùng để kết nối điểm người dùng với ga;
+    \item $G_{\text{gis}}$ là tập dữ liệu không gian gồm vị trí ga, hình học tuyến và các lớp bản đồ liên quan.
+\end{itemize}
+
+\subsubsection{Đầu ra}
+Đầu ra của hệ thống là một hành trình:
+\[
+\mathcal{J} = \left(s_{\text{start}}, s_{\text{end}}, P_{\text{mrt}}, P_{\text{geo}}, \mathbf{C}, T_{\text{total}}\right)
+\]
+trong đó:
+\begin{itemize}
+    \item $s_{\text{start}}$ là ga được chọn cho điểm đầu;
+    \item $s_{\text{end}}$ là ga được chọn cho điểm cuối;
+    \item $P_{\text{mrt}}$ là đường đi tối ưu trên mạng MRT;
+    \item $P_{\text{geo}}$ là dữ liệu hình học dùng để hiển thị hành trình trên bản đồ;
+    \item $\mathbf{C}$ là bộ chi phí tối ưu dùng cho so sánh đường đi;
+    \item $T_{\text{total}}$ là tổng thời gian hành trình dùng cho phần tóm tắt hiển thị tới người dùng.
+\end{itemize}
+
+\subsubsection{Hàm ánh xạ điểm người dùng vào mạng MRT}
+Do người dùng thao tác trên bản đồ liên tục thay vì chọn trực tiếp ga, hệ thống cần một phép ánh xạ:
+\[
+\phi : \mathbb{R}^{2} \rightarrow S
+\]
+sao cho:
+\[
+\phi(p_s) = s_{\text{start}}, \qquad \phi(p_t) = s_{\text{end}}
+\]
+
+Trong dự án, hàm $\phi$ không chỉ dựa trên khoảng cách hình học đơn giản, mà còn xét đến dữ liệu tiếp cận ga và mạng đi bộ lân cận để lựa chọn ga phù hợp hơn với điều kiện thực tế.
+
+\subsubsection{Mô hình đồ thị}
+Sau khi xác định được ga đầu và ga cuối, bài toán định tuyến được biểu diễn dưới dạng đồ thị trạng thái có chi phí:
+\[
+G' = (V', E', c)
+\]
+trong đó:
+\begin{itemize}
+    \item $V'$ là tập đỉnh, biểu diễn trạng thái ga--tuyến hoặc các trạng thái di chuyển hợp lệ trong runtime;
+    \item $E'$ là tập cạnh, biểu diễn khả năng di chuyển giữa các trạng thái đó;
+    \item $c : E' \rightarrow \mathbb{R}_{\ge 0}^{4}$ là hàm chi phí vector gán cho mỗi cạnh.
+\end{itemize}
+
+Một đường đi hợp lệ trên mạng MRT được ký hiệu:
+\[
+P_{\text{mrt}} = (v'_1, v'_2, \dots, v'_k), \qquad (v'_i, v'_{i+1}) \in E'
+\]
+trong đó mỗi thành phần của $c(e)$ lần lượt phản ánh thời gian tăng thêm, thời gian đi bộ tăng thêm, số lần chuyển tuyến tăng thêm và số chặng đi tàu tăng thêm trên cạnh $e$.
+
+\subsubsection{Hàm mục tiêu tối ưu}
+Trong cài đặt hiện tại, hệ thống không tối ưu một chi phí vô hướng duy nhất mà tối ưu một bộ chi phí theo thứ tự từ điển. Với một hành trình $P$, ta định nghĩa:
+\[
+\mathbf{C}(P) = \bigl(T(P), W(P), N_{tr}(P), N_{stop}(P)\bigr)
+\]
+trong đó:
+\begin{itemize}
+    \item $T(P)$ là tổng thời gian hành trình trên toàn tuyến định tuyến;
+    \item $W(P)$ là tổng thời gian đi bộ phát sinh;
+    \item $N_{tr}(P)$ là số lần chuyển tuyến;
+    \item $N_{stop}(P)$ là số chặng đi tàu.
+\end{itemize}
+
+Nếu đường đi chính trên mạng MRT gồm các cạnh $e_1, e_2, \dots, e_r$ thì:
+\[
+\mathbf{C}_{\text{route}}(P) = \sum_{i=1}^{r} c(e_i)
+\]
+trong đó phép cộng được hiểu theo từng thành phần của vector chi phí. Khi đó, bài toán tối ưu của hệ thống được viết dưới dạng:
+\[
+P^{*} = \arg\min_{P \in \mathcal{P}(s_{\text{start}}, s_{\text{end}})}^{\text{lex}} \mathbf{C}(P)
+\]
+trong đó $\mathcal{P}(s_{\text{start}}, s_{\text{end}})$ là tập tất cả các hành trình hợp lệ nối giữa hai ga đã chọn và ký hiệu $\min^{\text{lex}}$ chỉ phép so sánh theo thứ tự ưu tiên từ điển. Cụ thể, hệ thống ưu tiên tổng thời gian nhỏ nhất; nếu nhiều phương án có cùng tổng thời gian thì ưu tiên phương án có ít thời gian đi bộ hơn; sau đó mới xét đến số lần chuyển tuyến và số chặng đi tàu.
+
+Để phục vụ phần tóm tắt hành trình trên giao diện, hệ thống còn tính riêng một đại lượng vô hướng:
+\[
+T_{\text{total}} = T_{\text{access}} + T_{\text{route}} + T_{\text{transfer}} + T_{\text{egress}}
+\]
+Đại lượng này được dùng cho hiển thị và giải thích kết quả tới người dùng, còn tiêu chí lựa chọn đường đi vẫn là tối ưu từ điển trên $\mathbf{C}(P)$.
+
+\subsection{Cài đặt thuật toán định tuyến}
+
+Trong triển khai thực tế, bài toán không được giải trực tiếp trên đồ thị ga đơn giản mà trên một đồ thị trạng thái mở rộng
+\[
+G' = (V', E')
+\]
+trong đó mỗi đỉnh có dạng
+\[
+v' = (s, l)
+\]
+biểu diễn trạng thái đang ở ga \(s\) trên tuyến \(l\). Cách mô hình này cho phép hệ thống phân biệt rõ ba loại chuyển động khác nhau: đi tàu trên cùng một tuyến, chuyển tuyến tại cùng một ga, và walk-transfer giữa hai ga gần nhau.
+
+Mỗi cạnh \(e \in E'\) được gán một vector chi phí bốn thành phần:
+\[
+c(e) = (T, W, N_{tr}, N_{stop})
+\]
+với:
+\begin{itemize}
+    \item \(T\): tổng thời gian tăng thêm,
+    \item \(W\): thời gian đi bộ tăng thêm,
+    \item \(N_{tr}\): số lần chuyển tuyến tăng thêm,
+    \item \(N_{stop}\): số chặng đi tàu tăng thêm.
+\end{itemize}
+
+Trong cài đặt hiện tại, ba loại cạnh chính được gán vector chi phí như sau:
+\begin{itemize}
+    \item \textbf{ride edge}: $(\texttt{travel\_sec},\; 0,\; 0,\; 1)$,
+    \item \textbf{transfer edge}: $(\texttt{transfer\_sec},\; 0,\; 1,\; 0)$,
+    \item \textbf{walk-transfer edge}: $(\lambda_{walk}\texttt{duration\_sec},\; \texttt{duration\_sec},\; 0,\; 0)$.
+\end{itemize}
+
+Như vậy, thuật toán không tối ưu một scalar cost duy nhất, mà tối ưu theo thứ tự ưu tiên từ điển trên bộ chi phí
+\[
+(T, W, N_{tr}, N_{stop}).
+\]
+Nói cách khác, hệ thống ưu tiên hành trình có tổng thời gian nhỏ nhất; nếu nhiều phương án có cùng tổng thời gian thì ưu tiên phương án có ít thời gian đi bộ hơn; nếu vẫn bằng nhau thì ưu tiên ít chuyển tuyến hơn; cuối cùng mới xét đến số chặng đi tàu.
+
+Thuật toán nền được sử dụng là A* Search với hàng đợi ưu tiên. Dijkstra được xem là baseline lý thuyết vì A* sẽ trở thành Dijkstra nếu heuristic bằng 0. Trong dự án này, mỗi ga có toạ độ địa lý nên hệ thống dùng khoảng cách Haversine tới ga đích chia cho tốc độ tàu tối đa làm heuristic. Trên bản dữ liệu demo hiện hành, sau khi đồng bộ topology với lớp GIS và áp dụng scenario runtime, mạng định tuyến có khoảng 124 ga, 146 trạng thái station-line, 131 segment, 44 transfer và một số walk-transfer. Với quy mô này, độ phức tạp xấp xỉ
+\[
+O((|V'| + |E'|)\log |V'|)
+\]
+vẫn đủ nhẹ để đáp ứng tương tác gần thời gian thực trong môi trường demo cục bộ.
+
+Hệ thống mô hình hóa mạng lưới MRT dưới dạng một đồ thị có hướng trọng số \(G = (V, E, \mathbf{w})\), trong đó tập cạnh \(E\) được phân tách thành ba thành phần chính tương ứng với các loại hình di chuyển thực tế:
+\begin{itemize}
+    \item \textbf{Cạnh di chuyển (Ride Edges - \(E_{ride}\)):} Kết nối giữa hai ga kế tiếp trên cùng một tuyến. Trọng số \(w \in E_{ride}\) bao gồm thời gian di chuyển trung bình và số lượng ga đi qua.
+    \item \textbf{Cạnh chuyển tuyến (Transfer Edges - \(E_{transfer}\)):} Kết nối giữa các thực thể ga thuộc các tuyến khác nhau tại cùng một trạm trung chuyển. Trọng số \(w \in E_{transfer}\) phản ánh thời gian đi bộ nội khu để thay đổi platform.
+    \item \textbf{Cạnh đi bộ liên trạm (Walk-transfer Edges - \(E_{walk\_transfer}\)):} Kết nối các ga lân cận thông qua mạng lưới đường bộ (walking network). Đây là các cạnh được sinh ra dựa trên dữ liệu không gian OSM để hỗ trợ các hành trình kết nối linh hoạt giữa các tuyến không có trạm trung chuyển trực tiếp.
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Đặc tả chi tiết các loại cạnh và cơ chế tính trọng số}
+\label{tab:edge_types}
+\begin{tabular}{|l|l|>{\raggedright\arraybackslash}p{5cm}|l|}
+\hline
+\textbf{Loại cạnh} & \textbf{Ký hiệu} & \textbf{Cơ chế tính trọng số (\(w\))} & \textbf{Dữ liệu nguồn} \\ \hline
+Ride & \(E_{ride}\) & Thời gian chạy tàu giữa hai node ga kế tiếp & \texttt{lines.geojson} \\ \hline
+Transfer & \(E_{transfer}\) & Thời gian đi bộ trung bình giữa các platform nội trạm & \texttt{transfer\_catalog.json} \\ \hline
+Walk-transfer & \(E_{walk\_trans}\) & Khoảng cách đi bộ trên đồ thị OSM (\(d/v_{walk}\)) & \texttt{walk\_network.geojson} \\ \hline
+\end{tabular}
+\end{table}
+
+Việc ánh xạ điểm người dùng chọn trên bản đồ (\(p\)) vào mạng MRT được thực hiện thông qua quy trình \textbf{Spatial Snapping} hai giai đoạn để đảm bảo tính thực tế của hành trình:
+\begin{enumerate}
+    \item \textbf{Giai đoạn 1 (Point-to-Topology):} Tìm nút gần nhất (\(v_{walk}\)) trên đồ thị đi bộ từ tọa độ \(p\). Sử dụng chỉ mục không gian (Spatial Indexing) để tối ưu hóa việc tìm kiếm trong tập hợp hàng chục nghìn nút của toàn bộ mạng lưới Đài Bắc.
+    \item \textbf{Giai đoạn 2 (Topology-to-Station):} Từ \(v_{walk}\), hệ thống tính toán đường đi ngắn nhất tới các điểm tiếp cận (\(A_s\)) của nhà ga \(s\). Ga được chọn là ga tối ưu hóa hàm chi phí:
+    \[
+    \phi(p) = \arg\min_{s \in S} \left( D_{walk}(p, v_{walk}) + D_{graph}(v_{walk}, A_s) \right)
+    \]
+\end{enumerate}
+
+Sau khi xác định được ga đầu và ga cuối, hành trình được giải quyết bằng thuật toán A* trên đồ thị MRT mở rộng.
+
+
+\subsubsection{Mã minh hoạ logic lõi}
+Phần triển khai thực tế tuân theo đúng hai bước cốt lõi đã mô tả ở trên: (1) cập nhật trạng thái trong A* theo chi phí tổng quát có xét heuristic và (2) ánh xạ điểm người dùng vào ga dựa trên chi phí đi bộ khả thi trên walk network thay vì chỉ dùng khoảng cách Euclid.
+
+\subsection{Biểu diễn trực quan của bài toán}
+
+\subsubsection{Luồng xử lý tổng quát}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=1.65cm, scale=0.9, transform shape]
+    \node (input) [io] {Hai điểm người dùng chọn trên bản đồ};
+    \node (map) [process, below of=input] {Ánh xạ điểm đầu và điểm cuối tới ga phù hợp};
+    \node (access) [process, below of=map] {Xác định chặng tiếp cận và chặng rời ga};
+    \node (route) [process, below of=access] {Tìm đường tối ưu trên đồ thị MRT};
+    \node (geo) [process, below of=route] {Ghép dữ liệu hình học để hiển thị};
+    \node (output) [startstop, below of=geo] {Trả kết quả cho giao diện người dùng};
+
+    \draw [arrow] (input) -- (map);
+    \draw [arrow] (map) -- (access);
+    \draw [arrow] (access) -- (route);
+    \draw [arrow] (route) -- (geo);
+    \draw [arrow] (geo) -- (output);
+\end{tikzpicture}
+\caption{Quy trình tổng quát của bài toán định tuyến trong hệ thống}
+\label{fig:problem_pipeline}
+\end{figure}
+
+\subsubsection{Biểu diễn ánh xạ từ không gian bản đồ sang mạng MRT}
+\begin{figure}[H]
+\centering
+    \begin{tikzpicture}[scale=0.95, transform shape, every node/.style={font=\small}]
+        % Left side: user space (Map Space)
+        \draw[rounded corners=8pt, fill=blue!5, draw=blue!40, thick, drop shadow] (-0.3,-0.4) rectangle (5.2,4.2);
+        \node[font=\bfseries, color=blue!60!black] at (2.45,3.8) {KHÔNG GIAN BẢN ĐỒ};
+
+        \node[route_point] (ps) at (0.7,2.8) {};
+        \node[left=10pt, font=\footnotesize] at (ps) {Bắt đầu ($p_s$)};
+
+        \node[route_point] (pt) at (1.4,0.9) {};
+        \node[left=10pt, font=\footnotesize] at (pt) {Kết thúc ($p_t$)};
+
+        \node[station] (sa) at (3.4,2.4) {$s_a$};
+        \node[station] (sb) at (3.9,1.1) {$s_b$};
+
+        \draw[dashed, thick, black!60] (0.7,2.8) -- node[above, font=\tiny, sloped] {Walk Snap} (3.4,2.4);
+        \draw[dashed, thick, black!60] (1.4,0.9) -- node[below, font=\tiny, sloped] {Walk Snap} (3.9,1.1);
+
+        % Right side: graph space (Routing Space)
+        \draw[rounded corners=8pt, fill=green!5, draw=green!40, thick, drop shadow] (7.0,-0.4) rectangle (13.5,4.2);
+        \node[font=\bfseries, color=green!40!black] at (10.25,3.8) {MẠNG ĐỊNH TUYẾN (MRT GRAPH)};
+
+        \node[draw, circle, fill=blue!15, minimum size=0.8cm, thick] (v1) at (7.9,2.7) {$v_1$};
+        \node[draw, circle, fill=blue!15, minimum size=0.8cm, thick] (v2) at (11.7,2.7) {$v_2$};
+        \node[draw, circle, fill=green!15, minimum size=0.8cm, thick] (v3) at (9.8,1.2) {$v_3$};
+
+        \draw[line width=1.2pt, blue!70] (v1) -- node[above, font=\tiny] {Segment} (v2);
+        \draw[line width=1.2pt, green!60!black] (v2) -- node[right, font=\tiny] {Transfer} (v3);
+
+        % Mapping arrows
+        \draw[->, line width=1.5pt, red!60, -{Stealth[length=3mm]}] (4.8,2.45) .. controls (5.8,2.8) and (6.2,2.8) .. (7.45,2.7);
+        \draw[->, line width=1.5pt, red!60, -{Stealth[length=3mm]}] (5.0,1.1) .. controls (6.0,0.6) and (6.3,0.8) .. (9.35,1.2);
+
+        \node[font=\bfseries\color{red!80}] at (6.15,3.2) {$\phi(p_s)$};
+        \node[font=\bfseries\color{red!80}] at (6.2,0.8) {$\phi(p_t)$};
+    \end{tikzpicture}
+\caption{Ánh xạ từ điểm người dùng trên bản đồ sang các đỉnh trong mạng định tuyến MRT}
+\label{fig:map_to_graph}
+\end{figure}
+
+\subsubsection{Biểu diễn mạng MRT dưới dạng đồ thị có trọng số}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.95, transform shape, every node/.style={font=\small, align=center}]
+    % Tuyến 1
+    \node[station, draw=blue!70] (a1) at (0,0) {$v_1$};
+    \node[station, draw=blue!70] (a2) at (2.2,0) {$v_2$};
+    \node[station, draw=blue!70] (a3) at (4.4,0) {$v_3$};
+
+    % Tuyến 2
+    \node[station, draw=green!60!black] (b1) at (4.4,-2.8) {$v_4$};
+    \node[station, draw=green!60!black] (b2) at (6.6,-2.8) {$v_5$};
+    \node[station, draw=green!60!black] (b3) at (8.8,-2.8) {$v_6$};
+
+    % Cạnh
+    \draw[thick, blue!70] (a1) -- node[above, font=\tiny] {$E_{ride}$} (a2);
+    \draw[thick, blue!70] (a2) -- node[above, font=\tiny] {$E_{ride}$} (a3);
+    \draw[thick, purple!70] (a3) -- node[right=5pt, font=\tiny] {$E_{transfer}$} (b1);
+    \draw[thick, green!60!black] (b1) -- node[below, font=\tiny] {$E_{ride}$} (b2);
+    \draw[thick, green!60!black] (b2) -- node[below, font=\tiny] {$E_{ride}$} (b3);
+
+    % Nhãn
+    \node[above=0.8cm of a2] {\textbf{Tuyến $\ell_1$}};
+    \node[below=0.8cm of b2] {\textbf{Tuyến $\ell_2$}};
+    \node[right=0.45cm of a3] {\footnotesize Chuyển tuyến};
+    \node at (4.4,2.0) {Cấu trúc tập cạnh $E = E_{ride} \cup E_{transfer} \cup E_{walk\_trans}$};
+\end{tikzpicture}
+\caption{Mô hình đồ thị có trọng số của mạng MRT}
+\label{fig:weighted_mrt_graph}
+\end{figure}
+
+Trong Hình~\ref{fig:weighted_mrt_graph}, các đỉnh biểu diễn ga hoặc trạng thái ga--tuyến, còn các cạnh biểu diễn khả năng di chuyển giữa các trạng thái đó. Trọng số trên mỗi cạnh phản ánh chi phí tương ứng của từng chặng đi hoặc chặng chuyển tuyến.
+
+\subsubsection{Biểu diễn hàm chi phí hành trình}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    >=stealth,
+    box/.style={
+        rectangle,
+        rounded corners=4pt,
+        draw=black!40,
+        thick,
+        minimum width=3.2cm,
+        minimum height=1.1cm,
+        align=center,
+        font=\small
+    },
+    mainbox/.style={
+        box,
+        minimum width=6cm,
+        minimum height=1.15cm,
+        font=\normalsize\bfseries,
+        fill=red!12
+    },
+    line/.style={thick, draw=black!70}
+]
+
+    % Khối tổng chi phí
+    \node (top) [mainbox] {Tổng chi phí hành trình $C$};
+
+    % Trục ngang trung gian
+    \coordinate (bus) at ($(top.south)+(0,-1.2cm)$);
+
+    % Bốn khối thành phần
+    \node (access)   [process] at ($(bus)+(-5.4cm,-1.3cm)$) {$C_{\text{access}}$\\Chi phí tiếp cận ga};
+    \node (route)    [process] at ($(bus)+(-1.8cm,-1.3cm)$) {$C_{\text{route}}$\\Chi phí di chuyển MRT};
+    \node (transfer) [process] at ($(bus)+( 1.8cm,-1.3cm)$) {$C_{\text{transfer}}$\\Chi phí chuyển tuyến};
+    \node (egress)   [process] at ($(bus)+( 5.4cm,-1.3cm)$) {$C_{\text{egress}}$\\Chi phí rời ga};
+
+    % Các nhánh đi lên trục ngang
+    \draw[line] (access.north)   -- ($(access.north |- bus)$);
+    \draw[line] (route.north)    -- ($(route.north  |- bus)$);
+    \draw[line] (transfer.north) -- ($(transfer.north |- bus)$);
+    \draw[line] (egress.north)   -- ($(egress.north |- bus)$);
+
+    % Trục ngang
+    \draw[line] ($(access.north |- bus)$) -- ($(egress.north |- bus)$);
+
+    % Mũi tên lên khối tổng
+    \draw[->, line] (bus) -- (top.south);
+
+    % Công thức
+    \node[below=1.4cm of route, font=\normalsize, xshift=1.8cm] {$C = C_{\text{access}} + C_{\text{route}} + C_{\text{transfer}} + C_{\text{egress}}$};
+
+\end{tikzpicture}
+\caption{Phân rã tổng chi phí của một hành trình}
+\label{fig:cost_decomposition}
+\end{figure}
+
+\subsection{Nhận xét}
+Từ các biểu diễn trên có thể thấy bài toán của hệ thống là bài toán tích hợp nhiều lớp. Ở lớp không gian, hệ thống phải xử lý dữ liệu bản đồ và xác định ga phù hợp từ các điểm người dùng chọn. Ở lớp mô hình, hệ thống cần biểu diễn mạng MRT dưới dạng đồ thị có trọng số. Ở lớp tối ưu, hệ thống phải tìm hành trình có tổng chi phí nhỏ nhất. Cuối cùng, ở lớp hiển thị, kết quả tính toán cần được chuyển ngược thành dữ liệu hình học để biểu diễn trực quan trên giao diện web. Chính sự kết hợp đồng thời giữa các lớp này tạo nên giá trị kỹ thuật và tính thực tiễn của bài toán.
+
+Về mặt học thuật, bài toán của hệ thống nằm ở giao điểm giữa shortest path trên mạng giao thông công cộng \cite{bast2016route}, multimodal routing và GIS-based route planning \cite{geospatial}. Trong phạm vi bài tập lớn, nhóm lựa chọn cách tiếp cận thiên về xây dựng hệ thống chạy được end-to-end trên dữ liệu thực tế, đồng thời giữ mô hình thuật toán đủ rõ để có thể phân tích và mở rộng trong các giai đoạn tiếp theo.
+% ========================================================================
+% CHƯƠNG 2
+% ========================================================================
+
+\end{document}
+

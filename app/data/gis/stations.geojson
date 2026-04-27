@@ -1,0 +1,2296 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5172057,
+          24.9651484
+        ]
+      },
+      "properties": {
+        "id": "ankang",
+        "name": "Ankang",
+        "line_ids": [
+          "c10"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4631004,
+          25.014505
+        ]
+      },
+      "properties": {
+        "id": "banqiao",
+        "name": "Banqiao",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4724291,
+          25.0145373
+        ]
+      },
+      "properties": {
+        "id": "banxin",
+        "name": "Banxin",
+        "line_ids": [
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5102658,
+          25.0491554
+        ]
+      },
+      "properties": {
+        "id": "beimen",
+        "name": "Beimen",
+        "line_ids": [
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4986182,
+          25.131947
+        ]
+      },
+      "properties": {
+        "id": "beitou",
+        "name": "Beitou",
+        "line_ids": [
+          "c2",
+          "c6"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4920672,
+          25.0603194
+        ]
+      },
+      "properties": {
+        "id": "cailiao",
+        "name": "Cailiao",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.504687,
+          24.9544328
+        ]
+      },
+      "properties": {
+        "id": "cardinal-tien-hospital-an-kang-branch",
+        "name": "Cardinal Tien Hospital An Kang Branch",
+        "line_ids": [
+          "c10"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5176803,
+          25.0333612
+        ]
+      },
+      "properties": {
+        "id": "chiang-kai-shek-memorial-hall",
+        "name": "Chiang Kai-shek Memorial Hall",
+        "line_ids": [
+          "c2",
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5435877,
+          25.0333288
+        ]
+      },
+      "properties": {
+        "id": "daan",
+        "name": "Daan",
+        "line_ids": [
+          "c1",
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5357751,
+          25.0334458
+        ]
+      },
+      "properties": {
+        "id": "daan-park",
+        "name": "Daan Park",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6024382,
+          25.0837207
+        ]
+      },
+      "properties": {
+        "id": "dahu-park",
+        "name": "Dahu Park",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4522704,
+          25.1811562
+        ]
+      },
+      "properties": {
+        "id": "danjin-beixin",
+        "name": "Danjin Beixin",
+        "line_ids": [
+          "c7"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4608001,
+          25.1693253
+        ]
+      },
+      "properties": {
+        "id": "danjin-denggong",
+        "name": "Danjin Denggong",
+        "line_ids": [
+          "c7"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5413951,
+          24.9828752
+        ]
+      },
+      "properties": {
+        "id": "dapinglin",
+        "name": "Dapinglin",
+        "line_ids": [
+          "c4",
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5128414,
+          25.063171
+        ]
+      },
+      "properties": {
+        "id": "daqiaotou",
+        "name": "Daqiaotou",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5474484,
+          25.0798542
+        ]
+      },
+      "properties": {
+        "id": "dazhi",
+        "name": "Dazhi",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5155254,
+          25.0135895
+        ]
+      },
+      "properties": {
+        "id": "dingxi",
+        "name": "DIngxi",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6116029,
+          25.0674424
+        ]
+      },
+      "properties": {
+        "id": "donghu",
+        "name": "Donghu",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5279547,
+          25.0340831
+        ]
+      },
+      "properties": {
+        "id": "dongmen",
+        "name": "Dongmen",
+        "line_ids": [
+          "c2",
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4525465,
+          24.9981001
+        ]
+      },
+      "properties": {
+        "id": "far-eastern-hospital",
+        "name": "Far Eastern Hospital",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4594038,
+          25.0088957
+        ]
+      },
+      "properties": {
+        "id": "fuzhong",
+        "name": "Fuzhong",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5751265,
+          25.0801199
+        ]
+      },
+      "properties": {
+        "id": "gangqian",
+        "name": "Gangqian",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4562585,
+          25.162184
+        ]
+      },
+      "properties": {
+        "id": "ganzhenlin",
+        "name": "Ganzhenlin",
+        "line_ids": [
+          "c7"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5354443,
+          25.0137687
+        ]
+      },
+      "properties": {
+        "id": "gongguan",
+        "name": "Gongguan",
+        "line_ids": [
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4671251,
+          25.1257078
+        ]
+      },
+      "properties": {
+        "id": "guandu",
+        "name": "Guandu",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5230005,
+          25.0264391
+        ]
+      },
+      "properties": {
+        "id": "guting",
+        "name": "Guting",
+        "line_ids": [
+          "c4",
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4488649,
+          24.9855666
+        ]
+      },
+      "properties": {
+        "id": "haishan",
+        "name": "Haishan",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4588172,
+          25.1549232
+        ]
+      },
+      "properties": {
+        "id": "hongshulin",
+        "name": "Hongshulin",
+        "line_ids": [
+          "c2",
+          "c7"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5823728,
+          25.04471
+        ]
+      },
+      "properties": {
+        "id": "houshanpi",
+        "name": "Houshanpi",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6073377,
+          25.0726635
+        ]
+      },
+      "properties": {
+        "id": "huzhou",
+        "name": "Huzhou",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4728773,
+          25.0306492
+        ]
+      },
+      "properties": {
+        "id": "jiangzicui",
+        "name": "Jiangzicui",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.555707,
+          25.0848087
+        ]
+      },
+      "properties": {
+        "id": "jiannan-rd",
+        "name": "Jiannan Rd.",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5248895,
+          25.0843068
+        ]
+      },
+      "properties": {
+        "id": "jiantan",
+        "name": "Jiantan",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5053603,
+          24.993461
+        ]
+      },
+      "properties": {
+        "id": "jingan",
+        "name": "Jingan",
+        "line_ids": [
+          "c5",
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5408668,
+          24.9929615
+        ]
+      },
+      "properties": {
+        "id": "jingmei",
+        "name": "Jingmei",
+        "line_ids": [
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5163887,
+          24.9921309
+        ]
+      },
+      "properties": {
+        "id": "jingping",
+        "name": "Jingping",
+        "line_ids": [
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5104036,
+          24.9555164
+        ]
+      },
+      "properties": {
+        "id": "jinwen-university-of-science-and-technology",
+        "name": "Jinwen University of Science and Technology",
+        "line_ids": [
+          "c10"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5935449,
+          25.0504707
+        ]
+      },
+      "properties": {
+        "id": "kunyang",
+        "name": "Kunyang",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5588603,
+          25.0184365
+        ]
+      },
+      "properties": {
+        "id": "linguang",
+        "name": "Linguang",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.553112,
+          25.0238072
+        ]
+      },
+      "properties": {
+        "id": "liuzhangli",
+        "name": "Liuzhangli",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4996601,
+          25.0352057
+        ]
+      },
+      "properties": {
+        "id": "longshan-temple",
+        "name": "Longshan Temple",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4650926,
+          25.0912593
+        ]
+      },
+      "properties": {
+        "id": "luzhou",
+        "name": "Luzhou",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5188347,
+          25.1098711
+        ]
+      },
+      "properties": {
+        "id": "mingde",
+        "name": "Mingde",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5195685,
+          25.0625576
+        ]
+      },
+      "properties": {
+        "id": "minquan-w-road",
+        "name": "Minquan W. Road",
+        "line_ids": [
+          "c2",
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5731825,
+          24.9982325
+        ]
+      },
+      "properties": {
+        "id": "muzha",
+        "name": "Muzha",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6064294,
+          25.0521252
+        ]
+      },
+      "properties": {
+        "id": "nangang",
+        "name": "Nangang",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6159112,
+          25.0599577
+        ]
+      },
+      "properties": {
+        "id": "nangang-software-park",
+        "name": "Nangang Software Park",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5437455,
+          25.0518206
+        ]
+      },
+      "properties": {
+        "id": "nanjing-fuxing",
+        "name": "Nanjing Fuxing",
+        "line_ids": [
+          "c1",
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5643051,
+          25.0514601
+        ]
+      },
+      "properties": {
+        "id": "nanjing-sanmin",
+        "name": "Nanjing Sanmin",
+        "line_ids": [
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5094708,
+          24.9897355
+        ]
+      },
+      "properties": {
+        "id": "nanshijiao",
+        "name": "Nanshijiao",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5941756,
+          25.0835124
+        ]
+      },
+      "properties": {
+        "id": "neihu",
+        "name": "Neihu",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4592444,
+          25.0617141
+        ]
+      },
+      "properties": {
+        "id": "new-taipei-industrial-park",
+        "name": "New Taipei Industrial Park",
+        "line_ids": [
+          "c11",
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5162951,
+          25.0419379
+        ]
+      },
+      "properties": {
+        "id": "ntu-hospital",
+        "name": "NTU Hospital",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4902635,
+          25.0045814
+        ]
+      },
+      "properties": {
+        "id": "qiaohe",
+        "name": "Qiaohe",
+        "line_ids": [
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5061379,
+          25.120938
+        ]
+      },
+      "properties": {
+        "id": "qilian",
+        "name": "Qilian",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5011861,
+          25.1256109
+        ]
+      },
+      "properties": {
+        "id": "qiyan",
+        "name": "Qiyan",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5428989,
+          24.9740432
+        ]
+      },
+      "properties": {
+        "id": "qizhang",
+        "name": "Qizhang",
+        "line_ids": [
+          "c4",
+          "c8"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4939241,
+          24.9508466
+        ]
+      },
+      "properties": {
+        "id": "rose-china-town",
+        "name": "Rose China Town",
+        "line_ids": [
+          "c10"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4840269,
+          25.0555843
+        ]
+      },
+      "properties": {
+        "id": "sanchong",
+        "name": "Sanchong",
+        "line_ids": [
+          "c11",
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4972659,
+          25.0699665
+        ]
+      },
+      "properties": {
+        "id": "sanchong-elementary-school",
+        "name": "Sanchong Elementary School",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4864112,
+          25.0768567
+        ]
+      },
+      "properties": {
+        "id": "sanhe-junior-high-school",
+        "name": "Sanhe Junior High School",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4732468,
+          25.0854488
+        ]
+      },
+      "properties": {
+        "id": "sanmin-senior-high-school",
+        "name": "Sanmin Senior High School",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5260058,
+          25.0938313
+        ]
+      },
+      "properties": {
+        "id": "shilin",
+        "name": "Shilin",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5155683,
+          25.1146325
+        ]
+      },
+      "properties": {
+        "id": "shipai",
+        "name": "Shipai",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5273859,
+          24.9843559
+        ]
+      },
+      "properties": {
+        "id": "shisizhang",
+        "name": "Shisizhang",
+        "line_ids": [
+          "c10",
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4898214,
+          24.9465207
+        ]
+      },
+      "properties": {
+        "id": "shuangcheng",
+        "name": "Shuangcheng",
+        "line_ids": [
+          "c10"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5207181,
+          25.0576281
+        ]
+      },
+      "properties": {
+        "id": "shuanglian",
+        "name": "Shuanglian",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.533036,
+          25.0520356
+        ]
+      },
+      "properties": {
+        "id": "songjiang-nanjing",
+        "name": "Songjiang Nanjing",
+        "line_ids": [
+          "c4",
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5780731,
+          25.0500484
+        ]
+      },
+      "properties": {
+        "id": "songshan",
+        "name": "Songshan",
+        "line_ids": [
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.551643,
+          25.0631466
+        ]
+      },
+      "properties": {
+        "id": "songshan-airport",
+        "name": "Songshan Airport",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4802085,
+          25.0802913
+        ]
+      },
+      "properties": {
+        "id": "st-ignatius-high-school",
+        "name": "St. Ignatius High School",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5573904,
+          25.04129
+        ]
+      },
+      "properties": {
+        "id": "sun-yat-sen-memorial-hall",
+        "name": "Sun Yat-Sen Memorial Hall",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5195205,
+          24.9722982
+        ]
+      },
+      "properties": {
+        "id": "sunshine-sports-park",
+        "name": "Sunshine Sports Park",
+        "line_ids": [
+          "c10"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5624468,
+          25.0330359
+        ]
+      },
+      "properties": {
+        "id": "taipei-101-world-trade-center",
+        "name": "Taipei 101 World Trade Center",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.551507,
+          25.0516334
+        ]
+      },
+      "properties": {
+        "id": "taipei-arena",
+        "name": "Taipei Arena",
+        "line_ids": [
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5005572,
+          25.0631658
+        ]
+      },
+      "properties": {
+        "id": "taipei-bridge",
+        "name": "Taipei Bridge",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5660991,
+          25.0410441
+        ]
+      },
+      "properties": {
+        "id": "taipei-city-hall",
+        "name": "Taipei City Hall",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5174478,
+          25.0463004
+        ]
+      },
+      "properties": {
+        "id": "taipei-main-station",
+        "name": "Taipei Main Station",
+        "line_ids": [
+          "c2",
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6175982,
+          25.0546597
+        ]
+      },
+      "properties": {
+        "id": "taipei-nangang-exhibition-center",
+        "name": "Taipei Nangang Exhibition Center",
+        "line_ids": [
+          "c1",
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4994182,
+          24.9537269
+        ]
+      },
+      "properties": {
+        "id": "taipei-xiaocheng",
+        "name": "Taipei Xiaocheng",
+        "line_ids": [
+          "c10"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5874945,
+          24.9901573
+        ]
+      },
+      "properties": {
+        "id": "taipei-zoo-south-station",
+        "name": "Taipei Zoo South Station",
+        "line_ids": [
+          "c0"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5770437,
+          24.9955048
+        ]
+      },
+      "properties": {
+        "id": "taipei-zoo-station",
+        "name": "Taipei Zoo Station",
+        "line_ids": [
+          "c0"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5294561,
+          25.0194376
+        ]
+      },
+      "properties": {
+        "id": "taipower-building",
+        "name": "Taipower Building",
+        "line_ids": [
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4559435,
+          25.177078
+        ]
+      },
+      "properties": {
+        "id": "tamkang-university",
+        "name": "Tamkang University",
+        "line_ids": [
+          "c7"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4456139,
+          25.1678264
+        ]
+      },
+      "properties": {
+        "id": "tamsui",
+        "name": "Tamsui",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5434488,
+          25.0262988
+        ]
+      },
+      "properties": {
+        "id": "technology-building",
+        "name": "Technology Building",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4610956,
+          25.0393601
+        ]
+      },
+      "properties": {
+        "id": "touqianzhuang",
+        "name": "Touqianzhuang",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5681245,
+          24.9986181
+        ]
+      },
+      "properties": {
+        "id": "wanfang-community",
+        "name": "Wanfang Community",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5578461,
+          24.9996106
+        ]
+      },
+      "properties": {
+        "id": "wanfang-hospital",
+        "name": "Wanfang Hospital",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5393318,
+          25.0011619
+        ]
+      },
+      "properties": {
+        "id": "wanlong",
+        "name": "Wanlong",
+        "line_ids": [
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5849142,
+          25.0785641
+        ]
+      },
+      "properties": {
+        "id": "wende",
+        "name": "Wende",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5696327,
+          25.0327613
+        ]
+      },
+      "properties": {
+        "id": "xiangshan",
+        "name": "Xiangshan",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4717657,
+          25.0464736
+        ]
+      },
+      "properties": {
+        "id": "xianse-temple",
+        "name": "Xianse Temple",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5305976,
+          24.9717591
+        ]
+      },
+      "properties": {
+        "id": "xiaobitan",
+        "name": "Xiaobitan",
+        "line_ids": [
+          "c8"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5088918,
+          25.0369279
+        ]
+      },
+      "properties": {
+        "id": "xiaonanmen",
+        "name": "Xiaonanmen",
+        "line_ids": [
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5673348,
+          25.0822108
+        ]
+      },
+      "properties": {
+        "id": "xihu",
+        "name": "Xihu",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5085809,
+          25.0426979
+        ]
+      },
+      "properties": {
+        "id": "ximen",
+        "name": "Ximen",
+        "line_ids": [
+          "c3",
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5031683,
+          25.1370241
+        ]
+      },
+      "properties": {
+        "id": "xinbeitou",
+        "name": "Xinbeitou",
+        "line_ids": [
+          "c6"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.537837,
+          24.9584762
+        ]
+      },
+      "properties": {
+        "id": "xindian",
+        "name": "Xindian",
+        "line_ids": [
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5413979,
+          24.9673829
+        ]
+      },
+      "properties": {
+        "id": "xindian-district-office",
+        "name": "Xindian District Office",
+        "line_ids": [
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4599582,
+          25.0500095
+        ]
+      },
+      "properties": {
+        "id": "xingfu",
+        "name": "Xingfu",
+        "line_ids": [
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.533273,
+          25.0604494
+        ]
+      },
+      "properties": {
+        "id": "xingtian-temple",
+        "name": "Xingtian Temple",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5568825,
+          25.0050875
+        ]
+      },
+      "properties": {
+        "id": "xinhai",
+        "name": "Xinhai",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.518677,
+          24.9835047
+        ]
+      },
+      "properties": {
+        "id": "xinhe-elementary-school",
+        "name": "Xinhe Elementary School",
+        "line_ids": [
+          "c10"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4675167,
+          25.0241495
+        ]
+      },
+      "properties": {
+        "id": "xinpu",
+        "name": "Xinpu",
+        "line_ids": [
+          "c3",
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4666349,
+          25.0261465
+        ]
+      },
+      "properties": {
+        "id": "xinpu-minsheng",
+        "name": "Xinpu Minsheng",
+        "line_ids": [
+          "c3",
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4481976,
+          25.1838753
+        ]
+      },
+      "properties": {
+        "id": "xinshi-1st-rd",
+        "name": "Xinshi 1st Rd.",
+        "line_ids": [
+          "c7"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5526884,
+          25.0330734
+        ]
+      },
+      "properties": {
+        "id": "xinyi-anhe",
+        "name": "Xinyi Anhe",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4524518,
+          25.0360851
+        ]
+      },
+      "properties": {
+        "id": "xinzhuang",
+        "name": "Xinzhuang",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4457935,
+          25.0591996
+        ]
+      },
+      "properties": {
+        "id": "xinzhuang-fuduxin",
+        "name": "Xinzhuang Fuduxin",
+        "line_ids": [
+          "c11"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5248782,
+          24.9903162
+        ]
+      },
+      "properties": {
+        "id": "xiulang-bridge",
+        "name": "Xiulang Bridge",
+        "line_ids": [
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5108657,
+          25.0024441
+        ]
+      },
+      "properties": {
+        "id": "yongan-market",
+        "name": "Yongan Market",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5757224,
+          25.0409183
+        ]
+      },
+      "properties": {
+        "id": "yongchun",
+        "name": "Yongchun",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5200694,
+          25.0714273
+        ]
+      },
+      "properties": {
+        "id": "yuanshan",
+        "name": "Yuanshan",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5896828,
+          24.9789312
+        ]
+      },
+      "properties": {
+        "id": "zhinan-temple-station",
+        "name": "Zhinan Temple Station",
+        "line_ids": [
+          "c0"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5225847,
+          25.103022
+        ]
+      },
+      "properties": {
+        "id": "zhishan",
+        "name": "Zhishan",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4967479,
+          25.0020197
+        ]
+      },
+      "properties": {
+        "id": "zhonghe",
+        "name": "Zhonghe",
+        "line_ids": [
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5203808,
+          25.0525886
+        ]
+      },
+      "properties": {
+        "id": "zhongshan",
+        "name": "Zhongshan",
+        "line_ids": [
+          "c2",
+          "c4"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5266023,
+          25.0627256
+        ]
+      },
+      "properties": {
+        "id": "zhongshan-elementary-school",
+        "name": "Zhongshan Elementary School",
+        "line_ids": [
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5441859,
+          25.0606876
+        ]
+      },
+      "properties": {
+        "id": "zhongshan-junior-high-school",
+        "name": "Zhongshan Junior High School",
+        "line_ids": [
+          "c1"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5495019,
+          25.041449
+        ]
+      },
+      "properties": {
+        "id": "zhongxiao-dunhua",
+        "name": "Zhongxiao Dunhua",
+        "line_ids": [
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.543636,
+          25.0415728
+        ]
+      },
+      "properties": {
+        "id": "zhongxiao-fuxing",
+        "name": "Zhongxiao Fuxing",
+        "line_ids": [
+          "c1",
+          "c3"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5327345,
+          25.0413414
+        ]
+      },
+      "properties": {
+        "id": "zhongxiao-xinsheng",
+        "name": "Zhongxiao Xinsheng",
+        "line_ids": [
+          "c3",
+          "c5"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4733645,
+          25.1309602
+        ]
+      },
+      "properties": {
+        "id": "zhongyi",
+        "name": "Zhongyi",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4842759,
+          25.0081752
+        ]
+      },
+      "properties": {
+        "id": "zhongyuan",
+        "name": "Zhongyuan",
+        "line_ids": [
+          "c9"
+        ],
+        "source": "taipei_geojson"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4594952,
+          25.1369726
+        ]
+      },
+      "properties": {
+        "id": "zhuwei",
+        "name": "Zhuwei",
+        "line_ids": [
+          "c2"
+        ],
+        "source": "taipei_geojson"
+      }
+    }
+  ]
+}

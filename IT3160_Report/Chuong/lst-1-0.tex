@@ -1,0 +1,12 @@
+def relax_node(u, v, weight_vector, dist, prev):
+    """
+    Cập nhật đường đi ngắn nhất theo thứ tự ưu tiên từ điển:
+    (Total_Time, Walk_Time, Transfers, Stoptop_Count)
+    """
+    new_cost = tuple(a + b for a, b in zip(dist[u], weight_vector))
+
+    if v not in dist or new_cost < dist[v]:
+        dist[v] = new_cost
+        prev[v] = u
+        return True
+    return False

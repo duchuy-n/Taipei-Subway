@@ -1,0 +1,12 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+
+\chapter*{TÓM TẮT BÁO CÁO}
+\addcontentsline{toc}{chapter}{TÓM TẮT BÁO CÁO}
+Trong xu thế phát triển của giao thông công cộng đô thị, nhu cầu tra cứu và tìm đường trên hệ thống tàu điện ngầm (Subway/MRT) ngày càng trở nên thiết yếu. Bài báo cáo này trình bày quá trình nghiên cứu, thiết kế và phát triển dự án IT3160 Subway Web -- một ứng dụng web chuyên biệt hỗ trợ tìm đường tàu điện ngầm tích hợp công nghệ GIS. 
+
+Khác với các ứng dụng truyền thống yêu cầu người dùng phải chọn chính xác tên từng nhà ga, hệ thống cho phép thao tác chọn điểm trực tiếp trên bản đồ số, sau đó tự động ánh xạ vị trí tới nhà ga gần nhất thông qua mạng lưới đi bộ (Walk Network). Về mặt kiến trúc, dự án được phân rã thành ba khối chuyên trách độc lập: Frontend (chịu trách nhiệm về trải nghiệm người dùng và trực quan hoá đường đi bằng MapLibre), Backend (phụ trách API và lõi thuật toán định tuyến bằng FastAPI), và Data/GIS (tập trung chuẩn hoá dữ liệu topology, GeoJSON và các định dạng không gian). 
+
+Các kiểm thử nội bộ cho thấy hệ thống hoạt động ổn định trên phân hệ dữ liệu của mạng lưới MRT Đài Bắc. Điểm nổi bật của hệ thống nằm ở khả năng tích hợp các kịch bản vận hành do người quản trị cấu hình (như thiết lập vùng thời tiết xấu hoặc đóng chặn đoạn tuyến), cho phép route engine cập nhật lại lộ trình trong runtime và trực quan hoá kết quả ngay trên bản đồ.
+
+\end{document}

@@ -1,0 +1,47 @@
+﻿\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+
+\chapter{KẾT LUẬN}
+\label{chapter:conclusion}
+
+\section{Tổng kết đóng góp kỹ thuật}
+Dự án IT3160 Subway Web đã triển khai thành công một hệ thống định tuyến tàu điện ngầm đa lớp tích hợp GIS, với bộ đóng góp kỹ thuật cốt lõi gồm ba phần chính:
+
+\begin{enumerate}
+    \item \textbf{Mô hình đồ thị trạng thái mở rộng $G' = (V', E')$:} Mỗi đỉnh $v' = (s, l)$ biểu diễn trạng thái ga $s$ trên tuyến $l$, cho phép phân biệt rõ ba loại chuyển động (on-line, transfer, walk-transfer) và tránh được vòng lặp chuyển tuyến không cần thiết.
+    \item \textbf{A* Search trên mạng MRT mở rộng:} Thuật toán tận dụng toạ độ địa lý của ga làm heuristic, trong khi Dijkstra vẫn được dùng như baseline lý thuyết khi heuristic bằng 0.
+    \item \textbf{Cơ chế ánh xạ điểm -- ga $\phi(p)$ qua walk network:} Thay vì snap điểm đơn giản theo Euclidean, hệ thống định tuyến điểm người dùng qua đồ thị đi bộ thực tế, dùng multi-source Dijkstra dừng sớm để chọn một tập ga ứng viên có thể tiếp cận theo đường thực địa.
+    \item \textbf{Runtime Scenario System:} Admin có thể áp dụng ràng buộc vận hành (rain zone, đóng cửa ga, khoá đoạn segment) trong runtime mà không cần tắt dịch vụ, nhờ cơ chế invalidate cache theo chữ ký dữ liệu.
+\end{enumerate}
+
+Runtime demo hiện hành vận hành trên mạng dữ liệu đã đồng bộ với khoảng \textbf{124 ga khả dụng} của MRT Đài Bắc. Kết quả triển khai cho thấy hướng tiếp cận kết hợp GIS, A* search, walk access/egress, cache walk graph và admin scenario đáp ứng tốt phạm vi bài tập lớn: vừa giữ bài toán lõi là tìm đường metro, vừa tạo được trải nghiệm bản đồ trực quan và có khả năng xử lý tình huống vận hành.
+
+\section{Hướng phát triển}
+Trên nền tảng kỹ thuật đã xây dựng, hệ thống có thể mở rộng theo các hướng:
+\begin{itemize}
+    \item \textbf{Thuật toán:} Chuyển sang RAPTOR \cite{delling2015raptor} hoặc CSA \cite{dibbelt2018connection} để hỗ trợ time-table-based routing với thông tin chuyến thực tế.
+    \item \textbf{Dữ liệu:} Bổ sung GTFS feed thực của MRT Đài Bắc để thay thế topology tĩnh bằng lịch trình động.
+    \item \textbf{Bảo mật:} Tích hợp OAuth2 + JWT cho khu vực admin, thay thế cơ chế kiểm soát truy cập ở mức demo hiện tại.
+    \item \textbf{Quan sát hệ thống:} Bổ sung structured logging (\texttt{structlog}) và metrics endpoint (Prometheus) để theo dõi P95 latency ở môi trường production.
+    \item \textbf{Đa đô thị:} Mở rộng pipeline dữ liệu sang GTFS của Hà Nội Metro hoặc TP.HCM Metro khi có feed công khai.
+\end{itemize}
+
+\newpage
+\renewcommand\bibname{TÀI LIỆU THAM KHẢO}
+\begin{thebibliography}{99}
+    \bibitem{fastapi} T. Ramírez, \textit{FastAPI: Modern, Fast Web Framework for Building APIs with Python}, \url{https://fastapi.tiangolo.com/}, 2019. [Truy cập: 08-04-2026].
+    \bibitem{maplibre} MapLibre Contributors, \textit{MapLibre GL JS -- Open-source map rendering library}, \url{https://maplibre.org/}, 2021. [Truy cập: 08-04-2026].
+    \bibitem{geojson} H. Butler et al., \textit{RFC 7946: The GeoJSON Format}, Internet Engineering Task Force (IETF), 2016.
+    \bibitem{dijkstra} E. W. Dijkstra, \textit{A Note on Two Problems in Connexion with Graphs}, Numerische Mathematik, vol. 1, pp. 269--271, 1959.
+    \bibitem{osm} OpenStreetMap Foundation, \textit{OpenStreetMap: The Free Wiki World Map}, \url{https://www.openstreetmap.org/}. [Truy cập: 08-04-2026].
+    \bibitem{osmnx} G. Boeing, \textit{OSMnx: New Methods for Acquiring, Constructing, Analyzing, and Visualizing Complex Street Networks}, Computers, Environment and Urban Systems, vol. 65, pp. 126--139, 2017.
+    \bibitem{delling2015raptor} D. Delling, T. Pajor, R. Werneck, \textit{Round-Based Public Transit Routing}, Transportation Science, vol. 49, pp. 591--604, 2015.
+    \bibitem{dibbelt2018connection} J. Dibbelt, T. Pajor, B. Strasser, D. Wagner, \textit{Connection Scan Algorithm}, ACM Journal of Experimental Algorithmics, vol. 23, 2018.
+    \bibitem{bast2016route} H. Bast et al., \textit{Route Planning in Transportation Networks}, Algorithm Engineering, LNCS vol. 9220, 2016.
+    \bibitem{geospatial} P. A. Longley et al., \textit{Geographic Information Science and Systems}, 4th ed., Wiley, 2015.
+    \bibitem{bohannon1997walking} R. W. Bohannon, \textit{Comfortable and maximum walking speed of adults aged 20--79 years: reference values and determinants}, Age and Ageing, vol. 26, no. 1, pp. 15--19, 1997.
+    \bibitem{hcm2010pedestrians} Transportation Research Board, \textit{Highway Capacity Manual 2010, Chapter 18: Pedestrians}, Washington, DC, 2010.
+\end{thebibliography}
+
+
+\end{document}

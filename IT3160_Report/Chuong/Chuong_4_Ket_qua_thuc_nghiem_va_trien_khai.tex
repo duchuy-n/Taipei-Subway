@@ -1,0 +1,302 @@
+\documentclass[../DoAn.tex]{subfiles}
+\begin{document}
+
+\chapter{KẾT QUẢ THỰC NGHIỆM VÀ TRIỂN KHAI THEO TỪNG NHÓM}
+\label{chapter:results}
+
+\section{Tổng quan kết quả}
+Frontend hiện đã có các giao diện chính tương ứng với chức năng của hệ thống. Backend đã hình thành được lớp dịch vụ đủ dùng cho bài toán định tuyến và GIS. Khối data/GIS đã chuẩn hoá dữ liệu topology, lớp bản đồ và hỗ trợ trực tiếp cho việc hiển thị cũng như tính toán. Để báo cáo dễ viết và công bằng giữa các nhóm, phần kết quả được chia lại theo cùng một khung nội dung cho từng nhóm.
+
+\section{Đánh giá tóm tắt theo nhóm công việc}
+\begin{table}[H]
+\centering
+\caption{Tổng hợp kết quả theo nhóm công việc}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}p{4.0cm}|>{\raggedright\arraybackslash}p{6.2cm}|}
+\hline
+\textbf{Nhóm} & \textbf{Kết quả chính} & \textbf{Giá trị mang lại} \\ \hline
+Frontend & Bộ giao diện hoàn chỉnh cho người dùng và quản trị & Tạo trải nghiệm trực quan, dễ demo, dễ quan sát route và dễ đánh giá chức năng hệ thống \\ \hline
+Backend & API định tuyến, nạp dữ liệu và xử lý logic nghiệp vụ & Chuyển dữ liệu thô thành dịch vụ ổn định để frontend có thể tích hợp trực tiếp \\ \hline
+Data/GIS & Bộ dữ liệu mạng, lớp bản đồ và pipeline chuẩn hoá & Là nền tảng để kết quả định tuyến có ý nghĩa và hiển thị đúng ngữ cảnh địa lý \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Kết quả của nhóm frontend}
+\subsection{Thành viên phụ trách}
+Nhóm frontend gồm hai thành viên \textbf{Nguyễn Danh Tiến Nam} và \textbf{Trần Thái Minh}. Hai thành viên này phụ trách các màn hình tương tác trực tiếp với người dùng, đồng thời đảm nhận việc tổ chức trải nghiệm hiển thị sao cho dữ liệu định tuyến và dữ liệu bản đồ được trình bày rõ ràng, dễ thao tác và phù hợp với mục tiêu demo của bài tập lớn.
+
+\subsection{Chức năng đã triển khai}
+Trong phạm vi runtime chính của hệ thống, nhóm frontend đã triển khai ba giao diện quan trọng:
+\begin{itemize}
+    \item \textbf{GIS Studio:} giao diện trung tâm của hệ thống, cho phép tải dữ liệu mạng, hiển thị bản đồ bằng MapLibre, chọn điểm đầu -- điểm cuối và nhận kết quả định tuyến;
+    \item \textbf{Admin Console:} giao diện phục vụ mô phỏng vận hành, cho phép tạo rain zone, chặn segment, chặn điểm và đánh dấu ga bị cấm để kiểm tra ảnh hưởng đến route;
+    \item \textbf{Login Demo:} giao diện đơn giản dùng để điều hướng vào khu vực quản trị, mang tính chất mô phỏng luồng truy cập hơn là một hệ xác thực hoàn chỉnh.
+\end{itemize}
+
+Ngoài ra, frontend còn xử lý các thành phần phụ trợ như thông báo trạng thái, khu vực tóm tắt hành trình, hiển thị danh sách bước đi và phản hồi lỗi khi request không hợp lệ.
+
+\subsection{Cách triển khai và công nghệ sử dụng}
+Frontend của hệ thống được triển khai chủ yếu bằng \textbf{HTML, CSS và JavaScript thuần}, không phụ thuộc vào một framework SPA lớn trong runtime chính. Cách tổ chức này giúp hệ thống nhẹ, dễ chạy cục bộ và phù hợp với phạm vi của bài tập lớn.
+
+Phần bản đồ tương tác được xây dựng trên \textbf{MapLibre GL JS}. Sau khi người dùng truy cập giao diện \texttt{/gis}, frontend gọi endpoint \texttt{/api/gis/network} để tải các lớp dữ liệu như ga, tuyến, catalog tuyến, catalog ga và thông tin basemap. Khi người dùng chọn điểm bắt đầu và kết thúc, frontend gửi request tới \texttt{/api/gis/route/points}, sau đó dựng lại các thành phần gồm:
+\begin{itemize}[nosep]
+    \item ga được snap từ điểm người dùng chọn,
+    \item đoạn tiếp cận từ điểm đầu tới ga đầu tiên,
+    \item tuyến MRT chính,
+    \item đoạn rời ga tới điểm đích,
+    \item phần tóm tắt về tổng thời gian và chuỗi bước di chuyển.
+\end{itemize}
+
+\subsection{Kết quả đạt được}
+Kết quả quan trọng nhất của nhóm frontend là đã tạo ra được một luồng sử dụng hoàn chỉnh từ tải dữ liệu mạng đến hiển thị route cuối cùng trên bản đồ. So với cách biểu diễn tuyến tàu điện ngầm thuần văn bản, cách tiếp cận này giúp người dùng quan sát hành trình rõ ràng hơn và thể hiện được giá trị của lớp dữ liệu GIS.
+
+Giao diện admin cũng tạo ra giá trị đáng kể trong phần trình diễn, vì nó cho phép thay đổi scenario vận hành và quan sát ảnh hưởng của những thay đổi đó đối với hệ thống định tuyến mà không cần can thiệp trực tiếp vào mã nguồn hay chỉnh tay dữ liệu runtime.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Hinhve/taipei_map}
+    \caption{Giao diện chính phân hệ GIS Studio}
+    \label{fig:gis_studio}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Hinhve/find_route}
+    \caption{Kết quả định tuyến mẫu thể hiện ga đầu, ga cuối, đoạn tiếp cận và tuyến chính}
+    \label{fig:route_result}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.88, transform shape, every node/.style={font=\small}]
+    \draw[rounded corners=5pt, fill=gray!8, draw=black!35] (0,0) rectangle (3.8,7.2);
+    \node[anchor=west, font=\bfseries] at (0.25,6.75) {Admin Console};
+    \node[anchor=west] at (0.35,6.1) {Scenario Controls};
+    \foreach \y/\txt/\col in {5.35/Rain zone nhẹ/blue!12,4.55/Rain zone vừa/blue!18,3.75/Block segment/red!10,2.95/Disable station/yellow!18} {
+        \draw[rounded corners=4pt, fill=\col, draw=black!25] (0.35,\y) rectangle (3.35,\y+0.5);
+        \node[anchor=west] at (0.55,\y+0.25) {\txt};
+    }
+    \draw[rounded corners=4pt, fill=red!12, draw=red!55] (0.35,1.95) rectangle (3.35,2.45);
+    \node[anchor=center, font=\footnotesize\bfseries, text=red!60!black] at (1.85,2.2) {Clear / Save Scenario};
+    \node[anchor=center, align=left, text width=3.2cm] at (1.85,1.3) {\scriptsize Form admin gửi request \texttt{analyze} trước khi \texttt{PUT} scenario vào runtime.};
+
+    \draw[rounded corners=5pt, fill=green!4, draw=black!35] (4.2,0) rectangle (13.9,7.2);
+    \node[anchor=west, font=\bfseries] at (4.45,6.75) {Bản đồ runtime của Admin};
+    \foreach \x in {4.7,6.0,7.3,8.6,9.9,11.2,12.5,13.3} {
+        \draw[gray!35] (\x,0.5) -- ++(0,6.0);
+    }
+    \foreach \y in {0.8,1.7,2.6,3.5,4.4,5.3,6.2} {
+        \draw[gray!35] (4.45,\y) -- (13.6,\y+0.1);
+    }
+    \draw[line width=1.7pt, blue!70] (4.7,5.8) -- (6.2,5.0) -- (7.8,4.8) -- (9.5,4.0) -- (11.4,3.9) -- (13.0,3.0);
+    \draw[line width=1.7pt, orange!80!black] (5.0,1.2) -- (6.4,2.0) -- (7.7,2.8) -- (9.1,3.6) -- (10.5,4.6) -- (12.8,5.8);
+    \draw[line width=1.7pt, green!60!black] (5.1,6.1) -- (6.2,5.5) -- (7.3,4.9) -- (8.5,4.2);
+    \filldraw[fill=blue!20, draw=blue!70, opacity=0.45] (7.3,4.8) circle (1.0);
+    \filldraw[fill=blue!20, draw=blue!70, opacity=0.45] (10.9,4.0) circle (1.25);
+    \filldraw[fill=violet!18, draw=violet!70, opacity=0.42] (12.6,2.8) circle (1.05);
+    \draw[line width=4pt, red!75] (6.1,1.85) -- (8.05,3.0);
+    \node[draw, fill=white, rounded corners, align=left, text width=3.2cm] at (10.05,1.2) {\scriptsize Runtime constraint gồm:\\- rain zone tạo tăng chi phí\\- segment block loại bỏ cạnh hoặc đặt phạt rất lớn};
+\end{tikzpicture}
+\caption{Minh hoạ giao diện Admin Console khi áp dụng rain zone và block segment trong runtime}
+\label{fig:admin_console_runtime}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Hinhve/admin-base}
+    \caption{Giao diện Admin Console ở trạng thái cơ bản}
+    \label{fig:admin_base}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.9, transform shape, every node/.style={font=\small}]
+    \node[font=\bfseries] at (3.0,6.0) {Trước khi áp dụng scenario};
+    \node[font=\bfseries] at (11.2,6.0) {Sau khi áp dụng scenario};
+
+    \draw[rounded corners=5pt, fill=green!3, draw=black!30] (0.1,0.2) rectangle (5.9,5.5);
+    \foreach \y in {0.9,1.8,2.7,3.6,4.5} {\draw[gray!28] (0.4,\y) -- (5.6,\y+0.1);}    
+    \foreach \x in {0.8,1.7,2.6,3.5,4.4,5.3} {\draw[gray!28] (\x,0.5) -- ++(0,4.7);}    
+    \draw[line width=1.6pt, gray!65] (0.7,4.8) -- (1.8,4.1) -- (2.9,3.2) -- (4.1,2.4) -- (5.2,1.3);
+    \draw[line width=2.3pt, blue!75] (0.7,4.8) -- (1.8,4.1) -- (2.9,3.2) -- (4.1,2.4) -- (5.2,1.3);
+    \filldraw[fill=green!55!black, draw=black] (0.7,4.8) circle (2.6pt);
+    \filldraw[fill=red!75, draw=black] (5.2,1.3) circle (2.6pt);
+    \node[anchor=west] at (0.85,5.05) {Start};
+    \node[anchor=east] at (5.0,1.0) {End};
+
+    \draw[rounded corners=5pt, fill=green!3, draw=black!30] (8.3,0.2) rectangle (14.1,5.5);
+    \foreach \y in {0.9,1.8,2.7,3.6,4.5} {\draw[gray!28] (8.6,\y) -- (13.8,\y+0.1);}    
+    \foreach \x in {9.0,9.9,10.8,11.7,12.6,13.5} {\draw[gray!28] (\x,0.5) -- ++(0,4.7);}    
+    \draw[line width=1.6pt, gray!65] (8.9,4.8) -- (10.0,4.1) -- (11.1,3.2) -- (12.3,2.4) -- (13.4,1.3);
+    \filldraw[fill=blue!22, draw=blue!70, opacity=0.45] (11.0,3.1) circle (0.9);
+    \draw[line width=4pt, red!75] (10.4,3.65) -- (11.6,2.75);
+    \draw[line width=2.3pt, blue!75] (8.9,4.8) -- (10.0,4.5) -- (11.0,4.4) -- (12.0,3.7) -- (12.8,2.5) -- (13.4,1.3);
+    \filldraw[fill=green!55!black, draw=black] (8.9,4.8) circle (2.6pt);
+    \filldraw[fill=red!75, draw=black] (13.4,1.3) circle (2.6pt);
+    \node[draw, fill=white, rounded corners, text width=3.0cm, align=left] at (11.2,0.9) {\scriptsize Route phải né vùng mưa và đoạn bị khoá, nên hình học tuyến và tổng chi phí đều thay đổi.};
+\end{tikzpicture}
+\caption{Minh hoạ tác động của admin scenario lên kết quả định tuyến trên bản đồ}
+\label{fig:scenario_detour}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Hinhve/admin-rules}
+    \caption{Giao diện Admin Console sau khi áp dụng các kịch bản (rules) vận hành}
+    \label{fig:admin_rules}
+\end{figure}
+
+
+\section{Kết quả của nhóm backend}
+\subsection{Thành viên phụ trách}
+Nhóm backend gồm hai thành viên \textbf{Tạ Đức Hiển} và \textbf{Nguyễn Đức Huy}. Đây là nhóm chịu trách nhiệm về lớp xử lý trung tâm của hệ thống, nơi tiếp nhận yêu cầu từ frontend, nạp dữ liệu runtime, tính toán hành trình và trả kết quả theo schema ổn định.
+
+\subsection{Chức năng đã triển khai}
+Nhóm backend đã triển khai một tập API đủ để vận hành luồng chính của hệ thống:
+\begin{itemize}
+    \item \texttt{GET /api/gis/network}: cung cấp dữ liệu mạng, catalog ga/tuyến, bounds và basemap;
+    \item \texttt{POST /api/gis/route/points}: tiếp nhận hai điểm trên bản đồ và trả về hành trình định tuyến hoàn chỉnh;
+    \item \texttt{GET /api/admin/scenarios}: tải scenario hiện hành;
+    \item \texttt{PUT /api/admin/scenarios}: lưu và áp dụng scenario mới vào runtime;
+    \item \texttt{DELETE /api/admin/scenarios}: reset scenario về trạng thái mặc định;
+    \item các API phụ trợ như cập nhật vị trí ga hoặc đánh dấu xoá mềm ga GIS.
+\end{itemize}
+
+Bên dưới lớp API, backend còn tổ chức các dịch vụ chuyên biệt như route engine, walk network search, GIS payload loader và admin routing constraints.
+
+
+\begin{table}[H]
+\centering
+\small
+\caption{Đặc tả rút gọn các API chính của hệ thống}
+\label{tab:api_spec}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{1.2cm}|>{\raggedright\arraybackslash}p{4.0cm}|>{\raggedright\arraybackslash}p{4.2cm}|>{\raggedright\arraybackslash}p{4.8cm}|}
+\hline
+\textbf{Method} & \textbf{Endpoint} & \textbf{Input (payload/query)} & \textbf{Output (response schema)} \\ \hline
+GET & \texttt{/api/\allowbreak gis/\allowbreak network} & Không bắt buộc payload; có thể nhận tham số tải lớp dữ liệu hoặc bounds & Catalog ga/tuyến, lớp GeoJSON, bounds hiển thị, thông tin basemap để frontend khởi tạo bản đồ \\ \hline
+POST & \texttt{/api/\allowbreak gis/\allowbreak route/\allowbreak points} & Toạ độ điểm đầu, điểm cuối, tham số cấu hình route hoặc tốc độ đi bộ & Ga snap ở hai đầu, route summary, cost tuple, geometry/GeoJSON để frontend dựng tuyến \\ \hline
+GET & \texttt{/api/\allowbreak admin/\allowbreak scenario} & Không bắt buộc payload & Trạng thái scenario hiện hành, metadata của các ràng buộc đang áp dụng trong runtime \\ \hline
+POST & \texttt{/api/\allowbreak admin/\allowbreak scenario/\allowbreak analyze} & Mô tả scenario mới: loại ràng buộc, vùng ảnh hưởng, segment hoặc ga mục tiêu & Kết quả phân tích tác động: số cạnh/ga bị ảnh hưởng, trạng thái hợp lệ trước khi ghi vào runtime \\ \hline
+PUT & \texttt{/api/\allowbreak admin/\allowbreak scenario} & Scenario payload đã xác nhận, kèm dữ liệu cập nhật runtime & Runtime state mới nhất sau khi ghi, thông tin invalidate cache và dữ liệu để Admin Console vẽ lại lớp scenario \\ \hline
+\end{tabular}
+\end{table}
+
+Đặc tả API ở Bảng~\ref{tab:api_spec} đóng vai trò là hợp đồng kỹ thuật giữa frontend và backend. Nhờ đó, frontend có thể dựng hình học và route summary từ đúng schema mà backend cung cấp, còn backend giữ được khả năng tiến hoá service mà không phá vỡ luồng tích hợp chính.
+
+\subsection{Cách triển khai và công nghệ sử dụng}
+Backend được xây dựng trên \textbf{FastAPI} với ngôn ngữ \textbf{Python}. Kiến trúc thực tế mang đặc trưng của một \textit{modular monolith} nhỏ: các dịch vụ được tách rõ theo vai trò nhưng vẫn cùng chạy trong một tiến trình web duy nhất. Cách tổ chức này đủ linh hoạt cho phạm vi học phần mà không làm phát sinh độ phức tạp như microservice.
+
+Một điểm kỹ thuật đáng chú ý là backend không chỉ giải bài toán trên đồ thị ga đơn giản. Thay vào đó, hệ thống kết hợp nhiều lớp xử lý:
+\begin{itemize}
+    \item snap điểm người dùng chọn về ga phù hợp thông qua walk network và station access point;
+    \item chạy route engine trên đồ thị MRT mở rộng theo ngữ cảnh tuyến;
+    \item dựng lại hình học của tuyến đi dựa trên dữ liệu GIS;
+    \item áp dụng thêm các ràng buộc do scenario admin sinh ra trong runtime.
+\end{itemize}
+
+Nhóm backend cũng tận dụng \texttt{lru\_cache} và chữ ký file dữ liệu để giảm chi phí nạp lại mạng tuyến, đồng thời hỗ trợ làm mới cache khi scenario thay đổi.
+
+\subsection{Kết quả đạt được}
+Về mặt chức năng, nhóm backend đã xây dựng được một luồng xử lý end-to-end có thể phục vụ frontend ổn định:
+\begin{enumerate}
+    \item tải topology và dữ liệu GIS;
+    \item ánh xạ điểm người dùng tới ga phù hợp;
+    \item tìm hành trình trên mạng MRT;
+    \item ghép đường đi hoàn chỉnh và trả về geometry cho frontend.
+\end{enumerate}
+
+Điểm nổi bật của backend là khả năng tích hợp dữ liệu định tuyến với dữ liệu không gian, thay vì chỉ trả về danh sách ga. Ngoài ra, cơ chế admin scenario cũng tạo ra giá trị thực tế cho demo, vì nó giúp kiểm tra ảnh hưởng của các tình huống vận hành lên kết quả route mà không cần thay đổi trực tiếp code xử lý.
+
+
+\section{Kết quả của nhóm data/GIS}
+\subsection{Thành viên phụ trách}
+Nhóm data/GIS gồm hai thành viên \textbf{Nguyễn Vi Thái Sơn} và \textbf{Nguyễn Duy Mạnh}. Nhóm này cung cấp nền tảng dữ liệu để cả backend và frontend cùng hoạt động, đồng thời là nơi quyết định mức độ chính xác của route khi hiển thị trên bản đồ.
+
+\subsection{Chức năng và dữ liệu đã triển khai}
+Nhóm data/GIS đã chuẩn bị và duy trì các lớp dữ liệu chính của hệ thống, bao gồm:
+\begin{itemize}
+    \item \texttt{network\_topology.json} cho lớp topology MRT;
+    \item \texttt{stations.geojson} và \texttt{lines.geojson} cho lớp hình học của ga và tuyến;
+    \item \texttt{station\_access\_points.geojson} cho các điểm tiếp cận ga;
+    \item \texttt{walk\_network.geojson} cho đồ thị đi bộ;
+    \item \texttt{subway\_osm\_enrichment.json} để bổ sung thông tin từ nguồn OSM;
+    \item lớp nền bản đồ được lấy từ nguồn raster fallback khi chạy GIS Studio.
+\end{itemize}
+
+Bên cạnh dữ liệu runtime, nhóm còn duy trì các script xử lý dữ liệu trong thư mục \texttt{scripts/map/} để chuẩn hoá GeoJSON, tải dữ liệu mạng lưới OSM \cite{osm} (thông qua công cụ như OSMnx \cite{osmnx}) và xây dựng enrichment.
+
+\subsection{Cách triển khai và công nghệ sử dụng}
+Nhóm data/GIS làm việc trên nhiều kiểu dữ liệu khác nhau như JSON, GeoJSON và các tài nguyên bản đồ. Quy trình chính của nhóm không chỉ là thu thập dữ liệu, mà còn phải làm sạch, kiểm tra ID, đồng bộ toạ độ và bảo đảm dữ liệu đủ tốt để backend có thể sử dụng trực tiếp trong route runtime.
+
+Một khó khăn bản chất của lớp dữ liệu là topology và dữ liệu GIS không phải lúc nào cũng đồng bộ tuyệt đối. Vì vậy nhóm data/GIS phải phối hợp chặt với backend để phát hiện trường hợp ga có trong topology nhưng chưa có feature GIS tương ứng, hoặc tuyến có trong route logic nhưng thiếu hình học hiển thị. Đây là lý do hệ thống cần các bước lọc hoặc bổ sung dữ liệu trước khi đưa vào runtime.
+
+\subsection{Kết quả đạt được}
+Kết quả rõ nhất của nhóm data/GIS là đã xây dựng được một bộ dữ liệu đủ để vận hành luồng định tuyến trên bản đồ trong điều kiện cục bộ. Thay vì chỉ dừng ở dữ liệu logic, bộ dữ liệu hiện tại hỗ trợ được cả ba yêu cầu quan trọng:
+\begin{enumerate}
+    \item tính route trên topology,
+    \item xác định ga gần nhất theo lớp đi bộ,
+    \item dựng lại kết quả định tuyến thành hình học trực quan.
+\end{enumerate}
+
+Việc duy trì thêm các công cụ chuẩn hoá dữ liệu cũng giúp nhóm có khả năng mở rộng hoặc tái tạo pipeline khi cần cập nhật nguồn dữ liệu mới.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Hinhve/taipei_map}
+    \caption{Lớp dữ liệu GIS tổng quan: bản đồ mạng lưới tuyến và ga Đài Bắc (Taipei)}
+    \label{fig:gis_data}
+\end{figure}
+
+
+\section{Kiểm thử và nhận xét chung}
+Bộ kiểm thử hiện có của dự án tập trung mạnh vào lớp backend và các dịch vụ xử lý chính. Các test trong thư mục \texttt{tests/} bao phủ nhiều nhóm chức năng như API, runtime cache, route engine, GIS loader, ride geometry và admin scenario. Điều này cho thấy nhóm không chỉ dừng ở việc xây dựng giao diện demo mà còn quan tâm đến tính ổn định của logic xử lý phía sau.
+
+Ngoài kiểm thử tự động, dự án còn phù hợp với một số kịch bản kiểm thử tích hợp thủ công:
+\begin{itemize}
+    \item mở giao diện \texttt{/gis}, tải dữ liệu mạng và kiểm tra khả năng hiển thị các lớp bản đồ;
+    \item chọn hai điểm trên bản đồ để xác minh quá trình snap ga gần nhất và hiển thị route;
+    \item thay đổi scenario trong \texttt{/admin}, sau đó chạy lại định tuyến để quan sát ảnh hưởng lên kết quả;
+    \item kiểm tra khả năng fallback của lớp bản đồ khi không có nguồn nền cục bộ.
+\end{itemize}
+
+Bộ kiểm thử tự động được dùng để xác minh các hành vi chính của route engine, API và scenario. Hiệu năng thực tế của hệ thống được tổng hợp trong Bảng \ref{tab:performance_benchmark}, minh chứng cho hiệu quả của các cơ chế tối ưu hóa như runtime cache, spatial index và tái sử dụng dữ liệu đã nạp.
+
+\begin{table}[H]
+\centering
+\caption{Bảng benchmark hiệu năng định tuyến GIS sau tối ưu cache và walk candidate}
+\label{tab:performance_benchmark}
+\begin{tabular}{|p{4.3cm}|p{3.4cm}|p{3.4cm}|p{3.0cm}|}
+\hline
+\textbf{Thành phần} & \textbf{Lần đầu sau restart} & \textbf{Request đã warm cache} & \textbf{Nhận xét} \\ \hline
+Nạp GIS context và walk graph & khoảng 2.1--2.3 s & 0 ms nếu cache còn hợp lệ & Chi phí khởi tạo một lần \\ \hline
+Tìm ga ứng viên bằng walk network & nằm trong cold query & khoảng 0.10--0.13 s toàn request & Multi-source Dijkstra, dừng sớm \\ \hline
+A* trên đồ thị MRT mở rộng & $<$ 10 ms & $<$ 10 ms & Không phải nút nghẽn chính \\ \hline
+Ghép route geometry & $<$ 5 ms & $<$ 5 ms & Dùng segment index đã tiền xử lý \\ \hline
+\textbf{Tổng API route} & khoảng 2.2 s & khoảng 0.13 s & Đủ nhanh cho demo tương tác \\ \hline
+\end{tabular}
+\end{table}
+
+Các số liệu trên được đo cục bộ với endpoint \texttt{POST /api/gis/route/points}. Kết quả cho thấy A* không phải phần chậm nhất; độ trễ chủ yếu đến từ lần nạp walk graph và bước tìm ga ứng viên trên mạng đi bộ. Sau khi cache đã warm, thời gian phản hồi ở mức dưới 0.2 giây là đủ cho buổi demo bảo vệ. Tối ưu sâu hơn theo hướng hệ thống lớn như Google Maps (hierarchical routing, contraction hierarchy hoặc cache nhiều tầng theo vùng) là có thể, nhưng sẽ làm tăng đáng kể độ phức tạp và không cần thiết trong phạm vi bài tập lớn.
+
+\section{Hạn chế hiện tại và hướng khắc phục}
+Phần này tổng hợp các hạn chế kỹ thuật và thách thức vận hành trên toàn hệ thống, được phân tích theo từng lớp chức năng thay vì lặp lại ở từng nhóm riêng lẻ.
+
+\begin{itemize}
+    \item \textbf{Lớp Frontend -- Phụ thuộc vào chất lượng payload:} Frontend phải dựng dữ liệu định tuyến dưới dạng hình học thật trên bản đồ, khiến nhóm phụ thuộc chặt vào payload do backend trả về và mức độ đồng bộ giữa topology với dữ liệu GIS. Hướng xử lý hiện tại là tập trung vào luồng runtime cốt lõi (\texttt{gis-studio}, \texttt{admin}, \texttt{login}) thay vì dàn trải sang các tính năng chưa thiết yếu.
+
+    \item \textbf{Lớp Backend -- Nhất quán dữ liệu đa nguồn:} Backend phải bảo đảm tính nhất quán giữa topology, GeoJSON, walk network và scenario admin. Nếu một lớp thay đổi hoặc thiếu đồng bộ, route có thể sai hoặc frontend không dựng được đường đi. Nhóm ưu tiên ổn định luồng chính, giữ cấu trúc service rõ ràng và bao phủ test cho các hành vi quan trọng.
+
+    \item \textbf{Lớp Data/GIS -- Chênh lệch dữ liệu OSM và thực tế:} Dữ liệu OpenStreetMap \cite{osm} cung cấp chi tiết địa lý tốt, nhưng một số khu vực thiếu kết nối đi bộ hoặc access point phù hợp. Backend áp dụng cơ chế fallback nhiều tầng (walk network $\to$ access point $\to$ khoảng cách hình học) để giữ ổn định luồng truy vấn; nhóm data tiếp tục tinh chỉnh dữ liệu ở các vòng cập nhật tiếp theo.
+
+    \item \textbf{Bảo mật Admin:} Khu vực quản trị hiện mới phục vụ mục tiêu demo và kiểm thử nội bộ; hệ thống chưa triển khai đầy đủ cơ chế xác thực và phân quyền ở mức production như JWT, OAuth2/OIDC hay RBAC.
+
+    \item \textbf{Persistence file-based:} Toàn bộ trạng thái runtime (scenario, topology cache) hiện vẫn lưu trên file JSON. Ở quy mô nhiều người dùng đồng thời, cách tiếp cận này có thể phát sinh race condition khi ghi. Hướng khắc phục là chuyển sang SQLite (WAL mode) hoặc Redis tuỳ mức độ mở rộng.
+
+    \item \textbf{Observability:} Hiện chưa có structured logging hay metrics export. Có thể bổ sung \texttt{structlog} và endpoint \texttt{/metrics} theo chuẩn Prometheus để theo dõi các phân vị độ trễ như P95 hoặc P99 trong môi trường triển khai.
+\end{itemize}
+
+% ========================================================================
+% CHƯƠNG 6
+% ========================================================================
+
+\end{document}

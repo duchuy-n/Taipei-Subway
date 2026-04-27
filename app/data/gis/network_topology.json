@@ -1,0 +1,3289 @@
+{
+  "stations": [
+    {
+      "id": "airport-hotel",
+      "name": "Airport Hotel",
+      "x": 1237.5,
+      "y": 2047.09,
+      "diagram_x": 55.0,
+      "diagram_y": 65.0
+    },
+    {
+      "id": "airport-terminal-1",
+      "name": "Airport Terminal 1",
+      "x": 1237.5,
+      "y": 2236.06,
+      "diagram_x": 55.0,
+      "diagram_y": 71.0
+    },
+    {
+      "id": "airport-terminal-2",
+      "name": "Airport Terminal 2",
+      "x": 1237.5,
+      "y": 2141.57,
+      "diagram_x": 55.0,
+      "diagram_y": 68.0
+    },
+    {
+      "id": "ankang",
+      "name": "Ankang",
+      "x": 2092.5,
+      "y": 4377.63,
+      "diagram_x": 93.0,
+      "diagram_y": 139.0
+    },
+    {
+      "id": "banqiao",
+      "name": "Banqiao",
+      "x": 1552.5,
+      "y": 3653.28,
+      "diagram_x": 69.0,
+      "diagram_y": 116.0
+    },
+    {
+      "id": "banxin",
+      "name": "Banxin",
+      "x": 1620.0,
+      "y": 3747.76,
+      "diagram_x": 72.0,
+      "diagram_y": 119.0
+    },
+    {
+      "id": "beimen",
+      "name": "Beimen",
+      "x": 1777.5,
+      "y": 3117.88,
+      "diagram_x": 79.0,
+      "diagram_y": 99.0
+    },
+    {
+      "id": "beitou",
+      "name": "Beitou",
+      "x": 1620.0,
+      "y": 1984.11,
+      "diagram_x": 72.0,
+      "diagram_y": 63.0
+    },
+    {
+      "id": "binhai-shalun",
+      "name": "Binhai Shalun",
+      "x": 1946.25,
+      "y": 1369.98,
+      "diagram_x": 86.5,
+      "diagram_y": 43.5
+    },
+    {
+      "id": "binhai-yishan",
+      "name": "Binhai Yishan",
+      "x": 1957.5,
+      "y": 1511.7,
+      "diagram_x": 87.0,
+      "diagram_y": 48.0
+    },
+    {
+      "id": "cailiao",
+      "name": "Cailiao",
+      "x": 1530.0,
+      "y": 2991.91,
+      "diagram_x": 68.0,
+      "diagram_y": 95.0
+    },
+    {
+      "id": "cardinal-tien-hospital-an-kang-branch",
+      "name": "Cardinal Tien Hospital An Kang Branch",
+      "x": 1980.0,
+      "y": 4566.59,
+      "diagram_x": 88.0,
+      "diagram_y": 145.0
+    },
+    {
+      "id": "chang-gung-memorial-hospital",
+      "name": "Chang Gung Memorial Hospital",
+      "x": 1237.5,
+      "y": 2613.98,
+      "diagram_x": 55.0,
+      "diagram_y": 83.0
+    },
+    {
+      "id": "chiang-kai-shek-memorial-hall",
+      "name": "Chiang Kai-shek Memorial Hall",
+      "x": 1867.5,
+      "y": 3495.81,
+      "diagram_x": 83.0,
+      "diagram_y": 111.0
+    },
+    {
+      "id": "dingxi",
+      "name": "DIngxi",
+      "x": 1912.5,
+      "y": 3779.25,
+      "diagram_x": 85.0,
+      "diagram_y": 120.0
+    },
+    {
+      "id": "daan",
+      "name": "Daan",
+      "x": 2227.5,
+      "y": 3495.81,
+      "diagram_x": 99.0,
+      "diagram_y": 111.0
+    },
+    {
+      "id": "daan-park",
+      "name": "Daan Park",
+      "x": 2137.5,
+      "y": 3495.81,
+      "diagram_x": 95.0,
+      "diagram_y": 111.0
+    },
+    {
+      "id": "dahu-park",
+      "name": "Dahu Park",
+      "x": 2677.5,
+      "y": 2519.5,
+      "diagram_x": 119.0,
+      "diagram_y": 80.0
+    },
+    {
+      "id": "danfeng",
+      "name": "Danfeng",
+      "x": 1215.0,
+      "y": 3684.77,
+      "diagram_x": 54.0,
+      "diagram_y": 117.0
+    },
+    {
+      "id": "danhai-new-town",
+      "name": "Danhai New Town",
+      "x": 2047.5,
+      "y": 1385.73,
+      "diagram_x": 91.0,
+      "diagram_y": 44.0
+    },
+    {
+      "id": "danjin-beixin",
+      "name": "Danjin Beixin",
+      "x": 1755.0,
+      "y": 1637.67,
+      "diagram_x": 78.0,
+      "diagram_y": 52.0
+    },
+    {
+      "id": "danjin-denggong",
+      "name": "Danjin Denggong",
+      "x": 1575.0,
+      "y": 1637.67,
+      "diagram_x": 70.0,
+      "diagram_y": 52.0
+    },
+    {
+      "id": "dapinglin",
+      "name": "Dapinglin",
+      "x": 2295.0,
+      "y": 4094.19,
+      "diagram_x": 102.0,
+      "diagram_y": 130.0
+    },
+    {
+      "id": "daqiaotou",
+      "name": "Daqiaotou",
+      "x": 1755.0,
+      "y": 2802.94,
+      "diagram_x": 78.0,
+      "diagram_y": 89.0
+    },
+    {
+      "id": "dayuan",
+      "name": "Dayuan",
+      "x": 1237.5,
+      "y": 1952.61,
+      "diagram_x": 55.0,
+      "diagram_y": 62.0
+    },
+    {
+      "id": "dazhi",
+      "name": "Dazhi",
+      "x": 2227.5,
+      "y": 2645.47,
+      "diagram_x": 99.0,
+      "diagram_y": 84.0
+    },
+    {
+      "id": "dingpu",
+      "name": "Dingpu",
+      "x": 1552.5,
+      "y": 4409.12,
+      "diagram_x": 69.0,
+      "diagram_y": 140.0
+    },
+    {
+      "id": "donghu",
+      "name": "Donghu",
+      "x": 2767.5,
+      "y": 2645.47,
+      "diagram_x": 123.0,
+      "diagram_y": 84.0
+    },
+    {
+      "id": "dongmen",
+      "name": "Dongmen",
+      "x": 2047.5,
+      "y": 3495.81,
+      "diagram_x": 91.0,
+      "diagram_y": 111.0
+    },
+    {
+      "id": "far-eastern-hospital",
+      "name": "Far Eastern Hospital",
+      "x": 1552.5,
+      "y": 3905.22,
+      "diagram_x": 69.0,
+      "diagram_y": 124.0
+    },
+    {
+      "id": "fu-jen-university",
+      "name": "Fu Jen University",
+      "x": 1215.0,
+      "y": 3558.79,
+      "diagram_x": 54.0,
+      "diagram_y": 113.0
+    },
+    {
+      "id": "fuxingguang",
+      "name": "Fuxingguang",
+      "x": 1530.0,
+      "y": 1984.11,
+      "diagram_x": 68.0,
+      "diagram_y": 63.0
+    },
+    {
+      "id": "fuzhong",
+      "name": "Fuzhong",
+      "x": 1552.5,
+      "y": 3779.25,
+      "diagram_x": 69.0,
+      "diagram_y": 120.0
+    },
+    {
+      "id": "gangqian",
+      "name": "Gangqian",
+      "x": 2407.5,
+      "y": 2519.5,
+      "diagram_x": 107.0,
+      "diagram_y": 80.0
+    },
+    {
+      "id": "ganzhenlin",
+      "name": "Ganzhenlin",
+      "x": 1485.0,
+      "y": 1637.67,
+      "diagram_x": 66.0,
+      "diagram_y": 52.0
+    },
+    {
+      "id": "gongguan",
+      "name": "Gongguan",
+      "x": 2092.5,
+      "y": 3810.74,
+      "diagram_x": 93.0,
+      "diagram_y": 121.0
+    },
+    {
+      "id": "guandu",
+      "name": "Guandu",
+      "x": 1395.0,
+      "y": 1889.62,
+      "diagram_x": 62.0,
+      "diagram_y": 60.0
+    },
+    {
+      "id": "guting",
+      "name": "Guting",
+      "x": 1957.5,
+      "y": 3621.78,
+      "diagram_x": 87.0,
+      "diagram_y": 115.0
+    },
+    {
+      "id": "haishan",
+      "name": "Haishan",
+      "x": 1552.5,
+      "y": 4031.2,
+      "diagram_x": 69.0,
+      "diagram_y": 128.0
+    },
+    {
+      "id": "hengshan",
+      "name": "Hengshan",
+      "x": 1237.5,
+      "y": 1858.13,
+      "diagram_x": 55.0,
+      "diagram_y": 59.0
+    },
+    {
+      "id": "hongshulin",
+      "name": "Hongshulin",
+      "x": 1395.0,
+      "y": 1637.67,
+      "diagram_x": 62.0,
+      "diagram_y": 52.0
+    },
+    {
+      "id": "houshanpi",
+      "name": "Houshanpi",
+      "x": 2677.5,
+      "y": 3243.86,
+      "diagram_x": 119.0,
+      "diagram_y": 103.0
+    },
+    {
+      "id": "huanbei",
+      "name": "Huanbei",
+      "x": 1237.5,
+      "y": 1385.73,
+      "diagram_x": 55.0,
+      "diagram_y": 44.0
+    },
+    {
+      "id": "huilong",
+      "name": "Huilong",
+      "x": 1215.0,
+      "y": 3810.74,
+      "diagram_x": 54.0,
+      "diagram_y": 121.0
+    },
+    {
+      "id": "huzhou",
+      "name": "Huzhou",
+      "x": 2767.5,
+      "y": 2519.5,
+      "diagram_x": 123.0,
+      "diagram_y": 80.0
+    },
+    {
+      "id": "jiangzicui",
+      "name": "Jiangzicui",
+      "x": 1507.5,
+      "y": 3432.82,
+      "diagram_x": 67.0,
+      "diagram_y": 109.0
+    },
+    {
+      "id": "jiannan-rd",
+      "name": "Jiannan Rd.",
+      "x": 2227.5,
+      "y": 2519.5,
+      "diagram_x": 99.0,
+      "diagram_y": 80.0
+    },
+    {
+      "id": "jiantan",
+      "name": "Jiantan",
+      "x": 1867.5,
+      "y": 2550.99,
+      "diagram_x": 83.0,
+      "diagram_y": 81.0
+    },
+    {
+      "id": "jingan",
+      "name": "Jingan",
+      "x": 1912.5,
+      "y": 4031.2,
+      "diagram_x": 85.0,
+      "diagram_y": 128.0
+    },
+    {
+      "id": "jingmei",
+      "name": "Jingmei",
+      "x": 2227.5,
+      "y": 3999.71,
+      "diagram_x": 99.0,
+      "diagram_y": 127.0
+    },
+    {
+      "id": "jingping",
+      "name": "Jingping",
+      "x": 2002.5,
+      "y": 4031.2,
+      "diagram_x": 89.0,
+      "diagram_y": 128.0
+    },
+    {
+      "id": "jinwen-university-of-science-and-technology",
+      "name": "Jinwen University of Science and Technology",
+      "x": 2047.5,
+      "y": 4472.11,
+      "diagram_x": 91.0,
+      "diagram_y": 142.0
+    },
+    {
+      "id": "kanding",
+      "name": "Kanding",
+      "x": 2137.5,
+      "y": 1385.73,
+      "diagram_x": 95.0,
+      "diagram_y": 44.0
+    },
+    {
+      "id": "kengkou",
+      "name": "Kengkou",
+      "x": 1237.5,
+      "y": 2330.54,
+      "diagram_x": 55.0,
+      "diagram_y": 74.0
+    },
+    {
+      "id": "kunyang",
+      "name": "Kunyang",
+      "x": 2767.5,
+      "y": 3149.38,
+      "diagram_x": 123.0,
+      "diagram_y": 100.0
+    },
+    {
+      "id": "laojie-river",
+      "name": "Laojie River",
+      "x": 1237.5,
+      "y": 1291.24,
+      "diagram_x": 55.0,
+      "diagram_y": 41.0
+    },
+    {
+      "id": "linghang",
+      "name": "Linghang",
+      "x": 1237.5,
+      "y": 1763.65,
+      "diagram_x": 55.0,
+      "diagram_y": 56.0
+    },
+    {
+      "id": "linguang",
+      "name": "Linguang",
+      "x": 2407.5,
+      "y": 3653.28,
+      "diagram_x": 107.0,
+      "diagram_y": 116.0
+    },
+    {
+      "id": "linkou",
+      "name": "Linkou",
+      "x": 1237.5,
+      "y": 2519.5,
+      "diagram_x": 55.0,
+      "diagram_y": 80.0
+    },
+    {
+      "id": "liuzhangli",
+      "name": "Liuzhangli",
+      "x": 2317.5,
+      "y": 3653.28,
+      "diagram_x": 103.0,
+      "diagram_y": 116.0
+    },
+    {
+      "id": "longshan-temple",
+      "name": "Longshan Temple",
+      "x": 1597.5,
+      "y": 3243.86,
+      "diagram_x": 71.0,
+      "diagram_y": 103.0
+    },
+    {
+      "id": "luzhou",
+      "name": "Luzhou",
+      "x": 1485.0,
+      "y": 2236.06,
+      "diagram_x": 66.0,
+      "diagram_y": 71.0
+    },
+    {
+      "id": "maokong-zoo-station",
+      "name": "Maokong Zoo Station",
+      "x": 2655.0,
+      "y": 4409.12,
+      "diagram_x": 118.0,
+      "diagram_y": 140.0
+    },
+    {
+      "id": "mingde",
+      "name": "Mingde",
+      "x": 1867.5,
+      "y": 2173.07,
+      "diagram_x": 83.0,
+      "diagram_y": 69.0
+    },
+    {
+      "id": "minquan-w-road",
+      "name": "Minquan W. Road",
+      "x": 1867.5,
+      "y": 2802.94,
+      "diagram_x": 83.0,
+      "diagram_y": 89.0
+    },
+    {
+      "id": "muzha",
+      "name": "Muzha",
+      "x": 2565.0,
+      "y": 4062.69,
+      "diagram_x": 114.0,
+      "diagram_y": 129.0
+    },
+    {
+      "id": "ntu-hospital",
+      "name": "NTU Hospital",
+      "x": 1867.5,
+      "y": 3369.83,
+      "diagram_x": 83.0,
+      "diagram_y": 107.0
+    },
+    {
+      "id": "nangang",
+      "name": "Nangang",
+      "x": 2767.5,
+      "y": 3023.4,
+      "diagram_x": 123.0,
+      "diagram_y": 96.0
+    },
+    {
+      "id": "nangang-software-park",
+      "name": "Nangang Software Park",
+      "x": 2767.5,
+      "y": 2771.45,
+      "diagram_x": 123.0,
+      "diagram_y": 88.0
+    },
+    {
+      "id": "nanjing-fuxing",
+      "name": "Nanjing Fuxing",
+      "x": 2227.5,
+      "y": 3054.89,
+      "diagram_x": 99.0,
+      "diagram_y": 97.0
+    },
+    {
+      "id": "nanjing-sanmin",
+      "name": "Nanjing Sanmin",
+      "x": 2407.5,
+      "y": 3054.89,
+      "diagram_x": 107.0,
+      "diagram_y": 97.0
+    },
+    {
+      "id": "nanshijiao",
+      "name": "Nanshijiao",
+      "x": 1912.5,
+      "y": 4157.18,
+      "diagram_x": 85.0,
+      "diagram_y": 132.0
+    },
+    {
+      "id": "national-taiwan-sport-university",
+      "name": "National Taiwan Sport University",
+      "x": 1237.5,
+      "y": 2708.46,
+      "diagram_x": 55.0,
+      "diagram_y": 86.0
+    },
+    {
+      "id": "neihu",
+      "name": "Neihu",
+      "x": 2587.5,
+      "y": 2519.5,
+      "diagram_x": 115.0,
+      "diagram_y": 80.0
+    },
+    {
+      "id": "new-taipei-industrial-park",
+      "name": "New Taipei Industrial Park",
+      "x": 1237.5,
+      "y": 3086.39,
+      "diagram_x": 55.0,
+      "diagram_y": 98.0
+    },
+    {
+      "id": "qiaohe",
+      "name": "Qiaohe",
+      "x": 1755.0,
+      "y": 3936.72,
+      "diagram_x": 78.0,
+      "diagram_y": 125.0
+    },
+    {
+      "id": "qilian",
+      "name": "Qilian",
+      "x": 1800.0,
+      "y": 1984.11,
+      "diagram_x": 80.0,
+      "diagram_y": 63.0
+    },
+    {
+      "id": "qiyan",
+      "name": "Qiyan",
+      "x": 1710.0,
+      "y": 1984.11,
+      "diagram_x": 76.0,
+      "diagram_y": 63.0
+    },
+    {
+      "id": "qizhang",
+      "name": "Qizhang",
+      "x": 2295.0,
+      "y": 4220.16,
+      "diagram_x": 102.0,
+      "diagram_y": 134.0
+    },
+    {
+      "id": "rose-china-town",
+      "name": "Rose China Town",
+      "x": 1800.0,
+      "y": 4566.59,
+      "diagram_x": 80.0,
+      "diagram_y": 145.0
+    },
+    {
+      "id": "sanchong",
+      "name": "Sanchong",
+      "x": 1462.5,
+      "y": 3086.39,
+      "diagram_x": 65.0,
+      "diagram_y": 98.0
+    },
+    {
+      "id": "sanchong-elementary-school",
+      "name": "Sanchong Elementary School",
+      "x": 1597.5,
+      "y": 2708.46,
+      "diagram_x": 71.0,
+      "diagram_y": 86.0
+    },
+    {
+      "id": "sanhe-junior-high-school",
+      "name": "Sanhe Junior High School",
+      "x": 1530.0,
+      "y": 2613.98,
+      "diagram_x": 68.0,
+      "diagram_y": 83.0
+    },
+    {
+      "id": "sanmin-senior-high-school",
+      "name": "Sanmin Senior High School",
+      "x": 1485.0,
+      "y": 2362.03,
+      "diagram_x": 66.0,
+      "diagram_y": 75.0
+    },
+    {
+      "id": "shalun",
+      "name": "Shalun",
+      "x": 1687.5,
+      "y": 1385.73,
+      "diagram_x": 75.0,
+      "diagram_y": 44.0
+    },
+    {
+      "id": "shanbi",
+      "name": "Shanbi",
+      "x": 1237.5,
+      "y": 2425.02,
+      "diagram_x": 55.0,
+      "diagram_y": 77.0
+    },
+    {
+      "id": "shilin",
+      "name": "Shilin",
+      "x": 1867.5,
+      "y": 2425.02,
+      "diagram_x": 83.0,
+      "diagram_y": 77.0
+    },
+    {
+      "id": "shipai",
+      "name": "Shipai",
+      "x": 1867.5,
+      "y": 2047.09,
+      "diagram_x": 83.0,
+      "diagram_y": 65.0
+    },
+    {
+      "id": "shisizhang",
+      "name": "Shisizhang",
+      "x": 2205.0,
+      "y": 4094.19,
+      "diagram_x": 98.0,
+      "diagram_y": 130.0
+    },
+    {
+      "id": "shuangcheng",
+      "name": "Shuangcheng",
+      "x": 1710.0,
+      "y": 4566.59,
+      "diagram_x": 76.0,
+      "diagram_y": 145.0
+    },
+    {
+      "id": "shuanglian",
+      "name": "Shuanglian",
+      "x": 1867.5,
+      "y": 2928.92,
+      "diagram_x": 83.0,
+      "diagram_y": 93.0
+    },
+    {
+      "id": "songjiang-nanjing",
+      "name": "Songjiang Nanjing",
+      "x": 2047.5,
+      "y": 3054.89,
+      "diagram_x": 91.0,
+      "diagram_y": 97.0
+    },
+    {
+      "id": "songshan",
+      "name": "Songshan",
+      "x": 2497.5,
+      "y": 3054.89,
+      "diagram_x": 111.0,
+      "diagram_y": 97.0
+    },
+    {
+      "id": "songshan-airport",
+      "name": "Songshan Airport",
+      "x": 2227.5,
+      "y": 2771.45,
+      "diagram_x": 99.0,
+      "diagram_y": 88.0
+    },
+    {
+      "id": "st-ignatius-high-school",
+      "name": "St. Ignatius High School",
+      "x": 1485.0,
+      "y": 2488.01,
+      "diagram_x": 66.0,
+      "diagram_y": 79.0
+    },
+    {
+      "id": "sun-yat-sen-memorial-hall",
+      "name": "Sun Yat-Sen Memorial Hall",
+      "x": 2407.5,
+      "y": 3243.86,
+      "diagram_x": 107.0,
+      "diagram_y": 103.0
+    },
+    {
+      "id": "sunshine-sports-park",
+      "name": "Sunshine Sports Park",
+      "x": 2092.5,
+      "y": 4251.66,
+      "diagram_x": 93.0,
+      "diagram_y": 135.0
+    },
+    {
+      "id": "taipei-101-world-trade-center",
+      "name": "Taipei 101 World Trade Center",
+      "x": 2407.5,
+      "y": 3495.81,
+      "diagram_x": 107.0,
+      "diagram_y": 111.0
+    },
+    {
+      "id": "taipei-arena",
+      "name": "Taipei Arena",
+      "x": 2317.5,
+      "y": 3054.89,
+      "diagram_x": 103.0,
+      "diagram_y": 97.0
+    },
+    {
+      "id": "taipei-bridge",
+      "name": "Taipei Bridge",
+      "x": 1597.5,
+      "y": 2897.42,
+      "diagram_x": 71.0,
+      "diagram_y": 92.0
+    },
+    {
+      "id": "taipei-city-hall",
+      "name": "Taipei City Hall",
+      "x": 2497.5,
+      "y": 3243.86,
+      "diagram_x": 111.0,
+      "diagram_y": 103.0
+    },
+    {
+      "id": "taipei-main-station",
+      "name": "Taipei Main Station",
+      "x": 1845.0,
+      "y": 3180.87,
+      "diagram_x": 82.0,
+      "diagram_y": 101.0
+    },
+    {
+      "id": "taipei-nangang-exhibition-center",
+      "name": "Taipei Nangang Exhibition Center",
+      "x": 2767.5,
+      "y": 2897.42,
+      "diagram_x": 123.0,
+      "diagram_y": 92.0
+    },
+    {
+      "id": "taipei-university-of-marine-technology",
+      "name": "Taipei University of Marine Technology",
+      "x": 1777.5,
+      "y": 1385.73,
+      "diagram_x": 79.0,
+      "diagram_y": 44.0
+    },
+    {
+      "id": "taipei-xiaocheng",
+      "name": "Taipei Xiaocheng",
+      "x": 1890.0,
+      "y": 4566.59,
+      "diagram_x": 84.0,
+      "diagram_y": 145.0
+    },
+    {
+      "id": "taipei-zoo",
+      "name": "Taipei Zoo",
+      "x": 2655.0,
+      "y": 4062.69,
+      "diagram_x": 118.0,
+      "diagram_y": 129.0
+    },
+    {
+      "id": "taipei-zoo-south-station",
+      "name": "Taipei Zoo South Station",
+      "x": 2655.0,
+      "y": 4220.16,
+      "diagram_x": 118.0,
+      "diagram_y": 134.0
+    },
+    {
+      "id": "taipei-zoo-station",
+      "name": "Taipei Zoo Station",
+      "x": 2655.0,
+      "y": 4125.68,
+      "diagram_x": 118.0,
+      "diagram_y": 131.0
+    },
+    {
+      "id": "taipower-building",
+      "name": "Taipower Building",
+      "x": 2025.0,
+      "y": 3716.26,
+      "diagram_x": 90.0,
+      "diagram_y": 118.0
+    },
+    {
+      "id": "taishan",
+      "name": "Taishan",
+      "x": 1237.5,
+      "y": 2897.42,
+      "diagram_x": 55.0,
+      "diagram_y": 92.0
+    },
+    {
+      "id": "taishan-guihe",
+      "name": "Taishan Guihe",
+      "x": 1237.5,
+      "y": 2802.94,
+      "diagram_x": 55.0,
+      "diagram_y": 89.0
+    },
+    {
+      "id": "tamkang-university",
+      "name": "Tamkang University",
+      "x": 1665.0,
+      "y": 1637.67,
+      "diagram_x": 74.0,
+      "diagram_y": 52.0
+    },
+    {
+      "id": "tamsui",
+      "name": "Tamsui",
+      "x": 1395.0,
+      "y": 1511.7,
+      "diagram_x": 62.0,
+      "diagram_y": 48.0
+    },
+    {
+      "id": "tamsui-district-office",
+      "name": "Tamsui District Office",
+      "x": 1935.0,
+      "y": 1637.67,
+      "diagram_x": 86.0,
+      "diagram_y": 52.0
+    },
+    {
+      "id": "tamsui-fishermans-wharf",
+      "name": "Tamsui Fishermans Wharf",
+      "x": 1597.5,
+      "y": 1385.73,
+      "diagram_x": 71.0,
+      "diagram_y": 44.0
+    },
+    {
+      "id": "taoyuan-hsr-station",
+      "name": "Taoyuan HSR Station",
+      "x": 1237.5,
+      "y": 1669.17,
+      "diagram_x": 55.0,
+      "diagram_y": 53.0
+    },
+    {
+      "id": "taoyuan-sports-park",
+      "name": "Taoyuan Sports Park",
+      "x": 1237.5,
+      "y": 1574.69,
+      "diagram_x": 55.0,
+      "diagram_y": 50.0
+    },
+    {
+      "id": "technology-building",
+      "name": "Technology Building",
+      "x": 2227.5,
+      "y": 3621.78,
+      "diagram_x": 99.0,
+      "diagram_y": 115.0
+    },
+    {
+      "id": "touqianzhuang",
+      "name": "Touqianzhuang",
+      "x": 1305.0,
+      "y": 3306.84,
+      "diagram_x": 58.0,
+      "diagram_y": 105.0
+    },
+    {
+      "id": "tucheng",
+      "name": "Tucheng",
+      "x": 1552.5,
+      "y": 4157.18,
+      "diagram_x": 69.0,
+      "diagram_y": 132.0
+    },
+    {
+      "id": "wanfang-community",
+      "name": "Wanfang Community",
+      "x": 2497.5,
+      "y": 3968.21,
+      "diagram_x": 111.0,
+      "diagram_y": 126.0
+    },
+    {
+      "id": "wanfang-hospital",
+      "name": "Wanfang Hospital",
+      "x": 2497.5,
+      "y": 3842.24,
+      "diagram_x": 111.0,
+      "diagram_y": 122.0
+    },
+    {
+      "id": "wanlong",
+      "name": "Wanlong",
+      "x": 2160.0,
+      "y": 3905.22,
+      "diagram_x": 96.0,
+      "diagram_y": 124.0
+    },
+    {
+      "id": "wende",
+      "name": "Wende",
+      "x": 2497.5,
+      "y": 2519.5,
+      "diagram_x": 111.0,
+      "diagram_y": 80.0
+    },
+    {
+      "id": "xiangshan",
+      "name": "Xiangshan",
+      "x": 2497.5,
+      "y": 3495.81,
+      "diagram_x": 111.0,
+      "diagram_y": 111.0
+    },
+    {
+      "id": "xianse-temple",
+      "name": "Xianse Temple",
+      "x": 1395.0,
+      "y": 3180.87,
+      "diagram_x": 62.0,
+      "diagram_y": 101.0
+    },
+    {
+      "id": "xiaobitan",
+      "name": "Xiaobitan",
+      "x": 2205.0,
+      "y": 4220.16,
+      "diagram_x": 98.0,
+      "diagram_y": 134.0
+    },
+    {
+      "id": "xiaonanmen",
+      "name": "Xiaonanmen",
+      "x": 1777.5,
+      "y": 3495.81,
+      "diagram_x": 79.0,
+      "diagram_y": 111.0
+    },
+    {
+      "id": "xihu",
+      "name": "Xihu",
+      "x": 2317.5,
+      "y": 2519.5,
+      "diagram_x": 103.0,
+      "diagram_y": 80.0
+    },
+    {
+      "id": "ximen",
+      "name": "Ximen",
+      "x": 1777.5,
+      "y": 3243.86,
+      "diagram_x": 79.0,
+      "diagram_y": 103.0
+    },
+    {
+      "id": "xinbeitou",
+      "name": "Xinbeitou",
+      "x": 1620.0,
+      "y": 1858.13,
+      "diagram_x": 72.0,
+      "diagram_y": 59.0
+    },
+    {
+      "id": "xindian",
+      "name": "Xindian",
+      "x": 2295.0,
+      "y": 4472.11,
+      "diagram_x": 102.0,
+      "diagram_y": 142.0
+    },
+    {
+      "id": "xindian-district-office",
+      "name": "Xindian District Office",
+      "x": 2295.0,
+      "y": 4346.14,
+      "diagram_x": 102.0,
+      "diagram_y": 138.0
+    },
+    {
+      "id": "xingfu",
+      "name": "Xingfu",
+      "x": 1237.5,
+      "y": 3212.36,
+      "diagram_x": 55.0,
+      "diagram_y": 102.0
+    },
+    {
+      "id": "xingnan",
+      "name": "Xingnan",
+      "x": 1237.5,
+      "y": 1480.21,
+      "diagram_x": 55.0,
+      "diagram_y": 47.0
+    },
+    {
+      "id": "xingtian-temple",
+      "name": "Xingtian Temple",
+      "x": 2047.5,
+      "y": 2897.42,
+      "diagram_x": 91.0,
+      "diagram_y": 92.0
+    },
+    {
+      "id": "xinhai",
+      "name": "Xinhai",
+      "x": 2497.5,
+      "y": 3716.26,
+      "diagram_x": 111.0,
+      "diagram_y": 118.0
+    },
+    {
+      "id": "xinhe-elementary-school",
+      "name": "Xinhe Elementary School",
+      "x": 2092.5,
+      "y": 4125.68,
+      "diagram_x": 93.0,
+      "diagram_y": 131.0
+    },
+    {
+      "id": "xinpu",
+      "name": "Xinpu",
+      "x": 1507.5,
+      "y": 3558.79,
+      "diagram_x": 67.0,
+      "diagram_y": 113.0
+    },
+    {
+      "id": "xinpu-minsheng",
+      "name": "Xinpu Minsheng",
+      "x": 1485.0,
+      "y": 3558.79,
+      "diagram_x": 66.0,
+      "diagram_y": 113.0
+    },
+    {
+      "id": "xinshi-1st-rd",
+      "name": "Xinshi 1st Rd.",
+      "x": 1845.0,
+      "y": 1637.67,
+      "diagram_x": 82.0,
+      "diagram_y": 52.0
+    },
+    {
+      "id": "xinyi-anhe",
+      "name": "Xinyi Anhe",
+      "x": 2317.5,
+      "y": 3495.81,
+      "diagram_x": 103.0,
+      "diagram_y": 111.0
+    },
+    {
+      "id": "xinzhuang",
+      "name": "Xinzhuang",
+      "x": 1215.0,
+      "y": 3432.82,
+      "diagram_x": 54.0,
+      "diagram_y": 109.0
+    },
+    {
+      "id": "xinzhuang-fuduxin",
+      "name": "Xinzhuang Fuduxin",
+      "x": 1237.5,
+      "y": 2991.91,
+      "diagram_x": 55.0,
+      "diagram_y": 95.0
+    },
+    {
+      "id": "xiulang-bridge",
+      "name": "Xiulang Bridge",
+      "x": 2092.5,
+      "y": 4062.69,
+      "diagram_x": 93.0,
+      "diagram_y": 129.0
+    },
+    {
+      "id": "yongan-market",
+      "name": "Yongan Market",
+      "x": 1912.5,
+      "y": 3905.22,
+      "diagram_x": 85.0,
+      "diagram_y": 124.0
+    },
+    {
+      "id": "yongchun",
+      "name": "Yongchun",
+      "x": 2587.5,
+      "y": 3243.86,
+      "diagram_x": 115.0,
+      "diagram_y": 103.0
+    },
+    {
+      "id": "yongning",
+      "name": "Yongning",
+      "x": 1552.5,
+      "y": 4283.15,
+      "diagram_x": 69.0,
+      "diagram_y": 136.0
+    },
+    {
+      "id": "yuanshan",
+      "name": "Yuanshan",
+      "x": 1867.5,
+      "y": 2676.97,
+      "diagram_x": 83.0,
+      "diagram_y": 85.0
+    },
+    {
+      "id": "zhinan-temple-station",
+      "name": "Zhinan Temple Station",
+      "x": 2655.0,
+      "y": 4314.64,
+      "diagram_x": 118.0,
+      "diagram_y": 137.0
+    },
+    {
+      "id": "zhishan",
+      "name": "Zhishan",
+      "x": 1867.5,
+      "y": 2299.04,
+      "diagram_x": 83.0,
+      "diagram_y": 73.0
+    },
+    {
+      "id": "zhonghe",
+      "name": "Zhonghe",
+      "x": 1822.5,
+      "y": 4031.2,
+      "diagram_x": 81.0,
+      "diagram_y": 128.0
+    },
+    {
+      "id": "zhongshan",
+      "name": "Zhongshan",
+      "x": 1867.5,
+      "y": 3054.89,
+      "diagram_x": 83.0,
+      "diagram_y": 97.0
+    },
+    {
+      "id": "zhongshan-elementary-school",
+      "name": "Zhongshan Elementary School",
+      "x": 2002.5,
+      "y": 2802.94,
+      "diagram_x": 89.0,
+      "diagram_y": 89.0
+    },
+    {
+      "id": "zhongshan-junior-high-school",
+      "name": "Zhongshan Junior High School",
+      "x": 2227.5,
+      "y": 2897.42,
+      "diagram_x": 99.0,
+      "diagram_y": 92.0
+    },
+    {
+      "id": "zhongxiao-dunhua",
+      "name": "Zhongxiao Dunhua",
+      "x": 2317.5,
+      "y": 3243.86,
+      "diagram_x": 103.0,
+      "diagram_y": 103.0
+    },
+    {
+      "id": "zhongxiao-fuxing",
+      "name": "Zhongxiao Fuxing",
+      "x": 2227.5,
+      "y": 3243.86,
+      "diagram_x": 99.0,
+      "diagram_y": 103.0
+    },
+    {
+      "id": "zhongxiao-xinsheng",
+      "name": "Zhongxiao Xinsheng",
+      "x": 2047.5,
+      "y": 3243.86,
+      "diagram_x": 91.0,
+      "diagram_y": 103.0
+    },
+    {
+      "id": "zhongyi",
+      "name": "Zhongyi",
+      "x": 1440.0,
+      "y": 1984.11,
+      "diagram_x": 64.0,
+      "diagram_y": 63.0
+    },
+    {
+      "id": "zhongyuan",
+      "name": "Zhongyuan",
+      "x": 1687.5,
+      "y": 3842.24,
+      "diagram_x": 75.0,
+      "diagram_y": 122.0
+    },
+    {
+      "id": "zhuwei",
+      "name": "Zhuwei",
+      "x": 1395.0,
+      "y": 1763.65,
+      "diagram_x": 62.0,
+      "diagram_y": 56.0
+    }
+  ],
+  "lines": [
+    {
+      "id": "c0",
+      "name": "Line C0",
+      "color": "#78bc27"
+    },
+    {
+      "id": "c1",
+      "name": "Line C1",
+      "color": "#c38c31"
+    },
+    {
+      "id": "c10",
+      "name": "Line C10",
+      "color": "#d6cfba"
+    },
+    {
+      "id": "c11",
+      "name": "Line C11",
+      "color": "#cabfde"
+    },
+    {
+      "id": "c2",
+      "name": "Line C2",
+      "color": "#e3002d"
+    },
+    {
+      "id": "c3",
+      "name": "Line C3",
+      "color": "#0070bc"
+    },
+    {
+      "id": "c4",
+      "name": "Line C4",
+      "color": "#018659"
+    },
+    {
+      "id": "c5",
+      "name": "Line C5",
+      "color": "#f8b51c"
+    },
+    {
+      "id": "c6",
+      "name": "Line C6",
+      "color": "#f4a5a8"
+    },
+    {
+      "id": "c7",
+      "name": "Line C7",
+      "color": "#f5b8b0"
+    },
+    {
+      "id": "c8",
+      "name": "Line C8",
+      "color": "#dae11f"
+    },
+    {
+      "id": "c9",
+      "name": "Line C9",
+      "color": "#ffe707"
+    }
+  ],
+  "station_lines": [
+    {
+      "station_id": "taipei-zoo-station",
+      "line_id": "c0",
+      "seq": 1
+    },
+    {
+      "station_id": "taipei-zoo-south-station",
+      "line_id": "c0",
+      "seq": 2
+    },
+    {
+      "station_id": "zhinan-temple-station",
+      "line_id": "c0",
+      "seq": 3
+    },
+    {
+      "station_id": "maokong-zoo-station",
+      "line_id": "c0",
+      "seq": 4
+    },
+    {
+      "station_id": "taipei-nangang-exhibition-center",
+      "line_id": "c1",
+      "seq": 1
+    },
+    {
+      "station_id": "nangang-software-park",
+      "line_id": "c1",
+      "seq": 2
+    },
+    {
+      "station_id": "donghu",
+      "line_id": "c1",
+      "seq": 3
+    },
+    {
+      "station_id": "huzhou",
+      "line_id": "c1",
+      "seq": 4
+    },
+    {
+      "station_id": "dahu-park",
+      "line_id": "c1",
+      "seq": 5
+    },
+    {
+      "station_id": "neihu",
+      "line_id": "c1",
+      "seq": 6
+    },
+    {
+      "station_id": "wende",
+      "line_id": "c1",
+      "seq": 7
+    },
+    {
+      "station_id": "gangqian",
+      "line_id": "c1",
+      "seq": 8
+    },
+    {
+      "station_id": "xihu",
+      "line_id": "c1",
+      "seq": 9
+    },
+    {
+      "station_id": "jiannan-rd",
+      "line_id": "c1",
+      "seq": 10
+    },
+    {
+      "station_id": "dazhi",
+      "line_id": "c1",
+      "seq": 11
+    },
+    {
+      "station_id": "songshan-airport",
+      "line_id": "c1",
+      "seq": 12
+    },
+    {
+      "station_id": "zhongshan-junior-high-school",
+      "line_id": "c1",
+      "seq": 13
+    },
+    {
+      "station_id": "nanjing-fuxing",
+      "line_id": "c1",
+      "seq": 14
+    },
+    {
+      "station_id": "zhongxiao-fuxing",
+      "line_id": "c1",
+      "seq": 15
+    },
+    {
+      "station_id": "daan",
+      "line_id": "c1",
+      "seq": 16
+    },
+    {
+      "station_id": "technology-building",
+      "line_id": "c1",
+      "seq": 17
+    },
+    {
+      "station_id": "liuzhangli",
+      "line_id": "c1",
+      "seq": 18
+    },
+    {
+      "station_id": "linguang",
+      "line_id": "c1",
+      "seq": 19
+    },
+    {
+      "station_id": "xinhai",
+      "line_id": "c1",
+      "seq": 20
+    },
+    {
+      "station_id": "wanfang-hospital",
+      "line_id": "c1",
+      "seq": 21
+    },
+    {
+      "station_id": "wanfang-community",
+      "line_id": "c1",
+      "seq": 22
+    },
+    {
+      "station_id": "muzha",
+      "line_id": "c1",
+      "seq": 23
+    },
+    {
+      "station_id": "taipei-zoo",
+      "line_id": "c1",
+      "seq": 24
+    },
+    {
+      "station_id": "shisizhang",
+      "line_id": "c10",
+      "seq": 1
+    },
+    {
+      "station_id": "xinhe-elementary-school",
+      "line_id": "c10",
+      "seq": 2
+    },
+    {
+      "station_id": "sunshine-sports-park",
+      "line_id": "c10",
+      "seq": 3
+    },
+    {
+      "station_id": "ankang",
+      "line_id": "c10",
+      "seq": 4
+    },
+    {
+      "station_id": "jinwen-university-of-science-and-technology",
+      "line_id": "c10",
+      "seq": 5
+    },
+    {
+      "station_id": "cardinal-tien-hospital-an-kang-branch",
+      "line_id": "c10",
+      "seq": 6
+    },
+    {
+      "station_id": "taipei-xiaocheng",
+      "line_id": "c10",
+      "seq": 7
+    },
+    {
+      "station_id": "rose-china-town",
+      "line_id": "c10",
+      "seq": 8
+    },
+    {
+      "station_id": "shuangcheng",
+      "line_id": "c10",
+      "seq": 9
+    },
+    {
+      "station_id": "laojie-river",
+      "line_id": "c11",
+      "seq": 1
+    },
+    {
+      "station_id": "huanbei",
+      "line_id": "c11",
+      "seq": 2
+    },
+    {
+      "station_id": "xingnan",
+      "line_id": "c11",
+      "seq": 3
+    },
+    {
+      "station_id": "taoyuan-sports-park",
+      "line_id": "c11",
+      "seq": 4
+    },
+    {
+      "station_id": "taoyuan-hsr-station",
+      "line_id": "c11",
+      "seq": 5
+    },
+    {
+      "station_id": "linghang",
+      "line_id": "c11",
+      "seq": 6
+    },
+    {
+      "station_id": "hengshan",
+      "line_id": "c11",
+      "seq": 7
+    },
+    {
+      "station_id": "dayuan",
+      "line_id": "c11",
+      "seq": 8
+    },
+    {
+      "station_id": "airport-hotel",
+      "line_id": "c11",
+      "seq": 9
+    },
+    {
+      "station_id": "airport-terminal-2",
+      "line_id": "c11",
+      "seq": 10
+    },
+    {
+      "station_id": "airport-terminal-1",
+      "line_id": "c11",
+      "seq": 11
+    },
+    {
+      "station_id": "kengkou",
+      "line_id": "c11",
+      "seq": 12
+    },
+    {
+      "station_id": "shanbi",
+      "line_id": "c11",
+      "seq": 13
+    },
+    {
+      "station_id": "linkou",
+      "line_id": "c11",
+      "seq": 14
+    },
+    {
+      "station_id": "chang-gung-memorial-hospital",
+      "line_id": "c11",
+      "seq": 15
+    },
+    {
+      "station_id": "national-taiwan-sport-university",
+      "line_id": "c11",
+      "seq": 16
+    },
+    {
+      "station_id": "taishan-guihe",
+      "line_id": "c11",
+      "seq": 17
+    },
+    {
+      "station_id": "taishan",
+      "line_id": "c11",
+      "seq": 18
+    },
+    {
+      "station_id": "xinzhuang-fuduxin",
+      "line_id": "c11",
+      "seq": 19
+    },
+    {
+      "station_id": "new-taipei-industrial-park",
+      "line_id": "c11",
+      "seq": 20
+    },
+    {
+      "station_id": "sanchong",
+      "line_id": "c11",
+      "seq": 21
+    },
+    {
+      "station_id": "tamsui",
+      "line_id": "c2",
+      "seq": 1
+    },
+    {
+      "station_id": "hongshulin",
+      "line_id": "c2",
+      "seq": 2
+    },
+    {
+      "station_id": "zhuwei",
+      "line_id": "c2",
+      "seq": 3
+    },
+    {
+      "station_id": "guandu",
+      "line_id": "c2",
+      "seq": 4
+    },
+    {
+      "station_id": "zhongyi",
+      "line_id": "c2",
+      "seq": 5
+    },
+    {
+      "station_id": "fuxingguang",
+      "line_id": "c2",
+      "seq": 6
+    },
+    {
+      "station_id": "beitou",
+      "line_id": "c2",
+      "seq": 7
+    },
+    {
+      "station_id": "qiyan",
+      "line_id": "c2",
+      "seq": 8
+    },
+    {
+      "station_id": "qilian",
+      "line_id": "c2",
+      "seq": 9
+    },
+    {
+      "station_id": "shipai",
+      "line_id": "c2",
+      "seq": 10
+    },
+    {
+      "station_id": "mingde",
+      "line_id": "c2",
+      "seq": 11
+    },
+    {
+      "station_id": "zhishan",
+      "line_id": "c2",
+      "seq": 12
+    },
+    {
+      "station_id": "shilin",
+      "line_id": "c2",
+      "seq": 13
+    },
+    {
+      "station_id": "jiantan",
+      "line_id": "c2",
+      "seq": 14
+    },
+    {
+      "station_id": "yuanshan",
+      "line_id": "c2",
+      "seq": 15
+    },
+    {
+      "station_id": "minquan-w-road",
+      "line_id": "c2",
+      "seq": 16
+    },
+    {
+      "station_id": "shuanglian",
+      "line_id": "c2",
+      "seq": 17
+    },
+    {
+      "station_id": "zhongshan",
+      "line_id": "c2",
+      "seq": 18
+    },
+    {
+      "station_id": "taipei-main-station",
+      "line_id": "c2",
+      "seq": 19
+    },
+    {
+      "station_id": "ntu-hospital",
+      "line_id": "c2",
+      "seq": 20
+    },
+    {
+      "station_id": "chiang-kai-shek-memorial-hall",
+      "line_id": "c2",
+      "seq": 21
+    },
+    {
+      "station_id": "dongmen",
+      "line_id": "c2",
+      "seq": 22
+    },
+    {
+      "station_id": "daan-park",
+      "line_id": "c2",
+      "seq": 23
+    },
+    {
+      "station_id": "daan",
+      "line_id": "c2",
+      "seq": 24
+    },
+    {
+      "station_id": "xinyi-anhe",
+      "line_id": "c2",
+      "seq": 25
+    },
+    {
+      "station_id": "taipei-101-world-trade-center",
+      "line_id": "c2",
+      "seq": 26
+    },
+    {
+      "station_id": "xiangshan",
+      "line_id": "c2",
+      "seq": 27
+    },
+    {
+      "station_id": "taipei-nangang-exhibition-center",
+      "line_id": "c3",
+      "seq": 1
+    },
+    {
+      "station_id": "nangang",
+      "line_id": "c3",
+      "seq": 2
+    },
+    {
+      "station_id": "kunyang",
+      "line_id": "c3",
+      "seq": 3
+    },
+    {
+      "station_id": "houshanpi",
+      "line_id": "c3",
+      "seq": 4
+    },
+    {
+      "station_id": "yongchun",
+      "line_id": "c3",
+      "seq": 5
+    },
+    {
+      "station_id": "taipei-city-hall",
+      "line_id": "c3",
+      "seq": 6
+    },
+    {
+      "station_id": "sun-yat-sen-memorial-hall",
+      "line_id": "c3",
+      "seq": 7
+    },
+    {
+      "station_id": "zhongxiao-dunhua",
+      "line_id": "c3",
+      "seq": 8
+    },
+    {
+      "station_id": "zhongxiao-fuxing",
+      "line_id": "c3",
+      "seq": 9
+    },
+    {
+      "station_id": "zhongxiao-xinsheng",
+      "line_id": "c3",
+      "seq": 10
+    },
+    {
+      "station_id": "taipei-main-station",
+      "line_id": "c3",
+      "seq": 11
+    },
+    {
+      "station_id": "ximen",
+      "line_id": "c3",
+      "seq": 12
+    },
+    {
+      "station_id": "longshan-temple",
+      "line_id": "c3",
+      "seq": 13
+    },
+    {
+      "station_id": "jiangzicui",
+      "line_id": "c3",
+      "seq": 14
+    },
+    {
+      "station_id": "xinpu",
+      "line_id": "c3",
+      "seq": 15
+    },
+    {
+      "station_id": "xinpu-minsheng",
+      "line_id": "c3",
+      "seq": 16
+    },
+    {
+      "station_id": "banqiao",
+      "line_id": "c3",
+      "seq": 17
+    },
+    {
+      "station_id": "fuzhong",
+      "line_id": "c3",
+      "seq": 18
+    },
+    {
+      "station_id": "far-eastern-hospital",
+      "line_id": "c3",
+      "seq": 19
+    },
+    {
+      "station_id": "haishan",
+      "line_id": "c3",
+      "seq": 20
+    },
+    {
+      "station_id": "tucheng",
+      "line_id": "c3",
+      "seq": 21
+    },
+    {
+      "station_id": "yongning",
+      "line_id": "c3",
+      "seq": 22
+    },
+    {
+      "station_id": "dingpu",
+      "line_id": "c3",
+      "seq": 23
+    },
+    {
+      "station_id": "songshan",
+      "line_id": "c4",
+      "seq": 1
+    },
+    {
+      "station_id": "nanjing-sanmin",
+      "line_id": "c4",
+      "seq": 2
+    },
+    {
+      "station_id": "taipei-arena",
+      "line_id": "c4",
+      "seq": 3
+    },
+    {
+      "station_id": "nanjing-fuxing",
+      "line_id": "c4",
+      "seq": 4
+    },
+    {
+      "station_id": "songjiang-nanjing",
+      "line_id": "c4",
+      "seq": 5
+    },
+    {
+      "station_id": "zhongshan",
+      "line_id": "c4",
+      "seq": 6
+    },
+    {
+      "station_id": "beimen",
+      "line_id": "c4",
+      "seq": 7
+    },
+    {
+      "station_id": "ximen",
+      "line_id": "c4",
+      "seq": 8
+    },
+    {
+      "station_id": "xiaonanmen",
+      "line_id": "c4",
+      "seq": 9
+    },
+    {
+      "station_id": "chiang-kai-shek-memorial-hall",
+      "line_id": "c4",
+      "seq": 10
+    },
+    {
+      "station_id": "taipower-building",
+      "line_id": "c4",
+      "seq": 11
+    },
+    {
+      "station_id": "gongguan",
+      "line_id": "c4",
+      "seq": 12
+    },
+    {
+      "station_id": "wanlong",
+      "line_id": "c4",
+      "seq": 13
+    },
+    {
+      "station_id": "jingmei",
+      "line_id": "c4",
+      "seq": 14
+    },
+    {
+      "station_id": "dapinglin",
+      "line_id": "c4",
+      "seq": 15
+    },
+    {
+      "station_id": "qizhang",
+      "line_id": "c4",
+      "seq": 16
+    },
+    {
+      "station_id": "xindian-district-office",
+      "line_id": "c4",
+      "seq": 17
+    },
+    {
+      "station_id": "xindian",
+      "line_id": "c4",
+      "seq": 18
+    },
+    {
+      "station_id": "luzhou",
+      "line_id": "c5",
+      "seq": 1
+    },
+    {
+      "station_id": "sanmin-senior-high-school",
+      "line_id": "c5",
+      "seq": 2
+    },
+    {
+      "station_id": "st-ignatius-high-school",
+      "line_id": "c5",
+      "seq": 3
+    },
+    {
+      "station_id": "sanhe-junior-high-school",
+      "line_id": "c5",
+      "seq": 4
+    },
+    {
+      "station_id": "sanchong-elementary-school",
+      "line_id": "c5",
+      "seq": 5
+    },
+    {
+      "station_id": "daqiaotou",
+      "line_id": "c5",
+      "seq": 6
+    },
+    {
+      "station_id": "taipei-bridge",
+      "line_id": "c5",
+      "seq": 7
+    },
+    {
+      "station_id": "cailiao",
+      "line_id": "c5",
+      "seq": 8
+    },
+    {
+      "station_id": "minquan-w-road",
+      "line_id": "c5",
+      "seq": 9
+    },
+    {
+      "station_id": "sanchong",
+      "line_id": "c5",
+      "seq": 10
+    },
+    {
+      "station_id": "zhongshan-elementary-school",
+      "line_id": "c5",
+      "seq": 11
+    },
+    {
+      "station_id": "xianse-temple",
+      "line_id": "c5",
+      "seq": 12
+    },
+    {
+      "station_id": "xingtian-temple",
+      "line_id": "c5",
+      "seq": 13
+    },
+    {
+      "station_id": "touqianzhuang",
+      "line_id": "c5",
+      "seq": 14
+    },
+    {
+      "station_id": "songjiang-nanjing",
+      "line_id": "c5",
+      "seq": 15
+    },
+    {
+      "station_id": "xinzhuang",
+      "line_id": "c5",
+      "seq": 16
+    },
+    {
+      "station_id": "zhongxiao-xinsheng",
+      "line_id": "c5",
+      "seq": 17
+    },
+    {
+      "station_id": "fu-jen-university",
+      "line_id": "c5",
+      "seq": 18
+    },
+    {
+      "station_id": "danfeng",
+      "line_id": "c5",
+      "seq": 19
+    },
+    {
+      "station_id": "dongmen",
+      "line_id": "c5",
+      "seq": 20
+    },
+    {
+      "station_id": "huilong",
+      "line_id": "c5",
+      "seq": 21
+    },
+    {
+      "station_id": "guting",
+      "line_id": "c5",
+      "seq": 22
+    },
+    {
+      "station_id": "dingxi",
+      "line_id": "c5",
+      "seq": 23
+    },
+    {
+      "station_id": "yongan-market",
+      "line_id": "c5",
+      "seq": 24
+    },
+    {
+      "station_id": "jingan",
+      "line_id": "c5",
+      "seq": 25
+    },
+    {
+      "station_id": "nanshijiao",
+      "line_id": "c5",
+      "seq": 26
+    },
+    {
+      "station_id": "xinbeitou",
+      "line_id": "c6",
+      "seq": 1
+    },
+    {
+      "station_id": "beitou",
+      "line_id": "c6",
+      "seq": 2
+    },
+    {
+      "station_id": "tamsui-fishermans-wharf",
+      "line_id": "c7",
+      "seq": 1
+    },
+    {
+      "station_id": "shalun",
+      "line_id": "c7",
+      "seq": 2
+    },
+    {
+      "station_id": "taipei-university-of-marine-technology",
+      "line_id": "c7",
+      "seq": 3
+    },
+    {
+      "station_id": "binhai-shalun",
+      "line_id": "c7",
+      "seq": 4
+    },
+    {
+      "station_id": "danhai-new-town",
+      "line_id": "c7",
+      "seq": 5
+    },
+    {
+      "station_id": "binhai-yishan",
+      "line_id": "c7",
+      "seq": 6
+    },
+    {
+      "station_id": "kanding",
+      "line_id": "c7",
+      "seq": 7
+    },
+    {
+      "station_id": "tamsui-district-office",
+      "line_id": "c7",
+      "seq": 8
+    },
+    {
+      "station_id": "xinshi-1st-rd",
+      "line_id": "c7",
+      "seq": 9
+    },
+    {
+      "station_id": "danjin-beixin",
+      "line_id": "c7",
+      "seq": 10
+    },
+    {
+      "station_id": "tamkang-university",
+      "line_id": "c7",
+      "seq": 11
+    },
+    {
+      "station_id": "danjin-denggong",
+      "line_id": "c7",
+      "seq": 12
+    },
+    {
+      "station_id": "ganzhenlin",
+      "line_id": "c7",
+      "seq": 13
+    },
+    {
+      "station_id": "hongshulin",
+      "line_id": "c7",
+      "seq": 14
+    },
+    {
+      "station_id": "xiaobitan",
+      "line_id": "c8",
+      "seq": 1
+    },
+    {
+      "station_id": "qizhang",
+      "line_id": "c8",
+      "seq": 2
+    },
+    {
+      "station_id": "banxin",
+      "line_id": "c9",
+      "seq": 1
+    },
+    {
+      "station_id": "zhongyuan",
+      "line_id": "c9",
+      "seq": 2
+    },
+    {
+      "station_id": "qiaohe",
+      "line_id": "c9",
+      "seq": 3
+    },
+    {
+      "station_id": "zhonghe",
+      "line_id": "c9",
+      "seq": 4
+    },
+    {
+      "station_id": "jingan",
+      "line_id": "c9",
+      "seq": 5
+    },
+    {
+      "station_id": "jingping",
+      "line_id": "c9",
+      "seq": 6
+    },
+    {
+      "station_id": "xiulang-bridge",
+      "line_id": "c9",
+      "seq": 7
+    },
+    {
+      "station_id": "shisizhang",
+      "line_id": "c9",
+      "seq": 8
+    },
+    {
+      "station_id": "dapinglin",
+      "line_id": "c9",
+      "seq": 9
+    },
+    {
+      "station_id": "new-taipei-industrial-park",
+      "line_id": "c9",
+      "seq": 10
+    },
+    {
+      "station_id": "xingfu",
+      "line_id": "c9",
+      "seq": 11
+    },
+    {
+      "station_id": "xinpu-minsheng",
+      "line_id": "c9",
+      "seq": 12
+    },
+    {
+      "station_id": "xinpu",
+      "line_id": "c9",
+      "seq": 13
+    }
+  ],
+  "segments": [
+    {
+      "line_id": "c0",
+      "from_station_id": "taipei-zoo-south-station",
+      "to_station_id": "zhinan-temple-station",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c0",
+      "from_station_id": "taipei-zoo-station",
+      "to_station_id": "taipei-zoo-south-station",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c0",
+      "from_station_id": "zhinan-temple-station",
+      "to_station_id": "maokong-zoo-station",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "daan",
+      "to_station_id": "technology-building",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "dahu-park",
+      "to_station_id": "huzhou",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "dazhi",
+      "to_station_id": "songshan-airport",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "donghu",
+      "to_station_id": "nangang-software-park",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "gangqian",
+      "to_station_id": "wende",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "huzhou",
+      "to_station_id": "donghu",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "jiannan-rd",
+      "to_station_id": "dazhi",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "jiannan-rd",
+      "to_station_id": "xihu",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "linguang",
+      "to_station_id": "xinhai",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "liuzhangli",
+      "to_station_id": "linguang",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "muzha",
+      "to_station_id": "taipei-zoo",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "nangang-software-park",
+      "to_station_id": "taipei-nangang-exhibition-center",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "nanjing-fuxing",
+      "to_station_id": "zhongxiao-fuxing",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "neihu",
+      "to_station_id": "dahu-park",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "songshan-airport",
+      "to_station_id": "zhongshan-junior-high-school",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "technology-building",
+      "to_station_id": "liuzhangli",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "wanfang-community",
+      "to_station_id": "muzha",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "wanfang-hospital",
+      "to_station_id": "wanfang-community",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "wende",
+      "to_station_id": "neihu",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "xihu",
+      "to_station_id": "gangqian",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "xinhai",
+      "to_station_id": "wanfang-hospital",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "zhongshan-junior-high-school",
+      "to_station_id": "nanjing-fuxing",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c1",
+      "from_station_id": "zhongxiao-fuxing",
+      "to_station_id": "daan",
+      "travel_sec": 80
+    },
+    {
+      "line_id": "c10",
+      "from_station_id": "ankang",
+      "to_station_id": "jinwen-university-of-science-and-technology",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c10",
+      "from_station_id": "jinwen-university-of-science-and-technology",
+      "to_station_id": "cardinal-tien-hospital-an-kang-branch",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c10",
+      "from_station_id": "rose-china-town",
+      "to_station_id": "taipei-xiaocheng",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c10",
+      "from_station_id": "shisizhang",
+      "to_station_id": "xinhe-elementary-school",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c10",
+      "from_station_id": "shuangcheng",
+      "to_station_id": "rose-china-town",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c10",
+      "from_station_id": "sunshine-sports-park",
+      "to_station_id": "ankang",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c10",
+      "from_station_id": "taipei-xiaocheng",
+      "to_station_id": "cardinal-tien-hospital-an-kang-branch",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c10",
+      "from_station_id": "xinhe-elementary-school",
+      "to_station_id": "sunshine-sports-park",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "airport-hotel",
+      "to_station_id": "airport-terminal-2",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "airport-terminal-1",
+      "to_station_id": "kengkou",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "airport-terminal-2",
+      "to_station_id": "airport-terminal-1",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "chang-gung-memorial-hospital",
+      "to_station_id": "national-taiwan-sport-university",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "dayuan",
+      "to_station_id": "airport-hotel",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "hengshan",
+      "to_station_id": "dayuan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "huanbei",
+      "to_station_id": "xingnan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "kengkou",
+      "to_station_id": "shanbi",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "laojie-river",
+      "to_station_id": "huanbei",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "linghang",
+      "to_station_id": "hengshan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "linkou",
+      "to_station_id": "chang-gung-memorial-hospital",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "national-taiwan-sport-university",
+      "to_station_id": "taishan-guihe",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "new-taipei-industrial-park",
+      "to_station_id": "sanchong",
+      "travel_sec": 100
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "shanbi",
+      "to_station_id": "linkou",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "taishan",
+      "to_station_id": "xinzhuang-fuduxin",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "taishan-guihe",
+      "to_station_id": "taishan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "taoyuan-hsr-station",
+      "to_station_id": "linghang",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "taoyuan-sports-park",
+      "to_station_id": "taoyuan-hsr-station",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "xingnan",
+      "to_station_id": "taoyuan-sports-park",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c11",
+      "from_station_id": "xinzhuang-fuduxin",
+      "to_station_id": "new-taipei-industrial-park",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "beitou",
+      "to_station_id": "qiyan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "chiang-kai-shek-memorial-hall",
+      "to_station_id": "dongmen",
+      "travel_sec": 80
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "daan",
+      "to_station_id": "xinyi-anhe",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "daan-park",
+      "to_station_id": "daan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "dongmen",
+      "to_station_id": "daan-park",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "fuxingguang",
+      "to_station_id": "beitou",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "guandu",
+      "to_station_id": "zhongyi",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "hongshulin",
+      "to_station_id": "zhuwei",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "jiantan",
+      "to_station_id": "yuanshan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "mingde",
+      "to_station_id": "zhishan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "minquan-w-road",
+      "to_station_id": "shuanglian",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "ntu-hospital",
+      "to_station_id": "chiang-kai-shek-memorial-hall",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "qilian",
+      "to_station_id": "shipai",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "qiyan",
+      "to_station_id": "qilian",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "shilin",
+      "to_station_id": "jiantan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "shipai",
+      "to_station_id": "mingde",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "shuanglian",
+      "to_station_id": "zhongshan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "taipei-101-world-trade-center",
+      "to_station_id": "xiangshan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "taipei-main-station",
+      "to_station_id": "ntu-hospital",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "tamsui",
+      "to_station_id": "hongshulin",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "xinyi-anhe",
+      "to_station_id": "taipei-101-world-trade-center",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "yuanshan",
+      "to_station_id": "minquan-w-road",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "zhishan",
+      "to_station_id": "shilin",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "zhongshan",
+      "to_station_id": "taipei-main-station",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "zhongyi",
+      "to_station_id": "fuxingguang",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c2",
+      "from_station_id": "zhuwei",
+      "to_station_id": "guandu",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "banqiao",
+      "to_station_id": "fuzhong",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "far-eastern-hospital",
+      "to_station_id": "haishan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "fuzhong",
+      "to_station_id": "far-eastern-hospital",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "haishan",
+      "to_station_id": "tucheng",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "jiangzicui",
+      "to_station_id": "xinpu",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "kunyang",
+      "to_station_id": "houshanpi",
+      "travel_sec": 64
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "longshan-temple",
+      "to_station_id": "jiangzicui",
+      "travel_sec": 88
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "longshan-temple",
+      "to_station_id": "ximen",
+      "travel_sec": 80
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "nangang",
+      "to_station_id": "kunyang",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "sun-yat-sen-memorial-hall",
+      "to_station_id": "taipei-city-hall",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "taipei-city-hall",
+      "to_station_id": "yongchun",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "taipei-main-station",
+      "to_station_id": "ximen",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "taipei-main-station",
+      "to_station_id": "zhongxiao-xinsheng",
+      "travel_sec": 80
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "taipei-nangang-exhibition-center",
+      "to_station_id": "nangang",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "tucheng",
+      "to_station_id": "yongning",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "xinpu-minsheng",
+      "to_station_id": "banqiao",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "xinpu-minsheng",
+      "to_station_id": "xinpu",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "yongchun",
+      "to_station_id": "houshanpi",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "yongning",
+      "to_station_id": "dingpu",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "zhongxiao-dunhua",
+      "to_station_id": "sun-yat-sen-memorial-hall",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "zhongxiao-fuxing",
+      "to_station_id": "zhongxiao-dunhua",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c3",
+      "from_station_id": "zhongxiao-xinsheng",
+      "to_station_id": "zhongxiao-fuxing",
+      "travel_sec": 80
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "beimen",
+      "to_station_id": "ximen",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "dapinglin",
+      "to_station_id": "qizhang",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "gongguan",
+      "to_station_id": "wanlong",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "nanjing-fuxing",
+      "to_station_id": "taipei-arena",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "nanjing-sanmin",
+      "to_station_id": "songshan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "qizhang",
+      "to_station_id": "xindian-district-office",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "songjiang-nanjing",
+      "to_station_id": "nanjing-fuxing",
+      "travel_sec": 80
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "taipei-arena",
+      "to_station_id": "nanjing-sanmin",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "taipower-building",
+      "to_station_id": "gongguan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "wanlong",
+      "to_station_id": "jingmei",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "xiaonanmen",
+      "to_station_id": "chiang-kai-shek-memorial-hall",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "ximen",
+      "to_station_id": "xiaonanmen",
+      "travel_sec": 80
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "xindian-district-office",
+      "to_station_id": "xindian",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "zhongshan",
+      "to_station_id": "beimen",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c4",
+      "from_station_id": "zhongshan",
+      "to_station_id": "songjiang-nanjing",
+      "travel_sec": 80
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "cailiao",
+      "to_station_id": "sanchong",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "danfeng",
+      "to_station_id": "huilong",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "daqiaotou",
+      "to_station_id": "minquan-w-road",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "daqiaotou",
+      "to_station_id": "taipei-bridge",
+      "travel_sec": 82
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "dingxi",
+      "to_station_id": "yongan-market",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "dongmen",
+      "to_station_id": "guting",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "fu-jen-university",
+      "to_station_id": "danfeng",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "guting",
+      "to_station_id": "dingxi",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "jingan",
+      "to_station_id": "nanshijiao",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "luzhou",
+      "to_station_id": "sanmin-senior-high-school",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "minquan-w-road",
+      "to_station_id": "zhongshan-elementary-school",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "sanchong",
+      "to_station_id": "xianse-temple",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "sanchong-elementary-school",
+      "to_station_id": "daqiaotou",
+      "travel_sec": 82
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "sanchong-elementary-school",
+      "to_station_id": "taipei-bridge",
+      "travel_sec": 85
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "sanhe-junior-high-school",
+      "to_station_id": "sanchong-elementary-school",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "sanmin-senior-high-school",
+      "to_station_id": "st-ignatius-high-school",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "songjiang-nanjing",
+      "to_station_id": "zhongxiao-xinsheng",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "st-ignatius-high-school",
+      "to_station_id": "sanhe-junior-high-school",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "taipei-bridge",
+      "to_station_id": "cailiao",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "touqianzhuang",
+      "to_station_id": "xinzhuang",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "xianse-temple",
+      "to_station_id": "touqianzhuang",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "xingtian-temple",
+      "to_station_id": "songjiang-nanjing",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "xinzhuang",
+      "to_station_id": "fu-jen-university",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "yongan-market",
+      "to_station_id": "jingan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "zhongshan-elementary-school",
+      "to_station_id": "xingtian-temple",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c5",
+      "from_station_id": "zhongxiao-xinsheng",
+      "to_station_id": "dongmen",
+      "travel_sec": 80
+    },
+    {
+      "line_id": "c6",
+      "from_station_id": "xinbeitou",
+      "to_station_id": "beitou",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "binhai-shalun",
+      "to_station_id": "binhai-yishan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "binhai-shalun",
+      "to_station_id": "danhai-new-town",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "binhai-shalun",
+      "to_station_id": "taipei-university-of-marine-technology",
+      "travel_sec": 75
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "binhai-yishan",
+      "to_station_id": "tamsui-district-office",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "danhai-new-town",
+      "to_station_id": "kanding",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "danjin-beixin",
+      "to_station_id": "xinshi-1st-rd",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "danjin-denggong",
+      "to_station_id": "tamkang-university",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "ganzhenlin",
+      "to_station_id": "danjin-denggong",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "hongshulin",
+      "to_station_id": "ganzhenlin",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "shalun",
+      "to_station_id": "taipei-university-of-marine-technology",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "tamkang-university",
+      "to_station_id": "danjin-beixin",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "tamsui-fishermans-wharf",
+      "to_station_id": "shalun",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c7",
+      "from_station_id": "xinshi-1st-rd",
+      "to_station_id": "tamsui-district-office",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c8",
+      "from_station_id": "xiaobitan",
+      "to_station_id": "qizhang",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c9",
+      "from_station_id": "banxin",
+      "to_station_id": "zhongyuan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c9",
+      "from_station_id": "jingan",
+      "to_station_id": "jingping",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c9",
+      "from_station_id": "jingping",
+      "to_station_id": "xiulang-bridge",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c9",
+      "from_station_id": "new-taipei-industrial-park",
+      "to_station_id": "xingfu",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c9",
+      "from_station_id": "qiaohe",
+      "to_station_id": "zhonghe",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c9",
+      "from_station_id": "shisizhang",
+      "to_station_id": "dapinglin",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c9",
+      "from_station_id": "xinpu-minsheng",
+      "to_station_id": "xinpu",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c9",
+      "from_station_id": "xiulang-bridge",
+      "to_station_id": "shisizhang",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c9",
+      "from_station_id": "zhonghe",
+      "to_station_id": "jingan",
+      "travel_sec": 60
+    },
+    {
+      "line_id": "c9",
+      "from_station_id": "zhongyuan",
+      "to_station_id": "qiaohe",
+      "travel_sec": 60
+    }
+  ],
+  "transfers": [],
+  "metadata": {
+    "source_kind": "svg_rebuild",
+    "svg_file": "taipei_mrt_interactive.svg",
+    "mapping_file": "taipei_mrt_interactive_map.json",
+    "diagram_width": 160.0,
+    "diagram_height": 160.0
+  }
+}

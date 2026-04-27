@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/shared/app-shell.css?v=20260426-unified-1" />
+    <link rel="stylesheet" href="/static/login/login.css?v=20260426-auth-1" />
+  </head>
+  <body class="login-page">
+    <div class="login-card">
+      <h1>Sign in</h1>
+      <p class="lead">Sign in to open the MRT admin console.</p>
+
+      <form id="loginForm" class="login-form" action="/admin" method="get" onsubmit="return false;">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" required autocomplete="username" />
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required autocomplete="current-password" />
+
+        <button id="loginButton" type="submit" class="primary">Sign in</button>
+      </form>
+      <p id="loginError" class="login-error" role="alert" hidden></p>
+
+      <p class="hint">
+        Demo credentials: admin / password. This is a UI demo only; no real authentication is enforced.
+      </p>
+    </div>
+
+    <script>
+      const AUTH_KEY = 'mrt_admin_authenticated';
+      const DEMO_USERNAME = 'admin';
+      const DEMO_PASSWORD = 'password';
+      const params = new URLSearchParams(window.location.search);
+      const nextUrl = params.get('next') || '/admin';
+      const errorEl = document.getElementById('loginError');
+
+      if (sessionStorage.getItem(AUTH_KEY) === 'true') {
+        window.location.replace(nextUrl);
+      }
+
+      document.getElementById('loginForm').addEventListener('submit', function () {
+        const user = document.getElementById('username').value.trim();
+        const pass = document.getElementById('password').value.trim();
+        if (!user || !pass) {
+          errorEl.textContent = 'Please fill in all fields.';
+          errorEl.hidden = false;
+          return false;
+        }
+        if (user !== DEMO_USERNAME || pass !== DEMO_PASSWORD) {
+          sessionStorage.removeItem(AUTH_KEY);
+          errorEl.textContent = 'Invalid demo credentials. Use admin / password.';
+          errorEl.hidden = false;
+          return false;
+        }
+        sessionStorage.setItem(AUTH_KEY, 'true');
+        window.location.href = nextUrl;
+        return false;
+      });
+    </script>
+  </body>
+</html>
