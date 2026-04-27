@@ -1,4 +1,6 @@
 const FEED_LIMIT = 7;
+const ADMIN_SCENARIO_STORAGE_KEY = 'mrt_admin_scenarios';
+const LEGACY_ADMIN_SCENARIO_STORAGE_KEY = 'mrt_admin_scenarios_backup';
 const DEFAULT_VIEWPORT_BOUNDS = [121.44, 24.97, 121.62, 25.13];
 const MAX_FOCUS_LON_SPAN = 0.22;
 const MAX_FOCUS_LAT_SPAN = 0.16;
@@ -109,48 +111,27 @@ async function init() {
 }
 
 async function hydrateScenarioState() {
-  const LOCAL_STORAGE_KEY = 'mrt_admin_scenarios_backup';
-  let serverPayload = null;
   let localPayload = null;
 
-  // 1. Try to load from Server
   try {
-    const response = await fetch('/api/admin/scenarios');
-    const result = await response.json();
-    if (response.ok) {
-      serverPayload = result?.scenarios || result;
-    }
-  } catch (error) {
-    console.warn('Unable to load from server', error);
-  }
-
-  // 2. Try to load from LocalStorage
-  try {
-    const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
+    const stored =
+      localStorage.getItem(ADMIN_SCENARIO_STORAGE_KEY) ||
+      localStorage.getItem(LEGACY_ADMIN_SCENARIO_STORAGE_KEY);
     if (stored) {
       localPayload = JSON.parse(stored);
+      localStorage.setItem(ADMIN_SCENARIO_STORAGE_KEY, JSON.stringify(localPayload));
+      localStorage.removeItem(LEGACY_ADMIN_SCENARIO_STORAGE_KEY);
     }
   } catch (error) {
     console.warn('Unable to load from localStorage', error);
   }
 
-  // 3. Select the best payload (prefer newer generated_at)
-  let bestPayload = serverPayload || localPayload || {};
-  if (serverPayload && localPayload) {
-    const serverTime = new Date(serverPayload.generated_at || 0).getTime();
-    const localTime = new Date(localPayload.generated_at || 0).getTime();
-    if (localTime > serverTime) {
-      console.info('LocalStorage is newer than Server. Using local backup.');
-      bestPayload = localPayload;
-    }
-  }
-
-  applyScenarioPayload(bestPayload);
+  applyScenarioPayload(localPayload || {});
 }
 
 function saveToLocalStorage(payload) {
   try {
-    localStorage.setItem('mrt_admin_scenarios_backup', JSON.stringify(payload));
+    localStorage.setItem(ADMIN_SCENARIO_STORAGE_KEY, JSON.stringify(payload));
   } catch (error) {
     console.warn('Failed to save to localStorage', error);
   }
@@ -202,27 +183,9 @@ function applyScenarioPayload(payload) {
 
 async function saveScenarioState() {
   const payload = buildPayloadPreview();
-  try {
-    const response = await fetch('/api/admin/scenarios', {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-    });
-    const responsePayload = await response.json();
-    if (!response.ok) {
-      throw new Error(responsePayload?.detail || 'Failed to save admin scenarios.');
-    }
-    // No longer overwriting state with payload from server to avoid race conditions during rapid drawing.
-    // The local state is the source of truth; the server just persists it.
-    saveToLocalStorage(payload);
-    renderMetrics();
-    updateRulesSummary();
-  } catch (error) {
-    console.error(error);
-    setStatus(`Save failed: ${error.message}`);
-  }
+  saveToLocalStorage(payload);
+  renderMetrics();
+  updateRulesSummary();
 }
 
 function buildNetworkCatalog(gisPayload) {
@@ -867,11 +830,7 @@ async function resetAll() {
   addFeed('Rules cleared', 'Rain zones, blocked segments, and banned stations were reset.');
   setStatus('All admin rules were cleared.');
   render();
-  try {
-    await fetch('/api/admin/scenarios', { method: 'DELETE' });
-  } catch (error) {
-    console.error(error);
-  }
+  await saveScenarioState();
 }
 
 function render() {

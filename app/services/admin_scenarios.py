@@ -50,19 +50,6 @@ def load_admin_scenarios(path: str | Path) -> dict[str, Any]:
     return normalize_admin_scenarios(payload)
 
 
-def save_admin_scenarios(path: str | Path, payload: dict[str, Any]) -> dict[str, Any]:
-    file_path = Path(path)
-    file_path.parent.mkdir(parents=True, exist_ok=True)
-    normalized = normalize_admin_scenarios(payload)
-    temp_path = file_path.with_name(f".{file_path.name}.tmp")
-    temp_path.write_text(
-        json.dumps(normalized, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-    temp_path.replace(file_path)
-    return normalized
-
-
 def normalize_admin_scenarios(payload: dict[str, Any] | None) -> dict[str, Any]:
     normalized = default_admin_scenarios()
     if not isinstance(payload, dict):

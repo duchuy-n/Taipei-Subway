@@ -35,8 +35,8 @@ from app.services.runtime import (
 )
 from app.services.admin_scenarios import (
     load_admin_scenarios,
-    save_admin_scenarios as save_admin_scenarios_service,
     default_admin_scenarios,
+    normalize_admin_scenarios,
     build_admin_scenario_effects,
     apply_admin_scenarios_to_network,
 )
@@ -98,6 +98,7 @@ class GisPointRouteRequest(BaseModel):
     end_lat: float
     walking_m_per_sec: float = DEFAULT_WALKING_M_PER_SEC
     via_station_ids: list[str] = Field(default_factory=list)
+    admin_scenarios: dict | None = None
 
 
 class GisStationPositionPayload(BaseModel):
@@ -1244,19 +1245,22 @@ async def get_gis_route_for_points(request: GisPointRouteRequest):
             raise HTTPException(status_code=400, detail="walking_m_per_sec must be > 0")
 
         network = get_subway_network()
-        admin_effects_for_response = network.metadata.get("admin_effects")
-        if "admin_effects" not in network.metadata:
-            preview_context = get_gis_route_context(network)
-            scenarios = load_admin_scenarios(settings.admin_scenarios_file)
-            effects = build_admin_scenario_effects(
-                network=network,
-                gis_payload=preview_context.payload,
-                scenarios=scenarios,
-            )
-            if effects.get("has_active_incidents"):
-                admin_effects_for_response = effects
-            if effects.get("closed_station_ids") or effects.get("closed_segment_keys"):
-                network = apply_admin_scenarios_to_network(network, effects)
+        admin_effects_for_response = None
+        preview_context = get_gis_route_context(network)
+        scenarios = (
+            request.admin_scenarios
+            if request.admin_scenarios is not None
+            else load_admin_scenarios(settings.admin_scenarios_file)
+        )
+        effects = build_admin_scenario_effects(
+            network=network,
+            gis_payload=preview_context.payload,
+            scenarios=scenarios,
+        )
+        if effects.get("has_active_incidents"):
+            admin_effects_for_response = effects
+        if effects.get("closed_station_ids") or effects.get("closed_segment_keys"):
+            network = apply_admin_scenarios_to_network(network, effects)
         for via_station_id in request.via_station_ids:
             if via_station_id not in network.stations:
                 raise HTTPException(status_code=400, detail=f"Unknown via station: {via_station_id}")
@@ -1635,16 +1639,11 @@ async def get_admin_scenarios():
 
 @router.put("/admin/scenarios")
 async def save_admin_scenarios(request: AdminScenarioSaveRequest):
-    payload = request.dict()
-    scenarios = save_admin_scenarios_service(settings.admin_scenarios_file, payload)
-    refresh_runtime_caches()
+    scenarios = normalize_admin_scenarios(request.dict())
     return {"status": "ok", "scenarios": scenarios}
 
 
 @router.delete("/admin/scenarios")
 async def reset_admin_scenarios():
-    scenarios = save_admin_scenarios_service(
-        settings.admin_scenarios_file, default_admin_scenarios()
-    )
-    refresh_runtime_caches()
+    scenarios = default_admin_scenarios()
     return {"status": "ok", "scenarios": scenarios}
