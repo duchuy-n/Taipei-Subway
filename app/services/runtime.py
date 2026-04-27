@@ -10,6 +10,11 @@ from app.services.subway_loader import load_json_file
 from app.services.subway_loader import load_network_from_dict
 from app.services.subway_loader import load_station_positions_file
 from app.services.subway_loader import merge_network_enrichment
+from app.services.admin_scenarios import (
+    load_admin_scenarios,
+    build_admin_scenario_effects,
+    apply_admin_scenarios_to_network,
+)
 
 
 
@@ -83,7 +88,25 @@ def _load_network_cached(
         options=options,
     )
 
-    del admin_scenarios_path, qgis_geojson_dir, map_width, map_height, fallback_bounds
+    # Use specialized GIS loader to calculate impacts of blocked stations/zones
+    from app.services.gis_loader import build_gis_payload
+    gis_payload = build_gis_payload(
+        network=network,
+        qgis_geojson_dir=Path(qgis_geojson_dir),
+        map_width=map_width,
+        map_height=map_height,
+        fallback_bounds=fallback_bounds,
+        include_walk_network=False,
+    )
+
+    scenarios = load_admin_scenarios(admin_scenarios_path)
+    effects = build_admin_scenario_effects(
+        network=network,
+        gis_payload=gis_payload,
+        scenarios=scenarios,
+    )
+    network = apply_admin_scenarios_to_network(network, effects)
+
     return network
 
 
@@ -132,7 +155,11 @@ def _load_gis_payload_cached(
     network = get_network() 
     
     from app.services.gis_loader import build_gis_payload
-    del admin_scenarios_path
+    from app.services.admin_scenarios import load_admin_scenarios
+
+    scenarios = load_admin_scenarios(admin_scenarios_path)
+    # Highlight blocked segments in the map UI payload
+    block_segments = scenarios.get("block_segments", [])
     
     return build_gis_payload(
         network=network,
@@ -141,6 +168,7 @@ def _load_gis_payload_cached(
         map_height=map_height,
         fallback_bounds=fallback_bounds,
         include_walk_network=include_walk_network,
+        block_segments=block_segments,
     )
 
 

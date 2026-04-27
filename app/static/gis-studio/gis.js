@@ -42,8 +42,6 @@ const SOURCE_IDS = {
   selectedStations: "selected-stations",
   route: "route-lines",
 };
-const ADMIN_SCENARIO_STORAGE_KEY = "mrt_admin_scenarios";
-const LEGACY_ADMIN_SCENARIO_STORAGE_KEY = "mrt_admin_scenarios_backup";
 const SIDEBAR_TRANSITION_MS = 280;
 const DEFAULT_VIEWPORT_BOUNDS = [121.44, 24.97, 121.62, 25.13];
 const MAX_FOCUS_LON_SPAN = 0.22;
@@ -829,25 +827,19 @@ async function findRouteForPoints() {
 
   try {
     setStatus("Calculating route...");
-    const requestBody = {
-      start_lon: state.startPoint.lon,
-      start_lat: state.startPoint.lat,
-      end_lon: state.endPoint.lon,
-      end_lat: state.endPoint.lat,
-      via_station_ids: state.viaStationIds,
-      walking_m_per_sec: 1.1,
-    };
-    const adminScenarios = loadAdminScenariosFromLocalStorage();
-    if (adminScenarios) {
-      requestBody.admin_scenarios = adminScenarios;
-    }
-
     const response = await fetch("/api/gis/route/points", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(requestBody),
+      body: JSON.stringify({
+        start_lon: state.startPoint.lon,
+        start_lat: state.startPoint.lat,
+        end_lon: state.endPoint.lon,
+        end_lat: state.endPoint.lat,
+        via_station_ids: state.viaStationIds,
+        walking_m_per_sec: 1.1,
+      }),
     });
-    const payload = await readJsonResponse(response);
+    const payload = await response.json();
     if (!response.ok) {
       throw new Error(payload.detail || "Unable to calculate route.");
     }
@@ -860,41 +852,6 @@ async function findRouteForPoints() {
   } catch (error) {
     console.error(error);
     setStatus(error.message || "Route calculation failed.");
-  }
-}
-
-async function readJsonResponse(response) {
-  const text = await response.text();
-  if (!text) {
-    return {
-      detail: `Route API returned ${response.status} ${response.statusText || "with an empty response"}.`,
-    };
-  }
-  try {
-    return JSON.parse(text);
-  } catch (error) {
-    return {
-      detail: `Route API returned ${response.status} ${response.statusText || "non-JSON response"}.`,
-    };
-  }
-}
-
-function loadAdminScenariosFromLocalStorage() {
-  try {
-    const stored =
-      localStorage.getItem(ADMIN_SCENARIO_STORAGE_KEY) ||
-      localStorage.getItem(LEGACY_ADMIN_SCENARIO_STORAGE_KEY);
-    if (!stored) {
-      return null;
-    }
-    const payload = JSON.parse(stored);
-    if (!payload || typeof payload !== "object") {
-      return null;
-    }
-    return payload;
-  } catch (error) {
-    console.warn("Unable to read local admin scenarios", error);
-    return null;
   }
 }
 
