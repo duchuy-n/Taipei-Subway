@@ -606,6 +606,7 @@ def _build_walk_only_option(
     else:
         distance_m = haversine_distance_m(start_lat, start_lon, end_lat, end_lon) * 1.25
         distance_source = "geo_fallback"
+        path_coordinates = [(start_lon, start_lat), (end_lon, end_lat)]
 
     walk_time_sec = walking_time_sec(distance_m, walking_m_per_sec)
     rain_penalty = _rain_penalty_for_path(
