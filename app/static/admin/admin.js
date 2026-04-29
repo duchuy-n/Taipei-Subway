@@ -40,6 +40,8 @@ const elements = {
   zoomInBtn: document.getElementById('zoomInBtn'),
   zoomOutBtn: document.getElementById('zoomOutBtn'),
   zoomResetBtn: document.getElementById('zoomResetBtn'),
+  toggleControls: document.getElementById('toggleControls'),
+  quickToggleControls: document.getElementById('quickToggleControls'),
   statusText: document.getElementById('statusText'),
   modeLabel: document.getElementById('modeLabel'),
   modeHint: document.getElementById('modeHint'),
@@ -58,9 +60,15 @@ const elements = {
   activeRulesList: document.getElementById('activeRulesList'),
   severityButtons: document.querySelectorAll('[data-severity]'),
   mapHelper: document.getElementById('mapHelper'),
+  floatingHeader: document.querySelector('.floating-header'),
+  toolsPanel: document.querySelector('.tools-panel'),
+  toggleHeader: document.getElementById('toggleHeader'),
+  showHeader: document.getElementById('showHeader'),
   toggleInspector: document.getElementById('toggleInspector'),
+  quickToggleInspector: document.getElementById('quickToggleInspector'),
   inspectorPanel: document.getElementById('inspectorPanel'),
   logoutButton: document.getElementById('logoutButton'),
+  quickLogoutButton: document.getElementById('quickLogoutButton'),
 };
 
 async function init() {
@@ -138,7 +146,7 @@ function saveToLocalStorage(payload) {
 }
 
 function applyScenarioPayload(payload) {
-  state.mode = payload?.ui_mode === 'block' ? 'block' : 'rain';
+  state.mode = ['rain', 'block'].includes(payload?.ui_mode) ? payload.ui_mode : 'rain';
   state.rainZones = Array.isArray(payload?.rain_zones)
     ? payload.rain_zones
         .map((zone) => ({
@@ -267,6 +275,8 @@ function bindEvents() {
   elements.zoomInBtn.addEventListener('click', () => state.map?.zoomIn());
   elements.zoomOutBtn.addEventListener('click', () => state.map?.zoomOut());
   elements.zoomResetBtn.addEventListener('click', resetMapView);
+  elements.toggleControls?.addEventListener('click', toggleControlsPanel);
+  elements.quickToggleControls?.addEventListener('click', toggleControlsPanel);
   elements.bannedStations.addEventListener('change', () => {
     const selected = Array.from(elements.bannedStations.selectedOptions).map((option) => option.value);
     setBannedStations(selected);
@@ -275,11 +285,33 @@ function bindEvents() {
   elements.toggleInspector?.addEventListener('click', () => {
     elements.inspectorPanel?.classList.toggle('collapsed');
   });
-  elements.logoutButton?.addEventListener('click', () => {
+  elements.quickToggleInspector?.addEventListener('click', () => {
+    elements.inspectorPanel?.classList.toggle('collapsed');
+  });
+  elements.toggleHeader?.addEventListener('click', () => {
+    elements.floatingHeader?.classList.add('collapsed');
+  });
+  elements.showHeader?.addEventListener('click', () => {
+    elements.floatingHeader?.classList.remove('collapsed');
+  });
+  const logout = () => {
     sessionStorage.removeItem('mrt_admin_authenticated');
     window.location.href = '/login';
-  });
+  };
+  elements.logoutButton?.addEventListener('click', logout);
+  elements.quickLogoutButton?.addEventListener('click', logout);
   window.addEventListener('resize', () => state.map?.resize());
+}
+
+function toggleControlsPanel() {
+  const isCollapsed = elements.toolsPanel?.classList.toggle('collapsed') || false;
+  const label = isCollapsed ? 'Show controls' : 'Hide controls';
+  if (elements.toggleControls) {
+    elements.toggleControls.textContent = label;
+  }
+  if (elements.quickToggleControls) {
+    elements.quickToggleControls.textContent = label;
+  }
 }
 
 function initializeMap() {
@@ -695,14 +727,10 @@ function applyMapBoundsConstraint() {
 }
 
 async function setMode(mode) {
-  state.mode = mode;
+  state.mode = ['rain', 'block'].includes(mode) ? mode : 'rain';
   state.temporaryPoint = null;
   applyModeUi();
-  setStatus(
-    mode === 'rain'
-      ? 'Rain mode is active. Click center first, then click again to set radius.'
-      : 'Block mode is active. Click one point or two points on the GIS map.'
-  );
+  setStatus(getModeStatusText(state.mode));
   updateMapSources();
   updateMapHelper();
   await saveScenarioState();
@@ -711,14 +739,26 @@ async function setMode(mode) {
 function applyModeUi() {
   elements.modeRain.classList.toggle('active', state.mode === 'rain');
   elements.modeBlock.classList.toggle('active', state.mode === 'block');
+  document.body.classList.toggle('is-block-mode', state.mode === 'block');
   elements.modeLabel.textContent = state.mode === 'rain' ? 'Rain Zone' : 'Block Segment';
-  elements.modeHint.textContent =
-    state.mode === 'rain'
-      ? 'Create a soft walking penalty with 2 map clicks'
-      : 'Create a blocked line or a blocked point';
+  elements.modeHint.textContent = getModeHintText(state.mode);
   elements.severityButtons.forEach((button) => {
     button.classList.toggle('active', normalizeRainSeverity(button.dataset.severity) === state.rainSeverity);
   });
+}
+
+function getModeStatusText(mode) {
+  if (mode === 'block') {
+    return 'Block mode is active. Click one point or two points on the GIS map.';
+  }
+  return 'Rain mode is active. Click center first, then click again to set radius.';
+}
+
+function getModeHintText(mode) {
+  if (mode === 'block') {
+    return 'Create a blocked line or a blocked point';
+  }
+  return 'Create a soft walking penalty with 2 map clicks';
 }
 
 async function setRainSeverity(severity) {

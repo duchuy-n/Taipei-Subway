@@ -1,12 +1,12 @@
 IT3160-SubwayWeb/
 |-- app/
-|   |-- api/                # Endpoint FastAPI
+|   |-- api/                # FastAPI endpoints
 |   |-- services/           # Runtime, route engine, GIS logic, admin scenario
 |   |-- domain/             # Domain model
 |   |-- data/
 |   |   |-- gis/            # network_topology.json, stations.geojson, lines.geojson,
 |   |   |                   # station_access_points.geojson, walk_network.geojson
-|   |   |-- admin_scenario.json
+|   |   |-- admin_scenarios.json      # Seed scenario; runtime uses localStorage
 |   |   |-- subway_osm_enrichment.json
 |   |-- static/             # gis-studio, admin, login
 |-- map/                    # Diagram and geography assets

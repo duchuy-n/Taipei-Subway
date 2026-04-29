@@ -779,7 +779,7 @@ function applySidebarState() {
 
   shell.classList.toggle("is-sidebar-hidden", !state.sidebarVisible);
   if (elements.toggleSidebarBtn) {
-    elements.toggleSidebarBtn.textContent = state.sidebarVisible ? "Hide Sidebar" : "Show Sidebar";
+    elements.toggleSidebarBtn.textContent = state.sidebarVisible ? "Hide panel" : "Show panel";
     elements.toggleSidebarBtn.setAttribute("aria-expanded", state.sidebarVisible ? "true" : "false");
   }
   if (elements.openSidebarBtn) {

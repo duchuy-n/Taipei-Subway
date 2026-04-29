@@ -23,7 +23,7 @@ Các mục tiêu chính của dự án gồm:
 Phiên bản hiện tại của hệ thống tập trung vào các thành phần sau:
 \begin{itemize}
     \item Giao diện chính \texttt{gis-studio} cho bài toán tìm đường trên bản đồ.
-    \item Giao diện \texttt{admin} để mô phỏng tình huống vận hành và áp dụng scenario vào runtime định tuyến.
+    \item Giao diện \texttt{admin} để mô phỏng tình huống vận hành; scenario được lưu trong \texttt{localStorage} của từng trình duyệt và được gửi kèm khi người dùng tính route.
     \item Giao diện \texttt{login} ở mức demo để điều hướng vào khu vực quản trị.
     \item API định tuyến và API GIS trên nền FastAPI.
     \item Dữ liệu topology, GeoJSON và walk network cho mạng MRT Đài Bắc.
@@ -47,7 +47,7 @@ là tập ga của mạng MRT, và
 \[
 L = \{\ell_1, \ell_2, \dots, \ell_m\}
 \]
-là tập các tuyến. Nhiệm vụ của hệ thống là xây dựng một hành trình hợp lệ nối từ $p_s$ đến $p_t$ thông qua mạng MRT sao cho chi phí tổng quát là nhỏ nhất.
+là tập các tuyến. Nhiệm vụ của hệ thống là xây dựng một hành trình hợp lệ nối từ $p_s$ đến $p_t$ thông qua mạng MRT sao cho chi phí tổng quát là nhỏ nhất. Với các cặp điểm rất gần nhau, hệ thống cũng xét phương án \textit{walk-only}; phương án metro chỉ được chọn khi lợi ích thời gian đủ rõ so với việc đi bộ trực tiếp.
 
 \subsection{Mô hình toán học của bài toán}
 
@@ -112,13 +112,13 @@ P_{\text{mrt}} = (v'_1, v'_2, \dots, v'_k), \qquad (v'_i, v'_{i+1}) \in E'
 trong đó mỗi thành phần của $c(e)$ lần lượt phản ánh thời gian tăng thêm, thời gian đi bộ tăng thêm, số lần chuyển tuyến tăng thêm và số chặng đi tàu tăng thêm trên cạnh $e$.
 
 \subsubsection{Hàm mục tiêu tối ưu}
-Trong cài đặt hiện tại, hệ thống không tối ưu một chi phí vô hướng duy nhất mà tối ưu một bộ chi phí theo thứ tự từ điển. Với một hành trình $P$, ta định nghĩa:
+Trong lõi A* của route engine, hệ thống không tối ưu một chi phí vô hướng duy nhất mà tối ưu một bộ chi phí theo thứ tự từ điển. Với một hành trình $P$ giữa hai ga đã chọn, ta định nghĩa:
 \[
 \mathbf{C}(P) = \bigl(T(P), W(P), N_{tr}(P), N_{stop}(P)\bigr)
 \]
 trong đó:
 \begin{itemize}
-    \item $T(P)$ là tổng thời gian hành trình trên toàn tuyến định tuyến;
+    \item $T(P)$ là tổng chi phí thời gian dùng để so sánh trong route engine;
     \item $W(P)$ là tổng thời gian đi bộ phát sinh;
     \item $N_{tr}(P)$ là số lần chuyển tuyến;
     \item $N_{stop}(P)$ là số chặng đi tàu.
@@ -132,13 +132,13 @@ trong đó phép cộng được hiểu theo từng thành phần của vector c
 \[
 P^{*} = \arg\min_{P \in \mathcal{P}(s_{\text{start}}, s_{\text{end}})}^{\text{lex}} \mathbf{C}(P)
 \]
-trong đó $\mathcal{P}(s_{\text{start}}, s_{\text{end}})$ là tập tất cả các hành trình hợp lệ nối giữa hai ga đã chọn và ký hiệu $\min^{\text{lex}}$ chỉ phép so sánh theo thứ tự ưu tiên từ điển. Cụ thể, hệ thống ưu tiên tổng thời gian nhỏ nhất; nếu nhiều phương án có cùng tổng thời gian thì ưu tiên phương án có ít thời gian đi bộ hơn; sau đó mới xét đến số lần chuyển tuyến và số chặng đi tàu.
+trong đó $\mathcal{P}(s_{\text{start}}, s_{\text{end}})$ là tập tất cả các hành trình hợp lệ nối giữa hai ga đã chọn và ký hiệu $\min^{\text{lex}}$ chỉ phép so sánh theo thứ tự ưu tiên từ điển. Cụ thể, hệ thống ưu tiên chi phí thời gian nhỏ nhất; nếu nhiều phương án có cùng chi phí thì ưu tiên phương án có ít thời gian đi bộ hơn; sau đó mới xét đến số lần chuyển tuyến và số chặng đi tàu. Riêng ở tầng API, các cặp ga đầu/cuối được đánh giá bằng hàm tiện ích có thêm độ khó chịu khi đi bộ và phạt chuyển tuyến, giúp tránh các route có thời gian tàu ngắn nhưng bắt người dùng đi bộ quá xa.
 
 Để phục vụ phần tóm tắt hành trình trên giao diện, hệ thống còn tính riêng một đại lượng vô hướng:
 \[
 T_{\text{total}} = T_{\text{access}} + T_{\text{route}} + T_{\text{transfer}} + T_{\text{egress}}
 \]
-Đại lượng này được dùng cho hiển thị và giải thích kết quả tới người dùng, còn tiêu chí lựa chọn đường đi vẫn là tối ưu từ điển trên $\mathbf{C}(P)$.
+Đại lượng này được dùng cho hiển thị và giải thích kết quả tới người dùng. Nó không nhân hệ số phạt đi bộ; các hệ số phạt chỉ được dùng trong bước lựa chọn route.
 
 \subsection{Cài đặt thuật toán định tuyến}
 
@@ -170,14 +170,15 @@ Trong cài đặt hiện tại, ba loại cạnh chính được gán vector chi
     \item \textbf{transfer edge}: $(\texttt{transfer\_sec},\; 0,\; 1,\; 0)$,
     \item \textbf{walk-transfer edge}: $(\lambda_{walk}\texttt{duration\_sec},\; \texttt{duration\_sec},\; 0,\; 0)$.
 \end{itemize}
+Trong dữ liệu địa lý hiện tại, thời gian chạy tàu giữa hai ga liên tiếp được nội suy theo tốc độ \(80\,km/h\), còn tốc độ đi bộ mặc định là \(1.1\,m/s\). Walk-transfer nội bộ giữa các ga gần nhau vẫn bị phạt mạnh trong A* để hệ thống không lạm dụng đi bộ thay cho metro.
 
 Như vậy, thuật toán không tối ưu một scalar cost duy nhất, mà tối ưu theo thứ tự ưu tiên từ điển trên bộ chi phí
 \[
 (T, W, N_{tr}, N_{stop}).
 \]
-Nói cách khác, hệ thống ưu tiên hành trình có tổng thời gian nhỏ nhất; nếu nhiều phương án có cùng tổng thời gian thì ưu tiên phương án có ít thời gian đi bộ hơn; nếu vẫn bằng nhau thì ưu tiên ít chuyển tuyến hơn; cuối cùng mới xét đến số chặng đi tàu.
+Nói cách khác, hệ thống ưu tiên hành trình có chi phí thời gian nhỏ nhất; nếu nhiều phương án có cùng chi phí thì ưu tiên phương án có ít thời gian đi bộ hơn; nếu vẫn bằng nhau thì ưu tiên ít chuyển tuyến hơn; cuối cùng mới xét đến số chặng đi tàu.
 
-Thuật toán nền được sử dụng là A* Search với hàng đợi ưu tiên. Dijkstra được xem là baseline lý thuyết vì A* sẽ trở thành Dijkstra nếu heuristic bằng 0. Trong dự án này, mỗi ga có toạ độ địa lý nên hệ thống dùng khoảng cách Haversine tới ga đích chia cho tốc độ tàu tối đa làm heuristic. Trên bản dữ liệu demo hiện hành, sau khi đồng bộ topology với lớp GIS và áp dụng scenario runtime, mạng định tuyến có khoảng 124 ga, 146 trạng thái station-line, 131 segment, 44 transfer và một số walk-transfer. Với quy mô này, độ phức tạp xấp xỉ
+Thuật toán nền được sử dụng là A* Search với hàng đợi ưu tiên. Dijkstra được xem là baseline lý thuyết vì A* sẽ trở thành Dijkstra nếu heuristic bằng 0. Trong dự án này, mỗi ga có toạ độ địa lý nên hệ thống dùng khoảng cách Haversine tới ga đích chia cho tốc độ tàu tối đa \(80\,km/h\) làm heuristic. Trên bản dữ liệu demo hiện hành, sau khi đồng bộ topology với lớp GIS, mạng định tuyến có khoảng hơn một trăm ga, nhiều trạng thái station-line, các segment MRT, transfer và một số walk-transfer. Với quy mô này, độ phức tạp xấp xỉ
 \[
 O((|V'| + |E'|)\log |V'|)
 \]

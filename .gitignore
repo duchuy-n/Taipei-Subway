@@ -24,6 +24,7 @@ app/data/gis/.cache/
 # Scratch & Dev
 scratch/
 UAT-*.md
+IT3160_Report/DoAn.pdf
 *.png
 *.webp
 !IT3160_Report/Hinhve/*.png

@@ -15,7 +15,7 @@
       href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
     />
     <link rel="stylesheet" href="/static/shared/app-shell.css?v=20260426-unified-1" />
-    <link rel="stylesheet" href="/static/admin/admin.css?v=20260426-auth-1" />
+    <link rel="stylesheet" href="/static/admin/admin.css?v=20260429-ui-only-1" />
     <script>
       if (sessionStorage.getItem('mrt_admin_authenticated') !== 'true') {
         window.location.replace('/login?next=/admin');
@@ -47,7 +47,9 @@
         </div>
         <div class="header-actions">
           <a class="main-nav-btn" href="/">Main</a>
+          <button id="toggleControls" class="signout-btn" type="button">Hide controls</button>
           <button id="logoutButton" class="signout-btn" type="button">Sign out</button>
+          <button id="toggleHeader" class="signout-btn" type="button">Hide studio</button>
           <button id="toggleInspector" class="icon-btn" title="Toggle Inspector">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -57,11 +59,18 @@
         </div>
       </header>
 
+      <div class="admin-quick-actions">
+        <a class="main-nav-btn" href="/">Main</a>
+        <button id="quickLogoutButton" class="signout-btn" type="button">Sign out</button>
+        <button id="quickToggleInspector" class="signout-btn" type="button">Inspector</button>
+        <button id="quickToggleControls" class="signout-btn" type="button">Hide controls</button>
+        <button id="showHeader" class="signout-btn" type="button">Show studio</button>
+      </div>
+
       <aside class="floating-panel tools-panel">
         <header class="panel-section header-section">
           <div class="section-title">
             <p class="eyebrow">Scenario Control</p>
-            <h2>Tools</h2>
           </div>
         </header>
 
@@ -109,7 +118,7 @@
         </div>
       </aside>
 
-      <aside id="inspectorPanel" class="floating-panel inspector-panel">
+      <aside id="inspectorPanel" class="floating-panel inspector-panel collapsed">
         <header class="panel-section header-section">
           <div class="section-title">
             <h2>Operations Inspector</h2>
@@ -159,6 +168,6 @@
     </div>
 
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="/static/admin/admin.js?v=20260427-rain-soft-1"></script>
+    <script src="/static/admin/admin.js?v=20260429-ui-only-1"></script>
   </body>
 </html>

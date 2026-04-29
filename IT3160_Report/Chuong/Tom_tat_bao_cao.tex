@@ -7,6 +7,6 @@ Trong xu thế phát triển của giao thông công cộng đô thị, nhu cầ
 
 Khác với các ứng dụng truyền thống yêu cầu người dùng phải chọn chính xác tên từng nhà ga, hệ thống cho phép thao tác chọn điểm trực tiếp trên bản đồ số, sau đó tự động ánh xạ vị trí tới nhà ga gần nhất thông qua mạng lưới đi bộ (Walk Network). Về mặt kiến trúc, dự án được phân rã thành ba khối chuyên trách độc lập: Frontend (chịu trách nhiệm về trải nghiệm người dùng và trực quan hoá đường đi bằng MapLibre), Backend (phụ trách API và lõi thuật toán định tuyến bằng FastAPI), và Data/GIS (tập trung chuẩn hoá dữ liệu topology, GeoJSON và các định dạng không gian). 
 
-Các kiểm thử nội bộ cho thấy hệ thống hoạt động ổn định trên phân hệ dữ liệu của mạng lưới MRT Đài Bắc. Điểm nổi bật của hệ thống nằm ở khả năng tích hợp các kịch bản vận hành do người quản trị cấu hình (như thiết lập vùng thời tiết xấu hoặc đóng chặn đoạn tuyến), cho phép route engine cập nhật lại lộ trình trong runtime và trực quan hoá kết quả ngay trên bản đồ.
+Các kiểm thử nội bộ cho thấy hệ thống hoạt động ổn định trên phân hệ dữ liệu của mạng lưới MRT Đài Bắc. Điểm nổi bật của hệ thống nằm ở khả năng tích hợp các kịch bản vận hành do người quản trị cấu hình (như thiết lập vùng thời tiết xấu hoặc đóng chặn đoạn tuyến). Các kịch bản này được lưu theo từng trình duyệt ở phía frontend và được gửi kèm khi tính đường, nhờ đó route engine có thể áp dụng ràng buộc theo từng phiên demo mà không làm thay đổi trạng thái toàn cục của server.
 
 \end{document}

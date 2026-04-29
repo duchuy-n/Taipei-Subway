@@ -59,7 +59,7 @@ Việc chia theo ba khối này vừa phù hợp với cấu trúc repository hi
 
 Kiến trúc tại Hình~\ref{fig:subway_architecture} cho thấy hệ thống được tổ chức theo mô hình ba lớp.
 Frontend tập trung vào tương tác bản đồ và hiển thị kết quả.
-Backend đóng vai trò lớp xử lý trung tâm, nơi tiếp nhận request, tính toán route và quản lý trạng thái runtime.
+Backend đóng vai trò lớp xử lý trung tâm, nơi tiếp nhận request, tính toán route và quản lý cache dữ liệu runtime. Các scenario admin trong bản hiện tại được lưu theo từng trình duyệt và chỉ được áp dụng khi frontend gửi kèm vào request định tuyến.
 Data/GIS là lớp nền cung cấp topology, hình học không gian và bản đồ nền phục vụ cả định tuyến lẫn trực quan hoá.
 
 \section{Luồng xử lý chính}
@@ -68,8 +68,8 @@ Luồng xử lý định tuyến theo điểm trên bản đồ được tổ ch
     \item Người dùng mở giao diện \texttt{/} hoặc \texttt{/gis} và tải dữ liệu mạng từ endpoint \texttt{/api/gis/network}.
     \item Frontend hiển thị ga, tuyến, lớp nền và các thành phần điều khiển tương tác.
     \item Người dùng chọn điểm bắt đầu và điểm kết thúc trên bản đồ.
-    \item Frontend gửi yêu cầu tới backend qua endpoint \texttt{/api/gis/route/points}.
-    \item Backend nạp mạng tuyến, lớp ga GIS, lớp đường đi bộ và các cấu hình runtime cần thiết.
+    \item Frontend gửi yêu cầu tới backend qua endpoint \texttt{/api/gis/route/points}; nếu trình duyệt có scenario admin trong \texttt{localStorage}, payload scenario cũng được gửi kèm request.
+    \item Backend nạp mạng tuyến, lớp ga GIS, lớp đường đi bộ và các cấu hình runtime cần thiết; scenario trong request được áp dụng theo phạm vi request, không ghi đè trạng thái toàn cục của server.
     \item Backend tìm ga gần nhất theo dữ liệu đi bộ hoặc lối vào ga, sau đó route engine tính hành trình trên đồ thị tuyến.
     \item Kết quả cuối cùng được trả lại frontend để hiển thị đường đi bộ đầu/cuối, tuyến tàu điện và phần tóm tắt hành trình.
 \end{enumerate}
@@ -114,7 +114,7 @@ Hình~\ref{fig:seq_route_points} cụ thể hoá luồng người dùng chọn h
 \end{figure}
 
 \subsection{Sequence Diagram cho luồng admin scenario}
-Bên cạnh luồng định tuyến chính, Hình~\ref{fig:seq_admin_scenario} mô tả cách Admin Console gửi scenario mới, backend phân tích phạm vi ảnh hưởng, cập nhật runtime constraint và làm mới cache để các truy vấn định tuyến sau đó phản ánh đúng trạng thái vận hành.
+Bên cạnh luồng định tuyến chính, Hình~\ref{fig:seq_admin_scenario} mô tả cách Admin Console tạo scenario mới và lưu trong \texttt{localStorage}. Khi người dùng quay lại bản đồ chính và bấm tìm đường, frontend gửi scenario này kèm request route để backend áp dụng theo từng phiên trình duyệt.
 
 \begin{figure}[H]
 \centering
@@ -127,25 +127,25 @@ Bên cạnh luồng định tuyến chính, Hình~\ref{fig:seq_admin_scenario} m
     \node[draw, rounded corners, fill=blue!8, minimum width=2.2cm, minimum height=0.8cm] (ui) at (2.6,\TopY) {Admin UI};
     \node[draw, rounded corners, fill=orange!10, minimum width=1.9cm, minimum height=0.8cm] (api2) at (5.2,\TopY) {API};
     \node[draw, rounded corners, fill=green!10, minimum width=2.4cm, minimum height=0.8cm] (svc) at (7.9,\TopY) {Scenario Service};
-    \node[draw, rounded corners, fill=yellow!18, minimum width=2.4cm, minimum height=0.8cm] (cache) at (10.8,\TopY) {Runtime Cache/Data};
+    \node[draw, rounded corners, fill=yellow!18, minimum width=2.4cm, minimum height=0.8cm] (cache) at (10.8,\TopY) {Route Request};
 
     \foreach \x in {0,2.6,5.2,7.9,10.8} {
         \draw[dashed, gray!70] (\x,-0.5) -- (\x,\BottomY);
     }
 
     \draw[->, thick] (0,-1.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Chọn rain zone / block segment} (2.6,-1.2);
-    \draw[->, thick] (2.6,-2.2) -- node[midway, above, fill=white, inner sep=1.2pt]{PUT /api/admin/scenarios} (5.2,-2.2);
-    \draw[->, thick] (5.2,-3.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Tính segment bị ảnh hưởng} (7.9,-3.2);
+    \draw[->, thick] (2.6,-2.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Lưu scenario vào localStorage} (5.2,-2.2);
+    \draw[->, thick] (5.2,-3.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Chuẩn hoá payload} (7.9,-3.2);
     \draw[->, thick] (7.9,-4.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Đọc topology + GIS hiện hành} (10.8,-4.2);
-    \draw[->, thick] (10.8,-5.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Kết quả phân tích} (7.9,-5.2);
-    \draw[->, thick] (7.9,-6.2) -- node[midway, above, align=center, fill=white, inner sep=1.2pt]{Lưu scenario\\+ invalidate cache} (5.2,-6.2);
-    \draw[->, thick] (5.2,-7.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Trả runtime state mới} (2.6,-7.2);
+    \draw[->, thick] (10.8,-5.2) -- node[midway, above, fill=white, inner sep=1.2pt]{POST /api/gis/route/points} (7.9,-5.2);
+    \draw[->, thick] (7.9,-6.2) -- node[midway, above, align=center, fill=white, inner sep=1.2pt]{Áp dụng rule\\trong request route} (5.2,-6.2);
+    \draw[->, thick] (5.2,-7.2) -- node[midway, above, fill=white, inner sep=1.2pt]{Trả route đã xét scenario} (2.6,-7.2);
     \draw[->, thick] (2.6,-8.0) -- node[midway, above, fill=white, inner sep=1.2pt]{Scenario hiển thị trên bản đồ} (0,-8.0);
 
-    \node[draw, fill=yellow!8, rounded corners, align=left, text width=3.6cm] at (10.8,-9.1) {\scriptsize Cache được làm mới để mọi truy vấn route tiếp theo dùng đúng trạng thái scenario mới nhất.};
+    \node[draw, fill=yellow!8, rounded corners, align=left, text width=3.6cm] at (10.8,-9.1) {\scriptsize Scenario là trạng thái phía trình duyệt; server chỉ chuẩn hoá và áp dụng khi request route gửi payload tương ứng.};
 \end{tikzpicture}%
 }
-\caption{Sequence Diagram cho luồng áp dụng admin scenario trong runtime}
+\caption{Sequence Diagram cho luồng áp dụng admin scenario theo từng trình duyệt}
 \label{fig:seq_admin_scenario}
 \end{figure}
 
@@ -176,12 +176,15 @@ c(e) = (T, W, N_{tr}, N_{stop})
 trong đó \(T\) là chi phí thời gian dùng để so sánh phương án, \(W\) là thời gian đi bộ, \(N_{tr}\) là số lần chuyển tuyến và \(N_{stop}\) là số chặng đi tàu.
 
 Hệ thống không tối ưu quãng đường hình học đơn thuần.
-Thay vào đó, route được chọn theo chi phí tổng quát:
+Thay vào đó, route trong đồ thị MRT được chọn theo chi phí tổng quát:
 \[
 C = T_{ride} + T_{transfer} + \lambda_{walk}T_{walk} + \lambda_{switch}N_{switch}
 \]
-Trong cài đặt hiện tại, tốc độ đi bộ mặc định là \(1.3\,m/s\), tốc độ tàu dùng khi cần nội suy là \(80\,km/h\), và hệ số phạt đi bộ \(\lambda_{walk}\) là 5.
-Cách đặt trọng số này giúp hệ thống vẫn hỗ trợ đi bộ để kết nối điểm người dùng với ga, nhưng không lạm dụng đi bộ thay cho metro.
+Trong cài đặt hiện tại, tốc độ đi bộ mặc định là \(1.1\,m/s\), tốc độ tàu dùng khi cần nội suy là \(80\,km/h\). Walk-transfer giữa hai ga gần nhau trong A* có hệ số phạt riêng để không lạm dụng đi bộ thay cho metro. Ở tầng API, các cặp ga ứng viên được so sánh bằng:
+\[
+C_{\text{candidate}} = T_{\text{actual}} + 1.5T_{\text{walk}} + 120N_{\text{transfer}}
+\]
+trong đó \(T_{\text{actual}}\) là thời gian thật dùng để hiển thị, còn phần \(1.5T_{\text{walk}}\) chỉ là chi phí tiện ích để phản ánh độ mệt khi đi bộ.
 
 \subsection{Heuristic của A*}
 Heuristic được xây dựng từ khoảng cách địa lý giữa ga hiện tại và ga đích:
@@ -198,6 +201,7 @@ Luồng truy vấn định tuyến gồm các bước:
     \item Tìm các ga ứng viên bằng walk network và station access points. Walk graph được nạp từ cache; truy vấn điểm dùng multi-source Dijkstra từ một số nút snap gần nhất và dừng sớm khi đã thu đủ ga ứng viên tốt.
     \item Thử các cặp ga vào/ra hợp lệ và chạy A* trên đồ thị MRT mở rộng.
     \item Chọn phương án có chi phí tổng quát tốt nhất, trong đó đi bộ bị phạt để ưu tiên hành trình metro hợp lý.
+    \item So sánh route metro với phương án đi bộ trực tiếp. Nếu walk-only không quá 20 phút, metro chỉ được chọn khi nhanh hơn ít nhất 7 phút; nếu walk-only dài hơn 20 phút, hệ thống ưu tiên metro trừ khi metro chậm hơn walk-only quá 25 phút.
     \item Ghép geometry cho đoạn đi bộ vào ga, tuyến tàu và đoạn đi bộ ra đích để frontend hiển thị.
 \end{enumerate}
 
@@ -352,7 +356,7 @@ xử lý click/zoom/pan; hiển thị route summary; chuẩn hoá loading và er
 \\
 \hline
 Backend & API và logic nghiệp vụ & Xây dựng endpoint FastAPI; quản lý runtime cache;
-tổ chức route engine và GIS services; xử lý admin scenario; viết test cho API và logic định tuyến.
+tổ chức route engine và GIS services; áp dụng admin scenario theo từng request; viết test cho API và logic định tuyến.
 \\
 \hline
 Data/GIS & Dữ liệu mạng và lớp bản đồ & Chuẩn hoá \texttt{network\_topology.json}; cập nhật \texttt{stations.geojson}, \texttt{lines.geojson}, \texttt{station\_access\_points.geojson}, \texttt{walk\_network.geojson};
@@ -380,11 +384,11 @@ Cụ thể hơn, nhóm frontend phụ trách các nội dung sau:
 
 \subsection{Nhóm backend}
 Nhóm backend gồm Tạ Đức Hiển và Nguyễn Đức Huy.
-Nhóm này phụ trách toàn bộ phần xử lý nghiệp vụ phía máy chủ trên nền FastAPI, bao gồm tổ chức API, nạp dữ liệu runtime, xây dựng route engine và áp dụng các ràng buộc vận hành do khu vực admin tạo ra.
+Nhóm này phụ trách toàn bộ phần xử lý nghiệp vụ phía máy chủ trên nền FastAPI, bao gồm tổ chức API, nạp dữ liệu runtime, xây dựng route engine và áp dụng các ràng buộc vận hành do khu vực admin gửi kèm trong từng request định tuyến.
 Phạm vi chính của nhóm backend gồm:
 \begin{itemize}
     \item xây dựng và duy trì các endpoint chính như \texttt{/api/gis/network}, \texttt{/api/gis/route/points}, \texttt{/api/admin/scenarios} và các API GIS hỗ trợ;
-    \item triển khai runtime cache để giảm chi phí nạp dữ liệu lặp lại và hỗ trợ làm mới trạng thái khi scenario thay đổi;
+    \item triển khai runtime cache để giảm chi phí nạp dữ liệu lặp lại, đồng thời giữ scenario admin tách biệt theo từng trình duyệt thay vì ghi vào cache toàn cục;
     \item tổ chức route engine trên đồ thị MRT mở rộng, kết hợp logic snap ga gần nhất và ghép đường đi hoàn chỉnh;
     \item viết kiểm thử cho các luồng xử lý quan trọng như route API, admin scenario và các dịch vụ GIS.
 \end{itemize}

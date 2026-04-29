@@ -29,6 +29,7 @@ function Invoke-Build {
             $args = @(
                 '-interaction=nonstopmode',
                 '-halt-on-error',
+                '--enable-installer',
                 '--enable-write18',
                 $mainFile
             )
@@ -37,6 +38,12 @@ function Invoke-Build {
             if ($process.ExitCode -ne 0) {
                 return $false
             }
+        }
+
+        $pdfPath = Join-Path $root 'DoAn.pdf'
+        $parentPdfPath = Join-Path (Split-Path -Parent $root) 'DoAn.pdf'
+        if (Test-Path $pdfPath) {
+            Copy-Item -Path $pdfPath -Destination $parentPdfPath -Force
         }
 
         return $true
