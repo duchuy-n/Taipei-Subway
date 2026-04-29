@@ -37,9 +37,8 @@ const elements = {
   modeBlock: document.getElementById('modeBlock'),
   clearAll: document.getElementById('clearAll'),
   exportRules: document.getElementById('exportRules'),
-  zoomInBtn: document.getElementById('zoomInBtn'),
-  zoomOutBtn: document.getElementById('zoomOutBtn'),
-  zoomResetBtn: document.getElementById('zoomResetBtn'),
+  hideTools: document.getElementById('hideTools'),
+  showTools: document.getElementById('showTools'),
   statusText: document.getElementById('statusText'),
   modeLabel: document.getElementById('modeLabel'),
   modeHint: document.getElementById('modeHint'),
@@ -58,9 +57,15 @@ const elements = {
   activeRulesList: document.getElementById('activeRulesList'),
   severityButtons: document.querySelectorAll('[data-severity]'),
   mapHelper: document.getElementById('mapHelper'),
+  floatingHeader: document.querySelector('.floating-header'),
+  toolsPanel: document.querySelector('.tools-panel'),
+  toggleHeader: document.getElementById('toggleHeader'),
+  showHeader: document.getElementById('showHeader'),
   toggleInspector: document.getElementById('toggleInspector'),
+  quickToggleInspector: document.getElementById('quickToggleInspector'),
   inspectorPanel: document.getElementById('inspectorPanel'),
   logoutButton: document.getElementById('logoutButton'),
+  quickLogoutButton: document.getElementById('quickLogoutButton'),
 };
 
 async function init() {
@@ -112,6 +117,7 @@ async function init() {
 
 async function hydrateScenarioState() {
   let localPayload = null;
+  let serverPayload = null;
 
   try {
     const stored =
@@ -126,7 +132,17 @@ async function hydrateScenarioState() {
     console.warn('Unable to load from localStorage', error);
   }
 
-  applyScenarioPayload(localPayload || {});
+  try {
+    const response = await fetch('/api/admin/scenarios');
+    const body = await response.json();
+    if (response.ok && body?.scenarios) {
+      serverPayload = body.scenarios;
+    }
+  } catch (error) {
+    console.warn('Unable to load server admin scenarios', error);
+  }
+
+  applyScenarioPayload(isScenarioEmpty(localPayload) ? serverPayload || {} : localPayload || serverPayload || {});
 }
 
 function saveToLocalStorage(payload) {
@@ -138,7 +154,7 @@ function saveToLocalStorage(payload) {
 }
 
 function applyScenarioPayload(payload) {
-  state.mode = payload?.ui_mode === 'block' ? 'block' : 'rain';
+  state.mode = ['rain', 'block'].includes(payload?.ui_mode) ? payload.ui_mode : 'rain';
   state.rainZones = Array.isArray(payload?.rain_zones)
     ? payload.rain_zones
         .map((zone) => ({
@@ -184,8 +200,36 @@ function applyScenarioPayload(payload) {
 async function saveScenarioState() {
   const payload = buildPayloadPreview();
   saveToLocalStorage(payload);
+  try {
+    const response = await fetch('/api/admin/scenarios', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const body = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(body.detail || 'Failed to save admin scenario.');
+    }
+    if (body?.scenarios) {
+      saveToLocalStorage(body.scenarios);
+    }
+  } catch (error) {
+    console.warn('Failed to save server admin scenario', error);
+    setStatus(`${error.message || 'Failed to save admin scenario.'} Local browser copy was kept.`);
+  }
   renderMetrics();
   updateRulesSummary();
+}
+
+function isScenarioEmpty(payload) {
+  if (!payload || typeof payload !== 'object') {
+    return true;
+  }
+  return !(
+    Array.isArray(payload.rain_zones) && payload.rain_zones.length ||
+    Array.isArray(payload.block_segments) && payload.block_segments.length ||
+    Array.isArray(payload.banned_stations) && payload.banned_stations.length
+  );
 }
 
 function buildNetworkCatalog(gisPayload) {
@@ -264,9 +308,12 @@ function bindEvents() {
   });
   elements.clearAll.addEventListener('click', resetAll);
   elements.exportRules.addEventListener('click', exportRules);
-  elements.zoomInBtn.addEventListener('click', () => state.map?.zoomIn());
-  elements.zoomOutBtn.addEventListener('click', () => state.map?.zoomOut());
-  elements.zoomResetBtn.addEventListener('click', resetMapView);
+  elements.hideTools?.addEventListener('click', () => {
+    elements.toolsPanel?.classList.add('collapsed');
+  });
+  elements.showTools?.addEventListener('click', () => {
+    elements.toolsPanel?.classList.remove('collapsed');
+  });
   elements.bannedStations.addEventListener('change', () => {
     const selected = Array.from(elements.bannedStations.selectedOptions).map((option) => option.value);
     setBannedStations(selected);
@@ -275,10 +322,21 @@ function bindEvents() {
   elements.toggleInspector?.addEventListener('click', () => {
     elements.inspectorPanel?.classList.toggle('collapsed');
   });
-  elements.logoutButton?.addEventListener('click', () => {
+  elements.quickToggleInspector?.addEventListener('click', () => {
+    elements.inspectorPanel?.classList.toggle('collapsed');
+  });
+  elements.toggleHeader?.addEventListener('click', () => {
+    elements.floatingHeader?.classList.add('collapsed');
+  });
+  elements.showHeader?.addEventListener('click', () => {
+    elements.floatingHeader?.classList.remove('collapsed');
+  });
+  const logout = () => {
     sessionStorage.removeItem('mrt_admin_authenticated');
     window.location.href = '/login';
-  });
+  };
+  elements.logoutButton?.addEventListener('click', logout);
+  elements.quickLogoutButton?.addEventListener('click', logout);
   window.addEventListener('resize', () => state.map?.resize());
 }
 
@@ -664,9 +722,8 @@ function resolveViewportBounds() {
 }
 
 function resolvePanBounds() {
-  const viewportBounds = resolveViewportBounds();
   const outerBounds = state.gis?.basemap?.bounds || state.gis?.bounds || DEFAULT_VIEWPORT_BOUNDS;
-  return clampBounds(expandBounds(viewportBounds, 0.18), outerBounds);
+  return outerBounds;
 }
 
 function resetMapView() {
@@ -695,14 +752,10 @@ function applyMapBoundsConstraint() {
 }
 
 async function setMode(mode) {
-  state.mode = mode;
+  state.mode = ['rain', 'block'].includes(mode) ? mode : 'rain';
   state.temporaryPoint = null;
   applyModeUi();
-  setStatus(
-    mode === 'rain'
-      ? 'Rain mode is active. Click center first, then click again to set radius.'
-      : 'Block mode is active. Click one point or two points on the GIS map.'
-  );
+  setStatus(getModeStatusText(state.mode));
   updateMapSources();
   updateMapHelper();
   await saveScenarioState();
@@ -711,14 +764,32 @@ async function setMode(mode) {
 function applyModeUi() {
   elements.modeRain.classList.toggle('active', state.mode === 'rain');
   elements.modeBlock.classList.toggle('active', state.mode === 'block');
+  document.body.classList.toggle('is-block-mode', state.mode === 'block');
   elements.modeLabel.textContent = state.mode === 'rain' ? 'Rain Zone' : 'Block Segment';
-  elements.modeHint.textContent =
-    state.mode === 'rain'
-      ? 'Create a soft walking penalty with 2 map clicks'
-      : 'Create a blocked line or a blocked point';
+  elements.modeHint.textContent = getModeHintText(state.mode);
   elements.severityButtons.forEach((button) => {
     button.classList.toggle('active', normalizeRainSeverity(button.dataset.severity) === state.rainSeverity);
   });
+}
+
+function getModeStatusText(mode) {
+  if (mode === 'rain') {
+    return 'Rain mode is active. Click center first, then click again to set radius.';
+  }
+  if (mode === 'block') {
+    return 'Block mode is active. Click one point or two points on the GIS map.';
+  }
+  return 'Rain mode is active. Click center first, then click again to set radius.';
+}
+
+function getModeHintText(mode) {
+  if (mode === 'rain') {
+    return 'Create a soft walking penalty with 2 map clicks';
+  }
+  if (mode === 'block') {
+    return 'Create a blocked line or a blocked point';
+  }
+  return 'Create a soft walking penalty with 2 map clicks';
 }
 
 async function setRainSeverity(severity) {

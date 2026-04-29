@@ -15,7 +15,7 @@
       href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
     />
     <link rel="stylesheet" href="/static/shared/app-shell.css?v=20260426-unified-1" />
-    <link rel="stylesheet" href="/static/admin/admin.css?v=20260426-auth-1" />
+    <link rel="stylesheet" href="/static/admin/admin.css?v=20260428-admin-hardblock-1" />
     <script>
       if (sessionStorage.getItem('mrt_admin_authenticated') !== 'true') {
         window.location.replace('/login?next=/admin');
@@ -26,7 +26,7 @@
     <div id="adminMap" class="main-map-surface"></div>
 
     <div class="glass-layer">
-      <header class="floating-header">
+      <header class="floating-header collapsed">
         <div class="header-brand">
           <span class="brand-chip">Admin</span>
           <h1>MRT Studio</h1>
@@ -48,6 +48,7 @@
         <div class="header-actions">
           <a class="main-nav-btn" href="/">Main</a>
           <button id="logoutButton" class="signout-btn" type="button">Sign out</button>
+          <button id="toggleHeader" class="signout-btn" type="button">Hide studio</button>
           <button id="toggleInspector" class="icon-btn" title="Toggle Inspector">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -57,12 +58,21 @@
         </div>
       </header>
 
+      <div class="admin-quick-actions">
+        <a class="main-nav-btn" href="/">Main</a>
+        <button id="quickLogoutButton" class="signout-btn" type="button">Sign out</button>
+        <button id="quickToggleInspector" class="signout-btn" type="button">Inspector</button>
+        <button id="showTools" class="signout-btn" type="button">Tools</button>
+        <button id="showHeader" class="signout-btn" type="button">Show studio</button>
+      </div>
+
       <aside class="floating-panel tools-panel">
         <header class="panel-section header-section">
           <div class="section-title">
             <p class="eyebrow">Scenario Control</p>
             <h2>Tools</h2>
           </div>
+          <button id="hideTools" class="panel-hide-btn" type="button">Hide tools</button>
         </header>
 
         <div class="panel-body">
@@ -109,7 +119,7 @@
         </div>
       </aside>
 
-      <aside id="inspectorPanel" class="floating-panel inspector-panel">
+      <aside id="inspectorPanel" class="floating-panel inspector-panel collapsed">
         <header class="panel-section header-section">
           <div class="section-title">
             <h2>Operations Inspector</h2>
@@ -146,19 +156,9 @@
         </div>
       </aside>
 
-      <div class="floating-bottom">
-        <div class="map-helper-box">
-          <p id="mapHelper">Click map to interact</p>
-        </div>
-        <div class="map-controls">
-          <button id="zoomInBtn" class="zoom-btn">+</button>
-          <button id="zoomOutBtn" class="zoom-btn">-</button>
-          <button id="zoomResetBtn" class="zoom-btn">Reset</button>
-        </div>
-      </div>
     </div>
 
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-    <script src="/static/admin/admin.js?v=20260427-rain-soft-1"></script>
+    <script src="/static/admin/admin.js?v=20260428-admin-hardblock-1"></script>
   </body>
 </html>

@@ -22,6 +22,9 @@ app/data/gis/.runtime-cache/
 app/data/gis/.cache/
 
 # Scratch & Dev
+.venv/
+venv/
+env/
 scratch/
 UAT-*.md
 *.png

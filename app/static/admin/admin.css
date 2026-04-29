@@ -34,7 +34,7 @@
 }
 
 .main-map-surface .maplibregl-canvas {
-  cursor: crosshair !important;
+  cursor: crosshair;
 }
 
 /* UI Overlay Layer */
@@ -70,6 +70,36 @@
   border: 1px solid var(--admin-border);
   border-radius: 999px;
   box-shadow: var(--admin-shadow);
+}
+
+.floating-header.collapsed {
+  transform: translate(-50%, -140%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.admin-quick-actions {
+  position: absolute;
+  z-index: 35;
+  top: 24px;
+  right: 24px;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--admin-border);
+  border-radius: 999px;
+  background: var(--admin-bg-soft);
+  box-shadow: var(--admin-shadow);
+  backdrop-filter: blur(24px);
+}
+
+.floating-header.collapsed ~ .admin-quick-actions {
+  display: flex;
+}
+
+#showHeader {
+  display: inline-flex;
 }
 
 .header-brand {
@@ -185,6 +215,12 @@
   left: 24px;
 }
 
+.tools-panel.collapsed {
+  transform: translateX(-380px);
+  opacity: 0;
+  pointer-events: none;
+}
+
 .inspector-panel {
   right: 24px;
   width: 360px;
@@ -202,7 +238,22 @@
 }
 
 .header-section {
-  padding-bottom: 0;
+  padding-bottom: 12px;
+}
+
+.panel-hide-btn {
+  width: auto;
+  border: 1px solid var(--admin-border);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.06);
+  color: var(--admin-text);
+  padding: 9px 12px;
+  font: 700 0.78rem var(--font-body);
+}
+
+.panel-hide-btn:hover {
+  background: var(--admin-accent-soft);
+  color: var(--admin-accent);
 }
 
 .panel-body, .inspector-scroll {
@@ -278,6 +329,10 @@
   display: grid;
   gap: 8px;
   margin-top: 16px;
+}
+
+.admin-studio.is-block-mode .severity-control {
+  display: none;
 }
 
 .severity-control > span {
@@ -478,62 +533,6 @@
   white-space: pre-wrap;
   max-height: 300px;
   overflow: auto;
-}
-
-/* Floating Bottom */
-.floating-bottom {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.map-helper-box {
-  background: var(--admin-bg-soft);
-  backdrop-filter: blur(24px);
-  padding: 10px 20px;
-  border-radius: 999px;
-  border: 1px solid var(--admin-border);
-  box-shadow: var(--admin-shadow);
-}
-
-.map-helper-box p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--admin-muted);
-}
-
-.map-controls {
-  display: flex;
-  gap: 8px;
-  background: var(--admin-bg-soft);
-  backdrop-filter: blur(24px);
-  padding: 8px;
-  border-radius: 999px;
-  border: 1px solid var(--admin-border);
-  box-shadow: var(--admin-shadow);
-}
-
-.zoom-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  background: #fff;
-  border: 1px solid var(--admin-border);
-  font-family: var(--font-display);
-  font-weight: 700;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.zoom-btn:hover {
-  background: var(--admin-accent-soft);
-  color: var(--admin-accent);
 }
 
 /* MapLibre Control Tweak */
