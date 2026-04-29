@@ -135,6 +135,14 @@ body.gis-page::before {
   border-radius: 999px;
 }
 
+.sidebar-toggle-btn {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: block;
+  margin: 0 0 12px auto;
+}
+
 .open-sidebar-btn {
   position: absolute;
   top: 24px;
