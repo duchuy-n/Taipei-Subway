@@ -40,13 +40,10 @@ const elements = {
   zoomInBtn: document.getElementById('zoomInBtn'),
   zoomOutBtn: document.getElementById('zoomOutBtn'),
   zoomResetBtn: document.getElementById('zoomResetBtn'),
-  toggleControls: document.getElementById('toggleControls'),
   quickToggleControls: document.getElementById('quickToggleControls'),
   statusText: document.getElementById('statusText'),
   modeLabel: document.getElementById('modeLabel'),
   modeHint: document.getElementById('modeHint'),
-  networkSourceLabel: document.getElementById('networkSourceLabel'),
-  totalRuleCount: document.getElementById('totalRuleCount'),
   lineCount: document.getElementById('lineCount'),
   stationCount: document.getElementById('stationCount'),
   segmentCount: document.getElementById('segmentCount'),
@@ -60,14 +57,9 @@ const elements = {
   activeRulesList: document.getElementById('activeRulesList'),
   severityButtons: document.querySelectorAll('[data-severity]'),
   mapHelper: document.getElementById('mapHelper'),
-  floatingHeader: document.querySelector('.floating-header'),
   toolsPanel: document.querySelector('.tools-panel'),
-  toggleHeader: document.getElementById('toggleHeader'),
-  showHeader: document.getElementById('showHeader'),
-  toggleInspector: document.getElementById('toggleInspector'),
   quickToggleInspector: document.getElementById('quickToggleInspector'),
   inspectorPanel: document.getElementById('inspectorPanel'),
-  logoutButton: document.getElementById('logoutButton'),
   quickLogoutButton: document.getElementById('quickLogoutButton'),
 };
 
@@ -275,30 +267,19 @@ function bindEvents() {
   elements.zoomInBtn.addEventListener('click', () => state.map?.zoomIn());
   elements.zoomOutBtn.addEventListener('click', () => state.map?.zoomOut());
   elements.zoomResetBtn.addEventListener('click', resetMapView);
-  elements.toggleControls?.addEventListener('click', toggleControlsPanel);
   elements.quickToggleControls?.addEventListener('click', toggleControlsPanel);
   elements.bannedStations.addEventListener('change', () => {
     const selected = Array.from(elements.bannedStations.selectedOptions).map((option) => option.value);
     setBannedStations(selected);
   });
   elements.activeRulesList?.addEventListener('click', handleActiveRuleAction);
-  elements.toggleInspector?.addEventListener('click', () => {
-    elements.inspectorPanel?.classList.toggle('collapsed');
-  });
   elements.quickToggleInspector?.addEventListener('click', () => {
     elements.inspectorPanel?.classList.toggle('collapsed');
-  });
-  elements.toggleHeader?.addEventListener('click', () => {
-    elements.floatingHeader?.classList.add('collapsed');
-  });
-  elements.showHeader?.addEventListener('click', () => {
-    elements.floatingHeader?.classList.remove('collapsed');
   });
   const logout = () => {
     sessionStorage.removeItem('mrt_admin_authenticated');
     window.location.href = '/login';
   };
-  elements.logoutButton?.addEventListener('click', logout);
   elements.quickLogoutButton?.addEventListener('click', logout);
   window.addEventListener('resize', () => state.map?.resize());
 }
@@ -306,9 +287,6 @@ function bindEvents() {
 function toggleControlsPanel() {
   const isCollapsed = elements.toolsPanel?.classList.toggle('collapsed') || false;
   const label = isCollapsed ? 'Show controls' : 'Hide controls';
-  if (elements.toggleControls) {
-    elements.toggleControls.textContent = label;
-  }
   if (elements.quickToggleControls) {
     elements.quickToggleControls.textContent = label;
   }
