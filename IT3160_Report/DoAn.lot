@@ -2,12 +2,12 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {1.1}{\ignorespaces Đặc tả chi tiết các loại cạnh và cơ chế tính trọng số}}{5}{table.caption.6}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Đặc tả chi phí cho các loại cạnh trong đồ thị mở rộng}}{12}{table.caption.14}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Phân rã công việc theo nhóm chuyên trách}}{13}{table.caption.15}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Đặc tả chi phí cho các loại cạnh trong đồ thị mở rộng}}{13}{table.caption.14}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Phân rã công việc theo nhóm chuyên trách}}{14}{table.caption.15}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Tổng hợp kết quả theo nhóm công việc}}{18}{table.caption.16}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Đặc tả rút gọn các API chính của hệ thống}}{22}{table.caption.23}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Bảng Benchmark hiệu năng hệ thống theo giai đoạn (đo trên CPU Intel i7-12700H)}}{24}{table.caption.25}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Tổng hợp kết quả theo nhóm công việc}}{20}{table.caption.16}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Đặc tả rút gọn các API chính của hệ thống}}{24}{table.caption.23}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Bảng benchmark hiệu năng định tuyến GIS sau tối ưu cache và walk candidate}}{27}{table.caption.25}%
 \addvspace {10\p@ }
 \contentsfinish 

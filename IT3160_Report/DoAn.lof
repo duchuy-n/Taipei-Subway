@@ -2,20 +2,20 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Quy trình tổng quát của bài toán định tuyến trong hệ thống}}{6}{figure.caption.7}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Ánh xạ từ điểm người dùng trên bản đồ sang các đỉnh trong mạng định tuyến MRT}}{6}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Mô hình đồ thị có trọng số của mạng MRT}}{6}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Mô hình đồ thị có trọng số của mạng MRT}}{7}{figure.caption.9}%
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Phân rã tổng chi phí của một hành trình}}{7}{figure.caption.10}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Kiến trúc ba lớp của dự án IT3160 Subway Web}}{8}{figure.caption.11}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Sequence Diagram cho luồng định tuyến theo điểm trên bản đồ}}{9}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Sequence Diagram cho luồng áp dụng admin scenario trong runtime}}{9}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Sequence Diagram cho luồng áp dụng admin scenario theo từng trình duyệt}}{10}{figure.caption.13}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Giao diện chính phân hệ GIS Studio}}{19}{figure.caption.17}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Kết quả định tuyến mẫu thể hiện ga đầu, ga cuối, đoạn tiếp cận và tuyến chính}}{19}{figure.caption.18}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Minh hoạ giao diện Admin Console khi áp dụng rain zone và block segment trong runtime}}{20}{figure.caption.19}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Giao diện Admin Console ở trạng thái cơ bản}}{20}{figure.caption.20}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Minh hoạ tác động của admin scenario lên kết quả định tuyến trên bản đồ}}{20}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Giao diện Admin Console sau khi áp dụng các kịch bản (rules) vận hành}}{21}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Lớp dữ liệu GIS tổng quan: bản đồ mạng lưới tuyến và ga Đài Bắc (Taipei)}}{24}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Giao diện chính phân hệ GIS Studio}}{21}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Kết quả định tuyến mẫu thể hiện ga đầu, ga cuối, đoạn tiếp cận và tuyến chính}}{22}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Minh hoạ giao diện Admin Console khi tạo rain zone và block segment theo từng trình duyệt}}{22}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Giao diện Admin Console ở trạng thái cơ bản}}{22}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Minh hoạ tác động của admin scenario lên kết quả định tuyến trên bản đồ}}{23}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Giao diện Admin Console sau khi áp dụng các kịch bản (rules) vận hành}}{23}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Lớp dữ liệu GIS tổng quan: bản đồ mạng lưới tuyến và ga Đài Bắc (Taipei)}}{26}{figure.caption.24}%
 \addvspace {10\p@ }
 \contentsfinish 

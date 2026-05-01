@@ -1,0 +1,14 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{snap\PYGZus{}nodes} \PYG{o}{=} \PYG{n}{nearest\PYGZus{}walk\PYGZus{}nodes}\PYG{p}{(}\PYG{n}{point}\PYG{p}{,} \PYG{n}{k}\PYG{o}{=}\PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{n}{queue} \PYG{o}{=} \PYG{n}{priority\PYGZus{}queue\PYGZus{}from}\PYG{p}{(}\PYG{n}{snap\PYGZus{}nodes}\PYG{p}{)}
+\PYG{n}{best\PYGZus{}candidates} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{while} \PYG{n}{queue} \PYG{o+ow}{and} \PYG{o+ow}{not} \PYG{n}{enough\PYGZus{}candidates}\PYG{p}{(}\PYG{n}{best\PYGZus{}candidates}\PYG{p}{):}
+    \PYG{n}{dist}\PYG{p}{,} \PYG{n}{node} \PYG{o}{=} \PYG{n}{queue}\PYG{o}{.}\PYG{n}{pop\PYGZus{}min}\PYG{p}{()}
+    \PYG{k}{if} \PYG{n}{node} \PYG{o+ow}{in} \PYG{n}{access\PYGZus{}point\PYGZus{}nodes}\PYG{p}{:}
+        \PYG{n}{update\PYGZus{}best\PYGZus{}station\PYGZus{}candidate}\PYG{p}{(}\PYG{n}{best\PYGZus{}candidates}\PYG{p}{,} \PYG{n}{node}\PYG{p}{,} \PYG{n}{dist}\PYG{p}{)}
+    \PYG{k}{for} \PYG{n}{next\PYGZus{}node}\PYG{p}{,} \PYG{n}{edge\PYGZus{}cost} \PYG{o+ow}{in} \PYG{n}{walk\PYGZus{}graph}\PYG{p}{[}\PYG{n}{node}\PYG{p}{]:}
+        \PYG{n}{relax}\PYG{p}{(}\PYG{n}{queue}\PYG{p}{,} \PYG{n}{node}\PYG{p}{,} \PYG{n}{next\PYGZus{}node}\PYG{p}{,} \PYG{n}{dist} \PYG{o}{+} \PYG{n}{edge\PYGZus{}cost}\PYG{p}{)}
+
+\PYG{k}{return} \PYG{n}{sort\PYGZus{}by\PYGZus{}walk\PYGZus{}cost}\PYG{p}{(}\PYG{n}{best\PYGZus{}candidates}\PYG{p}{)[:}\PYG{n}{limit}\PYG{p}{]}
+\end{MintedVerbatim}

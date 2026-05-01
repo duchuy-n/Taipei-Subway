@@ -1,3 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-python\PYG{+w}{ }\PYGZhy{}m\PYG{+w}{ }pip\PYG{+w}{ }install\PYG{+w}{ }fastapi\PYG{+w}{ }uvicorn\PYG{+w}{ }networkx\PYG{+w}{ }geopandas\PYG{+w}{ }shapely\PYG{+w}{ }pyproj
-\end{MintedVerbatim}

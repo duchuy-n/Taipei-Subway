@@ -1,7 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{n}{new\PYGZus{}cost} \PYG{o}{=} \PYG{n}{curr\PYGZus{}cost} \PYG{o}{+} \PYG{n}{edge\PYGZus{}cost}
-\PYG{k}{if} \PYG{n}{lexicographical\PYGZus{}less}\PYG{p}{(}\PYG{n}{new\PYGZus{}cost}\PYG{p}{,} \PYG{n}{dist}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]):}
-    \PYG{n}{dist}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n}{new\PYGZus{}cost}
-    \PYG{n}{prev}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]} \PYG{o}{=} \PYG{n}{u}
-    \PYG{n}{pq}\PYG{o}{.}\PYG{n}{push}\PYG{p}{((}\PYG{n}{new\PYGZus{}cost}\PYG{p}{,} \PYG{n}{v}\PYG{p}{))}
-\end{MintedVerbatim}

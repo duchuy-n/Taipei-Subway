@@ -167,10 +167,10 @@ với:
 Trong cài đặt hiện tại, ba loại cạnh chính được gán vector chi phí như sau:
 \begin{itemize}
     \item \textbf{ride edge}: $(\texttt{travel\_sec},\; 0,\; 0,\; 1)$,
-    \item \textbf{transfer edge}: $(\texttt{transfer\_sec},\; 0,\; 1,\; 0)$,
+    \item \textbf{transfer edge}: $(\texttt{transfer\_sec} + \texttt{line\_switch\_penalty},\; 0,\; 1,\; 0)$,
     \item \textbf{walk-transfer edge}: $(\lambda_{walk}\texttt{duration\_sec},\; \texttt{duration\_sec},\; 0,\; 0)$.
 \end{itemize}
-Trong dữ liệu địa lý hiện tại, thời gian chạy tàu giữa hai ga liên tiếp được nội suy theo tốc độ \(80\,km/h\), còn tốc độ đi bộ mặc định là \(1.1\,m/s\). Walk-transfer nội bộ giữa các ga gần nhau vẫn bị phạt mạnh trong A* để hệ thống không lạm dụng đi bộ thay cho metro.
+Trong dữ liệu địa lý hiện tại, thời gian chạy tàu giữa hai ga liên tiếp được nội suy theo tốc độ \(80\,km/h\), còn tốc độ đi bộ mặc định là \(1.1\,m/s\). Với cạnh transfer, \texttt{transfer\_sec} biểu diễn thời gian chuyển tuyến cơ sở, còn \texttt{line\_switch\_penalty} là phần phạt thêm trong hàm chi phí khi đổi tuyến. Walk-transfer nội bộ giữa các ga gần nhau vẫn bị phạt mạnh trong A* để hệ thống không lạm dụng đi bộ thay cho metro.
 
 Như vậy, thuật toán không tối ưu một scalar cost duy nhất, mà tối ưu theo thứ tự ưu tiên từ điển trên bộ chi phí
 \[
@@ -196,12 +196,12 @@ Hệ thống mô hình hóa mạng lưới MRT dưới dạng một đồ thị 
 \small
 \caption{Đặc tả chi tiết các loại cạnh và cơ chế tính trọng số}
 \label{tab:edge_types}
-\begin{tabular}{|l|l|>{\raggedright\arraybackslash}p{5cm}|l|}
+\begin{tabular}{|l|l|>{\raggedright\arraybackslash}p{5cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
 \hline
 \textbf{Loại cạnh} & \textbf{Ký hiệu} & \textbf{Cơ chế tính trọng số (\(w\))} & \textbf{Dữ liệu nguồn} \\ \hline
-Ride & \(E_{ride}\) & Thời gian chạy tàu giữa hai node ga kế tiếp & \texttt{lines.geojson} \\ \hline
-Transfer & \(E_{transfer}\) & Thời gian đi bộ trung bình giữa các platform nội trạm & \texttt{transfer\_catalog.json} \\ \hline
-Walk-transfer & \(E_{walk\_trans}\) & Khoảng cách đi bộ trên đồ thị OSM (\(d/v_{walk}\)) & \texttt{walk\_network.geojson} \\ \hline
+Ride & \(E_{ride}\) & Thời gian chạy tàu giữa hai node ga kế tiếp & \texttt{network\_topology.json}; \texttt{lines.geojson} dùng cho hình học hiển thị \\ \hline
+Transfer & \(E_{transfer}\) & Thời gian chuyển tuyến trong cùng ga, cộng thêm phạt đổi tuyến khi so sánh route & \texttt{network\_topology.json} và auto-transfer từ các ga có nhiều tuyến \\ \hline
+Walk-transfer & \(E_{walk\_trans}\) & Kết nối đi bộ liên ga hoặc bypass khi có scenario khoá đoạn & \texttt{network\_topology.json}, \texttt{subway\_osm\_enrichment.json} và auto proximity \\ \hline
 \end{tabular}
 \end{table}
 

@@ -1,0 +1,10 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{new\PYGZus{}cost} \PYG{o}{=} \PYG{n}{add\PYGZus{}cost}\PYG{p}{(}\PYG{n}{curr\PYGZus{}cost}\PYG{p}{,} \PYG{n}{edge}\PYG{o}{.}\PYG{n}{cost}\PYG{p}{)}
+\PYG{k}{if} \PYG{n}{next\PYGZus{}state} \PYG{o+ow}{not} \PYG{o+ow}{in} \PYG{n}{distances} \PYG{o+ow}{or} \PYG{n}{new\PYGZus{}cost} \PYG{o}{\PYGZlt{}} \PYG{n}{distances}\PYG{p}{[}\PYG{n}{next\PYGZus{}state}\PYG{p}{]:}
+    \PYG{n}{distances}\PYG{p}{[}\PYG{n}{next\PYGZus{}state}\PYG{p}{]} \PYG{o}{=} \PYG{n}{new\PYGZus{}cost}
+    \PYG{n}{parents}\PYG{p}{[}\PYG{n}{next\PYGZus{}state}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{n}{curr\PYGZus{}state}\PYG{p}{,} \PYG{n}{edge}\PYG{p}{)}
+    \PYG{n}{h} \PYG{o}{=} \PYG{n}{heuristic}\PYG{p}{(}\PYG{n}{next\PYGZus{}state}\PYG{p}{,} \PYG{n}{goal}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} h = (h\PYGZus{}time, 0, 0, 0)}
+    \PYG{n}{estimated\PYGZus{}total} \PYG{o}{=} \PYG{n}{add\PYGZus{}cost}\PYG{p}{(}\PYG{n}{new\PYGZus{}cost}\PYG{p}{,} \PYG{n}{h}\PYG{p}{)}
+    \PYG{n}{priority\PYGZus{}key} \PYG{o}{=} \PYG{p}{(}\PYG{n}{estimated\PYGZus{}total}\PYG{p}{,} \PYG{n}{new\PYGZus{}cost}\PYG{p}{,} \PYG{n}{next\PYGZus{}state}\PYG{p}{)}
+    \PYG{n}{priority\PYGZus{}queue}\PYG{o}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{priority\PYGZus{}key}\PYG{p}{)}
+\end{MintedVerbatim}
